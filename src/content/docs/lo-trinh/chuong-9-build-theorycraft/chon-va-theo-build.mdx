@@ -1,0 +1,146 @@
+---
+title: Chọn & theo build đúng cách
+description: Cách chọn một build POE2 hợp người mới (Maxroll, poe.ninja), đọc một build guide đúng thứ tự, tách phần lõi rẻ với món carry đắt, và theo build sao cho không hỏng — ưu tiên gì, chú ý gì.
+lastUpdated: 2026-05-27
+---
+
+import Hop from '@components/Hop.astro';
+
+:::tip[👉 Bài này bạn sẽ hiểu được]
+- **Tìm build ở đâu** cho patch hiện tại và **chọn build nào** hợp người mới.
+- Đọc một **build guide** đúng thứ tự — đọc cái gì trước, cái gì sau.
+- Phân biệt **phần lõi rẻ** (làm build chạy được) với **món carry đắt** (chỉ đẩy thêm).
+- Theo build **không hỏng**: ưu tiên gì, chú ý gì, và những lỗi hay gặp.
+- Tự kiểm trong **PoB2** xem build có "chạy" không, và biết khi nào mình yếu vs khi nào content khó.
+:::
+
+Người mới hay loay hoay đúng hai câu: **"nên theo build nào?"** và **"build đó chú ý cái gì, ưu tiên cái gì?"**. Bài này trả lời cụ thể, từng bước, để bạn **chơi được theo một build** thay vì dò dẫm. (Bài này là "theo một build cho đúng"; còn việc **chỉnh build meta cho hợp túi tiền** là ở [Đọc meta & biến tấu](/POE2/lo-trinh/chuong-9-build-theorycraft/doc-meta-va-bien-tau/) — hai bài bổ trợ nhau.)
+
+> ⚠️ POE2 đang **Early Access** (vẫn phải mua để chơi), bản hiện hành khi viết là **0.5.x**. Build cụ thể nào đang mạnh **thay đổi theo từng patch** — bài này dạy **cách chọn và theo** một build bất kỳ, còn build cụ thể thì luôn lấy từ nguồn cập nhật mới nhất (link ở cuối bài).
+
+## 1. Chọn build nào — tìm ở đâu, chọn thế nào
+
+### Tìm build ở đâu
+
+Có hai nguồn chính, dùng cho hai mục đích khác nhau:
+
+- **[Maxroll — Build Guides](https://maxroll.gg/poe2/build-guides):** đây là nơi **người mới nên bắt đầu**. Mỗi guide là một bài viết kỹ, có giải thích cơ chế, thường kèm **mã PoB** (PoB code — dán vào Path of Building 2 là ra cả build), có phần "leveling / budget / endgame" rõ ràng, và **ghi ngày cập nhật**. Đây là tài liệu để **theo từng bước**.
+- **[poe.ninja — Builds](https://poe.ninja/poe2/builds):** đây là **dữ liệu thống kê** từ nhân vật người chơi thật, lọc theo class/skill/ascendancy. Dùng để **thấy hướng nào đang phổ biến**, nhưng nó **không phải hướng dẫn** — không có phần giải thích từng bước. Người mới nên xem nó để tham khảo, rồi tìm một guide đầy đủ trên Maxroll cho hướng đó.
+
+### Chọn build nào (tiêu chí cho người mới)
+
+Đừng chọn theo "build nào DPS to nhất". Lọc theo thứ tự ưu tiên này:
+
+1. **Có nhãn "league-start / budget / beginner-friendly".** Đây là build dựng được với **đồ rẻ**, không cần món đắt mới chạy. Bỏ qua các build ghi "endgame / high-investment / mirror-tier" — đó là cho người đã giàu currency.
+2. **Hợp class & gu chơi bạn thích.** Thích cận chiến cầm búa? Thích bắn xa? Thích triệu hồi quái (minion)? Chọn build theo cảm giác chơi bạn thấy vui, vì bạn sẽ chơi nó hàng chục giờ. Một build mạnh nhưng bạn thấy chán thì vẫn là build sai cho bạn.
+3. **Đã cập nhật cho patch hiện tại.** Xem **ngày cập nhật** (last updated) của guide. Nếu guide viết cho một bản cũ (vd patch trước cả mấy bản), nó **có thể không còn chạy** — skill bị nerf, gem đổi tên, cây passive đổi. Ưu tiên guide ghi rõ "updated for 0.5.x" hoặc có ngày gần đây.
+
+> ⚠️ **Build cũ (sai patch) là cái bẫy lớn nhất với người mới.** POE2 Early Access đổi rất nhanh; một guide cũ vài patch có thể dẫn bạn đi vào một skill đã bị làm yếu hoặc một cơ chế đã bị bỏ. Luôn kiểm ngày trước khi theo.
+
+## 2. Đọc một build guide đúng cách
+
+Một guide đầy đủ có nhiều phần. Đọc **đúng thứ tự** này để hiểu build trước khi tốn currency:
+
+1. **Skill chính + cách nó gây sát thương.** Đây là "động cơ" của build: nó dùng skill gì, loại sát thương nào (vật lý? lửa? đòn chí mạng (crit)? trạng thái (ailment) như cháy/độc?), và **cách build làm cho skill đó mạnh lên** (scale). Hiểu cái này thì mọi quyết định sau mới có nghĩa.
+2. **Kế hoạch phòng thủ.** Build sống bằng gì — máu (life) hay năng lượng giáp (energy shield)? Dựa vào kháng (resistance), giáp (armour), né (evasion), hay chặn (block)? Đây là phần **người mới hay bỏ qua nhất** và là lý do hay chết.
+3. **Thứ tự ưu tiên / leveling.** Guide tốt nói rõ **lên cây passive theo thứ tự nào**, lấy skill/support nào trước, và mỗi giai đoạn (đầu game, giữa, vào endgame) làm gì. Theo đúng thứ tự này để không bị "yếu giữa chừng".
+4. **Mục tiêu trang bị (gear targets).** Build cần những chỉ số gì trên đồ (stat priority), món chủ lực nào, và đâu là "đủ dùng" vs "lý tưởng".
+5. **Làm gì ở mỗi giai đoạn.** Phần "what to do at each stage" — đi campaign thì lo gì, vào map đầu thì lo gì.
+
+**Mẹo thực hành:** đọc lướt cả guide một lượt để nắm bức tranh tổng, **rồi mới đọc kỹ** phần skill + phòng thủ. Đừng nhảy thẳng tới danh sách đồ — đó là lỗi phổ biến nhất.
+
+## 3. Phân biệt "lõi rẻ" với "món carry đắt"
+
+Gần như mọi build đều có hai phần, và đây là điều **quan trọng nhất** bài này muốn bạn nhớ:
+
+- **Phần lõi (core) — RẺ:** skill chính + các support gem + cây passive + ascendancy + một vài món chủ lực (key unique / affix quan trọng). Phần này thường chỉ tốn điểm passive và đồ thường (rare) giá phải chăng. **Đây là thứ làm build "chạy được"** — đủ giết quái, đủ sống để farm.
+- **Món carry (gánh build) — ĐẮT:** 1–3 món chase (unique hiếm, vũ khí xịn, đồ chế kỹ) chỉ để **đẩy DPS/phòng thủ lên mức top**. Bỏ chúng ra build **vẫn chạy**, chỉ yếu hơn.
+
+**Người mới phải làm cho phần lõi chạy TRƯỚC.** Đừng đốt currency cố chép món endgame đắt khi nhân vật còn non — bạn sẽ cháy túi mà build vẫn chưa đứng vững. Trình tự đúng: dựng lõi rẻ → farm map kiếm tiền → **dùng tiền build tự kiếm** để nâng dần lên món carry. Cách tách lõi/carry chi tiết (tắt từng món trong PoB2, lên lộ trình nâng cấp) nằm ở [Đọc meta & biến tấu](/POE2/lo-trinh/chuong-9-build-theorycraft/doc-meta-va-bien-tau/).
+
+## 4. Theo build sao cho không hỏng — chú ý gì, ưu tiên gì
+
+Đây là **danh sách phải canh** khi đang theo một build. Làm sai mấy điểm này là build "hỏng" dù bạn chép đúng cây:
+
+- **Giữ kháng luôn đủ trần (resistance cap).** Ba kháng cơ bản (lửa/lạnh/sét) nên luôn **đủ max** (mặc định 75%). Đây là **ưu tiên số một** — thiếu kháng là chết oan, kể cả khi DPS cao. Xem [Phòng thủ](/POE2/lo-trinh/chuong-2-co-che-cot-loi/phong-thu/) để hiểu kháng và các lớp phòng thủ khác.
+- **Đừng bỏ lớp phòng thủ của build.** Nếu guide bảo lấy một node phòng thủ, một aura giảm sát thương, hay giữ một ngưỡng máu — **đừng cắt nó để nhồi thêm DPS**. Lớp phòng thủ là thứ giữ bạn sống đủ lâu để gây sát thương.
+- **Theo đúng setup gem + support.** Skill chính phải đi với đúng các support gem guide nêu — đây là phần đóng góp DPS lớn. Lắp sai/thiếu support là DPS hụt mà bạn không hiểu vì sao.
+- **Giữ "cơ chế mấu chốt" của build chạy.** Mỗi build có một thứ làm nó "tick" — vd một build crit cần đủ tỉ lệ chí mạng để bùng nổ, một build trạng thái cần đủ điều kiện để bốc cháy/trúng độc, một build minion cần đủ quái sống. Nếu thiếu điều kiện đó, build tụt thê thảm. Guide thường ghi rõ "cần đạt X% crit / cần Y" — **canh cho đủ**.
+- **Lên cây passive theo đúng thứ tự guide.** Lấy các node cốt lõi (sống + cơ chế chính) trước, node "thêm DPS" sau. Đừng tự ý nhảy lung tung.
+- **Mua đồ theo đúng stat priority của build.** Mỗi build ưu tiên chỉ số khác nhau (build này cần tốc đánh, build kia cần crit, build nọ cần +mức skill). Mua theo thứ tự ưu tiên đó, đừng mua đồ "nhìn ngầu" mà không hợp build. Cách đặt ưu tiên chỉ số theo build ở [Ưu tiên theo build](/POE2/lo-trinh/chuong-5-trang-bi/uu-tien-theo-build/).
+
+**Lỗi hay gặp cần tránh:** (1) nhồi DPS, bỏ phòng thủ → chết liên tục; (2) bỏ qua kháng vì "tạm thời" → quên luôn; (3) mua đồ không hợp stat priority; (4) đổi skill/cây nửa chừng theo cảm hứng làm hỏng cơ chế mấu chốt; (5) cố mua món carry đắt khi lõi chưa xong.
+
+## 5. Biết build có "chạy" không — kiểm trong PoB2
+
+Khi thấy "sao mình yếu thế?", đừng đoán mò — **kiểm bằng Path of Building 2 (PoB2)**. Cách làm:
+
+1. **Nhập mã build (PoB code) của guide** vào PoB2 để xem bản "chuẩn" của tác giả.
+2. **Dựng nhân vật của bạn** trong PoB2 (hoặc import từ tài khoản) và **so sánh** với bản chuẩn.
+3. **Soi lỗ hổng:** PoB2 hiện rõ kháng có đủ max không, máu/ES bao nhiêu, DPS chênh bao nhiêu so với bản chuẩn. Lỗ hổng hay gặp: **thiếu kháng** (đỏ trong PoB2), thiếu một món chủ lực, hoặc lắp sai support.
+
+Cách dùng PoB2 (cài đặt, import, đọc số) ở [Path of Building 2](/POE2/lo-trinh/chuong-4-passive-tree/path-of-building-2/).
+
+**"Mình yếu" hay "content vốn khó"?** Phân biệt thế này:
+
+- Nếu PoB2 cho thấy bạn **thiếu kháng, ít máu, DPS thấp hơn nhiều so với bản chuẩn** ở cùng giai đoạn → bạn **đang yếu**, đi vá lỗ hổng (kháng trước, rồi máu, rồi DPS).
+- Nếu PoB2 cho thấy bạn **bám sát bản chuẩn** mà vẫn chật vật → có thể **content đó vốn khó** so với mức đầu tư hiện tại. Lúc này hợp lý hơn là **farm content dễ hơn để nâng đồ**, rồi quay lại, thay vì đập đầu vào tường.
+
+## Một câu chốt về tâm lý
+
+Build "1 triệu DPS nhưng dày máu, rẻ, dễ chơi" thường **tốt hơn cho người mới** so với build "10 triệu DPS nhưng mỏng và đắt". Bạn **không chết** và farm đều mới là thứ kiếm ra tiền để nâng cấp. Chọn build hợp **hoàn cảnh và túi tiền của bạn**, theo nó cho đúng, rồi mới tính chuyện đẩy số.
+
+<Hop variant="thuatngu">
+
+| Tiếng Anh | Tiếng Việt / Giải thích |
+|-----------|------------------------|
+| Build | Cách dựng nhân vật (skill + cây + đồ) hướng tới một lối chơi |
+| Build guide | Bài hướng dẫn dựng một build cụ thể, từng bước |
+| League-start / Budget / Beginner-friendly | Build dựng được với đồ rẻ, hợp người mới / đầu mùa |
+| Endgame / High-investment | Build cần đầu tư nhiều currency, không cho người mới |
+| Last updated | Ngày cập nhật guide — kiểm để biết build còn hợp patch không |
+| Core (của build) | Phần lõi: skill + support + cây + chỉ số nền — thường rẻ |
+| Carry / Chase item | Món "gánh" build — đắt, chỉ để đẩy thêm; bỏ ra build vẫn chạy |
+| Skill gem / Support gem | Viên kỹ năng chính / viên hỗ trợ gắn kèm để tăng sức mạnh skill |
+| Stat priority | Thứ tự ưu tiên các chỉ số cần mua trên đồ |
+| Leveling | Giai đoạn lên cấp / đi campaign |
+| Resistance cap | Trần kháng (mặc định 75%) |
+| Life / Energy Shield (ES) | Máu / lá chắn năng lượng — hai cách "trữ máu" |
+| Armour / Evasion / Block | Giáp / né đòn / chặn — các lớp giảm sát thương |
+| Crit | Đòn chí mạng (sát thương nhân lên) |
+| Ailment | Trạng thái bất lợi (cháy, độc, tê liệt…) gây thêm sát thương/hiệu ứng |
+| Minion | Quái triệu hồi đánh thay người chơi |
+| DPS | Sát thương mỗi giây |
+| Unique | Item độc nhất với hiệu ứng cố định đặc biệt |
+| Rare | Item hiếm (tối đa 4 dòng affix) — thường dùng cho phần lõi |
+| PoB code | Mã đại diện cả build, dán vào Path of Building 2 để mở |
+| Nerf | Bị giảm sức mạnh qua patch |
+
+</Hop>
+
+<Hop variant="nguon">
+
+- [Build Guides — Maxroll POE2](https://maxroll.gg/poe2/build-guides)
+- [poe.ninja — Builds (POE2)](https://poe.ninja/poe2/builds)
+- [Path of Building 2 — GitHub chính thức (PathOfBuildingCommunity)](https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2)
+- [Path of Exile 2 — trang chính thức (patch notes)](https://www.pathofexile.com/poe2)
+
+> ⚠️ **Lưu ý:** Build cụ thể nào đang mạnh **đổi theo từng patch/league** (POE2 Early Access). Luôn lấy build từ nguồn cập nhật mới nhất và kiểm ngày trước khi theo — bài này dạy cách chọn/theo, không khóa cứng một build cụ thể.
+
+</Hop>
+
+:::note[📊 Số liệu sống — kiểm tra trước khi dùng]
+- Build & guide cập nhật cho patch hiện tại: [maxroll.gg/poe2/build-guides](https://maxroll.gg/poe2/build-guides)
+- Hướng build đang phổ biến (thống kê người chơi): [poe.ninja/poe2/builds](https://poe.ninja/poe2/builds)
+- Giá đồ thực tế (biết món nào là "carry" đắt): [pathofexile.com/trade2](https://www.pathofexile.com/trade2)
+:::
+
+<Hop variant="mauchot">
+
+- **Chọn build**: ưu tiên build có nhãn budget/beginner, hợp gu chơi, **đã cập nhật cho patch hiện tại** — build cũ sai patch hay không chạy.
+- **Đọc guide đúng thứ tự**: skill + cách gây sát thương → phòng thủ → thứ tự leveling → mục tiêu đồ → làm gì mỗi giai đoạn. Đừng nhảy thẳng tới danh sách đồ.
+- **Làm cho phần lõi rẻ chạy TRƯỚC**; đừng đốt currency chép món carry đắt khi nhân vật còn non.
+- **Theo không hỏng**: giữ kháng đủ max (ưu tiên số một), không bỏ lớp phòng thủ, lắp đúng gem/support, giữ cơ chế mấu chốt, lên cây + mua đồ theo đúng thứ tự ưu tiên của build.
+- **Nghi mình yếu thì kiểm trong PoB2**: so với bản chuẩn để biết là "mình yếu" (đi vá kháng/máu/DPS) hay "content vốn khó" (đi farm dễ hơn để nâng đồ).
+
+</Hop>

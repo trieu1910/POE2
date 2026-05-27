@@ -124,6 +124,7 @@ export default defineConfig({
                 { label: 'Quy trình thiết kế build', link: '/lo-trinh/chuong-9-build-theorycraft/quy-trinh-thiet-ke-build/' },
                 { label: 'PoB2 nâng cao', link: '/lo-trinh/chuong-9-build-theorycraft/pob2-nang-cao/' },
                 { label: 'Đọc meta & biến tấu', link: '/lo-trinh/chuong-9-build-theorycraft/doc-meta-va-bien-tau/' },
+                { label: 'Chọn & theo build đúng cách', link: '/lo-trinh/chuong-9-build-theorycraft/chon-va-theo-build/' },
               ],
             },
             {
