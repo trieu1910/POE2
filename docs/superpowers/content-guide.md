@@ -68,6 +68,8 @@ Dùng component `<Hop variant="thuatngu">` bao quanh một bảng Markdown:
 
 Liệt kê **tất cả** thuật ngữ tiếng Anh xuất hiện trong bài, để người đọc nhận ra chúng khi thấy trong game UI.
 
+> Nếu bài có nhiều thuật ngữ, **được phép** chia thành nhiều block `<Hop variant="thuatngu">` theo nhóm chủ đề (mỗi nhóm một bảng, có thể kèm một dòng tiêu đề nhóm phía trên) để dễ đọc. Đây là cách làm hợp lệ, không bắt buộc gộp tất cả vào một bảng duy nhất.
+
 #### (4) Nguồn tham khảo
 
 Dùng component `<Hop variant="nguon">` bao quanh danh sách link:
