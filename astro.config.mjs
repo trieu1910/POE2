@@ -120,7 +120,14 @@ export default defineConfig({
                 { label: 'Đọc meta & biến tấu', link: '/lo-trinh/chuong-9-build-theorycraft/doc-meta-va-bien-tau/' },
               ],
             },
-            { label: 'Chương 10 — Tài nguyên & Patch', link: '/lo-trinh/chuong-10-tai-nguyen-patch/' },
+            {
+              label: 'Chương 10 — Tài nguyên & Patch',
+              items: [
+                { label: 'Tổng quan chương', link: '/lo-trinh/chuong-10-tai-nguyen-patch/' },
+                { label: 'Nguồn gốc & công cụ', link: '/lo-trinh/chuong-10-tai-nguyen-patch/nguon-goc/' },
+                { label: 'Theo dõi patch', link: '/lo-trinh/chuong-10-tai-nguyen-patch/theo-doi-patch/' },
+              ],
+            },
           ],
         },
         { label: '🛠️ Công cụ Build', link: '/cong-cu-build/' },
