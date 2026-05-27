@@ -19,7 +19,16 @@ export default defineConfig({
         {
           label: '📚 Lộ trình học A→Z',
           items: [
-            { label: 'Chương 0 — Nhập môn', link: '/lo-trinh/chuong-0-nhap-mon/' },
+            {
+              label: 'Chương 0 — Nhập môn',
+              items: [
+                { label: 'Tổng quan chương', link: '/lo-trinh/chuong-0-nhap-mon/' },
+                { label: 'ARPG là gì & vòng lặp cốt lõi', link: '/lo-trinh/chuong-0-nhap-mon/arpg-va-vong-lap/' },
+                { label: 'Early Access là gì', link: '/lo-trinh/chuong-0-nhap-mon/early-access/' },
+                { label: 'League vs Standard', link: '/lo-trinh/chuong-0-nhap-mon/league-vs-standard/' },
+                { label: 'Bảng thuật ngữ nền tảng', link: '/lo-trinh/chuong-0-nhap-mon/bang-thuat-ngu/' },
+              ],
+            },
             { label: 'Chương 1 — Class & Ascendancy', link: '/lo-trinh/chuong-1-class-ascendancy/' },
             { label: 'Chương 2 — Cơ chế cốt lõi', link: '/lo-trinh/chuong-2-co-che-cot-loi/' },
             { label: 'Chương 3 — Đi cốt truyện', link: '/lo-trinh/chuong-3-campaign/' },
