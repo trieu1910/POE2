@@ -81,7 +81,15 @@ export default defineConfig({
                 { label: 'Đọc một món đồ', link: '/lo-trinh/chuong-5-trang-bi/doc-mot-mon-do/' },
               ],
             },
-            { label: 'Chương 6 — Chế đồ (Crafting)', link: '/lo-trinh/chuong-6-crafting/' },
+            {
+              label: 'Chương 6 — Chế đồ (Crafting)',
+              items: [
+                { label: 'Tổng quan chương', link: '/lo-trinh/chuong-6-crafting/' },
+                { label: 'Currency Orbs', link: '/lo-trinh/chuong-6-crafting/currency-orbs/' },
+                { label: 'Essence / Rune / Omen', link: '/lo-trinh/chuong-6-crafting/essence-rune-omen/' },
+                { label: 'Công thức cơ bản', link: '/lo-trinh/chuong-6-crafting/cong-thuc-co-ban/' },
+              ],
+            },
             { label: 'Chương 7 — Endgame: Atlas & Maps', link: '/lo-trinh/chuong-7-endgame-atlas/' },
             { label: 'Chương 8 — Kinh tế & Kiếm tiền', link: '/lo-trinh/chuong-8-kinh-te-kiem-tien/' },
             { label: 'Chương 9 — Tự cook Build', link: '/lo-trinh/chuong-9-build-theorycraft/' },

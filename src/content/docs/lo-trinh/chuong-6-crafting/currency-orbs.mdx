@@ -1,0 +1,123 @@
+---
+title: Currency Orbs — mỗi viên thực sự làm gì trong POE2
+description: Bộ orb chế đồ cốt lõi của POE2 và tác dụng chính xác của từng viên (Transmutation, Augmentation, Regal, Alchemy, Chaos, Exalted, Divine, Vaal, Annulment, Chance) — phân biệt orb dùng làm tiền vs orb dùng để chế.
+lastUpdated: 2026-05-27
+---
+
+import Hop from '@components/Hop.astro';
+
+:::tip[👉 Bài này bạn sẽ hiểu được]
+- **Currency orb là gì** và vì sao nó vừa là "tiền" vừa là "vật liệu chế đồ".
+- **Mỗi viên orb chính làm gì** trong POE2 (đã xác minh — KHÔNG dùng cách hiểu kiểu POE1).
+- Phân biệt orb **dùng như tiền** (giữ lại) vs orb **dùng để chế** (xài thoải mái).
+- **Làm thế này:** người mới nên dùng orb nào sớm, giữ orb nào để dành.
+:::
+
+Trong POE2, **không có đồng "vàng" như game khác**. "Tiền tệ" chính là các viên **currency orb** — và điều đặc biệt: chính những viên đó cũng là **vật liệu để chế đồ**. Tức là cùng một viên Exalted Orb, bạn có thể **đem đổi lấy đồ** (dùng như tiền) hoặc **dùng nó để thêm mod lên đồ của mình** (dùng để chế). Hiểu mỗi viên làm gì là nền tảng của cả Chương 6.
+
+> ⚠️ **Đọc kỹ nếu bạn từng xem video POE1:** nhiều orb POE2 hoạt động **khác hẳn**. Bài này mô tả đúng theo **bản hiện hành 0.5.x**. Khi cầm một viên orb trong game, hãy **đọc dòng mô tả ngay trên nó** — đó là nguồn chính xác nhất.
+
+## Nhắc lại nhanh: bậc độ hiếm của đồ
+
+Để hiểu orb, cần nhớ 4 bậc đồ (đã học ở [Chương 5](/lo-trinh/chuong-5-trang-bi/do-hiem/)):
+
+- **Normal (trắng):** 0 mod.
+- **Magic (xanh dương):** tối đa 1 prefix + 1 suffix (2 mod).
+- **Rare (vàng):** tối đa 3 prefix + 3 suffix (6 mod).
+- **Unique (cam):** mod cố định.
+
+Hầu hết orb chế đồ làm việc với **mod explicit** (mod quay ngẫu nhiên) trên đồ Magic và Rare.
+
+## Nhóm 1 — Orb "nâng bậc & thêm mod" (người mới dùng nhiều nhất)
+
+Đây là các orb **rẻ, rơi nhiều**, dùng để đưa đồ trắng đi lên dần. Cứ xài thoải mái khi tập chế.
+
+- **Orb of Transmutation** — *"Nâng một món Normal (trắng) thành Magic, kèm 1 mod."* Đây là bước đầu tiên: biến đồ trắng → đồ xanh có 1 dòng.
+- **Orb of Augmentation** — *"Thêm 1 mod mới ngẫu nhiên vào một món Magic."* Dùng sau Transmutation để món xanh có dòng thứ hai (tối đa 2 mod trên Magic).
+- **Regal Orb** — *"Nâng một món Magic thành Rare, và thêm 1 mod mới."* Đây là cầu nối: đồ xanh 2 mod → đồ vàng 3 mod. Chỉ dùng được trên đồ Magic.
+- **Orb of Alchemy** — *"Nâng một món Normal/Magic thẳng lên Rare với (khoảng) 4 mod ngẫu nhiên."* Cách nhanh để có một món Rare từ đồ trắng, nhưng các mod **hoàn toàn ngẫu nhiên** — hên xui.
+
+> Tóm ý: **Transmute → Augment → Regal** là "con đường đi bộ" lên Rare (kiểm soát từng bước hơn); còn **Alchemy** là "nhảy thẳng" lên Rare (nhanh nhưng không kiểm soát). *(Số mod cụ thể có thể đổi theo patch — đọc mô tả orb trong game.)*
+
+## Nhóm 2 — Orb "tài sản" để chế đồ cao cấp (giữ lại, đừng phí)
+
+Các orb này **giá trị cao**, đồng thời là **đơn vị tiền tệ chính** khi mua bán. Người mới nên **giữ để mua đồ** hoặc chỉ dùng khi đã hiểu rõ.
+
+- **Exalted Orb** — *"Thêm 1 mod mới ngẫu nhiên vào một món Rare."* Đây là cách "đắp thêm dòng" cho đồ vàng còn chỗ trống. Trong POE2, Exalted là một **đơn vị tiền tệ rất phổ biến** (giá đồ thường được ra giá bằng Exalted). Vì vậy đừng vung tay đập Exalt vào đồ rác — mod thêm ra là **ngẫu nhiên**, dễ ra dòng vô dụng.
+- **Chaos Orb** — *"Gỡ 1 mod ngẫu nhiên, rồi thêm 1 mod mới ngẫu nhiên vào món Rare."* ⚠️ **Đây là điểm khác POE1 lớn nhất:** Chaos Orb POE2 **KHÔNG quay lại toàn bộ mod**. Nó chỉ **đổi đúng một dòng** (bỏ một, thêm một). Hữu ích để "thử đổi" một dòng xấu, nhưng vẫn hên xui vì cả dòng bị gỡ lẫn dòng mới đều ngẫu nhiên.
+- **Divine Orb** — *"Quay lại các giá trị SỐ của những mod đang có trên đồ."* Lưu ý: Divine **không đổi mod nào cả** — nó chỉ "xóc lại con số" trong khoảng của từng mod (ví dụ dòng "+50–80 Life" có thể nhảy từ 55 lên 78). Dùng khi đã có đúng mod cần và muốn "ép" giá trị cao nhất. Divine cũng là **tiền giá trị cao**.
+
+## Nhóm 3 — Orb "gỡ mod" và orb rủi ro
+
+- **Orb of Annulment** — *"Gỡ 1 mod ngẫu nhiên khỏi một món Magic/Rare."* Dùng để **bỏ bớt** một dòng xấu — nhưng vì ngẫu nhiên, nó có thể **gỡ trúng dòng tốt**. Rủi ro cao, người mới nên tránh đến khi quen.
+- **Orb of Chance** — *"Biến một món Normal (trắng) thành Unique một cách bất định — hoặc phá hủy món đồ."* Tức là có thể trúng Unique, mà cũng có thể **mất luôn món đồ**. Mang tính cờ bạc, không phải công cụ chế cơ bản.
+- **Vaal Orb** — *"Thay đổi món đồ một cách bất định và **Corrupt (làm hỏng vĩnh viễn)** nó."* Sau khi Corrupt, món đồ **không chế thêm được nữa** bằng các orb thường. Kết quả có thể tốt (thêm mod mạnh, thêm ô socket) hoặc xấu (đồ thành rác). ⚠️ Đây là **canh bạc một chiều** — đã Vaal là không lùi được.
+
+> ⚠️ **Orb of Scouring (gỡ sạch mod về trắng) KHÔNG tồn tại trong POE2.** Bạn **không thể** đưa một món Rare về lại trắng. Vì thế hãy suy nghĩ trước khi nâng bậc một base hiếm — nâng rồi là không quay lui được.
+
+## Bonus — Currency "chất lượng" (quality)
+
+Đây không phải orb chế mod, mà tăng **quality (% chất lượng)** giúp đồ có chỉ số gốc cao hơn một chút:
+
+- **Blacksmith's Whetstone** — tăng quality cho **vũ khí cận chiến (martial weapon)**.
+- **Armourer's Scrap** — tăng quality cho **giáp (armour)**.
+- **Arcanist's Etcher** — tăng quality cho **wand / staff / sceptre** (vũ khí phép).
+
+Cứ dùng các viên này lên đồ bạn sắp mặc lâu dài — chúng rẻ và an toàn.
+
+## Làm thế này — người mới nên xài orb thế nào
+
+1. **Xài thoải mái** nhóm 1 (Transmutation, Augmentation, Regal, Alchemy): chúng rơi nhiều, dùng để tập chế và nâng đồ hằng ngày.
+2. **Giữ lại** Exalted / Divine / Chaos như **tiền để mua đồ** — với người mới, **mua một món đồ tốt thường rẻ và chắc ăn hơn** là tự đập currency hy vọng ra đồ ngon.
+3. **Tránh** Annulment / Vaal / Chance cho tới khi bạn hiểu rõ rủi ro — chúng có thể phá hỏng hoặc làm hỏng vĩnh viễn món đồ.
+4. **Luôn đọc dòng mô tả trên viên orb** trong game trước khi dùng, và đừng dùng orb xịn lên đồ rác.
+
+<Hop variant="thuatngu">
+
+| Tiếng Anh | Tiếng Việt / Giải thích |
+|-----------|------------------------|
+| Currency Orb | Cầu tiền tệ — vừa là "tiền", vừa là vật liệu chế đồ |
+| Orb of Transmutation | Nâng đồ Normal (trắng) → Magic, kèm 1 mod |
+| Orb of Augmentation | Thêm 1 mod mới vào đồ Magic |
+| Regal Orb | Nâng đồ Magic → Rare, thêm 1 mod |
+| Orb of Alchemy | Nâng đồ Normal/Magic → Rare với ~4 mod ngẫu nhiên |
+| Exalted Orb | Thêm 1 mod ngẫu nhiên vào đồ Rare (cũng là tiền phổ biến) |
+| Chaos Orb | Gỡ 1 mod ngẫu nhiên rồi thêm 1 mod mới (KHÔNG reroll hết như POE1) |
+| Divine Orb | Quay lại giá trị SỐ của các mod đang có (không đổi mod) |
+| Orb of Annulment | Gỡ 1 mod ngẫu nhiên (rủi ro gỡ trúng dòng tốt) |
+| Orb of Chance | Biến đồ trắng thành Unique — hoặc phá hủy nó |
+| Vaal Orb | Thay đổi bất định + Corrupt (làm hỏng vĩnh viễn, không chế tiếp được) |
+| Corrupt / Corrupted | Trạng thái "hỏng/khóa" — không chế thêm bằng orb thường |
+| Quality (% chất lượng) | Tăng chỉ số gốc của đồ một chút |
+| Blacksmith's Whetstone | Tăng quality cho vũ khí cận chiến |
+| Armourer's Scrap | Tăng quality cho giáp |
+| Arcanist's Etcher | Tăng quality cho wand / staff / sceptre |
+
+</Hop>
+
+<Hop variant="nguon">
+
+- [Currency — POE Wiki (POE2)](https://www.poewiki.net/wiki/poe2wiki:Currency)
+- [Exalted Orb — POE Wiki (POE2)](https://www.poewiki.net/wiki/poe2wiki:Exalted_Orb)
+- [Path of Exile 2 Crafting Overview — Maxroll](https://maxroll.gg/poe2/resources/path-of-exile-2-crafting-overview)
+- [poe2db — Currency database](https://poe2db.tw/us/Currency)
+- [Trang chính thức Path of Exile 2](https://www.pathofexile.com/poe2)
+
+> ⚠️ **Lưu ý:** Tác dụng orb mô tả ở trên đã xác minh theo bản 0.5.x, nhưng **chi tiết (số mod, tỉ lệ) có thể đổi theo patch** trong Early Access. Đọc dòng mô tả trên viên orb trong game là chuẩn nhất.
+
+</Hop>
+
+:::note[📊 Số liệu sống — kiểm tra trước khi dùng]
+- **Giá currency thay đổi từng ngày**, đừng học thuộc tỉ giá: [poe.ninja](https://poe.ninja)
+- Kiểm tra giá mua bán đồ thực tế: [pathofexile.com/trade2](https://www.pathofexile.com/trade2)
+:::
+
+<Hop variant="mauchot">
+
+- **Currency orb vừa là tiền vừa là vật liệu chế** — cùng một viên có thể đem mua đồ hoặc dùng để thêm mod.
+- **Nhóm rẻ** (Transmutation → Augmentation → Regal → Alchemy): xài thoải mái để nâng đồ trắng lên Rare.
+- **Nhóm tài sản** (Exalted thêm 1 mod, Divine xóc lại số, Chaos đổi 1 mod): giữ làm tiền, với người mới mua đồ thường chắc ăn hơn tự đập.
+- **Chaos Orb POE2 chỉ đổi 1 mod** (không reroll hết như POE1); **Orb of Scouring KHÔNG tồn tại** — nâng bậc đồ là không lùi được.
+- **Annulment / Vaal / Chance là cờ bạc** (gỡ/hỏng/phá hủy): người mới nên tránh đến khi hiểu rõ.
+
+</Hop>
