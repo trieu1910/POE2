@@ -1,0 +1,114 @@
+---
+title: Đọc một món đồ — "trang bị hay bỏ" cho build của bạn
+description: Cách đánh giá một món đồ có ngon cho build của bạn — khớp kháng/máu/loại sát thương, đọc DPS vũ khí cơ bản, và checklist giữ hay bỏ cho người mới.
+lastUpdated: 2026-05-27
+---
+
+import Hop from '@components/Hop.astro';
+
+:::tip[👉 Bài này bạn sẽ hiểu được]
+- Một món đồ "ngon" hay không là **tùy build của bạn**, không có "đồ tốt tuyệt đối".
+- 3 thứ người mới phải để mắt: **kháng (resistance)**, **máu (life/ES)**, và **chỉ số/sát thương hợp build**.
+- Cách đọc **DPS vũ khí** ở mức cơ bản để so hai vũ khí.
+- **Làm thế này:** một checklist đơn giản để quyết định mỗi món **giữ để mặc / giữ để bán / bỏ**.
+:::
+
+Hai bài trước dạy bạn đọc bậc độ hiếm và các dòng mod. Bài này trả lời câu hỏi quan trọng nhất: **"Món này có nên mặc không?"** Câu trả lời luôn bắt đầu bằng: **"Hợp với build của TÔI không?"** Một món Rare đầy dòng sát thương phép là rác với người chơi cung, dù nó "đẹp". Không có đồ tốt tuyệt đối — chỉ có **đồ tốt cho một build cụ thể**.
+
+## 3 thứ người mới phải nhìn đầu tiên
+
+### 1. Kháng (Resistance) — cái chết phổ biến nhất của người mới
+
+Trong POE2 bạn có **4 loại kháng**: lửa (Fire), băng (Cold), sét (Lightning), và hỗn độn (Chaos). Theo [Maxroll — Defence Guide](https://maxroll.gg/poe2/getting-started/defence-guide) và [POE Wiki — Resistance (POE2)](https://www.poewiki.net/wiki/poe2wiki:Resistance):
+
+- Kháng bắt đầu từ 0%, **trần mặc định là 75%** cho cả 4 loại (có thể đẩy lên tối đa 90% bằng mod đặc biệt).
+- Càng vào sâu game (qua từng Act, rồi vào endgame theo cấp khu vực), game **trừ kháng của bạn** một lượng ngày càng lớn — nên bạn phải **gom kháng dư** để bù lại.
+
+> ⚠️ **Mức trừ kháng cụ thể theo từng Act là con số dễ đổi theo patch** (các hướng dẫn cũ còn nhắc tới chế độ Cruel — chế độ này đã bị bỏ từ patch 0.3.0). Đừng học thuộc con số; chỉ cần nhớ nguyên tắc: **luôn giữ kháng đầy 75%, và cố gom dư thêm để bù phần bị trừ.**
+
+Maxroll nói thẳng cách nghĩ đúng: nếu bạn **thiếu kháng**, đừng nghĩ "ăn ít sát thương hơn" — hãy nghĩ "**ăn gấp đôi sát thương**". Quái trong map được thiết kế với giả định bạn đã capped kháng. Vì vậy **thói quen vàng của người mới**: mỗi lần xét một món đồ, hỏi ngay *"nó có giúp tôi giữ/đẩy kháng lên 75% không?"* Một món Rare có 2 dòng kháng đang thiếu thường **đáng mặc hơn** một món nhiều sát thương nhưng làm tụt kháng.
+
+### 2. Máu (Life) và/hoặc Lá chắn năng lượng (Energy Shield)
+
+**Maximum Life (máu tối đa)** là thanh sinh tồn chính. Theo [Maxroll — Defence Guide](https://maxroll.gg/poe2/getting-started/defence-guide), máu tăng theo cấp, theo chỉ số Strength, và **theo mod trên trang bị** — nên đồ có dòng **+Life** gần như luôn có giá trị. Một số build dùng **Energy Shield (ES — lá chắn năng lượng)** thay/bổ sung cho máu (ES hồi nhanh sau khi không ăn đòn một lúc).
+
+Người mới: trên **mọi ô đồ có thể**, ưu tiên món có **+Life** (hoặc +ES nếu build bạn theo ES). Sống được thì mới đánh được.
+
+### 3. Chỉ số / loại sát thương hợp build
+
+Phần còn lại của món đồ chỉ đáng giá nếu **khớp cách đánh của bạn**:
+
+- Đánh **phép lửa** → tìm dòng tăng sát thương lửa / sát thương phép, và Intelligence.
+- **Bắn cung / đòn vật lý** → tìm dòng sát thương vật lý / tốc độ đánh / sát thương đòn đánh, và Dexterity.
+- **Đập cận chiến nặng** → tìm sát thương vật lý / cận chiến, và Strength.
+
+Một dòng "+30% Spell Damage" là **vô dụng** với người bắn cung. Khi xét đồ, **bỏ qua những dòng không thuộc build mình** — chỉ đếm dòng *thật sự* giúp bạn.
+
+## Đọc DPS vũ khí ở mức cơ bản
+
+Vũ khí là ô đặc biệt: với build đánh đòn (attack), **phần lớn sát thương của bạn tính từ sát thương của vũ khí** *(theo [Maxroll — Damage Scaling](https://maxroll.gg/poe2/getting-started/damage-scaling))*. Hai con số gốc trên vũ khí:
+
+- **Sát thương mỗi đòn** (hiện dạng khoảng, ví dụ 40–70).
+- **Attacks per Second (APS — số đòn mỗi giây / tốc độ đánh).**
+
+Ý tưởng so sánh đơn giản: **DPS ≈ (sát thương trung bình mỗi đòn) × (số đòn mỗi giây).** Một cây búa to đánh đau nhưng chậm, một con dao găm yếu hơn nhưng nhanh — nhân hai con số lại mới biết cái nào ra nhiều sát thương hơn theo thời gian.
+
+Lưu ý quan trọng cho người mới:
+
+- **So vũ khí cùng kiểu build.** Đừng đem DPS của vũ khí phép so với vũ khí đòn đánh — chúng scale khác nhau.
+- **Cách lười mà chuẩn:** mở bảng kỹ năng trong game, **đổi qua lại hai vũ khí** và xem **con số sát thương của chiêu bạn dùng** đổi thế nào — cái nào làm chiêu mạnh hơn thì chọn. Để tính chính xác hơn, dùng **Path of Building 2** (xem [Chương 4 — Path of Building 2](/lo-trinh/chuong-4-passive-tree/path-of-building-2/)), nó tự tính DPS thật của cả build.
+- Vũ khí cũng có **prefix/suffix** như đồ khác — một cây vũ khí "DPS thô" cao nhưng thiếu thuộc tính bạn cần vẫn có thể thua một cây cân bằng hơn.
+
+## Làm thế này — checklist "trang bị hay bỏ"
+
+Rê chuột vào món đồ, bật xem chi tiết, rồi chạy qua checklist:
+
+1. **Đúng ô & đúng build?** Nó là loại đồ tôi muốn nâng cấp, và chỉ số của nó thuộc về build tôi không? → Không thì **bỏ** (hoặc nhặt bán nếu là Rare/Unique).
+2. **Có +Life (hoặc +ES) không?** Người mới gần như luôn muốn dòng này.
+3. **Có giúp kháng không?** Đếm dòng kháng — nếu tôi đang thiếu kháng nào mà nó có, **điểm cộng lớn**.
+4. **Có dòng hợp loại sát thương của tôi không?** Đếm những dòng *thật sự* giúp đánh đau hơn.
+5. **(Nếu là vũ khí)** Đổi thử trong bảng kỹ năng — **chiêu của tôi có mạnh lên không?**
+6. **So với món đang mặc:** món mới có **giữ được kháng 75%** mà vẫn hơn ở máu/sát thương không? Nếu thay vào mà tụt kháng dưới cap thì **chỉ thay khi bù được kháng ở ô khác**.
+
+Quy tắc một câu: **giữ kháng đầy trước đã, rồi mới tối ưu máu và sát thương.** Nếu một "nâng cấp" làm rớt kháng xuống dưới 75%, nó **chưa phải nâng cấp** cho tới khi bạn vá lại kháng.
+
+> Đừng cầu toàn. Người mới chỉ cần đồ **"đủ tốt"**: đủ máu, kháng 75%, vài dòng hợp build. Đồ hoàn hảo để dành cho lúc đã quen và biết chế đồ (Chương 6) hoặc mua bán (Chương 8).
+
+<Hop variant="thuatngu">
+
+| Tiếng Anh | Tiếng Việt / Giải thích |
+|-----------|------------------------|
+| Build | Lối xây nhân vật (class + skill + cây passive + đồ) |
+| Resistance | Kháng: Fire / Cold / Lightning / Chaos |
+| Capped (resistance) | Kháng đã đầy tới trần (mặc định 75%) |
+| Overcap | Gom kháng dư trên 75% để bù phần bị trừ |
+| Maximum Life | Máu tối đa — thanh sinh tồn chính |
+| Energy Shield (ES) | Lá chắn năng lượng — lớp "máu" hồi nhanh, ăn đòn trước |
+| DPS | Sát thương mỗi giây |
+| Attacks per Second (APS) | Số đòn đánh mỗi giây — tốc độ đánh của vũ khí |
+| Attack / Spell | Đòn đánh (theo vũ khí) / Phép (theo gem) |
+| Strength / Dexterity / Intelligence | Sức mạnh / Nhanh nhẹn / Trí tuệ |
+| Path of Building 2 (PoB2) | Công cụ tính DPS & phòng thủ của cả build |
+
+</Hop>
+
+<Hop variant="nguon">
+
+- [Defence Guide — Maxroll (POE2)](https://maxroll.gg/poe2/getting-started/defence-guide)
+- [Damage Scaling — Maxroll (POE2)](https://maxroll.gg/poe2/getting-started/damage-scaling)
+- [Resistance — POE Wiki (POE2)](https://www.poewiki.net/wiki/poe2wiki:Resistance)
+- [Trang chính thức Path of Exile 2](https://www.pathofexile.com/poe2)
+
+> ⚠️ **Lưu ý:** Trần kháng (75%/90%) và đặc biệt **mức trừ kháng theo Act/cấp khu vực** là con số **dễ đổi theo patch** trong Early Access — kiểm tra lại bảng nhân vật trong game.
+
+</Hop>
+
+<Hop variant="mauchot">
+
+- Không có "đồ tốt tuyệt đối" — món ngon hay không là **tùy build của bạn**.
+- Người mới nhìn 3 thứ trước: **kháng (giữ 75%), máu (+Life/+ES), và chỉ số/sát thương hợp build.**
+- **Thiếu kháng = ăn gấp đôi sát thương** → giữ kháng đầy là ưu tiên số 1; đẩy lên đủ để bù phần game trừ.
+- Vũ khí: **DPS ≈ sát thương trung bình × số đòn/giây**; cách chuẩn là đổi thử và xem **chiêu của bạn** mạnh lên không (hoặc dùng PoB2).
+- **Làm thế này:** chạy checklist đúng ô/build → +Life → kháng → dòng hợp sát thương → so với món đang mặc mà **không tụt kháng**.
+
+</Hop>

@@ -72,7 +72,15 @@ export default defineConfig({
                 { label: 'Cộng dồn sát thương', link: '/lo-trinh/chuong-4-passive-tree/cong-don-sat-thuong/' },
               ],
             },
-            { label: 'Chương 5 — Trang bị & Vật phẩm', link: '/lo-trinh/chuong-5-trang-bi/' },
+            {
+              label: 'Chương 5 — Trang bị & Vật phẩm',
+              items: [
+                { label: 'Tổng quan chương', link: '/lo-trinh/chuong-5-trang-bi/' },
+                { label: 'Độ hiếm của đồ', link: '/lo-trinh/chuong-5-trang-bi/do-hiem/' },
+                { label: 'Affix & Item Level', link: '/lo-trinh/chuong-5-trang-bi/affix-va-ilvl/' },
+                { label: 'Đọc một món đồ', link: '/lo-trinh/chuong-5-trang-bi/doc-mot-mon-do/' },
+              ],
+            },
             { label: 'Chương 6 — Chế đồ (Crafting)', link: '/lo-trinh/chuong-6-crafting/' },
             { label: 'Chương 7 — Endgame: Atlas & Maps', link: '/lo-trinh/chuong-7-endgame-atlas/' },
             { label: 'Chương 8 — Kinh tế & Kiếm tiền', link: '/lo-trinh/chuong-8-kinh-te-kiem-tien/' },

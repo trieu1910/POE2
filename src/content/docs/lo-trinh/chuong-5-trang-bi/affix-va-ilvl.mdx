@@ -1,0 +1,109 @@
+---
+title: Affix & Item Level — đọc các dòng chỉ số trên đồ
+description: Hiểu prefix vs suffix, implicit vs explicit, mỗi bậc độ hiếm có bao nhiêu mod, và vì sao item level (ilvl) cùng base type quyết định mod xịn cỡ nào xuất hiện.
+lastUpdated: 2026-05-27
+---
+
+import Hop from '@components/Hop.astro';
+
+:::tip[👉 Bài này bạn sẽ hiểu được]
+- **Affix là gì**, phân biệt **prefix (tiền tố)** vs **suffix (hậu tố)**, và mỗi bậc độ hiếm chứa được bao nhiêu.
+- Khác nhau giữa **implicit** (mod gắn liền) và **explicit** (mod quay ra).
+- **Item level (ilvl)** và **base type (loại nền)** là gì, và vì sao ilvl **mở khóa** các mod xịn hơn.
+- **Làm thế này:** đọc các dòng mod của một món đồ để đoán nó tốt hay không.
+:::
+
+Ở bài [Độ hiếm của đồ](/lo-trinh/chuong-5-trang-bi/do-hiem/) bạn đã biết bậc nào chứa được bao nhiêu mod. Bài này phóng to vào **chính các dòng mod đó**: chúng tên gọi là gì, chia loại ra sao, và vì sao hai món cùng loại lại có dòng "mạnh yếu" khác nhau. Hiểu phần này là bạn **tự đọc được đồ** thay vì đoán mò.
+
+## Affix là gì? Prefix vs Suffix
+
+**Affix** (còn gọi là **mod / modifier — dòng chỉ số**) là mỗi dòng chữ ghi tác dụng trên đồ, ví dụ "+80 to maximum Life" (thêm 80 máu) hay "+35% to Fire Resistance" (thêm 35% kháng lửa).
+
+Affix chia làm **2 nhóm** *(theo [POE Wiki — Rarity (POE2)](https://www.poewiki.net/wiki/poe2wiki:Rarity))*:
+
+- **Prefix (tiền tố):** nhóm này thường chứa mod kiểu **máu, sát thương phẳng, giáp/lá chắn**…
+- **Suffix (hậu tố):** nhóm này thường chứa **kháng (resistance), chỉ số gốc (attribute), tốc độ**… (Kháng hầu như luôn là suffix.)
+
+Điểm quan trọng: **prefix và suffix là hai "kho" riêng biệt**. Một món Rare quay được **tối đa 3 prefix + 3 suffix**, không bao giờ quá 3 dòng cùng một nhóm. Vì thế khi đánh giá đồ, bạn nên xem **nó đã "kẹt" prefix hay suffix chưa** — ví dụ một món có đủ 3 suffix kháng thì không thể thêm dòng kháng thứ tư.
+
+Số mod tối đa theo bậc (nhắc lại từ bài trước, *theo [POE Wiki — Rarity (POE2)](https://www.poewiki.net/wiki/poe2wiki:Rarity)*):
+
+| Bậc | Prefix tối đa | Suffix tối đa | Tổng |
+|-----|:---:|:---:|:---:|
+| Normal (trắng) | 0 | 0 | 0 |
+| Magic (xanh) | 1 | 1 | 2 |
+| Rare (vàng) | 3 | 3 | 6 |
+| Unique (cam) | cố định | cố định | cố định |
+
+## Implicit vs Explicit
+
+Một món đồ có thể có hai "tầng" mod:
+
+- **Implicit (mod gắn liền):** mod **đi sẵn theo loại đồ (base type)**, tồn tại bất kể độ hiếm, **nằm trên cùng** (thường có vạch ngăn cách bên dưới). Ví dụ một chiếc nhẫn Topaz **luôn** có dòng kháng sét — đó là implicit của nó *(theo dữ liệu base trên [poe2db](https://poe2db.tw/us/))*.
+- **Explicit (mod quay ra):** các dòng **nằm dưới** phần implicit. Đây là phần **ngẫu nhiên** khi đồ thành Magic/Rare, và là phần bạn **đổi được bằng crafting** (Chương 6). Khi nói "đồ có 6 mod" là đang nói explicit (3 prefix + 3 suffix).
+
+Cách dễ nhớ: **implicit = "tính trời sinh" của loại đồ; explicit = "tính cách quay ngẫu nhiên" của riêng món đó.**
+
+## Base Type & Item Level — vì sao mod có "tier"
+
+**Base type (loại nền)** là *kiểu* món đồ trước khi có mod — ví dụ "loại áo da", "loại nhẫn ngọc lục bảo", "loại kiếm hai tay X". Base type quyết định **chỉ số gốc** (giáp/né/lá chắn, hoặc sát thương vũ khí) và **implicit** của món.
+
+**Item level (ilvl — cấp độ vật phẩm)** là một con số ẩn của món đồ (bấm phím xem chi tiết để thấy), **khác với** cấp nhân vật. Quy tắc cốt lõi:
+
+> **ilvl càng cao thì món đồ càng được phép quay ra các mod ở "tier" (bậc) cao hơn** *(theo [Maxroll — Damage Scaling](https://maxroll.gg/poe2/getting-started/damage-scaling) và dữ liệu mod trên [poe2db](https://poe2db.tw/us/))*.
+
+Mỗi loại mod có nhiều **tier** từ yếu tới mạnh. Ví dụ dòng máu có thể từ "+10 Life" (tier thấp) tới "+100 Life" (tier cao). Các tier mạnh **bị khóa sau một mức ilvl tối thiểu** — đồ ilvl thấp **không bao giờ** quay ra dòng máu xịn nhất, dù bạn có chế bao nhiêu lần. Đó là lý do đồ rơi ở **khu vực cấp cao (endgame)** mới có tiềm năng "đỉnh".
+
+Con số ilvl chính xác cần để mở từng tier là **dữ liệu cụ thể dễ đổi theo patch** — đừng học thuộc, hãy **tra trên poe2db** khi cần. Với người mới chỉ cần nhớ ý tưởng: **đồ từ khu cấp cao → tiềm năng cao hơn.**
+
+## Làm thế này — đọc nhanh một món đồ
+
+Khi rê chuột vào một món đồ (và bấm phím xem chi tiết — POE2 cho hiện thêm tier mod), đọc theo thứ tự:
+
+1. **Xem base type & loại ô:** nó là áo, mũ, nhẫn, hay vũ khí? Có hợp ô bạn đang muốn nâng cấp không?
+2. **Đọc implicit (dòng trên cùng):** dòng "trời sinh" này có hữu ích không (ví dụ nhẫn có sẵn một loại kháng).
+3. **Quét các explicit:** tìm 3 thứ người mới cần nhất — **máu (Life)**, **kháng (Resistance)**, và **chỉ số/sát thương hợp build**. Đếm xem có bao nhiêu dòng "có ích cho mình".
+4. **Để ý prefix/suffix đã đầy chưa:** nếu định chế thêm, xem còn chỗ trống nhóm nào. (POE2 hiển thị nhãn Prefix/Suffix và tier khi bạn bật xem chi tiết.)
+5. **Nhìn tier (nếu hiện):** dòng tier cao = giá trị to. Đồ nhiều dòng có ích + tier cao = đáng giữ.
+
+Cách quyết định cuối cùng "giữ hay bỏ cho **build của bạn**" nằm ở bài [Đọc một món đồ](/lo-trinh/chuong-5-trang-bi/doc-mot-mon-do/).
+
+<Hop variant="thuatngu">
+
+| Tiếng Anh | Tiếng Việt / Giải thích |
+|-----------|------------------------|
+| Affix / Mod / Modifier | Dòng chỉ số ghi trên đồ |
+| Prefix | Tiền tố — nhóm mod (máu, sát thương phẳng, giáp…) |
+| Suffix | Hậu tố — nhóm mod còn lại (kháng, chỉ số, tốc độ…) |
+| Implicit (modifier) | Mod gắn liền theo loại đồ, nằm trên cùng |
+| Explicit (modifier) | Mod quay ngẫu nhiên, nằm dưới, đổi được bằng crafting |
+| Item Level (ilvl) | Cấp độ vật phẩm — quyết định tier mod nào được quay ra |
+| Tier (mod tier) | Bậc của một mod, từ yếu tới mạnh |
+| Base Type | Loại nền — kiểu món đồ, quyết định chỉ số gốc & implicit |
+| Maximum Life | Máu tối đa |
+| Resistance | Kháng (lửa / băng / sét / hỗn độn) |
+| Attribute | Chỉ số gốc: Strength / Dexterity / Intelligence |
+| Crafting | Chế đồ — dùng currency đổi/nâng mod explicit |
+
+</Hop>
+
+<Hop variant="nguon">
+
+- [Rarity — POE Wiki (POE2)](https://www.poewiki.net/wiki/poe2wiki:Rarity)
+- [Damage Scaling — Maxroll (POE2)](https://maxroll.gg/poe2/getting-started/damage-scaling)
+- [poe2db — database item/mod/base](https://poe2db.tw/us/)
+- [Trang chính thức Path of Exile 2](https://www.pathofexile.com/poe2)
+
+> ⚠️ **Lưu ý:** Tên/giá trị/tier của mod và mức ilvl mở khóa từng tier **đổi theo patch** trong Early Access. Tra cụ thể trên poe2db hoặc xem trong game; đừng học thuộc con số.
+
+</Hop>
+
+<Hop variant="mauchot">
+
+- **Affix = mod = dòng chỉ số**; chia hai nhóm **prefix** (máu/sát thương…) và **suffix** (kháng/chỉ số…), mỗi nhóm tối đa 3 trên đồ Rare.
+- **Implicit** là mod "trời sinh" theo loại đồ (nằm trên); **explicit** là mod quay ngẫu nhiên (nằm dưới, chế đổi được).
+- **Base type** quyết định chỉ số gốc & implicit; **item level (ilvl)** quyết định **mod tier nào** được phép xuất hiện.
+- **ilvl cao → mở khóa mod tier cao hơn** → đồ khu endgame có tiềm năng mạnh hơn.
+- **Làm thế này:** đọc base → implicit → đếm explicit có ích (máu/kháng/hợp build) → xem prefix/suffix đầy chưa → nhìn tier.
+
+</Hop>
