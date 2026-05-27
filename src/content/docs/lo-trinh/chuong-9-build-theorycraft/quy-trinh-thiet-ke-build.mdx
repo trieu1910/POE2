@@ -1,0 +1,153 @@
+---
+title: Quy trình thiết kế build — 7 bước tự cook
+description: "Một quy trình lặp được để tự thiết kế build POE2 từ đầu — chọn skill chính, dựng lớp phòng thủ, chọn support, tìm đường cây passive và ascendancy, đặt ưu tiên trang bị, kiểm trong PoB2, rồi lặp lại. Tư tưởng xuyên suốt: sống trước, sát thương sau."
+lastUpdated: 2026-05-27
+---
+
+import Hop from '@components/Hop.astro';
+
+:::tip[👉 Bài này bạn sẽ hiểu được]
+- Một **quy trình 7 bước** lặp được để tự nghĩ ra build, thay vì lấy bừa cho "thấy số cộng là vui".
+- Vì sao phải **dựng phòng thủ trước, đẩy sát thương sau** — và làm thế nào để không quên.
+- Cách **ghép skill chính + support + cây passive + ascendancy** sao cho cùng kéo về một hướng.
+- Cách **dừng lại kiểm tra** ở mỗi bước thay vì dựng cả build rồi mới phát hiện sai.
+:::
+
+Tự thiết kế build nghe ghê gớm, nhưng thật ra chỉ là **trả lời vài câu hỏi theo đúng thứ tự**. Người mới thường làm lộn xộn: lấy skill thấy ngầu, rồi lấy passive thấy số to, rồi vào game chết liên tục mà không hiểu vì sao. Bài này cho bạn một **trình tự cố định** để không bị lạc.
+
+> Một build trong POE2 gồm 4 mảnh khớp với nhau: **skill chính** (cách bạn gây sát thương), **phòng thủ** (cách bạn sống), **cây passive + ascendancy** (cách bạn khuếch đại cả hai), và **trang bị** (nơi lấp các chỉ số còn thiếu). Quy trình dưới đây dựng từng mảnh theo thứ tự ít hối tiếc nhất.
+
+## Nguyên tắc số 1: sống trước, sát thương sau
+
+Trước khi vào 7 bước, ghi nhớ tư tưởng quan trọng nhất: **một build không sống được thì không có DPS nào cứu nổi**. Quái chết bạn không quan trọng bằng việc bạn không chết. Người mới gần như luôn làm ngược — dồn hết vào sát thương, rồi bị one-shot (chết một phát) trong map.
+
+Cách giữ kỷ luật: ở **mỗi** bước phía dưới, tự hỏi *"thay đổi này làm tôi sống dai hơn hay dễ chết hơn?"*. Nền tảng phòng thủ (kháng max, đủ máu/ES) là thứ không được thương lượng. Vì sao phòng thủ phải lớn lên theo sát thương, xem bài [Cộng dồn sát thương](/lo-trinh/chuong-4-passive-tree/cong-don-sat-thuong/) và [Phòng thủ](/lo-trinh/chuong-2-co-che-cot-loi/phong-thu/).
+
+## Làm thế này — 7 bước thiết kế build
+
+### Bước 1 — Chọn skill chính và HIỂU cách nó gây sát thương
+
+Bắt đầu từ **một skill bạn thấy thích chơi** (cảm giác bấm sướng quan trọng hơn bạn nghĩ — bạn sẽ bấm nó hàng vạn lần). Nhưng đừng dừng ở "thấy ngầu": phải biết **skill đó gây sát thương kiểu gì**, vì cái đó quyết định mọi thứ sau.
+
+Tự hỏi vài câu:
+
+- Nó là **Attack** (đòn đánh, dùng vũ khí) hay **Spell** (phép, dùng gem level)? Đòn đánh scale theo **vũ khí**; phép scale theo **level gem + chỉ số phép**.
+- Loại sát thương gì: **Physical, Fire, Cold, Lightning, hay Chaos**? Cái này quyết định bạn cần đẩy "% increased loại nào".
+- Nó gây sát thương bằng **hit trực tiếp** hay qua **ailment/hiệu ứng theo thời gian** (ví dụ Ignite cháy, Poison độc)?
+- Nó cần **đến gần** (melee/cận chiến) hay **đánh từ xa**? Cái này ảnh hưởng lớn tới phòng thủ ở Bước 2.
+
+Hiểu skill scale theo gì giúp bạn **không lấy nhầm chỉ số vô dụng** (ví dụ lấy "increased Attack Damage" cho một build phép — vô tác dụng). Nền tảng "more vs increased" và skill tag ở bài [Cộng dồn sát thương](/lo-trinh/chuong-4-passive-tree/cong-don-sat-thuong/); cơ chế skill gem ở [Skill gem & support](/lo-trinh/chuong-2-co-che-cot-loi/skill-gem-support/).
+
+### Bước 2 — Quyết định lớp phòng thủ (làm NGAY, đừng để cuối)
+
+Đây là bước người mới hay bỏ qua. Trước khi nghĩ tới DPS, chốt **bộ khung sống sót**:
+
+1. **Kho máu**: chủ yếu **Life (máu)** hay **Energy Shield (ES, lá chắn)**? (Một số class thiên ES, một số thiên Life — chọn theo class/ascendancy ở Bước 4.)
+2. **Kháng (Resistances)**: kế hoạch để **đẩy Lửa/Băng/Sét lên trần 75%** càng sớm càng tốt. Đây là phòng thủ quan trọng nhất và gần như miễn phí qua trang bị.
+3. **Một lớp giảm sát thương (mitigation)**: chọn **một** thứ chính để dựa vào — **Armour** (giảm đòn vật lý lớn kém hiệu quả, đòn nhỏ tốt), **Evasion** (né), **Block** (chặn), hoặc dựa vào ES tái tạo nhanh. Đừng cố ôm hết; chọn một lớp hợp với skill (melee thường cần dày hơn ranged).
+
+Chi tiết từng lớp ở bài [Phòng thủ](/lo-trinh/chuong-2-co-che-cot-loi/phong-thu/) và [Sát thương & hiệu ứng](/lo-trinh/chuong-2-co-che-cot-loi/sat-thuong-va-hieu-ung/) (cho ailment như freeze/shock cần chống). Theo [Maxroll — Defence Guide](https://maxroll.gg/poe2/getting-started/defence-guide), sát thương của quái trong map được cân bằng quanh giả định bạn **đã max kháng** — nên coi kháng là điều kiện cần, không phải tùy chọn.
+
+### Bước 3 — Chọn support gem để KHUẾCH ĐẠI skill chính
+
+Giờ quay lại skill chính và gắn **support gem** để nó mạnh lên. Nguyên tắc chọn:
+
+- Ưu tiên support cho **"more" multiplier** (nhân lên) — mạnh hơn "increased" nhiều, xem [Cộng dồn sát thương](/lo-trinh/chuong-4-passive-tree/cong-don-sat-thuong/).
+- Chỉ chọn support mà **skill thật sự dùng được** (đúng tag). Support sát thương vật lý không giúp một skill thuần Fire.
+- Cân nhắc support **bù khuyết điểm**: thiếu trúng đích thì thêm chính xác, hết mana thì thêm hiệu quả mana, v.v.
+
+Lưu ý POE2: mỗi skill gem có **số ô support riêng** và support tiêu tốn theo cơ chế gem hiện hành — đọc lại [Skill gem & support](/lo-trinh/chuong-2-co-che-cot-loi/skill-gem-support/) để nắm cách lắp. Cũng nhớ tới [Spirit](/lo-trinh/chuong-2-co-che-cot-loi/spirit/) nếu bạn định chạy aura/buff thường trực — Spirit là "ngân sách" cho các kỹ năng thường trực đó.
+
+### Bước 4 — Tìm đường đi cây passive + ascendancy hợp build
+
+Giờ mới mở cây. Đừng tô bừa — **đi theo cụm (cluster) phục vụ đúng thứ đã chọn ở Bước 1–3**:
+
+1. Nhắm các **notable** (ô lớn) cộng đúng loại sát thương và đúng cơ chế skill của bạn.
+2. Trên đường đi, **nhặt các ô máu/ES và kháng** tiện đường — đừng đi vòng xa chỉ vì một ô sát thương nhỏ.
+3. Chọn **ascendancy** (lớp chuyên hóa) **củng cố hướng build**: ví dụ build dựa ailment thì chọn ascendancy đẩy ailment. Ascendancy là bội số lớn nhất nên hãy để nó dẫn đường, không phải dán vào sau.
+
+Cách đọc cây và lập kế hoạch ở [Đọc cây passive](/lo-trinh/chuong-4-passive-tree/doc-cay-passive/); chọn ascendancy ở [Ascendancy](/lo-trinh/chuong-1-class-ascendancy/ascendancy/). Mẹo: **vạch cây trong PoB2 trước** (Bước 6) rồi mới tô trong game, vì refund tốn Gold.
+
+### Bước 5 — Đặt ưu tiên chỉ số trên trang bị
+
+Trang bị là nơi **lấp những gì cây passive chưa cho**. Lập một danh sách ưu tiên, đại khái:
+
+1. **Kháng cho đủ max** (thường là việc của trang bị) — ưu tiên cao nhất.
+2. **Máu/ES** trên các slot lớn (áo giáp, mũ, v.v.).
+3. **Chỉ số sát thương** đúng loại skill (ví dụ vũ khí có flat damage đúng loại, hoặc % spell damage).
+4. **Tiện ích**: tốc độ đánh/cast, chống ailment, di chuyển.
+
+Cách đọc một món đồ và biết affix nào đáng ở [Đọc một món đồ](/lo-trinh/chuong-5-trang-bi/doc-mot-mon-do/) và [Affix & ilvl](/lo-trinh/chuong-5-trang-bi/affix-va-ilvl/). Nếu định tự chế đồ thay vì mua, xem [Crafting cơ bản](/lo-trinh/chuong-6-crafting/cong-thuc-co-ban/). Mẹo người mới: **mua đồ "rương" rẻ cho đủ kháng trước**, để dành slot vũ khí cho khoản đầu tư lớn.
+
+### Bước 6 — Kiểm chứng trong PoB2 TRƯỚC khi tiêu currency
+
+Dựng toàn bộ ý tưởng trên vào **Path of Building 2 (PoB2)** và **xem con số thật** trước khi bỏ một xu trong game:
+
+- Cây passive + ascendancy đã chọn ở Bước 4.
+- Skill + support ở Bước 1, 3.
+- Trang bị giả định ở Bước 5 (cứ điền đồ "mục tiêu" để xem nếu đạt thì mạnh cỡ nào).
+
+Rồi đọc 3 nhóm số: **DPS** (đủ giết quái chưa), **Life/ES** (kho máu đủ dày chưa), **Resistances** (đã max chưa, có lỗ hổng nào không). Cách dùng PoB2 ở mức sâu — so cây, thử swap, đọc EHP, soi lỗ kháng — nằm trọn ở bài [PoB2 nâng cao](/lo-trinh/chuong-9-build-theorycraft/pob2-nang-cao/). Bài cài đặt & nhập build cơ bản ở [Path of Building 2](/lo-trinh/chuong-4-passive-tree/path-of-building-2/).
+
+### Bước 7 — Lặp lại (build là vòng lặp, không phải đích đến)
+
+Hiếm khi đúng ngay lần đầu. Nhìn con số ở Bước 6 rồi quay lại sửa:
+
+- **DPS thừa, máu mỏng?** → đổi vài ô sát thương sang máu/ES (nhớ nguyên tắc số 1).
+- **Sống tốt nhưng giết chậm?** → tìm thêm "more" multiplier (support/ascendancy) trước khi nhồi "increased".
+- **Thiếu kháng?** → đổi một món đồ hoặc một nhánh cây.
+
+Cứ lặp Bước 1–6 cho tới khi bảng số "đủ sống + đủ giết" cho mục tiêu của bạn (đẩy campaign, hay farm map, hay đánh boss endgame — mỗi mục tiêu yêu cầu khác nhau, xem [Pinnacle boss](/lo-trinh/chuong-7-endgame-atlas/pinnacle-boss/) nếu nhắm boss cuối). **Build là vòng lặp sửa dần**, không phải thứ chốt một lần.
+
+## Một sai lầm phổ biến cần tránh
+
+**Đi theo "tổng số to" mà không hỏi vì sao.** Thấy một notable cộng "+40% increased Damage" rồi vồ lấy, dù nó nằm xa và bạn phải đi 5 ô trống để tới. Năm ô đó nếu nhặt được máu/kháng tiện đường có khi giá trị hơn. Luôn hỏi: *"ô này phục vụ skill/phòng thủ của tôi, hay chỉ to cho vui?"*
+
+<Hop variant="thuatngu">
+
+| Tiếng Anh | Tiếng Việt / Giải thích |
+|-----------|------------------------|
+| Build | Cấu hình tổng thể của nhân vật (skill + cây + đồ + ascendancy) |
+| Theorycraft | Tính toán/thiết kế build trên lý thuyết trước khi chơi |
+| Main skill / Core skill | Skill chính — đòn gây sát thương chủ lực |
+| Attack / Spell | Đòn đánh (theo vũ khí) / Phép (theo level gem) |
+| Hit | Đòn trúng trực tiếp |
+| Ailment | Hiệu ứng bất lợi (Ignite cháy, Poison độc, Freeze đóng băng, Shock…) |
+| Support gem | Gem hỗ trợ — gắn vào để khuếch đại skill chính |
+| Increased / More | % cộng dồn / % nhân lên (more mạnh hơn) |
+| Life / Energy Shield (ES) | Máu / Lá chắn năng lượng — "kho máu" |
+| Resistances | Kháng nguyên tố (Lửa/Băng/Sét) và Chaos |
+| Resistance cap | Trần kháng (mặc định 75%) |
+| Mitigation | Lớp giảm sát thương (Armour/Evasion/Block…) |
+| Armour / Evasion / Block | Giáp giảm sát thương / Né đòn / Chặn đòn |
+| Notable | Ô passive lớn cho hiệu ứng mạnh |
+| Cluster | Cụm các ô passive gần nhau |
+| Ascendancy | Lớp chuyên hóa của class |
+| Spirit | "Ngân sách" cho kỹ năng thường trực (aura/buff) |
+| DPS | Sát thương mỗi giây — chỉ số so sánh độ mạnh |
+| EHP (Effective HP) | Lượng máu hiệu dụng sau khi tính phòng thủ |
+| One-shot | Bị giết chỉ trong một đòn |
+| Affix | Dòng chỉ số ngẫu nhiên trên đồ |
+
+</Hop>
+
+<Hop variant="nguon">
+
+- [Damage Scaling — Maxroll POE2](https://maxroll.gg/poe2/getting-started/damage-scaling)
+- [Defence Guide — Maxroll POE2](https://maxroll.gg/poe2/getting-started/defence-guide)
+- [Path of Building 2 — GitHub chính thức (PathOfBuildingCommunity)](https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2)
+- [Path of Exile 2 — trang chính thức](https://www.pathofexile.com/poe2)
+
+> ⚠️ **Lưu ý:** Cơ chế sát thương/phòng thủ và "skill nào đáng chơi" đổi theo patch (POE2 Early Access). Quy trình trong bài là tư duy ổn định, nhưng **con số và mức cân bằng cần kiểm lại** ở patch hiện hành.
+
+</Hop>
+
+<Hop variant="mauchot">
+
+- **Sống trước, sát thương sau** — ở mỗi bước tự hỏi "tôi sống dai hơn hay dễ chết hơn?".
+- Trình tự: **skill chính (+ hiểu cách scale) → phòng thủ → support → cây + ascendancy → trang bị → kiểm PoB2 → lặp**.
+- Mọi mảnh phải **kéo về cùng một hướng**: support đúng tag, cây đúng loại sát thương, ascendancy củng cố hướng.
+- **Kiểm trong PoB2 trước khi tiêu currency** — đọc DPS, Life/ES, Resistances rồi mới sửa.
+- **Build là vòng lặp**, không phải chốt một lần; đừng vồ "số to" nếu nó không phục vụ skill/phòng thủ.
+
+</Hop>

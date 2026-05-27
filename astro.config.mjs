@@ -111,7 +111,15 @@ export default defineConfig({
                 { label: 'Tư duy ROI', link: '/lo-trinh/chuong-8-kinh-te-kiem-tien/tu-duy-roi/' },
               ],
             },
-            { label: 'Chương 9 — Tự cook Build', link: '/lo-trinh/chuong-9-build-theorycraft/' },
+            {
+              label: 'Chương 9 — Tự cook Build',
+              items: [
+                { label: 'Tổng quan chương', link: '/lo-trinh/chuong-9-build-theorycraft/' },
+                { label: 'Quy trình thiết kế build', link: '/lo-trinh/chuong-9-build-theorycraft/quy-trinh-thiet-ke-build/' },
+                { label: 'PoB2 nâng cao', link: '/lo-trinh/chuong-9-build-theorycraft/pob2-nang-cao/' },
+                { label: 'Đọc meta & biến tấu', link: '/lo-trinh/chuong-9-build-theorycraft/doc-meta-va-bien-tau/' },
+              ],
+            },
             { label: 'Chương 10 — Tài nguyên & Patch', link: '/lo-trinh/chuong-10-tai-nguyen-patch/' },
           ],
         },
