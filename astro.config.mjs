@@ -90,7 +90,17 @@ export default defineConfig({
                 { label: 'Công thức cơ bản', link: '/lo-trinh/chuong-6-crafting/cong-thuc-co-ban/' },
               ],
             },
-            { label: 'Chương 7 — Endgame: Atlas & Maps', link: '/lo-trinh/chuong-7-endgame-atlas/' },
+            {
+              label: 'Chương 7 — Endgame: Atlas & Maps',
+              items: [
+                { label: 'Tổng quan chương', link: '/lo-trinh/chuong-7-endgame-atlas/' },
+                { label: 'Mở khóa endgame', link: '/lo-trinh/chuong-7-endgame-atlas/mo-khoa-endgame/' },
+                { label: 'Waystone & Map', link: '/lo-trinh/chuong-7-endgame-atlas/waystone-va-map/' },
+                { label: 'Cây Atlas', link: '/lo-trinh/chuong-7-endgame-atlas/cay-atlas/' },
+                { label: 'Cơ chế trong map', link: '/lo-trinh/chuong-7-endgame-atlas/co-che-trong-map/' },
+                { label: 'Pinnacle boss', link: '/lo-trinh/chuong-7-endgame-atlas/pinnacle-boss/' },
+              ],
+            },
             { label: 'Chương 8 — Kinh tế & Kiếm tiền', link: '/lo-trinh/chuong-8-kinh-te-kiem-tien/' },
             { label: 'Chương 9 — Tự cook Build', link: '/lo-trinh/chuong-9-build-theorycraft/' },
             { label: 'Chương 10 — Tài nguyên & Patch', link: '/lo-trinh/chuong-10-tai-nguyen-patch/' },

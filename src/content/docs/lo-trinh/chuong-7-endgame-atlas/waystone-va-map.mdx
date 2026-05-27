@@ -1,0 +1,118 @@
+---
+title: Waystone & Map — "đá mở cổng" bản đồ endgame
+description: Waystone là vật phẩm bạn đặt vào Map Device để mở một map. Bài này giải thích tier, rarity/quality, cách map "tự nuôi" Waystone, hệ Tower & Tablet, và vòng lặp chạy map cho người mới.
+lastUpdated: 2026-05-27
+---
+
+import Hop from '@components/Hop.astro';
+
+:::tip[👉 Bài này bạn sẽ hiểu được]
+- **Waystone** là gì và vì sao nó là "chìa khóa" của cả phần endgame.
+- **Tier (bậc)** và **rarity/quality** của Waystone ảnh hưởng độ khó và phần thưởng ra sao.
+- **Map sustain** (nuôi Waystone) là gì — vì sao bạn chạy map mãi mà không hết Waystone.
+- **Tower & Precursor Tablet** là gì (sơ lược) — cách thêm cơ chế vào nhiều map cùng lúc.
+- **Làm thế này:** vòng lặp chạy map an toàn cho người mới.
+:::
+
+## Waystone là gì?
+
+**Waystone (đá mở cổng bản đồ)** là một **vật phẩm tiêu hao** — bạn đặt nó vào **Map Device (máy mở bản đồ)**, máy mở ra một map, bạn vào cày. Chạy xong thì viên Waystone đó **biến mất**. Muốn chạy map khác → cần Waystone khác.
+
+Nói cách khác: trong endgame, **không có Waystone = không vào được map**. Vì thế "làm sao luôn có Waystone để chạy" là kỹ năng quan trọng nhất ở giai đoạn này (xem mục map sustain bên dưới).
+
+> ⚠️ POE2 đang Early Access (bản 0.5.x). Hệ Waystone/Tower/Tablet **đã đổi qua các patch** (bản 0.5.0 vừa chỉnh cách Tablet hoạt động). Bài này theo bản hiện hành; chi tiết con số/cơ chế **có thể đổi** — đọc mô tả ngay trên viên Waystone trong game.
+
+## Tier — bậc của Waystone
+
+Mỗi Waystone có một **tier (bậc)**, thường ký hiệu bằng số La Mã từ **I đến XVI** (1 → 16). Theo [Maxroll](https://maxroll.gg/poe2/resources/atlas-of-worlds-and-mapping):
+
+- **Tier quyết định cấp độ quái trong map** → quái càng cao thì **đồ rơi ra có item level cao hơn** (đồ "xịn nền" hơn).
+- Màu sắc cho biết khoảng độ khó: **tier I–V màu trắng**, **tier VI–X màu vàng**, **tier XI–XV màu đỏ** (các tier đỏ cao nhất là vùng thưởng tốt nhất).
+- **Tier XVI** thường chỉ có được bằng cách **làm "hỏng" (corrupt)** một Waystone tier XV bằng **Vaal Orb** *(chi tiết có thể đổi theo patch)*.
+
+**Cho người mới:** cứ bắt đầu từ tier thấp (trắng), quen tay rồi leo dần. Đừng nhảy thẳng lên tier đỏ — quái mạnh, dễ chết.
+
+## Rarity & Quality — Waystone cũng "chế" được
+
+Giống trang bị, Waystone có **rarity (độ hiếm)**: Normal (trắng) → Magic (xanh dương) → Rare (vàng). Rarity càng cao thì Waystone mang được **càng nhiều dòng mod**. Bạn có thể **dùng currency orb** (Transmutation, Augmentation, Alchemy…) để "chế" mod lên Waystone — y như chế đồ (xem [Chương 6 — Currency Orbs](/lo-trinh/chuong-6-crafting/currency-orbs/)).
+
+Điểm mấu chốt (theo [Maxroll](https://maxroll.gg/poe2/resources/atlas-of-worlds-and-mapping)): **mỗi dòng mod trên Waystone vừa làm map khó hơn vừa làm thưởng nhiều hơn** cùng lúc — tăng số lượng/độ hiếm đồ rơi, tăng mật độ quái, nhưng cũng tăng máu/sát thương/kháng của quái.
+
+Ngoài ra Waystone còn có **quality (chất lượng, %)** — tăng quality giúp map thưởng tốt hơn một chút.
+
+> ⚠️ **Bẫy người mới:** đừng "chế nặng" (nhiều mod khó) một Waystone tier cao khi đồ bạn còn yếu — map sẽ vượt sức và bạn **mất luôn viên Waystone** vì chết. Chế vừa phải, leo từ từ.
+
+## Map sustain — vì sao chạy mãi không hết Waystone
+
+**Map sustain (nuôi Waystone)** nghĩa là: bạn chạy map và **nhặt được Waystone mới ngay trong map đó**, đủ để chạy tiếp — vòng lặp tự nuôi chính nó. Theo [Maxroll](https://maxroll.gg/poe2/resources/atlas-of-worlds-and-mapping):
+
+- Quái cấp cao có **cơ hội rơi Waystone tier kế tiếp**, nên bạn dần leo tier một cách tự nhiên.
+- **Boss cuối map (map boss)** thường rơi Waystone **tier cao hơn map hiện tại** → đây là nguồn leo tier ổn định, nên **luôn giết boss map**.
+- Điểm vài node trong **cây Atlas** vào "Waystone có cơ hội ra tier cao hơn" giúp sustain mượt hơn (xem [bài Cây Atlas](/lo-trinh/chuong-7-endgame-atlas/cay-atlas/)).
+
+Nếu bị "tụt" (cạn Waystone), cứ lùi về tier thấp chạy vài map gom lại, hoặc mua Waystone tier thấp từ NPC, rồi leo lại.
+
+## Tower & Precursor Tablet (sơ lược)
+
+Trên Atlas có những **Precursor Tower (tháp tiền nhân)** rải rác. Theo [Maxroll](https://maxroll.gg/poe2/resources/rolling-waystones-and-precursor-tablets), chạy xong một Tower sẽ **"soi sáng" một vùng map xung quanh** nó (cho bạn thấy và chạy các map gần đó).
+
+**Precursor Tablet (phiến tiền nhân)** là vật phẩm bạn dùng để **thêm cơ chế (league mechanic) vào các map** — ví dụ thêm Breach, thêm Ritual vào loạt map bạn sắp chạy. Theo Maxroll, **từ bản 0.5.0** cách Tablet áp dụng đã được chỉnh (Tablet giờ tác động lên các **map** trong vùng). Hệ này cũng **tự nuôi**: dùng Tablet loại nào thì có xu hướng nhặt lại nhiều Tablet loại đó.
+
+> ⚠️ Hệ Tower/Tablet là phần **dễ đổi theo patch nhất** trong endgame (đã đổi nhiều lần). Người mới chỉ cần nhớ ý tưởng: **Tower mở vùng map, Tablet thêm cơ chế cho map**. Cày quen rồi học sâu sau cũng kịp.
+
+## Làm thế này — vòng lặp chạy map cho người mới
+
+1. **Mở Map Device, đặt một Waystone tier thấp vào, vào map.**
+2. **Dọn sạch map** (đánh hết quái lẻ và pack quái), nhặt đồ + Waystone rơi ra.
+3. **Luôn tìm và giết boss cuối map** — boss rơi Waystone tier cao hơn để bạn leo dần.
+4. **Chạy xong → quay về thị trấn**, bán/cất đồ, chọn viên Waystone tier kế tiếp.
+5. Khi đã dư Waystone, **dùng Orb of Alchemy** lên Waystone để nó thành Rare (nhiều mod hơn) → thưởng nhiều hơn. Bắt đầu nhẹ, theo dõi xem mình có gánh nổi không.
+6. **Lặp lại**, leo tier từ từ. Hay chết → dừng lại nâng kháng/đồ rồi mới leo.
+
+<Hop variant="thuatngu">
+
+| Tiếng Anh | Tiếng Việt / Giải thích |
+|-----------|------------------------|
+| Waystone | Đá mở cổng bản đồ — vật phẩm tiêu hao để mở một map |
+| Map Device | Máy mở bản đồ — đặt Waystone vào để vào map |
+| Map | Bản đồ — khu vực endgame được mở ra để cày |
+| Tier | Bậc (I–XVI) — quyết định cấp quái và mức thưởng của map |
+| Rarity | Độ hiếm của Waystone (Normal / Magic / Rare) — càng cao càng nhiều mod |
+| Quality | Chất lượng (%) — tăng nhẹ phần thưởng của map |
+| Mod / Modifier | Dòng thuộc tính trên Waystone — tăng cả độ khó lẫn thưởng |
+| Item Level (ilvl) | Cấp món đồ — quyết định món đồ "nền" mạnh tới đâu |
+| Map sustain | "Nuôi" Waystone — nhặt Waystone mới khi chạy map để chạy tiếp |
+| Map Boss | Boss cuối map — thường rơi Waystone tier cao hơn |
+| Precursor Tower | Tháp tiền nhân — chạy xong sẽ mở (soi sáng) vùng map quanh nó |
+| Precursor Tablet | Phiến tiền nhân — thêm cơ chế (league mechanic) vào các map |
+| Vaal Orb | Currency làm "hỏng" (corrupt) đồ/Waystone — liên quan tạo tier XVI |
+| Corrupt | "Làm hỏng/khóa" — trạng thái sau khi dùng Vaal Orb |
+
+</Hop>
+
+<Hop variant="nguon">
+
+- [Atlas of Worlds and Mapping — Maxroll](https://maxroll.gg/poe2/resources/atlas-of-worlds-and-mapping)
+- [Rolling Waystones and Precursor Tablets — Maxroll](https://maxroll.gg/poe2/resources/rolling-waystones-and-precursor-tablets)
+- [Atlas Tips and Tricks — Maxroll](https://maxroll.gg/poe2/getting-started/atlas-tips-and-tricks)
+- [0.5.0 Patch Notes "Return of the Ancients" — pathofexile.com](https://www.pathofexile.com/forum/view-thread/3932540)
+- [Trang chính thức Path of Exile 2](https://www.pathofexile.com/poe2)
+
+> ⚠️ **Lưu ý:** Số tier, màu, cách Tower/Tablet hoạt động và cách sustain **có thể đổi theo patch** trong Early Access (0.5.0 vừa chỉnh Tablet) — xác minh lại trong game.
+
+</Hop>
+
+:::note[📊 Số liệu sống — kiểm tra trước khi dùng]
+- Giá Waystone / Tablet / currency thực tế: [poe.ninja/economy](https://poe.ninja/economy)
+- Giá mua bán cụ thể: [pathofexile.com/trade2](https://www.pathofexile.com/trade2)
+:::
+
+<Hop variant="mauchot">
+
+- **Waystone = "đá mở cổng"** đặt vào Map Device để mở một map; chạy xong là **mất** — luôn phải có Waystone mới để chơi tiếp.
+- **Tier** quyết định cấp quái + mức thưởng (I→XVI, trắng→vàng→đỏ); **rarity/quality + mod** làm map vừa khó hơn vừa thưởng nhiều hơn.
+- **Map sustain:** giết **boss cuối map** và điểm Atlas vào "Waystone tier cao hơn" → chạy mãi không cạn, leo tier tự nhiên.
+- **Tower mở vùng map, Tablet thêm cơ chế** cho map — phần này dễ đổi theo patch, người mới chỉ cần nhớ ý tưởng.
+- **Vòng lặp:** mở map tier thấp → dọn sạch + giết boss → nhặt Waystone → Alchemy nhẹ để thưởng nhiều hơn → leo tier từ từ.
+
+</Hop>
