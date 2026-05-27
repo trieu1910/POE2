@@ -18,11 +18,11 @@ lastUpdated: 2026-05-27
 
 Đọc theo thứ tự này là hợp lý nhất:
 
-- **[Mở khóa endgame](/lo-trinh/chuong-7-endgame-atlas/mo-khoa-endgame/)** — Endgame mở ra thế nào sau khi xong cốt truyện (khoảng cấp 65), bước chuyển từ "đi truyện" sang "chạy map", và việc đầu tiên nên làm khi vừa tới map.
-- **[Waystone & Map](/lo-trinh/chuong-7-endgame-atlas/waystone-va-map/)** — Waystone là gì, tier (bậc), cách bỏ Waystone vào Map Device để mở một map, cách "nuôi" Waystone để chạy mãi không hết, và rarity/quality của Waystone ảnh hưởng phần thưởng ra sao. Kèm vòng lặp chạy map cho người mới.
-- **[Cây Atlas](/lo-trinh/chuong-7-endgame-atlas/cay-atlas/)** — Cây kỹ năng Atlas là gì (khác hẳn cây passive của nhân vật), cách kiếm điểm Atlas, và cách nó cho bạn **chuyên môn hóa** loại nội dung muốn gặp. Kèm gợi ý điểm Atlas đầu tiên cho người mới.
-- **[Cơ chế trong map](/lo-trinh/chuong-7-endgame-atlas/co-che-trong-map/)** — Các cơ chế (league mechanic) xuất hiện bên trong map: Breach, Ritual, Expedition, Delirium, Abyss, Strongbox, Essence… Mỗi cái là gì và vì sao đáng cày.
-- **[Pinnacle boss](/lo-trinh/chuong-7-endgame-atlas/pinnacle-boss/)** — Pinnacle boss (boss đỉnh) là gì, cách mở chúng bằng mảnh/chìa khóa nhặt khi chạy map, và vì sao chúng là mục tiêu thử thách + phần thưởng lớn nhất.
+- **[Mở khóa endgame](/POE2/lo-trinh/chuong-7-endgame-atlas/mo-khoa-endgame/)** — Endgame mở ra thế nào sau khi xong cốt truyện (khoảng cấp 65), bước chuyển từ "đi truyện" sang "chạy map", và việc đầu tiên nên làm khi vừa tới map.
+- **[Waystone & Map](/POE2/lo-trinh/chuong-7-endgame-atlas/waystone-va-map/)** — Waystone là gì, tier (bậc), cách bỏ Waystone vào Map Device để mở một map, cách "nuôi" Waystone để chạy mãi không hết, và rarity/quality của Waystone ảnh hưởng phần thưởng ra sao. Kèm vòng lặp chạy map cho người mới.
+- **[Cây Atlas](/POE2/lo-trinh/chuong-7-endgame-atlas/cay-atlas/)** — Cây kỹ năng Atlas là gì (khác hẳn cây passive của nhân vật), cách kiếm điểm Atlas, và cách nó cho bạn **chuyên môn hóa** loại nội dung muốn gặp. Kèm gợi ý điểm Atlas đầu tiên cho người mới.
+- **[Cơ chế trong map](/POE2/lo-trinh/chuong-7-endgame-atlas/co-che-trong-map/)** — Các cơ chế (league mechanic) xuất hiện bên trong map: Breach, Ritual, Expedition, Delirium, Abyss, Strongbox, Essence… Mỗi cái là gì và vì sao đáng cày.
+- **[Pinnacle boss](/POE2/lo-trinh/chuong-7-endgame-atlas/pinnacle-boss/)** — Pinnacle boss (boss đỉnh) là gì, cách mở chúng bằng mảnh/chìa khóa nhặt khi chạy map, và vì sao chúng là mục tiêu thử thách + phần thưởng lớn nhất.
 
 ## Học xong chương này bạn sẽ
 

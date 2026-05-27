@@ -18,9 +18,9 @@ Mục tiêu không phải biến bạn thành theorycrafter (người tính toá
 
 Đọc theo thứ tự này là hợp lý nhất:
 
-- **[Quy trình thiết kế build](/lo-trinh/chuong-9-build-theorycraft/quy-trinh-thiet-ke-build/)** — Một quy trình 7 bước lặp được để dựng build từ con số 0: chọn skill chính + cách nó gây sát thương, chọn lớp phòng thủ, chọn support, tìm đường đi cây passive + ascendancy, đặt ưu tiên trang bị, kiểm trong PoB2, rồi lặp lại. Tư tưởng xuyên suốt: **sống trước, sát thương sau**.
-- **[PoB2 nâng cao](/lo-trinh/chuong-9-build-theorycraft/pob2-nang-cao/)** — Dùng Path of Building 2 sâu hơn để **kiểm chứng** một build: so sánh hai cây passive, thử đổi gem/support, đọc số DPS và EHP/phòng thủ, nhập mã build của người khác để học, và soi lỗ hổng kháng. (Nối tiếp bài PoB2 cơ bản ở Chương 4.)
-- **[Đọc meta & biến tấu](/lo-trinh/chuong-9-build-theorycraft/doc-meta-va-bien-tau/)** — Cách đọc build "meta" (từ poe.ninja và guide Maxroll) và **chỉnh cho hợp túi tiền + hoàn cảnh của bạn** thay vì copy mù: hiểu **vì sao** một build mạnh, phân biệt món đồ "carry" đắt tiền với phần lõi rẻ, và cách thay thế. Đây là trang "học từ meta, rồi biến thành của mình".
+- **[Quy trình thiết kế build](/POE2/lo-trinh/chuong-9-build-theorycraft/quy-trinh-thiet-ke-build/)** — Một quy trình 7 bước lặp được để dựng build từ con số 0: chọn skill chính + cách nó gây sát thương, chọn lớp phòng thủ, chọn support, tìm đường đi cây passive + ascendancy, đặt ưu tiên trang bị, kiểm trong PoB2, rồi lặp lại. Tư tưởng xuyên suốt: **sống trước, sát thương sau**.
+- **[PoB2 nâng cao](/POE2/lo-trinh/chuong-9-build-theorycraft/pob2-nang-cao/)** — Dùng Path of Building 2 sâu hơn để **kiểm chứng** một build: so sánh hai cây passive, thử đổi gem/support, đọc số DPS và EHP/phòng thủ, nhập mã build của người khác để học, và soi lỗ hổng kháng. (Nối tiếp bài PoB2 cơ bản ở Chương 4.)
+- **[Đọc meta & biến tấu](/POE2/lo-trinh/chuong-9-build-theorycraft/doc-meta-va-bien-tau/)** — Cách đọc build "meta" (từ poe.ninja và guide Maxroll) và **chỉnh cho hợp túi tiền + hoàn cảnh của bạn** thay vì copy mù: hiểu **vì sao** một build mạnh, phân biệt món đồ "carry" đắt tiền với phần lõi rẻ, và cách thay thế. Đây là trang "học từ meta, rồi biến thành của mình".
 
 ## Học xong chương này bạn sẽ
 

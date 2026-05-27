@@ -3,8 +3,10 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import starlightLinksValidator from 'starlight-links-validator';
 
-// LƯU Ý: cập nhật `site` và `base` sau khi biết tên repo GitHub (bước deploy).
+// GitHub Pages project site: https://trieu1910.github.io/POE2/
 export default defineConfig({
+  site: 'https://trieu1910.github.io',
+  base: '/POE2',
   integrations: [
     starlight({
       title: 'Master POE 2',

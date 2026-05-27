@@ -20,9 +20,9 @@ lastUpdated: 2026-05-27
 
 Đọc theo thứ tự này là hợp lý nhất:
 
-- **[Currency Orbs](/lo-trinh/chuong-6-crafting/currency-orbs/)** — Bộ orb chế đồ cốt lõi và mỗi viên LÀM GÌ trong POE2 (đã xác minh): Transmutation, Augmentation, Regal, Alchemy, Chaos, Exalted, Divine, Vaal, Annulment, Chance… Phân biệt orb "dùng như tiền" vs orb "dùng để chế", và orb nào người mới đụng tới sớm.
-- **[Essence / Rune / Omen](/lo-trinh/chuong-6-crafting/essence-rune-omen/)** — Các hệ chế đồ khác trong POE2: Essence (đảm bảo một mod chỉ định), Rune & Soul Core (gắn vào ô socket trên đồ), và Omen (đổi cách orb chế đồ hoạt động).
-- **[Công thức cơ bản](/lo-trinh/chuong-6-crafting/cong-thuc-co-ban/)** — Vài quy trình chế đồ AN TOÀN cho người mới: Transmute → Augment → Regal lên Rare, dùng Alchemy trên đồ trắng, khi nào nên **mua thẳng** thay vì chế. Kèm cảnh báo crafting là cờ bạc, đừng đốt currency hiếm sớm.
+- **[Currency Orbs](/POE2/lo-trinh/chuong-6-crafting/currency-orbs/)** — Bộ orb chế đồ cốt lõi và mỗi viên LÀM GÌ trong POE2 (đã xác minh): Transmutation, Augmentation, Regal, Alchemy, Chaos, Exalted, Divine, Vaal, Annulment, Chance… Phân biệt orb "dùng như tiền" vs orb "dùng để chế", và orb nào người mới đụng tới sớm.
+- **[Essence / Rune / Omen](/POE2/lo-trinh/chuong-6-crafting/essence-rune-omen/)** — Các hệ chế đồ khác trong POE2: Essence (đảm bảo một mod chỉ định), Rune & Soul Core (gắn vào ô socket trên đồ), và Omen (đổi cách orb chế đồ hoạt động).
+- **[Công thức cơ bản](/POE2/lo-trinh/chuong-6-crafting/cong-thuc-co-ban/)** — Vài quy trình chế đồ AN TOÀN cho người mới: Transmute → Augment → Regal lên Rare, dùng Alchemy trên đồ trắng, khi nào nên **mua thẳng** thay vì chế. Kèm cảnh báo crafting là cờ bạc, đừng đốt currency hiếm sớm.
 
 ## Học xong chương này bạn sẽ
 

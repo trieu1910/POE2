@@ -18,10 +18,10 @@ lastUpdated: 2026-05-27
 
 Đọc theo thứ tự này là hợp lý nhất:
 
-- **[Currency giá trị](/lo-trinh/chuong-8-kinh-te-kiem-tien/currency-gia-tri/)** — Currency nào thực sự giữ giá và vì sao: Exalted Orb là đơn vị "tiền lẻ" hằng ngày, Divine Orb là đơn vị giá trị cao, cùng các món giá trị khác. Khái niệm "tỉ giá" giữa các currency, vì sao giá đổi suốt league, và cách đọc poe.ninja để tự nắm giá.
-- **[Trade & định giá](/lo-trinh/chuong-8-kinh-te-kiem-tien/trade-va-dinh-gia/)** — Cách dùng trang trade chính thức (trade2) để tìm đồ, cách whisper (nhắn) người bán (POE2 **không có nhà đấu giá tự động**), và cách tự định giá đồ của bạn bằng cách tra các tin rao tương tự. Có hướng dẫn từng bước cho giao dịch đầu tiên.
-- **[Các cách farm](/lo-trinh/chuong-8-kinh-te-kiem-tien/cac-cach-farm/)** — Bốn cách kiếm tiền chính: chạy map hiệu quả, đánh boss lấy đồ rớt giá trị, chế đồ để bán (flip), và đầu cơ currency/thị trường. Mỗi cách kèm cảnh báo cho người mới và gợi ý "người mới nên bắt đầu kiếm tiền từ đâu".
-- **[Tư duy ROI](/lo-trinh/chuong-8-kinh-te-kiem-tien/tu-duy-roi/)** — Tư duy như một nhà đầu tư: thời gian đổi lấy phần thưởng, chi phí cơ hội, không đổ currency mình không dám mất, theo dõi xem cái gì sinh lời với CHÍNH BẠN, và tránh lừa đảo / canh bạc rủi ro.
+- **[Currency giá trị](/POE2/lo-trinh/chuong-8-kinh-te-kiem-tien/currency-gia-tri/)** — Currency nào thực sự giữ giá và vì sao: Exalted Orb là đơn vị "tiền lẻ" hằng ngày, Divine Orb là đơn vị giá trị cao, cùng các món giá trị khác. Khái niệm "tỉ giá" giữa các currency, vì sao giá đổi suốt league, và cách đọc poe.ninja để tự nắm giá.
+- **[Trade & định giá](/POE2/lo-trinh/chuong-8-kinh-te-kiem-tien/trade-va-dinh-gia/)** — Cách dùng trang trade chính thức (trade2) để tìm đồ, cách whisper (nhắn) người bán (POE2 **không có nhà đấu giá tự động**), và cách tự định giá đồ của bạn bằng cách tra các tin rao tương tự. Có hướng dẫn từng bước cho giao dịch đầu tiên.
+- **[Các cách farm](/POE2/lo-trinh/chuong-8-kinh-te-kiem-tien/cac-cach-farm/)** — Bốn cách kiếm tiền chính: chạy map hiệu quả, đánh boss lấy đồ rớt giá trị, chế đồ để bán (flip), và đầu cơ currency/thị trường. Mỗi cách kèm cảnh báo cho người mới và gợi ý "người mới nên bắt đầu kiếm tiền từ đâu".
+- **[Tư duy ROI](/POE2/lo-trinh/chuong-8-kinh-te-kiem-tien/tu-duy-roi/)** — Tư duy như một nhà đầu tư: thời gian đổi lấy phần thưởng, chi phí cơ hội, không đổ currency mình không dám mất, theo dõi xem cái gì sinh lời với CHÍNH BẠN, và tránh lừa đảo / canh bạc rủi ro.
 
 ## Học xong chương này bạn sẽ
 

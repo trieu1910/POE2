@@ -19,8 +19,8 @@ Không cần đọc thuộc. Cứ đọc một lượt cho biết "có cái gì 
 
 ## Mục lục chương
 
-- **[Nguồn gốc & công cụ](/lo-trinh/chuong-10-tai-nguyen-patch/nguon-goc/)** — Danh bạ các nguồn và công cụ ngoài game, chia theo nhóm: **học cơ chế** (trang chính thức, POE Wiki), **tra database** (poe2db), **kinh tế** (poe.ninja, trang trade), **công cụ build** (Path of Building 2), và **lọc đồ** (FilterBlade của NeverSink). Kèm gợi ý 2–3 cái người mới nên bookmark đầu tiên.
-- **[Theo dõi patch](/lo-trinh/chuong-10-tai-nguyen-patch/theo-doi-patch/)** — Patch notes chính thức đăng ở đâu, "League" mới nghĩa là gì (reset nhân vật), cách nhận biết một guide (kể cả site này) đã lỗi thời, và một **thói quen đơn giản** để luôn cập nhật.
+- **[Nguồn gốc & công cụ](/POE2/lo-trinh/chuong-10-tai-nguyen-patch/nguon-goc/)** — Danh bạ các nguồn và công cụ ngoài game, chia theo nhóm: **học cơ chế** (trang chính thức, POE Wiki), **tra database** (poe2db), **kinh tế** (poe.ninja, trang trade), **công cụ build** (Path of Building 2), và **lọc đồ** (FilterBlade của NeverSink). Kèm gợi ý 2–3 cái người mới nên bookmark đầu tiên.
+- **[Theo dõi patch](/POE2/lo-trinh/chuong-10-tai-nguyen-patch/theo-doi-patch/)** — Patch notes chính thức đăng ở đâu, "League" mới nghĩa là gì (reset nhân vật), cách nhận biết một guide (kể cả site này) đã lỗi thời, và một **thói quen đơn giản** để luôn cập nhật.
 
 ## Học xong chương này bạn sẽ
 

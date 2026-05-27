@@ -20,9 +20,9 @@ Trang bị (gear) là một trong **ba trụ cột** quyết định nhân vật
 
 Đọc theo thứ tự này là hợp lý nhất:
 
-- **[Độ hiếm của đồ](/lo-trinh/chuong-5-trang-bi/do-hiem/)** — 4 bậc độ hiếm: Normal (trắng), Magic (xanh dương), Rare (vàng), Unique (cam/nâu). Mỗi bậc nghĩa là gì, đồ nào nên nhặt sớm, đồ nào kệ nó.
-- **[Affix & Item Level](/lo-trinh/chuong-5-trang-bi/affix-va-ilvl/)** — Affix (mod) là gì: prefix (tiền tố) vs suffix (hậu tố), implicit vs explicit; mỗi bậc độ hiếm có bao nhiêu mod; item level (ilvl) và base type (loại nền), và vì sao ilvl quyết định mod "xịn" cỡ nào được xuất hiện.
-- **[Đọc một món đồ](/lo-trinh/chuong-5-trang-bi/doc-mot-mon-do/)** — Cách đánh giá một món đồ có "ngon" cho **build của bạn** hay không: khớp chỉ số với build, đọc DPS vũ khí cơ bản, và thói quen luôn giữ kháng đầy. Kèm một checklist "giữ hay bỏ".
+- **[Độ hiếm của đồ](/POE2/lo-trinh/chuong-5-trang-bi/do-hiem/)** — 4 bậc độ hiếm: Normal (trắng), Magic (xanh dương), Rare (vàng), Unique (cam/nâu). Mỗi bậc nghĩa là gì, đồ nào nên nhặt sớm, đồ nào kệ nó.
+- **[Affix & Item Level](/POE2/lo-trinh/chuong-5-trang-bi/affix-va-ilvl/)** — Affix (mod) là gì: prefix (tiền tố) vs suffix (hậu tố), implicit vs explicit; mỗi bậc độ hiếm có bao nhiêu mod; item level (ilvl) và base type (loại nền), và vì sao ilvl quyết định mod "xịn" cỡ nào được xuất hiện.
+- **[Đọc một món đồ](/POE2/lo-trinh/chuong-5-trang-bi/doc-mot-mon-do/)** — Cách đánh giá một món đồ có "ngon" cho **build của bạn** hay không: khớp chỉ số với build, đọc DPS vũ khí cơ bản, và thói quen luôn giữ kháng đầy. Kèm một checklist "giữ hay bỏ".
 
 ## Học xong chương này bạn sẽ
 

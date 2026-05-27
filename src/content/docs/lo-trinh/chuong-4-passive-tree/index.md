@@ -20,9 +20,9 @@ Người mới nhìn cái cây thấy "rối như mạng nhện" và sợ. Đừ
 
 Đọc theo thứ tự này là hợp lý nhất:
 
-- **[Đọc cây passive](/lo-trinh/chuong-4-passive-tree/doc-cay-passive/)** — Phân biệt các loại ô: ô nhỏ (cộng chỉ số), notable (điểm đáng kể), keystone (đổi luật chơi), ô chỉ số (attribute), ô gắn ngọc (jewel socket). Bạn lấy điểm passive ở đâu, và người mới nên tiêu điểm sớm thế nào.
-- **[Path of Building 2](/lo-trinh/chuong-4-passive-tree/path-of-building-2/)** — Công cụ miễn phí giúp bạn dựng cây, xem DPS & phòng thủ, nhập build mẫu từ mã code. Lấy ở đâu và dùng cơ bản ra sao.
-- **[Cộng dồn sát thương](/lo-trinh/chuong-4-passive-tree/cong-don-sat-thuong/)** — Mô hình tư duy về scaling: khác biệt giữa "increased" và "more", vì sao sát thương cộng (flat) + % tăng + support gem phối hợp với nhau, và vì sao **phòng thủ phải lớn theo sát thương**.
+- **[Đọc cây passive](/POE2/lo-trinh/chuong-4-passive-tree/doc-cay-passive/)** — Phân biệt các loại ô: ô nhỏ (cộng chỉ số), notable (điểm đáng kể), keystone (đổi luật chơi), ô chỉ số (attribute), ô gắn ngọc (jewel socket). Bạn lấy điểm passive ở đâu, và người mới nên tiêu điểm sớm thế nào.
+- **[Path of Building 2](/POE2/lo-trinh/chuong-4-passive-tree/path-of-building-2/)** — Công cụ miễn phí giúp bạn dựng cây, xem DPS & phòng thủ, nhập build mẫu từ mã code. Lấy ở đâu và dùng cơ bản ra sao.
+- **[Cộng dồn sát thương](/POE2/lo-trinh/chuong-4-passive-tree/cong-don-sat-thuong/)** — Mô hình tư duy về scaling: khác biệt giữa "increased" và "more", vì sao sát thương cộng (flat) + % tăng + support gem phối hợp với nhau, và vì sao **phòng thủ phải lớn theo sát thương**.
 
 ## Học xong chương này bạn sẽ
 

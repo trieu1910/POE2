@@ -14,10 +14,10 @@ lastUpdated: 2026-05-27
 
 Đọc theo thứ tự dưới đây sẽ "vào" nhất, vì các bài sau dựa trên bài trước:
 
-- **[Skill Gem & Support Gem](/lo-trinh/chuong-2-co-che-cot-loi/skill-gem-support/)** — Cách bạn có chiêu để đánh trong POE2: khắc viên ngọc kỹ năng (skill gem) từ Uncut Skill Gem, rồi gắn các viên hỗ trợ (support gem) để chiêu mạnh hơn. POE2 thay đổi lớn so với POE1 — đọc cái này trước.
-- **[Spirit](/lo-trinh/chuong-2-co-che-cot-loi/spirit/)** — Tài nguyên mới của POE2 dùng để "nuôi" các hiệu ứng thường trực như hào quang (aura), quái triệu hồi (minion), một số chiêu tự kích hoạt. Học cách chia Spirit hợp lý lúc mới chơi.
-- **[Sát thương & hiệu ứng](/lo-trinh/chuong-2-co-che-cot-loi/sat-thuong-va-hieu-ung/)** — Năm loại sát thương (vật lý, lửa, băng, sét, hỗn độn) và các hiệu ứng trạng thái (cháy, đóng băng & làm chậm, sốc, độc, chảy máu). Hiểu vì sao sát thương nguyên tố + hiệu ứng giúp người mới đánh dễ hơn rất nhiều.
-- **[Phòng thủ](/lo-trinh/chuong-2-co-che-cot-loi/phong-thu/)** — Giáp (armour), né (evasion), khiên năng lượng (energy shield), kháng (resistance) và đỡ (block). **Quy tắc sống còn số 1** cho người mới nằm ở đây.
-- **[Máu / Mana / Flask](/lo-trinh/chuong-2-co-che-cot-loi/mau-mana-flask/)** — Máu (life), mana, và bình (flask) trong POE2 — đã thay đổi nhiều so với POE1. Học cách giữ bình luôn hữu ích.
+- **[Skill Gem & Support Gem](/POE2/lo-trinh/chuong-2-co-che-cot-loi/skill-gem-support/)** — Cách bạn có chiêu để đánh trong POE2: khắc viên ngọc kỹ năng (skill gem) từ Uncut Skill Gem, rồi gắn các viên hỗ trợ (support gem) để chiêu mạnh hơn. POE2 thay đổi lớn so với POE1 — đọc cái này trước.
+- **[Spirit](/POE2/lo-trinh/chuong-2-co-che-cot-loi/spirit/)** — Tài nguyên mới của POE2 dùng để "nuôi" các hiệu ứng thường trực như hào quang (aura), quái triệu hồi (minion), một số chiêu tự kích hoạt. Học cách chia Spirit hợp lý lúc mới chơi.
+- **[Sát thương & hiệu ứng](/POE2/lo-trinh/chuong-2-co-che-cot-loi/sat-thuong-va-hieu-ung/)** — Năm loại sát thương (vật lý, lửa, băng, sét, hỗn độn) và các hiệu ứng trạng thái (cháy, đóng băng & làm chậm, sốc, độc, chảy máu). Hiểu vì sao sát thương nguyên tố + hiệu ứng giúp người mới đánh dễ hơn rất nhiều.
+- **[Phòng thủ](/POE2/lo-trinh/chuong-2-co-che-cot-loi/phong-thu/)** — Giáp (armour), né (evasion), khiên năng lượng (energy shield), kháng (resistance) và đỡ (block). **Quy tắc sống còn số 1** cho người mới nằm ở đây.
+- **[Máu / Mana / Flask](/POE2/lo-trinh/chuong-2-co-che-cot-loi/mau-mana-flask/)** — Máu (life), mana, và bình (flask) trong POE2 — đã thay đổi nhiều so với POE1. Học cách giữ bình luôn hữu ích.
 
-Nếu chỉ có thời gian đọc **một** bài để khỏi chết, hãy đọc **[Phòng thủ](/lo-trinh/chuong-2-co-che-cot-loi/phong-thu/)** — nhưng hiểu [skill gem](/lo-trinh/chuong-2-co-che-cot-loi/skill-gem-support/) trước thì mọi thứ khác sẽ dễ hình dung hơn.
+Nếu chỉ có thời gian đọc **một** bài để khỏi chết, hãy đọc **[Phòng thủ](/POE2/lo-trinh/chuong-2-co-che-cot-loi/phong-thu/)** — nhưng hiểu [skill gem](/POE2/lo-trinh/chuong-2-co-che-cot-loi/skill-gem-support/) trước thì mọi thứ khác sẽ dễ hình dung hơn.
