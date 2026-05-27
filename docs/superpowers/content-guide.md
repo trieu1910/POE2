@@ -156,6 +156,8 @@ Hoặc viết inline: "*(có thể đổi theo patch)*" ngay sau câu đó.
 
 POE2 đang trong giai đoạn Early Access. Các cơ chế, số liệu, và meta thay đổi thường xuyên theo từng patch. Khi viết bài:
 
+> **Phiên bản hiện tại (tại thời điểm soạn site, đã xác minh đa nguồn):** **0.5.0 "Return of the Ancients"** (ra mắt ~2026-05-21). Lưu ý quan trọng đã đổi so với bản đầu EA: **Cruel difficulty đã bị bỏ từ patch 0.3.0**; campaign hiện có **4 Act + 3 Interlude** đi một lần (Act 5+ dự kiến cho 1.0, các interlude là tạm thời). Roster class tới 0.4.0 gồm 8 class (thêm Huntress 0.2.0, Druid 0.4.0). Khi viết, mặc định mốc 0.5.x trừ khi xác minh được mốc mới hơn; luôn hedge nếu không chắc.
+
 1. Kiểm tra patch notes mới nhất tại pathofexile.com trước khi bắt đầu viết.
 2. Luôn ghi đúng ngày vào `lastUpdated` trong frontmatter.
 3. Khi patch mới ra và ảnh hưởng đến bài đã viết, cập nhật bài ngay và sửa `lastUpdated`.
