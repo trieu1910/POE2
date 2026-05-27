@@ -1,0 +1,22 @@
+---
+const variants = {
+  thuatngu: { title: '📦 Thuật ngữ Anh–Việt', cls: 'v-thuatngu' },
+  nguon:    { title: '🔗 Nguồn gốc',          cls: 'v-nguon' },
+  mauchot:  { title: '✅ Điểm mấu chốt',       cls: 'v-mauchot' },
+};
+const { variant = 'thuatngu', title } = Astro.props;
+const v = variants[variant] ?? variants.thuatngu;
+const heading = title ?? v.title;
+---
+<div class={`hop ${v.cls}`}>
+  <p class="hop-title">{heading}</p>
+  <div class="hop-body"><slot /></div>
+</div>
+<style>
+  .hop { border: 1px solid var(--sl-color-gray-5); border-left-width: 4px; border-radius: 0.5rem; padding: 0.75rem 1rem; margin: 1.25rem 0; background: var(--sl-color-gray-6); }
+  .hop-title { font-weight: 700; margin: 0 0 0.5rem; }
+  .hop-body :global(p:last-child) { margin-bottom: 0; }
+  .v-thuatngu { border-left-color: var(--sl-color-blue); }
+  .v-nguon    { border-left-color: var(--sl-color-purple); }
+  .v-mauchot  { border-left-color: var(--sl-color-green); }
+</style>
