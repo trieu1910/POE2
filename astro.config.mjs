@@ -39,7 +39,17 @@ export default defineConfig({
                 { label: 'Class cho người mới', link: '/lo-trinh/chuong-1-class-ascendancy/class-cho-nguoi-moi/' },
               ],
             },
-            { label: 'Chương 2 — Cơ chế cốt lõi', link: '/lo-trinh/chuong-2-co-che-cot-loi/' },
+            {
+              label: 'Chương 2 — Cơ chế cốt lõi',
+              items: [
+                { label: 'Tổng quan chương', link: '/lo-trinh/chuong-2-co-che-cot-loi/' },
+                { label: 'Skill Gem & Support Gem', link: '/lo-trinh/chuong-2-co-che-cot-loi/skill-gem-support/' },
+                { label: 'Spirit', link: '/lo-trinh/chuong-2-co-che-cot-loi/spirit/' },
+                { label: 'Sát thương & hiệu ứng', link: '/lo-trinh/chuong-2-co-che-cot-loi/sat-thuong-va-hieu-ung/' },
+                { label: 'Phòng thủ', link: '/lo-trinh/chuong-2-co-che-cot-loi/phong-thu/' },
+                { label: 'Máu / Mana / Flask', link: '/lo-trinh/chuong-2-co-che-cot-loi/mau-mana-flask/' },
+              ],
+            },
             { label: 'Chương 3 — Đi cốt truyện', link: '/lo-trinh/chuong-3-campaign/' },
             { label: 'Chương 4 — Passive Tree', link: '/lo-trinh/chuong-4-passive-tree/' },
             { label: 'Chương 5 — Trang bị & Vật phẩm', link: '/lo-trinh/chuong-5-trang-bi/' },

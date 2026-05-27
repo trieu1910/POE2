@@ -1,0 +1,124 @@
+---
+title: Sát thương & hiệu ứng trạng thái
+description: Năm loại sát thương của POE2 (vật lý, lửa, băng, sét, hỗn độn) và các hiệu ứng trạng thái (cháy, đóng băng, làm chậm, sốc, độc, chảy máu) — và vì sao chúng quan trọng với người mới.
+lastUpdated: 2026-05-27
+---
+
+import Hop from '@components/Hop.astro';
+
+:::tip[👉 Bài này bạn sẽ hiểu được]
+- **Năm loại sát thương** trong POE2 và mỗi loại "thuộc về" thứ gì.
+- Các **hiệu ứng trạng thái (ailment)** — cháy, đóng băng & làm chậm, sốc, độc, chảy máu — mỗi cái làm gì bằng lời dễ hiểu.
+- Phân biệt hiệu ứng **gây sát thương theo thời gian** với hiệu ứng **chỉ cản trở** kẻ địch.
+- Vì sao **sát thương nguyên tố + hiệu ứng** giúp người mới đánh dễ hơn nhiều.
+:::
+
+## Năm loại sát thương
+
+Mọi sát thương trong POE2 thuộc một trong **năm loại** *(theo [PoE Wiki](https://www.poewiki.net/wiki/poe2wiki:Ailment))*:
+
+- **Physical (vật lý)** — Sát thương "thuần lực", từ kiếm, búa, tên thường. Bị **Armour (giáp)** giảm bớt.
+- **Fire (lửa)** — Sát thương nguyên tố lửa.
+- **Cold (băng)** — Sát thương nguyên tố băng/lạnh.
+- **Lightning (sét)** — Sát thương nguyên tố sét.
+- **Chaos (hỗn độn)** — Sát thương "hỗn độn", thường **xuyên qua** phần lớn phòng thủ thông thường và bị kháng riêng.
+
+Ba loại **Fire / Cold / Lightning** gọi chung là **sát thương nguyên tố (elemental)**. Chúng bị **kháng nguyên tố (resistance)** của mục tiêu chặn bớt — và đây cũng là loại kháng bạn phải lo nhất khi phòng thủ (xem bài [Phòng thủ](/lo-trinh/chuong-2-co-che-cot-loi/phong-thu/)).
+
+> Hiểu nhanh: **vật lý** bị giáp cản; **lửa/băng/sét** bị kháng nguyên tố cản; **hỗn độn** là loại "khó chịu" vì né được nhiều phòng thủ thường.
+
+## Hiệu ứng trạng thái (ailment) là gì?
+
+Khi bạn đánh trúng kẻ địch bằng một số loại sát thương, có thể kèm theo một **ailment (hiệu ứng trạng thái)** — một hiệu ứng bám lên mục tiêu một lúc. POE2 chia ailment thành **hai nhóm** *(theo [PoE Wiki](https://www.poewiki.net/wiki/poe2wiki:Ailment))*:
+
+- **Nhóm gây sát thương theo thời gian (damaging):** **Ignite (cháy)**, **Poison (độc)**, **Bleeding (chảy máu)** — bám lên rồi rút máu mục tiêu dần dần.
+- **Nhóm cản trở, không gây sát thương (non-damaging):** **Chill (làm chậm)**, **Freeze (đóng băng)**, **Shock (sốc)** — không tự rút máu, mà làm mục tiêu yếu/chậm/dễ ăn đòn hơn.
+
+### Ignite — Cháy 🔥
+
+Do **sát thương lửa** gây ra. Mục tiêu bị **bốc cháy và mất máu dần theo thời gian**. Cú đánh có sát thương lửa càng cao thì vết cháy càng mạnh *(theo [PoE Wiki](https://www.poewiki.net/wiki/poe2wiki:Ailment), độ mạnh cụ thể có thể đổi theo patch)*.
+
+### Freeze & Chill — Đóng băng & Làm chậm ❄️
+
+Cả hai tới từ **sát thương băng (cold)**:
+
+- **Chill (làm chậm):** khiến mục tiêu **chậm hẳn lại** (đánh chậm, đi chậm). Rất tiện để "ghìm" quái nguy hiểm.
+- **Freeze (đóng băng):** nặng hơn — mục tiêu bị **đóng cứng, không di chuyển hay ra chiêu** trong một lúc. Đóng băng được con quái nguy hiểm = nó đứng im cho bạn xử. Cần dồn đủ sát thương băng mới gây được.
+
+### Shock — Sốc ⚡
+
+Do **sát thương sét** gây ra. Mục tiêu bị sốc sẽ **nhận thêm sát thương** từ mọi nguồn trong thời gian bị sốc *(thường được nêu là tăng khoảng 20% sát thương phải nhận theo [PoE Wiki](https://www.poewiki.net/wiki/poe2wiki:Ailment), con số có thể đổi theo patch)*. Tức là sốc không tự đánh, nhưng **làm mọi đòn khác của bạn đau hơn**.
+
+### Poison — Độc ☠️
+
+Tích từ **sát thương vật lý và hỗn độn** của cú đánh. Mục tiêu **mất máu dần** theo kiểu sát thương hỗn độn. Điểm mạnh của độc: **chồng được nhiều lớp** — càng đánh nhiều phát, độc càng cộng dồn.
+
+### Bleeding — Chảy máu 🩸
+
+Một ailment **vật lý** gây **mất máu theo thời gian**. Đặc biệt nguy hiểm khi mục tiêu **đang di chuyển** (vết chảy máu nặng hơn khi nạn nhân chạy). Đây cũng là thứ **bạn** phải đề phòng khi bị quái gây chảy máu lên người.
+
+## Vì sao người mới nên quan tâm sát thương nguyên tố + hiệu ứng?
+
+Đây là phần "tại sao bạn nên đọc bài này":
+
+1. **Hiệu ứng giúp bạn vừa gây sát thương vừa kiểm soát trận đánh.** Đóng băng/làm chậm một con quái nguy hiểm khiến nó **không kịp đánh bạn** — đây là cách phòng thủ chủ động cực mạnh cho người mới còn vụng.
+2. **Sát thương theo thời gian (cháy/độc/chảy máu) "tự đánh" giúp bạn.** Bạn đánh một phát, kẻ địch tiếp tục mất máu kể cả khi bạn đang né — rất hợp với người chưa quen combat.
+3. **Sốc nhân sát thương của cả build.** Một nguồn sét nhỏ để gây sốc có thể làm toàn bộ đòn khác của bạn mạnh hơn.
+4. **Nhiều quái/boss có điểm yếu nguyên tố.** Có sẵn vài loại sát thương nguyên tố giúp bạn linh hoạt hơn là chỉ dựa vào một loại.
+
+> Quan trọng đối xứng: vì hiệu ứng lợi cho bạn thế nào, **kẻ địch cũng dùng nó lên bạn** y vậy. Bạn cũng có thể bị cháy/đóng băng/sốc/độc/chảy máu — nên phần phòng thủ ở bài [Phòng thủ](/lo-trinh/chuong-2-co-che-cot-loi/phong-thu/) (đặc biệt là **kháng nguyên tố**) cực kỳ quan trọng.
+
+## Làm thế này — tận dụng sát thương & hiệu ứng khi mới chơi
+
+1. **Chọn một chiêu chủ lực có "chất" nguyên tố** (lửa/băng/sét) nếu bạn muốn dễ thở — hiệu ứng đi kèm giúp ích nhiều.
+2. **Nếu hay bị quây:** chiêu thiên **băng** rất hợp — vừa đánh vừa làm chậm/đóng băng để giảm áp lực.
+3. **Nếu muốn "dán rồi chạy":** chiêu gây **độc/cháy/chảy máu** cho phép bạn đánh dấu mục tiêu rồi né, để hiệu ứng tự rút máu.
+4. **Đừng quên sát thương vật lý vẫn ổn lúc đầu** — nhưng bổ sung một nguồn nguyên tố để xử quái kháng vật lý hoặc cần hiệu ứng.
+5. **Xem tooltip kẻ địch/đòn của bạn** để biết loại sát thương — đây là thói quen tốt giúp bạn hiểu vì sao đánh con này dễ, con kia khó.
+
+<Hop variant="thuatngu">
+
+Sát thương:
+
+| Tiếng Anh | Tiếng Việt / Giải thích |
+|-----------|------------------------|
+| Physical | Vật lý — bị Armour (giáp) giảm bớt |
+| Fire | Lửa — nguyên tố, gây hiệu ứng Ignite (cháy) |
+| Cold | Băng — nguyên tố, gây Chill (làm chậm) & Freeze (đóng băng) |
+| Lightning | Sét — nguyên tố, gây Shock (sốc) |
+| Chaos | Hỗn độn — né nhiều phòng thủ thường, có kháng riêng |
+| Elemental | Nguyên tố — gọi chung Fire/Cold/Lightning |
+
+Hiệu ứng trạng thái:
+
+| Tiếng Anh | Tiếng Việt / Giải thích |
+|-----------|------------------------|
+| Ailment | Hiệu ứng trạng thái — bám lên mục tiêu sau khi bị đánh |
+| Ignite | Cháy — mất máu theo thời gian (từ sát thương lửa) |
+| Chill | Làm chậm — giảm tốc độ hành động (từ sát thương băng) |
+| Freeze | Đóng băng — đứng cứng, không di chuyển/ra chiêu (từ băng) |
+| Shock | Sốc — khiến mục tiêu nhận thêm sát thương (từ sét) |
+| Poison | Độc — mất máu theo thời gian, chồng nhiều lớp (từ vật lý & hỗn độn) |
+| Bleeding | Chảy máu — mất máu theo thời gian, nặng hơn khi di chuyển (vật lý) |
+
+</Hop>
+
+<Hop variant="nguon">
+
+- [Ailment — Path of Exile 2 Wiki](https://www.poewiki.net/wiki/poe2wiki:Ailment)
+- [Defence Guide — Maxroll](https://maxroll.gg/poe2/getting-started/defence-guide)
+- [Trang chính thức Path of Exile 2](https://www.pathofexile.com/poe2)
+
+> ⚠️ **Lưu ý:** Độ mạnh của từng ailment (ví dụ % sát thương thêm khi bị Shock, tốc độ rút máu của Ignite/Poison/Bleed) là số liệu **dễ đổi theo patch**. Luôn xem tooltip in-game tại thời điểm bạn chơi.
+
+</Hop>
+
+<Hop variant="mauchot">
+
+- POE2 có 5 loại sát thương: **vật lý, lửa, băng, sét, hỗn độn** (lửa/băng/sét = nguyên tố).
+- Ailment gây sát thương theo thời gian: **cháy (lửa), độc (vật lý/hỗn độn), chảy máu (vật lý)**.
+- Ailment cản trở (không tự đánh): **làm chậm & đóng băng (băng), sốc (sét — tăng sát thương mục tiêu nhận)**.
+- Hiệu ứng giúp người mới **vừa đánh vừa kiểm soát** trận và để sát thương "tự chạy".
+- Kẻ địch cũng dùng hiệu ứng lên bạn — nhớ lo **kháng nguyên tố** ở bài Phòng thủ.
+
+</Hop>

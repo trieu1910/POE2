@@ -1,0 +1,118 @@
+---
+title: Phòng thủ — Giáp, né, khiên, kháng & đỡ
+description: Năm lớp phòng thủ trong POE2 (armour, evasion, energy shield, resistance, block) và quy tắc sống còn số 1 cho người mới — cap kháng nguyên tố.
+lastUpdated: 2026-05-27
+---
+
+import Hop from '@components/Hop.astro';
+
+:::tip[👉 Bài này bạn sẽ hiểu được]
+- Năm cách phòng thủ trong POE2: **giáp, né, khiên năng lượng, kháng, đỡ** — mỗi cái chặn đòn theo kiểu khác nhau.
+- **Quy tắc sống còn số 1** cho người mới: **đẩy kháng nguyên tố lên mức trần (cap)**.
+- Vì sao chỉ "trâu máu" thôi là **chưa đủ** để sống.
+- Cách thực hành: việc đầu tiên cần làm mỗi khi thay đồ để khỏi chết oan.
+:::
+
+## POE2 có những lớp phòng thủ nào?
+
+Có **năm thứ** chính giúp bạn sống sót, mỗi thứ chặn đòn theo cách khác nhau *(theo [Maxroll Defence Guide](https://maxroll.gg/poe2/getting-started/defence-guide))*:
+
+### Armour — Giáp 🛡️
+
+**Giảm bớt sát thương vật lý** của mỗi đòn. Đặc điểm quan trọng: armour **rất tốt với nhiều đòn nhỏ**, nhưng **càng kém hiệu quả với một cú đánh càng lớn**. Vì vậy giáp hợp để "chống đỡ" mưa đòn nhỏ hơn là đỡ một phát búa khổng lồ. *(Theo [Maxroll](https://maxroll.gg/poe2/getting-started/defence-guide), công thức armour có giới hạn giảm tối đa quanh mức 90% — không bao giờ chặn 100%.)*
+
+### Evasion — Né 💨
+
+Cho bạn **cơ hội né hẳn** một đòn. Né được thì **không mất máu gì cả** — nhưng nếu "xui" không né được thì ăn trọn. Theo [Maxroll](https://maxroll.gg/poe2/getting-started/defence-guide), evasion giúp né các đòn đánh dạng **strike (cận chiến) và projectile (đạn bắn)**. Đây là phòng thủ "được ăn cả ngã về không" — đều và dễ hiểu, nhưng có yếu tố may rủi.
+
+### Energy Shield — Khiên năng lượng 🔵
+
+Một **lớp "máu phụ"** đứng **trước máu thật**: đòn đánh trừ vào khiên trước, hết khiên mới vào máu. Khiên **tự hồi lại** sau một lúc ngắn không bị đánh. Lưu ý quan trọng: khiên năng lượng **chặn được phần lớn sát thương, nhưng KHÔNG chặn sát thương theo thời gian kiểu Chảy máu (Bleed) và Độc (Poison)** — hai thứ đó ăn thẳng vào máu *(theo [Maxroll](https://maxroll.gg/poe2/getting-started/defence-guide))*.
+
+### Resistance — Kháng 🔥❄️⚡
+
+**Giảm phần trăm sát thương nguyên tố và hỗn độn** bạn nhận. Có **kháng Lửa, kháng Băng, kháng Sét** (ba kháng nguyên tố) và **kháng Hỗn độn (Chaos)**. Đây là lớp phòng thủ **quan trọng nhất cho người mới** — đọc kỹ phần dưới.
+
+### Block — Đỡ ⛨
+
+Cho bạn **cơ hội đỡ hẳn** một đòn — đỡ được thì **chặn toàn bộ sát thương** của đòn đó, và còn **chặn luôn ailment** đòn đó định gây *(theo [Maxroll](https://maxroll.gg/poe2/getting-started/defence-guide))*. Đỡ thường gắn với việc dùng **khiên (shield)** ở tay phụ. Rất mạnh để chống các cú đánh lớn.
+
+## Quy tắc sống còn số 1: CAP kháng nguyên tố
+
+Nếu bạn chỉ nhớ **một điều** từ cả chương này, hãy nhớ điều này:
+
+> **Đẩy ba kháng nguyên tố (Lửa / Băng / Sét) lên mức trần càng sớm càng tốt.**
+
+Mức trần kháng mặc định trong POE2 là **75%** *(theo [Maxroll](https://maxroll.gg/poe2/getting-started/defence-guide); một số mod/đồ có thể nâng trần lên tới 90%, có thể đổi theo patch)*. Nghĩa là khi một kháng đạt 75%, bạn chỉ còn nhận **1/4** sát thương loại đó.
+
+Vì sao đây là quy tắc số 1?
+
+- **Phần lớn cái giết người mới là sát thương nguyên tố.** Boss và quái bắn lửa/băng/sét rất nhiều. Thiếu kháng = ăn **gấp nhiều lần** sát thương.
+- **Thiếu một kháng là chết oan.** Nhiều người mới máu rất dày nhưng vẫn "một phát chết" chỉ vì một kháng đang âm. Cap kháng quan trọng hơn nhồi thêm máu.
+- **Cap kháng rẻ và dễ.** Bạn cap kháng chủ yếu bằng **các dòng kháng (resistance) trên trang bị** (nhẫn, dây chuyền, giáp...) — không tốn điểm cây kỹ năng quý giá.
+
+> Cảnh báo người mới: mỗi khi **chuyển sang vùng/màn mới**, game thường khiến đòn đánh mạnh hơn, và **sau một số mốc cốt truyện, kháng tối đa của bạn bị "phạt" giảm xuống** (penalty). Vì thế kháng cứ tưởng đủ rồi lại tụt — phải kiểm tra lại liên tục.
+
+Kháng vượt 75% cũng không thừa hoàn toàn: phần dư là **đệm chống bị giảm kháng** (ví dụ khi dính lời nguyền/curse làm tụt kháng) *(theo [Maxroll](https://maxroll.gg/poe2/getting-started/defence-guide))*.
+
+## "Trâu máu" thôi là chưa đủ
+
+Người mới hay nghĩ: cứ nhiều máu là sống. **Sai.** Máu nhiều mà:
+
+- **Kháng âm** → ăn sát thương nguyên tố gấp bội → vẫn một phát chết.
+- **Không có lớp giảm/né** → mỗi đòn vào full → bình máu hồi không kịp.
+
+Cách đúng là **xếp nhiều lớp (layering)**: một lượng máu (life) hợp lý **cộng với** kháng đã cap **cộng với** một lớp giảm đòn (giáp/né/khiên/đỡ tùy build). Mỗi lớp gánh một phần, bạn mới thật sự "trâu".
+
+## Làm thế này — checklist phòng thủ cho người mới
+
+Làm theo thứ tự ưu tiên này, đặc biệt **mỗi lần thay trang bị**:
+
+1. **Mở bảng nhân vật (Character), nhìn ba kháng nguyên tố.** Cố giữ cả ba **càng gần 75% càng tốt**. Đây là việc số 1.
+2. **Nếu một kháng đang âm hoặc thấp:** ưu tiên đeo món có dòng "+% Resistance" cho loại đó, kể cả phải hi sinh chút sát thương. **Sống đã rồi mới tính đánh nhanh.**
+3. **Giữ một lượng máu (Life) tử tế** bằng các dòng "+ to maximum Life" trên đồ. Đừng để máu quá thấp so với cấp của bạn.
+4. **Dùng đúng lớp giảm đòn của build:** build Str ưu tiên **giáp**, build Dex ưu tiên **né**, build Int ưu tiên **khiên năng lượng**; cầm **khiên** thì tận dụng **đỡ (block)**.
+5. **Sau mỗi mốc cốt truyện lớn, kiểm tra lại kháng** — vì kháng tối đa có thể bị phạt giảm, "đủ" hôm qua có thể "thiếu" hôm nay.
+
+Nói gọn: **cap kháng trước, máu sau, rồi mới tới giảm đòn.** Làm đúng thứ tự này là bạn đã sống tốt hơn 90% người mới.
+
+<Hop variant="thuatngu">
+
+| Tiếng Anh | Tiếng Việt / Giải thích |
+|-----------|------------------------|
+| Defence | Phòng thủ — các cách giảm/chặn sát thương |
+| Armour | Giáp — giảm sát thương vật lý mỗi đòn (kém với cú đánh lớn) |
+| Evasion | Né — cơ hội né hẳn đòn strike/projectile (né thì không mất máu) |
+| Energy Shield (ES) | Khiên năng lượng — máu phụ trước máu thật, tự hồi; không chặn Bleed/Poison |
+| Resistance | Kháng — giảm % sát thương nguyên tố/hỗn độn nhận vào |
+| Fire/Cold/Lightning Resistance | Kháng Lửa/Băng/Sét — ba kháng nguyên tố |
+| Chaos Resistance | Kháng Hỗn độn |
+| Resistance Cap | Trần kháng — mức tối đa kháng có tác dụng (mặc định 75%) |
+| Block | Đỡ — cơ hội chặn toàn bộ đòn (và ailment của nó), thường nhờ khiên |
+| Shield | Khiên cầm tay phụ — cho block và thường thêm phòng thủ |
+| Strike | Đòn đánh cận chiến (evasion/block có thể né/đỡ) |
+| Projectile | Đạn/đòn bắn ra (evasion/block có thể né/đỡ) |
+| Layering | Xếp nhiều lớp phòng thủ cùng lúc cho chắc |
+
+</Hop>
+
+<Hop variant="nguon">
+
+- [Defence Guide — Maxroll](https://maxroll.gg/poe2/getting-started/defence-guide)
+- [Path of Exile 2 Survival Guide — Maxroll](https://maxroll.gg/poe2/resources/path-of-exile-2-survival-guide)
+- [Defences — Path of Exile 2 Wiki](https://www.poewiki.net/wiki/poe2wiki:Defences)
+- [Trang chính thức Path of Exile 2](https://www.pathofexile.com/poe2)
+
+> ⚠️ **Lưu ý:** Trần kháng (75%, nâng tối đa 90%), mức phạt kháng theo cốt truyện, và giới hạn giảm sát thương của armour là số liệu **dễ đổi theo patch**. Luôn xem bảng nhân vật in-game tại thời điểm bạn chơi.
+
+</Hop>
+
+<Hop variant="mauchot">
+
+- POE2 có 5 lớp phòng thủ: **giáp, né, khiên năng lượng, kháng, đỡ**.
+- **Quy tắc số 1:** đẩy **ba kháng nguyên tố lên trần 75%** càng sớm càng tốt (cap chủ yếu bằng dòng kháng trên đồ).
+- Khiên năng lượng **không chặn** Chảy máu & Độc; armour kém với cú đánh lớn; né/đỡ có yếu tố may rủi.
+- **Trâu máu thôi không đủ** — phải xếp nhiều lớp: máu + kháng cap + một lớp giảm đòn.
+- Thứ tự ưu tiên người mới: **cap kháng → đủ máu → giảm đòn**; kiểm lại kháng sau mỗi mốc cốt truyện.
+
+</Hop>

@@ -1,0 +1,103 @@
+---
+title: Máu / Mana / Flask
+description: Máu (life), mana và bình (flask) trong POE2 — flask đã đổi nhiều so với POE1, cùng cách giữ bình luôn hữu ích cho người mới.
+lastUpdated: 2026-05-27
+---
+
+import Hop from '@components/Hop.astro';
+
+:::tip[👉 Bài này bạn sẽ hiểu được]
+- **Máu (Life)** và **Mana** dùng để làm gì, khác nhau ra sao.
+- **Flask (bình)** trong POE2 hoạt động thế nào — và **đã đổi nhiều so với POE1**.
+- Bình **nạp điểm (charge)** từ đâu, hồi máu/mana **theo thời gian hay tức thì**.
+- Cách thực hành: giữ cho **bình máu và bình mana luôn hữu ích**, không bị "cạn" giữa trận.
+:::
+
+## Máu và Mana — hai thanh nền tảng
+
+- **Life (máu)** — Thanh đỏ. **Hết máu là chết.** Đây là "ngân sách sống" của bạn. Tăng máu chủ yếu qua chỉ số **Strength** và các dòng "+ to maximum Life" trên trang bị.
+- **Mana** — Thanh xanh. Dùng để **trả chi phí mỗi lần bấm chiêu**. Hết mana thì không ra chiêu được (phải chờ hồi hoặc uống bình mana). Mana liên quan tới chỉ số **Intelligence**.
+
+> Phân biệt nhanh: **Máu = sống/chết. Mana = "xăng" để bấm chiêu.** Đừng nhầm với **Spirit** (bài [Spirit](/lo-trinh/chuong-2-co-che-cot-loi/spirit/)) — Spirit không tiêu khi bấm chiêu, nó giữ chỗ cho hiệu ứng thường trực.
+
+Cả máu và mana đều **tự hồi từ từ**, nhưng thường quá chậm giữa lúc đánh nhau — nên bạn cần **flask (bình)** để hồi nhanh.
+
+## Flask trong POE2 — và nó khác POE1 thế nào
+
+Đây là chỗ POE2 thay đổi lớn, nên người xem video POE1 dễ hiểu sai.
+
+Trong **POE2**, bạn chỉ có **một ô bình máu (Life Flask)** và **một ô bình mana (Mana Flask)** *(theo [PoE Wiki](https://www.poewiki.net/wiki/Flask))*. Khác hẳn POE1 vốn có tới năm ô bình. Cụ thể trong POE2:
+
+- **Chỉ 1 bình máu + 1 bình mana** dùng cùng lúc (trừ khi có đồ đặc biệt cho thêm).
+- Bình **hồi máu/mana dần theo thời gian** khi uống (không phải đổ ụp một phát), trừ khi bình có thuộc tính **Instant (hồi tức thì)** thì đổ hết ngay *(theo [PoE Wiki](https://www.poewiki.net/wiki/Flask))*.
+- Các **bình tiện ích (utility flask)** kiểu POE1 (bình tăng tốc, bình kháng...) **không còn** ở dạng bình nữa — chúng được thay bằng **Charm (bùa)** cắm vào **belt (thắt lưng)** (xem phần dưới).
+
+> Hiểu nhanh: **POE2 = 1 bình máu + 1 bình mana, hồi theo thời gian.** Mọi hiệu ứng "tiện ích" cũ giờ là **Charm**, không phải bình.
+
+## Charge — bình nạp điểm từ đâu?
+
+Bình không uống vô hạn. Mỗi lần uống tốn một ít **charge (điểm nạp)**, và bạn nạp lại charge bằng cách **giết quái** *(theo [PoE Wiki](https://www.poewiki.net/wiki/Flask))*:
+
+- **Đánh quái sẽ nạp charge cho bình.** Quái càng "to" (hiếm/rare, unique) thì nạp càng nhiều charge.
+- Hệ quả thực tế: **cứ đánh nhau là bình tự đầy lại.** Bạn hiếm khi cạn bình nếu xung quanh có quái để giết. Cạn bình thường xảy ra khi bạn **đứng yên/đi đường dài không đánh ai**.
+- **Tới checkpoint (điểm lưu) là máu, mana, bình và charm được nạp đầy** *(theo [poe2db](https://poe2db.tw/us/))* — nên trước khi đánh boss, ghé checkpoint để vào trận với bình đầy.
+
+## Charm thay cho bình tiện ích cũ
+
+**Charm (bùa)** là thứ thay thế các bình tiện ích của POE1:
+
+- Charm được **cắm vào ô charm trên belt (thắt lưng)** *(theo [PoE Wiki](https://www.poewiki.net/wiki/Charm))*. Belt tốt hơn thường có nhiều ô charm hơn.
+- Charm thường **tự kích hoạt khi gặp điều kiện** (ví dụ: tự dùng khi bạn bị đóng băng/bị độc...), giúp bạn thoát hiệu ứng xấu mà không phải bấm tay.
+- Charm cũng **dùng charge** và **được nạp đầy ở checkpoint** giống bình.
+
+Với người mới, charm là cách dễ để **chống các hiệu ứng khó chịu** (đóng băng, chảy máu...) một cách tự động.
+
+## Làm thế này — giữ bình luôn hữu ích
+
+1. **Luôn có 1 bình máu + 1 bình mana đang trang bị**, đúng cấp với nhân vật. Nhặt được bình cấp cao hơn (hồi nhiều hơn) thì thay ngay.
+2. **Đừng "ôm bình" sợ hết.** Charge nạp lại từ giết quái, nên cứ uống khi cần — đứng chịu trận để tiếc bình là cách chết nhanh nhất.
+3. **Ghé checkpoint trước khi đánh boss** để vào trận với bình đầy 100%.
+4. **Nếu hay cạn mana:** cân nhắc giảm chi phí chiêu (đồ/cây kỹ năng) hoặc dùng chiêu chính rẻ hơn; bình mana chỉ là cứu cánh, không nên phụ thuộc hoàn toàn.
+5. **Cắm Charm vào belt** để tự chống hiệu ứng xấu — ví dụ một charm gỡ đóng băng nếu bạn hay bị quái băng làm cứng người. Nhớ kiếm belt nhiều ô charm.
+6. **Để ý thuộc tính bình.** Bình có "Instant" hồi tức thì rất hợp lúc nguy cấp; bình hồi theo thời gian hợp để "dưỡng" máu lai rai.
+
+Nói gọn: **bình không phải để dành — đánh nhau là nó tự đầy.** Uống kịp lúc + ghé checkpoint trước boss + dùng charm chống hiệu ứng là đủ sống khỏe khi mới chơi.
+
+<Hop variant="thuatngu">
+
+| Tiếng Anh | Tiếng Việt / Giải thích |
+|-----------|------------------------|
+| Life | Máu — hết là chết; tăng nhờ Strength & dòng "+Life" trên đồ |
+| Mana | Năng lượng để bấm chiêu; liên quan Intelligence |
+| Flask | Bình — uống để hồi máu/mana nhanh |
+| Life Flask | Bình máu — POE2 chỉ có 1 ô |
+| Mana Flask | Bình mana — POE2 chỉ có 1 ô |
+| Charge (Flask Charge) | Điểm nạp của bình — tốn khi uống, nạp lại bằng giết quái |
+| Instant (recovery) | Hồi tức thì — bình đổ hết lượng hồi ngay lập tức |
+| Utility Flask | Bình tiện ích (kiểu POE1) — POE2 thay bằng Charm |
+| Charm | Bùa — cắm vào belt, thường tự kích hoạt khi gặp điều kiện |
+| Belt | Thắt lưng — trang bị chứa các ô charm |
+| Checkpoint | Điểm lưu — chạm vào sẽ nạp đầy máu/mana/bình/charm |
+
+</Hop>
+
+<Hop variant="nguon">
+
+- [Flask — Path of Exile 2 Wiki](https://www.poewiki.net/wiki/Flask)
+- [Charm — Path of Exile 2 Wiki](https://www.poewiki.net/wiki/Charm)
+- [Flasks & Charms — poe2db](https://poe2db.tw/us/)
+- [Trang chính thức Path of Exile 2](https://www.pathofexile.com/poe2)
+
+> ⚠️ **Lưu ý:** Cơ chế bình của POE2 đang trong Early Access và **dễ đổi theo patch** (số ô bình, cách nạp charge, hành vi hồi). Luôn xem tooltip bình in-game tại thời điểm bạn chơi.
+
+</Hop>
+
+<Hop variant="mauchot">
+
+- **Máu = sống/chết; Mana = "xăng" bấm chiêu.** Cả hai tự hồi chậm, nên cần bình.
+- POE2 chỉ có **1 bình máu + 1 bình mana** (khác POE1 có 5 bình), hồi **theo thời gian** trừ khi bình "Instant".
+- Bình **nạp charge bằng giết quái**; **checkpoint nạp đầy** máu/mana/bình/charm.
+- Bình tiện ích cũ được thay bằng **Charm** cắm vào **belt**, thường tự kích hoạt chống hiệu ứng xấu.
+- Người mới: **đừng ôm bình** (đánh là tự đầy), ghé checkpoint trước boss, dùng charm chống đóng băng/độc.
+
+</Hop>
