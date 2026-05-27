@@ -137,6 +137,17 @@ export default defineConfig({
             },
           ],
         },
+        {
+          label: '🎯 Cày Party 6 Acc',
+          items: [
+            { label: 'Tổng quan & chiến lược', link: '/party-6-acc/' },
+            { label: 'Ice Shot Amazon (carry)', link: '/party-6-acc/ice-shot-amazon/' },
+            { label: 'Ritualist ×2 (Huntress)', link: '/party-6-acc/ritualist/' },
+            { label: 'Lich (Witch)', link: '/party-6-acc/lich/' },
+            { label: 'Pathfinder (Ranger)', link: '/party-6-acc/pathfinder/' },
+            { label: 'Tactician (Mercenary, support)', link: '/party-6-acc/tactician/' },
+          ],
+        },
         { label: '🛠️ Công cụ Build', link: '/cong-cu-build/' },
         { label: '💰 Dashboard Kiếm tiền', link: '/kiem-tien/' },
         { label: '🧠 Ghi chú cá nhân', link: '/ghi-chu/' },

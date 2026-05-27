@@ -1,0 +1,137 @@
+---
+title: Tactician (Mercenary) — Support
+description: Lộ trình lên đồ theo giai đoạn + thứ tự ưu tiên chỉ số cho build Tactician (Mercenary) làm SUPPORT trung tâm của party 6 acc — buff aura/banner/presence lan cho cả nhóm để power-level lên 90 rồi farm currency.
+lastUpdated: 2026-05-27
+---
+
+import Hop from '@components/Hop.astro';
+
+:::tip[👉 Trang này dành cho bạn]
+- Hiểu vì sao **Tactician (Mercenary)** là **support trung tâm** cực hợp cho party 6 acc — nó buff cả nhóm bằng **aura/banner/presence**.
+- Biết **lộ trình lên đồ theo giai đoạn** (Leveling → Early maps → Endgame) cho một nhân vật support: ưu tiên **sống sót + tối đa hoá hiệu quả aura/utility**, không đua DPS.
+- Nắm **thứ tự ưu tiên chỉ số/affix**: cap kháng → đủ máu sống → chỉ số hỗ trợ (Spirit cho nhiều aura, hiệu lực buff) → DPS phụ.
+- Biết **vai trò trong party 6**: bạn là người làm 5 DPS còn lại mạnh & sống dai hơn, nhóm dọn map nhanh hơn.
+:::
+
+> ⚠️ POE2 đang **Early Access** (bản hiện hành khi viết: **0.5.x "Return of the Ancients"**). Các node ascendancy, tên skill và con số **đổi theo patch**. Trang này viết theo **khung ưu tiên** cho một Tactician support tiêu biểu — **luôn đối chiếu với PoB của bạn** (link cuối trang) trước khi chốt đồ. Tactician là một ascendancy đã có sẵn của Mercenary (bản 0.5.0 thêm hai ascendancy mới là *Martial Artist* và *Spirit Walker*, **không** đụng tới Tactician), nên thông tin tương đối ổn định — nhưng vẫn hedge nếu bạn thấy lệch so với in-game.
+
+## Tóm tắt build
+
+- **Ascendancy:** **Tactician** — một trong các ascendancy của class **Mercenary** (dùng **Crossbow** / nỏ). Theo [Maxroll — Tactician Ascendancy Overview](https://maxroll.gg/poe2/resources/tactician-ascendancy-overview), Tactician thiên về **utility & phòng thủ đội hình**: ghim quái (pin → quái không hành động được), **giữ nhiều buff thường trực với chi phí rẻ**, banner, và **buff cho đồng đội**.
+- **Skill / archetype (đối chiếu PoB):** phần "động cơ" của owner là build endgame *"Level 100 Efficiency II Tactician"*. Tactician thường đi với **Crossbow + grenade/ballista/totem** (các guide tiêu biểu trên Maxroll như *Siege Cascade* hay *Mortar Cannon* dùng đạn nổ/ghim quái). **Với vai trò support trong party, phần DPS chỉ là phụ** — cái chính là cụm buff. **Hãy mở PoB của owner để xem chính xác skill chính + cụm aura/banner đang chạy** rồi theo đúng đó.
+- **Hệ phòng thủ:** Tactician nghiêng **Armour + Evasion** với cơ chế đặc trưng: chuyển **Armour → ngưỡng choáng (Stun Threshold)** và **Evasion → ngưỡng trạng thái (Ailment Threshold)**, cộng các node giảm sát thương và phạt độ chính xác của quái theo khoảng cách *(theo [Maxroll](https://maxroll.gg/poe2/resources/tactician-ascendancy-overview))*. Nghĩa là Tactician **trâu sẵn** — rất hợp cho một support phải đứng vững giữa party.
+- **Vai trò = SUPPORT của party:** đây là điểm cốt lõi. Tactician có node kiểu **"Watch How I Do It"** / **Presence** — *đồng đội trong vùng hiện diện (Presence) của bạn nhận thêm sát thương đòn đánh bằng một phần sát thương vũ khí của bạn* — và **"50% less reservation"** cho phép **gánh nhiều aura cùng lúc** *(theo [Maxroll](https://maxroll.gg/poe2/resources/tactician-ascendancy-overview); tên node có thể đổi — đối chiếu PoB)*. Cộng thêm **banner** (bản 0.5.0 buff bán kính banner lên 6m, bỏ phạt tốc chạy — theo [patch notes 0.5.0](https://www.pathofexile.com/forum/view-thread/3932540)), bạn thành một **trạm buff di động** cho cả nhóm.
+- **Có thể kèm DPS phụ:** vẫn nên có một cụm gây sát thương + ghim quái để tự dọn rác và khống chế (pin), nhưng **không hy sinh phòng thủ/aura để nhồi DPS**.
+
+**Vì sao support cực giá trị trong party 6?** Trong POE2, nhiều buff (aura, banner, presence) **lan cho cả nhóm** đứng gần. Một Tactician support đổ buff lên **5 DPS còn lại** sẽ nhân tổng sát thương & sức sống của cả party lên nhiều hơn hẳn so với việc bạn tự gánh thêm một suất DPS thứ 6. Với mục tiêu **power-level cả 6 acc lên 90 rồi farm currency**, support giúp **dọn map nhanh hơn và ít chết hơn** = kiếm tiền hiệu quả hơn. Nền tảng về Spirit (tài nguyên nuôi aura) xem [Spirit](/POE2/lo-trinh/chuong-2-co-che-cot-loi/spirit/).
+
+## Lộ trình lên đồ theo giai đoạn
+
+Triết lý cho một support: **đủ sống sót trước, rồi tối đa hoá hiệu quả aura/utility.** Bạn không cần DPS to — bạn cần **đứng vững giữa party và giữ buff chạy liên tục**.
+
+### Giai đoạn 1 — Leveling (đi campaign, 4 Act + interlude)
+
+- **Sống là số một.** Nhặt/mua đồ **rare** rẻ có **+Life** và **kháng** trên mọi ô; vá đủ 3 kháng cơ bản (lửa/lạnh/sét) khi đổi Act. Là support bạn càng phải sống để buff không tắt.
+- **Bật aura/banner sớm.** Ngay khi có Spirit, bật 1–2 aura có ích cho cả nhóm + một banner. Đừng để Spirit trống.
+- **Lấy ascendancy khi mở khoá Trial.** Ưu tiên trước các node **support/phòng thủ** (reservation rẻ để gánh thêm aura, Presence buff cho đồng đội) hơn node DPS thuần.
+- **Power-level trong party:** bạn có thể bám sát một acc DPS để cùng dọn; vì là support, **đứng gần để Presence/banner phủ lên DPS** là đã đóng góp lớn.
+- Mẹo đi campaign nhanh & sống sót: [Mẹo lên cấp](/POE2/lo-trinh/chuong-3-campaign/meo-len-cap/) và [Nguyên tắc sống còn](/POE2/lo-trinh/chuong-3-campaign/nguyen-tac-song-con/).
+
+### Giai đoạn 2 — Early maps (vừa vào endgame Atlas)
+
+- **Cap kháng 75% cho cả 3 kháng cơ bản.** Đây là ngưỡng bắt buộc trước khi đẩy map khó. Xem [Phòng thủ](/POE2/lo-trinh/chuong-2-co-che-cot-loi/phong-thu/).
+- **Tăng Spirit để gánh thêm aura.** Spirit nhiều hơn = nhiều buff thường trực hơn cho cả party. Săn nguồn +Spirit (đồ, node) — đây là "DPS gián tiếp" của support.
+- **Củng cố lớp Armour/Evasion** đúng theo cơ chế Tactician (Armour→stun, Evasion→ailment) để **lì đòn & khó bị khống chế** — support bị choáng/đông cứng là cả party mất buff.
+- **Mở rộng vùng hiệu lực:** ưu tiên dòng/node tăng **Area of Effect** cho banner và **Presence Area** để buff phủ rộng, party không phải bám sát nhau.
+
+### Giai đoạn 3 — Endgame (farm currency, hướng tới lvl 90+)
+
+- **Tối đa hoá hiệu quả buff:** nhồi **+mức skill liên quan** (aura/buff), **hiệu lực aura (aura effect)**, **giảm reservation / +Spirit** để chạy được cụm aura lớn nhất mà nhóm cần.
+- **Đẩy phòng thủ tới mức "không chết":** support sống dai là điều kiện để cả party an toàn. Cap kháng, dày Life, gia cố layer Tactician, cân nhắc kháng Chaos.
+- **DPS phụ + khống chế:** chỉ sau khi support đã đủ, mới đầu tư cụm DPS/ghim quái để bạn tự dọn rác và **pin các quái nguy hiểm** cho DPS rảnh tay.
+- Đối chiếu toàn bộ với PoB endgame của owner (*"Level 100 Efficiency II Tactician"*) — **đó là bản chuẩn** để bạn so kháng/máu/Spirit/cụm aura. Cách dùng PoB: [Path of Building 2](/POE2/lo-trinh/chuong-4-passive-tree/path-of-building-2/).
+
+## Thứ tự ưu tiên chỉ số / affix
+
+Đây là **khung ưu tiên cho một SUPPORT**. Khác với DPS: với support, **sống sót + hiệu quả buff** đứng trên sát thương cá nhân. Khi nhặt/mua một món, chạy theo thứ tự:
+
+1. **Cap kháng 75% (lửa/lạnh/sét) — việc số một.** Thiếu kháng là chết oan, mà support chết thì cả party mất buff. Vá kháng chủ yếu ở **nhẫn / dây chuyền / khiên-đồ tay phụ / giáp**. (Cân nhắc thêm kháng Chaos ở endgame.)
+2. **Đủ máu (Life) / ES để sống sót.** Support **phải sống để buff** — đây là lý do tồn tại của bạn. Gom **+Life** trên mọi ô; gia cố lớp **Armour/Evasion** theo cơ chế Tactician (lì đòn, chống choáng/ailment) để không bị khống chế giữa trận. Nền tảng: [Phòng thủ](/POE2/lo-trinh/chuong-2-co-che-cot-loi/phong-thu/).
+3. **Chỉ số hỗ trợ (trái tim của support).** Theo thứ tự sức nặng:
+   - **+Spirit** — để chạy được **nhiều aura/buff hơn** cho cả party (xem [Spirit](/POE2/lo-trinh/chuong-2-co-che-cot-loi/spirit/)).
+   - **Hiệu lực aura / buff (increased Aura Effect, buff effect)** và **+mức các skill liên quan** (aura/banner) — làm mỗi buff *mạnh hơn*.
+   - **Mở rộng vùng:** Area of Effect cho banner, Presence Area — buff phủ rộng cho cả nhóm.
+   - **Hồi mana / giảm reservation** — giữ cụm buff chạy ổn định, đỡ "hết chỗ" Spirit.
+4. **DPS phụ / tiện ích.** Sau khi 3 mục trên đã đủ: dòng sát thương đúng nhóm của skill phụ, dòng giúp **ghim/khống chế** quái, **Movement Speed** (giày — gần như luôn nên có) để bám theo party.
+
+> Quy tắc một câu cho support: **Cap kháng → đủ máu để sống → tối đa hoá aura/utility (Spirit, hiệu lực, vùng) → rồi mới DPS phụ.** Nếu một "nâng cấp" làm rớt kháng dưới 75% hoặc làm tắt một aura, nó **chưa phải nâng cấp**. Cách đặt ưu tiên chỉ số theo từng build: [Ưu tiên theo build](/POE2/lo-trinh/chuong-5-trang-bi/uu-tien-theo-build/).
+
+## Vai trò trong party 6
+
+Bạn là **support trung tâm** — không phải suất DPS thứ 6, mà là người **nhân sức mạnh của 5 DPS còn lại**:
+
+- **Buff lan cả nhóm:** aura + banner + Presence của Tactician phủ lên đồng đội đứng gần. Node kiểu *"đồng đội trong Presence nhận thêm sát thương đòn đánh theo % vũ khí của bạn"* nghĩa là **đồ vũ khí của bạn càng tốt, cả party càng mạnh** *(theo [Maxroll](https://maxroll.gg/poe2/resources/tactician-ascendancy-overview); đối chiếu PoB)*.
+- **Tăng tốc độ dọn map:** nhóm gây sát thương cao hơn → giết nhanh hơn → **farm currency hiệu quả hơn** (mục tiêu chính của party 6 acc).
+- **Tăng sức sống cả nhóm:** banner/aura phòng thủ + khả năng **ghim (pin)** quái nguy hiểm giúp 5 DPS ít chết hơn, đặc biệt khi power-level các acc còn yếu lên 90.
+- **Vị trí khi chơi:** đứng **giữa đội hình**, sát các DPS, để vùng buff phủ tối đa. Là người **trâu nhất**, bạn có thể đi trước hứng đòn / mở đường an toàn.
+- **Đầu tư đúng chỗ:** ưu tiên currency cho **sống sót + Spirit + hiệu lực aura + (nếu có) vũ khí tốt để buff Presence mạnh**, thay vì đua DPS cá nhân.
+
+> Tóm lại: trong party 6, **một Tactician support tốt làm cả nhóm vừa mạnh hơn vừa an toàn hơn** — đó là cách power-level lên 90 và farm currency nhanh nhất.
+
+<Hop variant="thuatngu">
+
+| Tiếng Anh | Tiếng Việt / Giải thích |
+|-----------|------------------------|
+| Tactician | Ascendancy của Mercenary, thiên support/utility & phòng thủ |
+| Mercenary | Class dùng Crossbow (nỏ) trong POE2 |
+| Ascendancy | Nhánh chuyên hoá nâng cao của class |
+| Crossbow | Nỏ — vũ khí chính của Mercenary |
+| Support (vai trò) | Người buff/hỗ trợ cả party, không phải sát thương chính |
+| Aura | Hào quang thường trực buff bản thân & đồng đội quanh mình |
+| Banner | Cờ cắm xuống tạo vùng buff/hiệu ứng |
+| Presence | "Vùng hiện diện" quanh nhân vật; đồng đội trong vùng nhận buff |
+| Spirit | Tài nguyên nuôi các hiệu ứng thường trực (aura, banner…) |
+| Reservation | Phần Spirit/mana bị "giữ chỗ" để duy trì aura |
+| Aura Effect | Hiệu lực aura — làm aura mạnh hơn |
+| Area of Effect (AoE) | Tầm/vùng ảnh hưởng của skill/buff |
+| Pin | Ghim — quái bị ghim không hành động được (khống chế) |
+| Ailment | Trạng thái bất lợi (cháy/đông/sốc…) |
+| Stun Threshold | Ngưỡng choáng — cao thì khó bị stun |
+| Ailment Threshold | Ngưỡng trạng thái — cao thì khó dính ailment |
+| Armour / Evasion | Giáp / né đòn — hai lớp giảm/tránh sát thương |
+| Resistance cap | Trần kháng (mặc định 75%) |
+| Life / Energy Shield (ES) | Máu / lá chắn năng lượng — hai cách "trữ máu" |
+| Movement Speed | Tốc độ di chuyển |
+| Power-level | Kéo cấp nhanh nhờ người mạnh hơn |
+| PoB (Path of Building 2) | Phần mềm tính toán & lưu build |
+
+</Hop>
+
+<Hop variant="nguon">
+
+- [PoB endgame của owner — "Level 100 Efficiency II Tactician" (Maxroll PoB)](https://maxroll.gg/poe2/pob/zfb510o2)
+- [Tactician Ascendancy Overview — Maxroll (POE2)](https://maxroll.gg/poe2/resources/tactician-ascendancy-overview)
+- [Siege Cascade Tactician — Build Guide (Maxroll, POE2)](https://maxroll.gg/poe2/build-guides/siege-cascade-tactician-build-guide)
+- [PoE2DB — Tactician (database ascendancy passives)](https://poe2db.tw/us/Tactician)
+- [0.5.0 Patch Notes — Return of the Ancients (forum chính thức POE2)](https://www.pathofexile.com/forum/view-thread/3932540)
+- [Path of Building 2 — GitHub chính thức (PathOfBuildingCommunity)](https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2)
+
+> ⚠️ **Lưu ý:** Tên node ascendancy, con số (bán kính banner, % reservation, % buff) và skill meta **đổi theo patch** (POE2 Early Access). Các tên node ở trên lấy từ Maxroll/poe2db tại thời điểm viết — **luôn đối chiếu với PoB của owner và in-game** trước khi chốt. Trang này khoá vào **khung ưu tiên support**, không khoá cứng một con số cụ thể.
+
+</Hop>
+
+:::note[📊 Số liệu sống — kiểm tra trước khi dùng]
+- Bản chuẩn của owner (skill/aura/kháng/máu/Spirit): [maxroll.gg/poe2/pob/zfb510o2](https://maxroll.gg/poe2/pob/zfb510o2)
+- Build & guide Tactician cập nhật patch: [maxroll.gg/poe2/build-guides](https://maxroll.gg/poe2/build-guides)
+- Giá currency & đồ thực tế: [poe.ninja](https://poe.ninja/poe2) · [pathofexile.com/trade2](https://www.pathofexile.com/trade2)
+:::
+
+<Hop variant="mauchot">
+
+- **Tactician (Mercenary)** = **support trung tâm** của party 6: buff lan cả nhóm bằng **aura + banner + Presence**, lại trâu sẵn (Armour→stun, Evasion→ailment).
+- **Vì là support, ưu tiên ngược với DPS:** 1) cap kháng 75% → 2) đủ máu để **sống mà giữ buff** → 3) chỉ số hỗ trợ (**+Spirit**, hiệu lực aura, +skill liên quan, mở rộng vùng, giảm reservation) → 4) DPS phụ/tiện ích.
+- **Lộ trình:** Leveling (sống + bật aura sớm) → Early maps (cap kháng + tăng Spirit + mở rộng vùng buff) → Endgame (tối đa hoá hiệu lực buff + phòng thủ "không chết", rồi mới DPS phụ).
+- **Giá trị trong party 6:** làm 5 DPS mạnh & sống dai hơn → **dọn map nhanh, ít chết → farm currency hiệu quả**; vũ khí của bạn càng tốt thì buff Presence càng mạnh.
+- **Mọi con số đều patch-volatile** → **đối chiếu PoB của owner** (*"Level 100 Efficiency II Tactician"*) làm bản chuẩn, hedge phần nào thấy lệch in-game.
+
+</Hop>
