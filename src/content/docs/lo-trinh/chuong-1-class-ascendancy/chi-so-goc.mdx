@@ -1,0 +1,119 @@
+---
+title: Chỉ số gốc — Sức mạnh, Khéo léo, Trí tuệ
+description: Ba chỉ số gốc Strength/Dexterity/Intelligence là gì, mỗi cái cho bạn thứ gì, và vì sao chúng quyết định trang bị, kỹ năng và độ "trâu" của nhân vật.
+lastUpdated: 2026-05-27
+---
+
+import Hop from '@components/Hop.astro';
+
+:::tip[👉 Bài này bạn sẽ hiểu được]
+- Ba chỉ số gốc của POE2 là gì và mỗi chỉ số cho nhân vật **thứ gì cụ thể**.
+- Vì sao chỉ số gốc quyết định bạn **mặc được trang bị nào** và **dùng được kỹ năng nào**.
+- Mỗi chỉ số gắn với một kiểu **phòng thủ** ra sao (máu / né / khiên năng lượng).
+- Là người mới, bạn nên **quan tâm điều gì** về chỉ số (và điều gì kệ được).
+:::
+
+## Ba chỉ số gốc là gì?
+
+Mọi nhân vật trong POE2 đều có ba **chỉ số gốc (attributes)**. Đây là ba con số nền tảng nhất, ảnh hưởng tới gần như mọi thứ:
+
+- **Strength (Str) — Sức mạnh**
+- **Dexterity (Dex) — Khéo léo**
+- **Intelligence (Int) — Trí tuệ**
+
+Mỗi **class** (lớp nhân vật) bắt đầu thiên về một hoặc hai chỉ số. Ví dụ Warrior (Chiến binh) nhiều Sức mạnh, Witch (Phù thủy) nhiều Trí tuệ. Nhưng đừng nghĩ "đã chọn class là khóa chặt" — bạn cộng thêm chỉ số khi lên cấp và đi cây kỹ năng (passive tree), nên một nhân vật vẫn có thể "vay mượn" chỉ số của hướng khác.
+
+Hãy hiểu ba chỉ số này theo cách thực tế: **chúng vừa cho bạn lợi ích trực tiếp, vừa là "tấm vé" để dùng đồ và kỹ năng.**
+
+## Mỗi chỉ số cho bạn thứ gì?
+
+### Strength (Sức mạnh) — máu và đồ "trâu"
+
+Mỗi điểm Strength cho bạn **+2 máu tối đa (Life)**. Càng nhiều Str, nhân vật càng nhiều máu, càng khó chết. Strength cũng là chỉ số yêu cầu để mặc các loại **giáp Armour (giáp giảm sát thương vật lý)** và dùng phần lớn **vũ khí cận chiến nặng** cùng các kỹ năng của chúng.
+
+> Hiểu nhanh: Str = **trâu bò, đánh cận chiến mạnh, máu dày**.
+
+### Dexterity (Khéo léo) — chính xác và né đòn
+
+Mỗi điểm Dexterity cho bạn **+8 Accuracy Rating (chỉ số chính xác)** — tức là tăng khả năng **đánh trúng** mục tiêu khi dùng đòn đánh thường (Attack). Dexterity cũng là chỉ số yêu cầu để mặc đồ cho **Evasion (né đòn — cơ hội né hẳn một cú đánh)** và dùng phần lớn vũ khí tầm xa như cung.
+
+> Hiểu nhanh: Dex = **nhanh nhẹn, đánh xa/chính xác, né đòn thay vì đỡ đòn**.
+
+### Intelligence (Trí tuệ) — mana và khiên năng lượng
+
+Cứ **2 điểm Intelligence cho +1 mana (năng lượng dùng kỹ năng)**, và cứ **10 điểm Int cho +1% Energy Shield tối đa**. Intelligence là chỉ số yêu cầu cho phần lớn **spell (phép thuật)** và cho đồ tạo **Energy Shield (khiên năng lượng — lớp "máu phụ" hồi nhanh, đứng trước máu thật)**.
+
+> Hiểu nhanh: Int = **dùng phép, nhiều mana, phòng thủ bằng khiên năng lượng**.
+
+## Ba kiểu phòng thủ gắn với ba chỉ số
+
+Đây là điểm quan trọng nhất nên nhớ. POE2 có **ba lớp phòng thủ chính**, và mỗi cái gắn với một chỉ số gốc:
+
+| Chỉ số | Phòng thủ tương ứng | Cơ chế |
+|--------|---------------------|--------|
+| Strength | **Armour** (giáp) | Giảm bớt sát thương vật lý mỗi đòn |
+| Dexterity | **Evasion** (né) | Có **cơ hội né hẳn** một đòn (né được thì không mất máu) |
+| Intelligence | **Energy Shield** (khiên năng lượng) | Lớp "máu phụ" hứng đòn trước máu thật, tự hồi nhanh khi không bị đánh |
+
+Nhiều món giáp trong game là **lai (hybrid)** — ví dụ vừa cho Armour vừa cho Evasion — và sẽ yêu cầu cả hai chỉ số tương ứng. Đó là lý do đôi khi bạn nhặt được một món giáp ngon nhưng **chưa mặc được** vì thiếu chỉ số.
+
+## Vì sao chỉ số gốc quyết định trang bị và kỹ năng
+
+Đây là phần khiến người mới hay khựng lại. Trong POE2:
+
+1. **Trang bị có yêu cầu chỉ số.** Một bộ giáp Armour ngon có thể ghi "yêu cầu 80 Strength". Nếu nhân vật bạn chưa đủ Str, bạn **không mặc được** cho tới khi cộng đủ.
+2. **Kỹ năng (skill gem) cũng có yêu cầu chỉ số.** Một viên ngọc kỹ năng phép có thể cần một lượng Int nhất định để gắn và dùng. Thiếu chỉ số thì kỹ năng đó **không xài được**.
+
+Vì vậy, chỉ số gốc không chỉ là "buff cho khỏe" — nó là **điều kiện để dùng được đồ và chiêu bạn muốn**. May mắn là khi đi đúng hướng class của mình, chỉ số tăng tự nhiên đủ cho phần lớn nhu cầu, nên bạn hiếm khi phải lo lắng quá sớm.
+
+## Là người mới — bạn nên quan tâm điều gì? (làm thế này)
+
+Đừng để ba con số làm bạn căng thẳng. Với nhân vật đầu tiên, chỉ cần nhớ mấy điều sau:
+
+1. **Chọn class hợp với kiểu chơi bạn thích**, rồi cứ đi theo chỉ số chính của class đó. Class lo phần lớn việc cộng chỉ số nền giúp bạn.
+2. **Khi nhặt đồ, đọc dòng "Requires" (yêu cầu).** Nếu thiếu vài điểm chỉ số, bạn có thể chờ lên cấp, hoặc đi vài điểm trên cây kỹ năng để bù.
+3. **Nếu một kỹ năng/đồ đòi chỉ số bạn không có nhiều** (ví dụ build đánh xa Dex mà kỹ năng lại đòi Int), tìm trên cây kỹ năng các điểm **"+ to all Attributes" hoặc "+ to Intelligence"** để vá. Đây là cách phổ biến để dùng kỹ năng "lai" chỉ số.
+4. **Đừng cố ép một build trộn cả ba chỉ số khi mới chơi.** Càng đơn giản (tập trung 1 chỉ số chính) càng dễ sống và dễ hiểu.
+
+Nói gọn: hiểu **Str = máu/giáp, Dex = chính xác/né, Int = mana/khiên** là đủ để chơi vui rồi. Phần tối ưu sâu để dành cho sau.
+
+<Hop variant="thuatngu">
+
+| Tiếng Anh | Tiếng Việt / Giải thích |
+|-----------|------------------------|
+| Attribute | Chỉ số gốc (Str/Dex/Int) |
+| Strength (Str) | Sức mạnh — cho máu, yêu cầu của giáp Armour & vũ khí cận chiến nặng |
+| Dexterity (Dex) | Khéo léo — cho độ chính xác, yêu cầu của đồ Evasion & vũ khí tầm xa |
+| Intelligence (Int) | Trí tuệ — cho mana & khiên năng lượng, yêu cầu của phép |
+| Life | Máu tối đa của nhân vật |
+| Mana | Năng lượng để dùng kỹ năng |
+| Accuracy (Accuracy Rating) | Độ chính xác — khả năng đánh trúng mục tiêu bằng đòn thường |
+| Armour | Giáp — giảm bớt sát thương vật lý mỗi đòn |
+| Evasion | Né đòn — cơ hội né hẳn một cú đánh |
+| Energy Shield (ES) | Khiên năng lượng — lớp máu phụ hồi nhanh, hứng đòn trước máu thật |
+| Attack | Đòn đánh thường (dùng vũ khí, cần Accuracy để trúng) |
+| Spell | Phép thuật (thường dựa vào Int) |
+| Hybrid | Lai — đồ/giáp cho hai loại chỉ số hoặc phòng thủ cùng lúc |
+| Requirement (Requires) | Yêu cầu chỉ số/cấp độ để dùng được đồ hoặc kỹ năng |
+| Passive tree | Cây kỹ năng bị động — cộng điểm để tăng chỉ số/phòng thủ |
+
+</Hop>
+
+<Hop variant="nguon">
+
+- [Strength — Path of Exile 2 Wiki](https://www.poewiki.net/wiki/poe2wiki:Strength)
+- [Dexterity — Path of Exile 2 Wiki](https://www.poewiki.net/wiki/poe2wiki:Dexterity)
+- [Attribute — PoE Wiki](https://www.poewiki.net/wiki/Attribute)
+- [Trang chính thức Path of Exile 2](https://www.pathofexile.com/poe2)
+
+</Hop>
+
+<Hop variant="mauchot">
+
+- POE2 có 3 chỉ số gốc: Strength (Sức mạnh), Dexterity (Khéo léo), Intelligence (Trí tuệ).
+- Str = máu + giáp Armour; Dex = chính xác + né đòn (Evasion); Int = mana + khiên năng lượng (Energy Shield).
+- Mỗi class thiên về 1–2 chỉ số; bạn cộng thêm khi lên cấp và đi cây kỹ năng.
+- Trang bị và kỹ năng đều có **yêu cầu chỉ số** — thiếu thì chưa dùng được.
+- Người mới: chọn class theo sở thích, đi theo chỉ số chính của nó, dùng cây kỹ năng để vá chỉ số khi cần.
+
+</Hop>

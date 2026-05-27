@@ -29,7 +29,16 @@ export default defineConfig({
                 { label: 'Bảng thuật ngữ nền tảng', link: '/lo-trinh/chuong-0-nhap-mon/bang-thuat-ngu/' },
               ],
             },
-            { label: 'Chương 1 — Class & Ascendancy', link: '/lo-trinh/chuong-1-class-ascendancy/' },
+            {
+              label: 'Chương 1 — Class & Ascendancy',
+              items: [
+                { label: 'Tổng quan chương', link: '/lo-trinh/chuong-1-class-ascendancy/' },
+                { label: 'Chỉ số gốc (Str/Dex/Int)', link: '/lo-trinh/chuong-1-class-ascendancy/chi-so-goc/' },
+                { label: 'Các class', link: '/lo-trinh/chuong-1-class-ascendancy/cac-class/' },
+                { label: 'Ascendancy là gì', link: '/lo-trinh/chuong-1-class-ascendancy/ascendancy/' },
+                { label: 'Class cho người mới', link: '/lo-trinh/chuong-1-class-ascendancy/class-cho-nguoi-moi/' },
+              ],
+            },
             { label: 'Chương 2 — Cơ chế cốt lõi', link: '/lo-trinh/chuong-2-co-che-cot-loi/' },
             { label: 'Chương 3 — Đi cốt truyện', link: '/lo-trinh/chuong-3-campaign/' },
             { label: 'Chương 4 — Passive Tree', link: '/lo-trinh/chuong-4-passive-tree/' },

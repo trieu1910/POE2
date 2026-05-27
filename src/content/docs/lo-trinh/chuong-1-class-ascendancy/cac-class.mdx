@@ -1,0 +1,139 @@
+---
+title: Các class trong POE2
+description: Danh sách các lớp nhân vật hiện có trong POE2 — mỗi class thiên về chỉ số nào, lối chơi ra sao, và hợp với người chơi kiểu nào.
+lastUpdated: 2026-05-27
+---
+
+import Hop from '@components/Hop.astro';
+
+:::tip[👉 Bài này bạn sẽ hiểu được]
+- POE2 hiện có **những class nào** để chọn.
+- Mỗi class thiên về **chỉ số gốc nào** và **đánh kiểu gì** (xa/gần, vũ khí/phép, triệu hồi…).
+- Một câu gợi ý **"hợp với ai"** cho từng class, để bạn dễ chọn.
+- Vì sao danh sách này còn **thay đổi theo patch** và nên đọc thế nào.
+:::
+
+## Trước khi đọc danh sách
+
+Mỗi **class (lớp nhân vật)** là một điểm khởi đầu khác nhau: chỉ số gốc khác, vị trí xuất phát trên cây kỹ năng (passive tree) khác, và thường gắn với một kiểu vũ khí/lối chơi. Nhưng nhớ điều này: **class chỉ là điểm bắt đầu, không phải nhà tù.** Cây kỹ năng POE2 dùng chung cho mọi class, nên về lý thuyết bạn có thể đi rất xa khỏi "vai trò mặc định". Dù vậy, người mới nên chơi class **đúng thế mạnh tự nhiên** của nó cho dễ.
+
+> ⚠️ POE2 đang **Early Access**, danh sách class **vẫn đang được bổ sung dần qua từng patch**. Bài này mô tả các class **đang có ở thời điểm cập nhật**. GGG đã công bố mục tiêu cuối cùng là **12 class** (mỗi cặp chỉ số có 2 class) khi game ra mắt chính thức 1.0 — nên sẽ còn class mới xuất hiện *(có thể đổi theo patch)*.
+
+Ôn nhanh: **Str = Sức mạnh (máu/giáp), Dex = Khéo léo (chính xác/né), Int = Trí tuệ (mana/khiên năng lượng)**. Xem chi tiết ở [bài Chỉ số gốc](/lo-trinh/chuong-1-class-ascendancy/chi-so-goc/).
+
+## Các class hiện có
+
+### Warrior (Chiến binh) — Strength
+
+Nhân vật cận chiến cổ điển: cầm vũ khí hai tay nặng (búa, rìu), giáp dày, máu trâu. Lối chơi chậm mà chắc — vung những đòn mạnh, đập choáng (stun) kẻ địch, đứng giữa bầy quái mà không sợ. Đổi lại, tốc độ và sự cơ động không phải thế mạnh.
+
+> **Hợp với ai:** người thích lao thẳng vào đánh cận chiến, trâu bò, không ngại chơi chậm rãi.
+
+### Ranger (Cung thủ) — Dexterity
+
+Bậc thầy đánh xa bằng cung. Cơ động, bắn nhanh, dọn quái từ khoảng cách an toàn, dựa vào né đòn (Evasion) và tốc độ để sống. Đây là kiểu "đứng xa nhả đạn" rất thân thiện với người mới vì bạn ít phải đứng sát nguy hiểm.
+
+> **Hợp với ai:** người thích đánh tầm xa, kiting (chạy né rồi bắn), giữ khoảng cách an toàn.
+
+### Witch (Phù thủy) — Intelligence
+
+Pháp sư hắc ám, mạnh nhất khi **triệu hồi (minion — quái phụ đánh thay bạn)** và dùng phép hỗn độn/tử thi. Có hướng chơi để cả đàn xương/quỷ xông lên đánh hộ, còn bạn đứng sau điều khiển. Cũng có hướng tự bắn phép. Dựa vào khiên năng lượng (Energy Shield) để phòng thủ.
+
+> **Hợp với ai:** người thích "nuôi quân" triệu hồi, đứng sau an toàn để quái đánh hộ.
+
+### Sorceress (Pháp sư nguyên tố) — Intelligence
+
+Pháp sư nguyên tố thuần túy: lửa, băng, sét. Bắn phép sát thương lớn diện rộng, cảm giác "bùng nổ" rất đã tay. Đổi lại khá "giòn" (ít máu), cần biết né và canh khoảng cách. Phòng thủ chính cũng là khiên năng lượng.
+
+> **Hợp với ai:** người mê bắn phép nguyên tố hoành tráng, chịu khó né để bù lại việc mỏng máu.
+
+### Monk (Võ tăng) — Dexterity / Intelligence
+
+Lai giữa Khéo léo và Trí tuệ. Đánh cận chiến bằng quyền trượng (quarterstaff) cực nhanh, kết hợp đòn tay với một chút phép thuật nguyên tố. Lối chơi linh hoạt, cơ động, combo liên tục. Nhịp độ nhanh, vui mắt, nhưng cần quen tay hơn một chút.
+
+> **Hợp với ai:** người thích cận chiến nhanh nhẹn, combo, không thích kiểu "đứng yên đập" chậm chạp.
+
+### Mercenary (Lính đánh thuê) — Strength / Dexterity
+
+Dùng nỏ (crossbow) và súng — bắn đạn đặc biệt như đạn lửa, đạn nổ, lựu đạn. Cảm giác giống một "tay súng" hiện đại trong thế giới fantasy. Có thể nạp nhiều loại đạn cho nhiều tình huống. Lối chơi tầm xa nhưng cơ chế nạp/đổi đạn cần hiểu một chút.
+
+> **Hợp với ai:** người thích bắn súng/đạn đặc biệt, đánh xa nhưng muốn nhiều "mánh" hơn cung đơn thuần.
+
+### Huntress (Nữ thợ săn) — Dexterity
+
+Class thiên Khéo léo, dùng **giáo (spear)** — một loại vũ khí đặc biệt **đánh được cả tầm gần lẫn tầm trung**, kèm khiên nhỏ (buckler) để đỡ. Lối chơi cơ động, kiểm soát chiến trường tốt, vừa thọc vừa lùi. *(Class này được thêm vào trong một patch sau khi EA ra mắt — có thể còn được tinh chỉnh.)*
+
+> **Hợp với ai:** người thích cận–trung chiến cơ động, vũ khí "vừa thọc vừa né", không quá xa cũng không quá sát.
+
+### Druid (Đức sĩ tự nhiên) — Intelligence (lai biến hình)
+
+Class thiên Trí tuệ nhưng đặc biệt ở chỗ **biến hình (shapeshift) thành thú** — gấu, sói, wyvern (rồng có cánh) — mỗi dạng có bộ kỹ năng riêng, dùng vũ khí "Talisman". Vừa niệm phép tự nhiên (phép nguyên thủy), vừa hóa thú lao vào đánh. Rất linh hoạt nhưng cũng là class **phức tạp**, nhiều cơ chế để học. *(Đây là class mới nhất, thêm vào cuối 2025 — có thể còn được cân bằng/tinh chỉnh theo patch.)*
+
+> **Hợp với ai:** người thích sự độc đáo, biến hình thú, sẵn sàng học một class nhiều cơ chế (không lý tưởng cho buổi chơi đầu tiên).
+
+## Bảng tổng hợp nhanh
+
+| Class | Chỉ số chính | Đánh kiểu gì | Hợp với ai |
+|-------|--------------|--------------|------------|
+| Warrior | Str | Cận chiến nặng, trâu | Thích đập mạnh, máu dày, chơi chậm |
+| Ranger | Dex | Bắn cung tầm xa | Thích đứng xa nhả đạn, an toàn |
+| Witch | Int | Triệu hồi + phép hắc ám | Thích nuôi quân đánh hộ |
+| Sorceress | Int | Phép nguyên tố lửa/băng/sét | Mê bắn phép bùng nổ, chịu né bù mỏng máu |
+| Monk | Dex/Int | Cận chiến nhanh + chút phép | Thích combo nhanh nhẹn |
+| Mercenary | Str/Dex | Nỏ/súng, đạn đặc biệt | Thích "tay súng", nhiều mánh |
+| Huntress | Dex | Giáo cận–trung, cơ động | Thích vừa thọc vừa né |
+| Druid | Int (biến hình) | Phép tự nhiên + hóa thú | Thích độc đáo, chịu học cơ chế phức tạp |
+
+> Mỗi class còn có nhiều hướng **chuyên sâu** gọi là **Ascendancy** — xem [bài Ascendancy là gì](/lo-trinh/chuong-1-class-ascendancy/ascendancy/). Còn nếu bạn chỉ muốn biết **nên chọn cái nào để bắt đầu**, nhảy tới [Class cho người mới](/lo-trinh/chuong-1-class-ascendancy/class-cho-nguoi-moi/).
+
+<Hop variant="thuatngu">
+
+| Tiếng Anh | Tiếng Việt / Giải thích |
+|-----------|------------------------|
+| Class | Lớp nhân vật — chọn lúc tạo nhân vật |
+| Warrior | Chiến binh — cận chiến nặng, Strength |
+| Ranger | Cung thủ — đánh xa bằng cung, Dexterity |
+| Witch | Phù thủy — triệu hồi & phép hắc ám, Intelligence |
+| Sorceress | Pháp sư nguyên tố — lửa/băng/sét, Intelligence |
+| Monk | Võ tăng — cận chiến nhanh + chút phép, Dex/Int |
+| Mercenary | Lính đánh thuê — nỏ/súng & đạn đặc biệt, Str/Dex |
+| Huntress | Nữ thợ săn — dùng giáo cận–trung, Dexterity |
+| Druid | Đức sĩ tự nhiên — biến hình thú + phép, thiên Intelligence |
+| Minion | Quái triệu hồi đánh thay người chơi |
+| Spell | Phép thuật |
+| Spear | Giáo — vũ khí đánh được cả gần lẫn trung |
+| Buckler | Khiên nhỏ để đỡ đòn |
+| Crossbow | Nỏ — vũ khí bắn đạn của Mercenary |
+| Quarterstaff | Quyền trượng — vũ khí cận chiến của Monk |
+| Talisman | Vũ khí của Druid, gắn với biến hình |
+| Shapeshift | Biến hình thành thú (cơ chế của Druid) |
+| Evasion | Né đòn |
+| Energy Shield (ES) | Khiên năng lượng — phòng thủ chính của class Int |
+| Kiting | Vừa chạy né vừa đánh để giữ khoảng cách |
+| Stun | Choáng — làm kẻ địch khựng lại |
+
+</Hop>
+
+<Hop variant="nguon">
+
+- [PoE 2 Class Overview — Maxroll](https://maxroll.gg/poe2/resources/poe-2-class-overview)
+- [Ascendancy Classes in Early Access — Forum chính thức POE](https://www.pathofexile.com/forum/view-thread/3592012)
+- [0.4.0 The Last of the Druids — Patch Notes chính thức](https://www.pathofexile.com/forum/view-thread/3883495)
+- [Trang chính thức Path of Exile 2](https://www.pathofexile.com/poe2)
+
+</Hop>
+
+:::note[📊 Số liệu sống — kiểm tra trước khi dùng]
+- Danh sách class & ascendancy mới nhất: [Class Overview — Maxroll](https://maxroll.gg/poe2/resources/poe-2-class-overview)
+- Thông báo & patch notes chính thức: [pathofexile.com/poe2](https://www.pathofexile.com/poe2)
+:::
+
+<Hop variant="mauchot">
+
+- Class là điểm khởi đầu (chỉ số + vị trí cây kỹ năng), không phải khóa cứng vai trò.
+- Hiện có: Warrior, Ranger, Witch, Sorceress, Monk, Mercenary, Huntress, Druid — và còn thêm theo patch (mục tiêu 1.0 là 12 class).
+- Str: Warrior. Dex: Ranger, Huntress. Int: Witch, Sorceress, Druid. Lai: Monk (Dex/Int), Mercenary (Str/Dex).
+- Người mới nên chơi class đúng thế mạnh tự nhiên của nó cho dễ.
+- Danh sách đang Early Access nên có thể đổi — luôn đối chiếu nguồn chính thức.
+
+</Hop>
