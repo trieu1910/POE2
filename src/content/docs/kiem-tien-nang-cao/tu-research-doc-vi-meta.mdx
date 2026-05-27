@@ -1,0 +1,110 @@
+---
+title: Tự research & đọc vị meta
+description: Quy trình tư duy + research để bạn tự đi tìm thông tin POE1/POE2 (farm gì, build nào, giá cả) thay vì đợi người khác — kèm checklist và bộ bookmark bấm được.
+lastUpdated: 2026-05-27
+---
+
+import Hop from '@components/Hop.astro';
+
+:::tip[👉 Bài này bạn sẽ làm được]
+- Tự trả lời "nên farm/build/mua gì" mà **không cần đợi ai**.
+- Biết **nguồn nào tin được**, dùng nguồn nào cho việc gì.
+- **Đọc vị** một guide/tier list: cái nào thật, cái nào thổi phồng, cái nào đã cũ.
+- Có **checklist + bộ bookmark** bấm phát là tra được ngay.
+:::
+
+Đây là **kỹ năng "master" thật sự**: tự đánh hơi được meta. Áp cho cả POE1 lẫn POE2. Tinh thần xuyên suốt — *câu cá, đừng học thuộc con cá*.
+
+## 3 nguyên tắc nền (mindset)
+
+1. **Bắt đầu từ QUYẾT ĐỊNH, không từ thông tin.** Trước khi mở web, hỏi: *"Mình cần quyết cái gì?"* + *"Tiêu chí chấm là gì?"*. Ví dụ chọn farm → 4 cột: **chi phí / lợi nhuận / độ ổn định / yêu cầu**. Định tiêu chí trước → đọc gì cũng quy về đó, khỏi lạc.
+2. **Luôn neo THỜI ĐIỂM.** Mọi thứ POE đổi theo patch/league. Thông tin không kèm "đúng ở phiên bản nào" = **đáng nghi**. Việc đầu tiên luôn là xác định league/patch hiện tại.
+3. **Tách FACT BỀN vs FACT BIẾN.** *Bền* = cơ chế, cung–cầu, cách đọc đồ → học **một lần**. *Biến* = giá, meta đang hot → **tra mỗi lần**. Đừng học thuộc cái biến.
+
+## Quy trình 6 bước
+
+1. **Khung hỏi + tiêu chí** — viết ra câu hỏi & 4 cột tiêu chí.
+2. **Neo bối cảnh** — league/patch hiện tại là gì? (tra official / trang chủ poe.ninja / Maxroll).
+3. **Đi nguồn theo thứ bậc** (xem bảng dưới) — dùng đúng nguồn cho đúng việc.
+4. **Đối chiếu chéo ≥2 nguồn** — mâu thuẫn thì tin cái **mạnh hơn + mới hơn**, nhất là với con số.
+5. **Suy luận first-principles khi data mỏng** — cung dưới cầu? deterministic hay hên xui? cost vs reward vs **time** vs risk? đang giai đoạn nào của league?
+6. **Chốt quyết định + caveat + hạn dùng** — ghi rõ "đúng ở patch X" và khi nào cần tra lại.
+
+## Bậc nguồn — dùng đúng việc
+
+| Nguồn | Dùng để | Độ tin |
+|-------|---------|--------|
+| Trang chính thức (patch notes) | Sự thật về cơ chế & thay đổi | Cao nhất |
+| poe.ninja | Giá & meta **SỐNG**: cái gì đắt, build nào đông | Cao (số liệu live) |
+| Wiki / poedb / poe2db | Cơ chế & **nguồn drop** (truy ngược "rơi từ đâu") | Cao |
+| Maxroll | Chiến lược/guide đã biên tập (cost/profit/ổn) | Cao |
+| Tier list / Reddit / YouTube | Ý tưởng & meta nóng | **Phải verify** (thiên vị, dễ cũ) |
+
+## Cách "đọc vị" một nguồn (quan trọng nhất)
+
+- **Luôn check DATE/LEAGUE của bài.** Guide league cũ → có thể sai hoàn toàn.
+- **Cảnh giác site BÁN currency** — họ thổi phồng "div/giờ" để câu khách.
+- **Số div/giờ = kịch bản tối ưu** (gear/tốc độ cao). Coi là **range/tương đối**, không phải cam kết. Mẹo: Maxroll thường **không** cho div/giờ vì nó quá phụ thuộc build → đó là dấu hiệu **trung thực**.
+- Một claim "ngon" mà chỉ **1 nguồn** nói → treo nghi vấn tới khi có nguồn thứ 2.
+
+## Cách đặt truy vấn tìm kiếm
+
+- **Kèm phiên bản:** `poe 3.28 best currency farm`, `poe2 0.5 atlas strategy`.
+- **Truy ngược nguồn:** `where does <item> drop poe2`, hoặc gõ thẳng tên item vào **poe2db/poedb** rồi đọc mục nguồn.
+- **So sánh:** `X vs Y farm poe`, `<mechanic> worth farming 3.28`.
+
+## Ví dụ thật — research "farm gì POE1"
+
+1. **Tiêu chí:** lời cao **+ ổn**. → 2. **Neo:** tra ra *Mirage 3.28, đang cuối league*. → 3. **Nguồn:** Maxroll currency guides (cost/profit/ổn) + poe.ninja (giá) + tier list (verify). → 4. **Đối chiếu:** Maxroll nói Delve deterministic & fossil độc quyền 3.28 ↔ tier list xếp cao → tin. → 5. **First-principles:** Settlers = thợ chạy nền, ít RNG = variance thấp dù lời TB → đúng "ổn"; Unstable Breach trần cao nhưng đầu tư khổng lồ + jackpot → loại vì tiêu chí là "ổn". → 6. **Chốt** theo ngân sách + caveat "số div/giờ biến động, cuối league đã đổi".
+
+## ✅ Checklist tự research (copy ra dùng)
+
+- [ ] Mình đang cần **quyết định gì**? Tiêu chí 4 cột: chi phí / lợi nhuận / ổn định / yêu cầu?
+- [ ] **League/patch hiện tại** là gì? (đã neo chưa?)
+- [ ] Đã xem **≥2 nguồn**, có nguồn mạnh (official/poe.ninja/Maxroll/wiki)?
+- [ ] Bài/nguồn này **của league nào** — còn đúng không?
+- [ ] Con số (giá, div/giờ) — mình coi là **range**, đã hedge chưa?
+- [ ] Đây là fact **bền** hay **biến**? (biến thì hẹn tra lại)
+- [ ] Quyết định cuối + **caveat** + "đúng tới khi patch/giá đổi".
+
+## 🔖 Bộ bookmark (mở là tra)
+
+- **Giá & meta sống:** [poe.ninja (POE1)](https://poe.ninja/poe1/economy) · [poe.ninja (POE2)](https://poe.ninja/poe2/economy) · builds: [POE1](https://poe.ninja/poe1/builds) / [POE2](https://poe.ninja/poe2/builds)
+- **Guide & chiến lược:** [Maxroll POE1](https://maxroll.gg/poe) · [Maxroll POE2](https://maxroll.gg/poe2) · [Atlas planner POE2](https://maxroll.gg/poe2/atlas-tree)
+- **Cơ chế & nguồn drop:** [POE Wiki](https://www.poewiki.net) · [poe2db (POE2)](https://poe2db.tw) · [poedb (POE1)](https://poedb.tw)
+- **Chính thức:** [pathofexile.com](https://www.pathofexile.com) · patch notes & Trade
+
+<Hop variant="thuatngu">
+
+| Tiếng Anh | Tiếng Việt / Giải thích |
+|-----------|------------------------|
+| Meta | Cái đang "tối ưu/được ưa chuộng" ở thời điểm đó |
+| Patch / League | Phiên bản / mùa giải — mốc khiến thông tin cũ hết đúng |
+| Deterministic | Có kiểm soát, ít hên xui (ngược với RNG) |
+| Variance | Độ dao động kết quả (cao = lúc trúng đậm lúc trắng tay) |
+| First-principles | Suy luận từ gốc (cung/cầu) khi không có sẵn số liệu |
+| Cross-reference | Đối chiếu chéo nhiều nguồn để xác minh |
+
+</Hop>
+
+<Hop variant="nguon">
+
+- [poe.ninja](https://poe.ninja) — giá & meta sống (POE1 & POE2)
+- [Maxroll](https://maxroll.gg) — guide & chiến lược đã biên tập
+- [POE Wiki](https://www.poewiki.net) — cơ chế & nguồn drop
+- [poe2db.tw](https://poe2db.tw) / [poedb.tw](https://poedb.tw) — database item/cơ chế
+- [pathofexile.com](https://www.pathofexile.com) — patch notes chính thức & Trade
+
+> ⚠️ **Lưu ý:** chính các nguồn này cũng đổi theo patch/league — luôn check ngày & phiên bản của thứ bạn đang đọc.
+
+</Hop>
+
+<Hop variant="mauchot">
+
+- **Quyết định trước, thông tin sau** — định 4 cột tiêu chí (chi phí/lợi nhuận/ổn định/yêu cầu) rồi mới tra.
+- **Luôn neo league/patch** — thông tin không kèm phiên bản là đáng nghi.
+- **Đối chiếu ≥2 nguồn**; con số coi là range, không phải cam kết.
+- **Tách bền vs biến:** cơ chế học một lần, giá/meta tra mỗi lần.
+- Vòng lặp: *Quyết gì? → neo league → nguồn theo bậc → đối chiếu → suy luận cung/cầu → chốt + caveat.*
+
+</Hop>

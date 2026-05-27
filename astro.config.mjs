@@ -157,6 +157,7 @@ export default defineConfig({
           label: '💹 Kiếm tiền nâng cao (POE1 & POE2)',
           items: [
             { label: 'Tư duy kiếm tiền & đọc vị content', link: '/kiem-tien-nang-cao/' },
+            { label: 'Tự research & đọc vị meta', link: '/kiem-tien-nang-cao/tu-research-doc-vi-meta/' },
             { label: 'Dòng thời gian một league', link: '/kiem-tien-nang-cao/dong-thoi-gian-league/' },
             { label: 'Cơ chế → farm ra gì (bảng tra)', link: '/kiem-tien-nang-cao/co-che-farm-ra-gi/' },
             { label: 'POE1: Farm Settlers/Kingsmarch ore', link: '/kiem-tien-nang-cao/poe1-settlers-ore/' },
