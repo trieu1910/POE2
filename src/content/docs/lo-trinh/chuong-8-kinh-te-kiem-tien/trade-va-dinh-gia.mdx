@@ -1,0 +1,117 @@
+---
+title: Trade & định giá — mua bán trên trang trade chính thức
+description: Cách dùng trang trade chính thức (trade2) để tìm đồ, cách whisper người bán (POE2 không có nhà đấu giá tự động), và cách tự định giá đồ của bạn bằng cách tra các tin rao tương tự. Kèm hướng dẫn từng bước cho giao dịch đầu tiên.
+lastUpdated: 2026-05-27
+---
+
+import Hop from '@components/Hop.astro';
+
+:::tip[👉 Bài này bạn sẽ hiểu được]
+- POE2 mua bán đồ thế nào: **không có nhà đấu giá tự động** — bạn **whisper (nhắn) người bán** rồi gặp nhau giao dịch.
+- Cách dùng **trang trade chính thức (trade2)** để tìm đúng món đồ mình cần.
+- Cách **tự định giá** đồ của bạn bằng cách tra các tin rao tương tự (không đoán mò).
+- **Làm thế này:** các bước cụ thể cho **giao dịch đầu tiên** của người mới — cả khi mua lẫn khi bán.
+:::
+
+## POE2 mua bán thế nào — không có "chợ tự động"
+
+Đây là điều người mới hay hiểu sai, nên đọc kỹ: **POE2 KHÔNG có nhà đấu giá tự động (auction house)** cho trang bị. Bạn không thể bấm một nút là đồ tự về túi. Thay vào đó:
+
+1. Người bán **rao đồ** (đặt giá) trong một **ô túi public (Premium Stash Tab)** của họ. Đồ này được trang trade lập chỉ mục (index) và hiện ra cho người khác tìm thấy.
+2. Người mua **tìm thấy món đồ** trên trang trade, rồi **gửi lời whisper (nhắn)** cho người bán (trang trade tạo sẵn câu nhắn, chỉ việc copy).
+3. Hai bên **vào hideout (nhà riêng trong game)** của nhau, mở **cửa sổ giao dịch**, đặt đồ và currency vào, rồi cùng bấm xác nhận.
+
+Tức là giao dịch đồ **luôn cần hai con người online cùng lúc**. Nghe phiền, nhưng đó là cách POE2 vận hành.
+
+> Một ngoại lệ tiện lợi: **Currency Exchange** (sàn đổi currency) là cơ chế **không đồng bộ (asynchronous)** — bạn đặt lệnh "đổi X lấy Y", trả một ít Gold phí, rồi hệ thống tự khớp với người khác mà **không cần hai bên online cùng lúc**. Nhưng nó **chỉ dùng cho currency và vật liệu xếp chồng**, KHÔNG dùng cho trang bị/unique. Đồ thường vẫn phải whisper như trên.
+
+## Chuẩn bị: bạn cần một Premium Stash Tab để BÁN
+
+Để **mua**, bạn không cần gì đặc biệt — chỉ cần tài khoản và vào được trang trade. Nhưng để **rao bán** đồ, bạn cần một **Premium Stash Tab** (ô túi cao cấp — mua bằng tiền thật qua microtransaction). Chỉ ô túi loại này mới đặt được giá và được trang trade nhìn thấy.
+
+> ⚠️ Người mới **chưa cần vội** mua Premium Tab. Bạn hoàn toàn có thể **mua đồ** thoải mái mà không tốn gì. Khi nào bắt đầu có đồ đáng bán thì tính tới Premium Tab sau.
+
+## Làm thế này — tìm và MUA một món đồ (giao dịch đầu tiên)
+
+Giả sử bạn muốn mua một món giáp tốt hơn. Làm như sau:
+
+1. Mở **trang trade chính thức**: `pathofexile.com/trade2`. Chọn đúng **league bạn đang chơi** ở góc trên.
+2. Trong ô tìm kiếm, chọn **loại đồ (item category)** bạn cần — ví dụ "Body Armour". Có thể gõ tên **base type** cụ thể nếu biết.
+3. Thêm các **filter (bộ lọc)**: ví dụ kéo thanh "Energy Shield tối thiểu", thêm dòng mod "+Life", giới hạn giá tối đa… Lọc càng kỹ, kết quả càng đúng nhu cầu.
+4. Bấm **Search**. Danh sách hiện ra, **xếp theo giá rẻ → đắt** mặc định.
+5. Chọn một tin hợp lý, bấm nút **copy whisper** (sao chép câu nhắn). Trang sẽ copy sẵn câu kiểu *"Hi, I would like to buy your [tên đồ] listed for [giá]…"*.
+6. Vào game, **dán câu đó vào khung chat** rồi gửi. Chờ người bán mời vào party.
+7. Khi được mời, **đi tới hideout của họ**, đợi họ mở cửa sổ trade, kiểm tra đúng đồ + đúng giá, rồi **cùng bấm xác nhận**.
+
+Mẹo cho người mới:
+
+- **Đừng mời người bán vào party của mình** — hãy chờ họ mời bạn (họ là người chủ động).
+- Nếu muốn **trả giá khác**, gửi một câu **riêng** ("can you do 5ex?"), **đừng sửa** câu nhắn gốc (sửa câu gốc dễ bị nghi lừa).
+- Một số người bán **AFK hoặc đã bán rồi**. Nếu 1–2 phút không trả lời, cứ whisper người tiếp theo. Đây là chuyện bình thường.
+
+## Làm thế này — tự ĐỊNH GIÁ đồ của bạn
+
+Đây là kỹ năng kiếm tiền quan trọng nhất chương này: **đừng đoán giá, hãy tra giá**. Cách làm:
+
+1. Mở `pathofexile.com/trade2`, đúng league.
+2. Lọc tìm **những món GIỐNG món bạn định bán**: cùng loại đồ, và quan trọng nhất là **các dòng mod chính giống nó** (ví dụ cùng có "% Energy Shield cao + Life + kháng"). Đặt giá trị filter gần với món của bạn.
+3. Bấm Search và nhìn **giá thấp nhất** của những món tương tự. Đó là vùng giá thị trường đang chấp nhận.
+4. Để **bán nhanh**, ra giá **bằng hoặc thấp hơn một chút** so với những tin rẻ nhất tương tự. Để **bán được nhiều tiền hơn** (chấp nhận chờ lâu), ra giá nhỉnh hơn.
+5. Đặt giá bằng **một loại currency duy nhất** (mỗi món chỉ ra giá bằng một thứ — ví dụ Exalt hoặc Divine), rồi rao trong Premium Tab.
+
+> Nguyên tắc vàng khi định giá: **so sánh táo với táo.** Một món chỉ "trông giống" nhưng thiếu một dòng mod quan trọng có thể rẻ hơn nhiều lần. Lọc đúng các mod chủ chốt mới ra giá đúng.
+
+> ⚠️ Nếu món của bạn **quá độc/hiếm** đến mức không tìm thấy món nào tương tự để so, đó là dấu hiệu nó có thể rất giá trị — khi đó nên rao thử giá cao và điều chỉnh dần, hoặc hỏi thêm. Đừng bán tháo vội.
+
+## Cảnh giác lừa đảo cơ bản
+
+- **Kiểm tra kỹ cửa sổ trade trước khi bấm xác nhận:** đúng món đồ, đúng số currency. Có trò đổi đồ/đổi số vào phút chót.
+- Cẩn thận chiêu **"price fixing"**: ai đó rao giá rẻ giả để dụ bạn whisper rồi đòi giá khác khi gặp. Cứ từ chối, tìm người khác.
+- **Không bao giờ** "đưa đồ trước, trả sau" hay giao dịch qua bên thứ ba ngoài cửa sổ trade chính thức.
+
+<Hop variant="thuatngu">
+
+| Tiếng Anh | Tiếng Việt / Giải thích |
+|-----------|------------------------|
+| Trade site (trade2) | Trang mua bán chính thức của POE2 (pathofexile.com/trade2) |
+| Auction house | Nhà đấu giá tự động — POE2 KHÔNG có cho trang bị |
+| Whisper | Lời nhắn riêng gửi người bán để hỏi mua |
+| Hideout | Nhà riêng trong game — nơi hai bên gặp nhau giao dịch |
+| Party | Nhóm; người bán mời bạn vào party để cùng tới hideout |
+| Premium Stash Tab | Ô túi cao cấp — cần có để RAO BÁN đồ trên trang trade |
+| Public stash | Ô túi để chế độ công khai cho trang trade lập chỉ mục |
+| Index (lập chỉ mục) | Trang trade quét đồ rao để hiện trong kết quả tìm kiếm |
+| Currency Exchange | Sàn đổi currency không đồng bộ (chỉ cho currency/vật liệu, không cho trang bị) |
+| Asynchronous (không đồng bộ) | Không cần hai bên online cùng lúc |
+| Base type | Loại đồ gốc (vd "Body Armour" cụ thể) |
+| Filter (bộ lọc) | Điều kiện lọc khi tìm đồ (mod, giá, chỉ số…) |
+| Listing (tin rao) | Một món đồ ai đó đang rao bán |
+
+</Hop>
+
+<Hop variant="nguon">
+
+- [Trang trade chính thức POE2 (trade2)](https://www.pathofexile.com/trade2)
+- [Trade in Path of Exile 2 — Maxroll](https://maxroll.gg/poe2/resources/trade-in-path-of-exile-2)
+- [Currency Guide (Currency Exchange) — Maxroll POE2](https://maxroll.gg/poe2/resources/currency-guide)
+- [Asynchronous trading — POE Wiki](https://www.poewiki.net/wiki/Asynchronous_trading)
+- [Trang chính thức Path of Exile 2](https://www.pathofexile.com/poe2)
+
+> ⚠️ **Lưu ý:** giao diện trang trade và chi tiết Currency Exchange **có thể đổi theo patch** trong Early Access. Các bước trên mô tả luồng chung theo bản 0.5.x — nếu nút/menu khác đi, cứ tìm chức năng tương đương.
+
+</Hop>
+
+:::note[📊 Số liệu sống — kiểm tra trước khi dùng]
+- **Giá đồ và tỉ giá đổi từng ngày** — luôn tra giá thực tế trước khi ra giá: [pathofexile.com/trade2](https://www.pathofexile.com/trade2)
+- Tham khảo giá currency để quy đổi cho gọn: [poe.ninja](https://poe.ninja) (chọn Path of Exile 2 → đúng league)
+:::
+
+<Hop variant="mauchot">
+
+- POE2 **không có nhà đấu giá tự động** cho trang bị: bạn **whisper người bán** rồi gặp ở **hideout** để giao dịch.
+- **Currency Exchange** đổi currency tự động (không cần online cùng lúc), nhưng **chỉ cho currency/vật liệu**, không cho trang bị.
+- Để **mua** không cần gì đặc biệt; để **bán** cần **Premium Stash Tab** (người mới chưa cần vội).
+- **Định giá = tra giá, không đoán:** lọc tìm món tương tự trên trade2, nhìn giá thấp nhất, ra giá ngang hoặc thấp hơn chút để bán nhanh.
+- **Kiểm tra cửa sổ trade trước khi xác nhận**; cảnh giác đổi đồ/đổi giá phút chót.
+
+</Hop>

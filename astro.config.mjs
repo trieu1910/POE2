@@ -101,7 +101,16 @@ export default defineConfig({
                 { label: 'Pinnacle boss', link: '/lo-trinh/chuong-7-endgame-atlas/pinnacle-boss/' },
               ],
             },
-            { label: 'Chương 8 — Kinh tế & Kiếm tiền', link: '/lo-trinh/chuong-8-kinh-te-kiem-tien/' },
+            {
+              label: 'Chương 8 — Kinh tế & Kiếm tiền',
+              items: [
+                { label: 'Tổng quan chương', link: '/lo-trinh/chuong-8-kinh-te-kiem-tien/' },
+                { label: 'Currency giá trị', link: '/lo-trinh/chuong-8-kinh-te-kiem-tien/currency-gia-tri/' },
+                { label: 'Trade & định giá', link: '/lo-trinh/chuong-8-kinh-te-kiem-tien/trade-va-dinh-gia/' },
+                { label: 'Các cách farm', link: '/lo-trinh/chuong-8-kinh-te-kiem-tien/cac-cach-farm/' },
+                { label: 'Tư duy ROI', link: '/lo-trinh/chuong-8-kinh-te-kiem-tien/tu-duy-roi/' },
+              ],
+            },
             { label: 'Chương 9 — Tự cook Build', link: '/lo-trinh/chuong-9-build-theorycraft/' },
             { label: 'Chương 10 — Tài nguyên & Patch', link: '/lo-trinh/chuong-10-tai-nguyen-patch/' },
           ],

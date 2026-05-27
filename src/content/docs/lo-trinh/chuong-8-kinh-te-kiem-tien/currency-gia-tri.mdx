@@ -1,0 +1,110 @@
+---
+title: Currency giá trị — viên nào thực sự đáng giữ làm tiền
+description: Trong POE2, Exalted Orb là đơn vị "tiền lẻ" hằng ngày còn Divine Orb là đơn vị giá trị cao. Bài này giải thích currency nào giữ giá, khái niệm tỉ giá, vì sao giá đổi suốt league, và cách đọc poe.ninja để tự nắm giá — KHÔNG hardcode con số.
+lastUpdated: 2026-05-27
+---
+
+import Hop from '@components/Hop.astro';
+
+:::tip[👉 Bài này bạn sẽ hiểu được]
+- Vì sao POE2 **không có đồng "vàng"** chung, và "tiền" thật sự là các viên **currency orb**.
+- **Exalted Orb** là đơn vị "tiền lẻ" hằng ngày, **Divine Orb** là đơn vị giá trị cao — và vài món giá trị khác.
+- Khái niệm **"tỉ giá"** giữa các currency, và vì sao giá **đổi suốt cả league**.
+- **Làm thế này:** đọc poe.ninja để tự biết giá hiện tại, không cần học thuộc con số.
+:::
+
+## POE2 không có "vàng" để mua mọi thứ
+
+Ở đa số game, bạn nhặt vàng rồi dùng vàng mua đồ. POE2 **khác hẳn**: không có một đồng tiền chung như vậy giữa người chơi. Thứ đóng vai trò "tiền" chính là các viên **currency orb** (cầu/viên tiền tệ) — những viên bạn đã gặp ở [Chương 6](/lo-trinh/chuong-6-crafting/currency-orbs/). Điểm đặc biệt: mỗi viên vừa là **vật liệu để chế đồ**, vừa là **tiền để mua bán**. Vì ai cũng cần chúng để chế đồ, nên chúng tự nhiên trở thành "tiền" mà mọi người đều chấp nhận.
+
+> Ghi chú: trong game **có "Gold" (vàng)** nhưng nó chỉ dùng để trả phí cho NPC và phí giao dịch trên Currency Exchange — **không** dùng để mua bán đồ giữa người chơi. Đừng nhầm Gold với "tiền thật" của nền kinh tế.
+
+## Hai trụ cột: Exalted Orb và Divine Orb
+
+Trong vô số loại currency, có **hai viên** mà gần như mọi giao dịch đều quy về:
+
+- **Exalted Orb** — đây là **đơn vị "tiền lẻ" hằng ngày** của POE2. Nó rơi tương đối thường xuyên, nên đa số đồ giá thấp–trung bình được **ra giá bằng Exalted** (ví dụ: một món đồ "vài Exalt"). Hãy coi Exalted như tờ tiền bạn cầm đi chợ.
+- **Divine Orb** — đây là **đơn vị giá trị cao**, được xem như "vàng miếng" của nền kinh tế. Một viên Divine đáng **nhiều Exalted** (đúng bao nhiêu thì đổi theo ngày — xem block số liệu sống bên dưới). Đồ đắt tiền thường được ra giá bằng Divine cho gọn.
+
+Hiểu nôm na: **Exalted là tiền lẻ, Divine là tờ tiền mệnh giá lớn.** Khi mua một món vài chục Exalt, người ta thường gom lại trả bằng Divine cho tiện.
+
+> ⚠️ **Đơn vị "trung tâm" của nền kinh tế có thể dịch chuyển theo thời gian.** Đầu một league, currency rớt nhiều ai cũng có, càng về sau những viên hiếm càng lên giá. Có giai đoạn cộng đồng dùng Exalted làm chuẩn chính, có giai đoạn ngả nhiều hơn về Divine. *(Điều này có thể đổi theo patch/league — luôn nhìn poe.ninja để biết hiện tại đang dùng gì.)*
+
+## "Tỉ giá" giữa các currency là gì
+
+Vì có nhiều loại currency, giữa chúng tồn tại **tỉ giá (exchange rate)** — giống như đổi tiền giữa các nước. Ví dụ "1 Divine = bao nhiêu Exalted" chính là một tỉ giá. Tỉ giá này **không cố định**: nó do cung–cầu của người chơi quyết định và **thay đổi theo từng giờ, từng ngày**.
+
+Vì sao giá đổi liên tục?
+
+- **Đầu league** mọi thứ rớt nhiều, người chơi nghèo → đồ và currency cao cấp đắt tương đối.
+- **Giữa/cuối league** nhiều người đã giàu, currency rẻ tích lũy đầy → một số viên hiếm tăng giá, viên phổ thông giảm giá.
+- Một **patch cân bằng** hay một build "meta" hot lên cũng có thể khiến một số món tăng/giảm đột ngột.
+
+Đây là lý do bài học này **tuyệt đối không ghi con số giá**: bất kỳ tỉ giá nào viết ra hôm nay, vài ngày sau đã sai.
+
+## Vài món giá trị khác đáng để ý
+
+Ngoài hai trụ cột, có những thứ tuy không phải "tiền" nhưng **bán ra Exalted/Divine rất tốt** vì người chơi luôn cần để chế đồ cao cấp. Bạn không cần nhớ hết, chỉ cần biết **đừng vứt** chúng:
+
+- **Jeweller's Orb** (Lesser / Greater / Perfect) — dùng để thêm ô socket cho gem.
+- **Gemcutter's Prism** — tăng quality (chất lượng) cho skill gem.
+- **Essence, Omen, Catalyst** — vật liệu chế đồ có mục tiêu (đã gặp ở [Chương 6](/lo-trinh/chuong-6-crafting/essence-rune-omen/)).
+- **Waystone bậc cao, Breachstone, Expedition currency, Distilled Emotion** — các món gắn với cơ chế endgame, người cày chuyên sâu luôn mua.
+
+Quy tắc cho người mới: nếu một món **xếp chồng được (stack)** và bạn không rõ nó là gì, **đừng vứt** — gom lại rồi tra giá. Nhiều thứ "trông tầm thường" lại bán được.
+
+## Làm thế này — tự đọc giá trên poe.ninja
+
+**poe.ninja** là trang thống kê giá cộng đồng. Đây là cách bạn tự biết giá hiện tại mà không cần ai chỉ:
+
+1. Mở **poe.ninja**, chọn mục **Path of Exile 2** (không phải POE1), rồi chọn đúng **league bạn đang chơi** (ví dụ league hiện tại, hoặc Standard).
+2. Vào tab **Currency** — bạn sẽ thấy bảng các viên currency và **giá quy đổi của chúng** (thường quy ra Exalted hoặc Divine/Chaos).
+3. Để biết "1 Divine bằng bao nhiêu Exalted", tìm dòng **Divine Orb** và đọc cột quy đổi. Đó là tỉ giá **ngay lúc này**.
+4. Nhìn **biểu đồ xu hướng** (đường giá mấy ngày qua) để biết món đó đang **lên hay xuống giá** — hữu ích khi quyết định nên bán ngay hay giữ.
+
+> Đừng học thuộc con số trên poe.ninja. Hãy học **thói quen mở nó ra tra** mỗi khi định mua/bán/giữ một thứ gì đó.
+
+<Hop variant="thuatngu">
+
+| Tiếng Anh | Tiếng Việt / Giải thích |
+|-----------|------------------------|
+| Currency / Currency Orb | Viên tiền tệ — vừa là "tiền", vừa là vật liệu chế đồ |
+| Exalted Orb | Đơn vị "tiền lẻ" hằng ngày, đồ giá thấp–trung bình thường ra giá bằng nó |
+| Divine Orb | Đơn vị giá trị cao ("vàng miếng"), đồ đắt thường ra giá bằng nó |
+| Gold (vàng) | Tiền trả phí NPC & phí Currency Exchange — KHÔNG dùng mua bán đồ giữa người chơi |
+| Exchange rate (tỉ giá) | Tỉ lệ quy đổi giữa hai currency, thay đổi theo cung–cầu |
+| League | Mùa chơi có thời hạn; giá cả biến động mạnh trong vòng đời một league |
+| Standard | Server vĩnh viễn, gộp đồ của các league cũ |
+| Stack (xếp chồng) | Nhiều món cùng loại gộp vào một ô túi |
+| poe.ninja | Trang thống kê giá cộng đồng — tra giá hiện tại |
+| Jeweller's Orb | Thêm ô socket cho gem |
+| Gemcutter's Prism | Tăng quality cho skill gem |
+
+</Hop>
+
+<Hop variant="nguon">
+
+- [Currency — POE Wiki (POE2)](https://www.poewiki.net/wiki/poe2wiki:Currency)
+- [Exalted Orb — POE Wiki (POE2)](https://www.poewiki.net/wiki/poe2wiki:Exalted_Orb)
+- [Divine Orb — POE Wiki (POE2)](https://www.poewiki.net/wiki/poe2wiki:Divine_Orb)
+- [Currency Guide — Maxroll POE2](https://maxroll.gg/poe2/resources/currency-guide)
+- [poe2db — Currency database](https://poe2db.tw/us/Currency)
+
+> ⚠️ **Lưu ý:** đơn vị tiền tệ "trung tâm" và mức độ phổ biến của từng viên **có thể đổi theo patch/league** trong Early Access. Bài này chỉ mô tả vai trò, KHÔNG ghi giá — luôn tra poe.ninja để biết tình hình hiện tại.
+
+</Hop>
+
+:::note[📊 Số liệu sống — kiểm tra trước khi dùng]
+- **Tỉ giá currency (1 Divine = ? Exalted, v.v.) thay đổi từng ngày** — tra tại: [poe.ninja](https://poe.ninja) (chọn Path of Exile 2 → đúng league → tab Currency)
+- Kiểm tra giá đồ thực tế đang được rao: [pathofexile.com/trade2](https://www.pathofexile.com/trade2)
+:::
+
+<Hop variant="mauchot">
+
+- POE2 **không có "vàng" chung** — "tiền" là các viên **currency orb**, vừa làm tiền vừa để chế đồ.
+- **Exalted = tiền lẻ hằng ngày; Divine = đơn vị giá trị cao.** Đồ rẻ ra giá bằng Exalt, đồ đắt ra giá bằng Divine.
+- Giữa các currency có **tỉ giá**, và nó **đổi theo giờ/ngày/league** — đừng học thuộc con số.
+- Các món **stack được** (Jeweller's Orb, Essence, Omen, Waystone bậc cao…) thường bán ra tiền tốt — **đừng vứt**.
+- **Làm thế này:** mở **poe.ninja** (chọn POE2 → đúng league → tab Currency) để tự tra giá và xem xu hướng trước khi mua/bán/giữ.
+
+</Hop>
