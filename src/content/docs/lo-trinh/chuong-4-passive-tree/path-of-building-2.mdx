@@ -1,0 +1,103 @@
+---
+title: Path of Building 2 (PoB2) — công cụ lên kế hoạch build
+description: Path of Building 2 là gì, vì sao người chơi POE2 nào cũng nên có, lấy ở đâu (GitHub chính thức) và cách dùng cơ bản cho người mới.
+lastUpdated: 2026-05-27
+---
+
+import Hop from '@components/Hop.astro';
+
+:::tip[👉 Bài này bạn sẽ hiểu được]
+- **Path of Building 2 (PoB2)** là gì và vì sao gần như ai cũng dùng.
+- **Lấy ở đâu cho an toàn** (GitHub chính thức của cộng đồng PoB).
+- Cách **nhập (import) build mẫu bằng mã code** hoặc nhập chính nhân vật của bạn.
+- Cách đọc **DPS, máu, kháng** và **thử cây passive** trước khi tiêu điểm thật.
+:::
+
+**Path of Building 2 (viết tắt PoB2)** là một **phần mềm miễn phí, chạy ngoại tuyến (offline)** trên máy tính, dùng để **lên kế hoạch và tính toán build** cho Path of Exile 2. Theo mô tả của chính kho mã nguồn, đây là *"an offline build planner for Path of Exile 2"* — một công cụ dựng build offline cho POE2. Nó là **bản POE2 riêng**, do cộng đồng Path of Building Community phát triển *(theo [Maxroll — PoB2 Release](https://maxroll.gg/poe2/news/pob2-release-and-pob-team-partnership))*.
+
+Hiểu nôm na: PoB2 là một **bản sao mô phỏng nhân vật của bạn ngoài game**. Bạn bày cây passive, gắn chiêu, mặc đồ giả định vào đó, và PoB2 **tính ngay ra** nhân vật mạnh cỡ nào (sát thương, máu, kháng...) — mà **không tốn gì trong game cả**.
+
+## Vì sao gần như ai cũng dùng PoB2?
+
+- **Thử trước, khỏi phí điểm/Gold.** Trong game, tô sai ô passive phải tốn Gold để refund. Trong PoB2 bạn **bấm thử thoải mái**, sai thì xoá, không mất gì.
+- **Thấy con số thật.** Game không hiện rõ "đổi ô này thì DPS tăng bao nhiêu". PoB2 hiện **DPS, máu, kháng, các phòng thủ** và cập nhật ngay khi bạn đổi gì đó.
+- **Đi theo build mẫu cực dễ.** Hầu hết build hướng dẫn (ví dụ trên Maxroll) đều kèm **mã code PoB2**. Dán mã vào là bạn có nguyên build của họ để xem và bắt chước.
+- **Lên kế hoạch dài hạn.** Bạn vạch sẵn "cấp 30 lấy gì, cấp 60 lấy gì" trước, rồi cứ thế tô trong game.
+
+## Lấy PoB2 ở đâu cho an toàn?
+
+**Chỉ tải từ trang GitHub chính thức của cộng đồng Path of Building** — đừng tải từ web lạ để tránh dính mã độc.
+
+- Kho chính thức (POE2): **[github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2](https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2)**
+- Tải bản cài tại trang **[Releases](https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/releases)** — ở đó có **bộ cài (install wizard)** hoặc **bản nén portable** (giải nén ra chạy luôn, không cần cài).
+
+> Bước cài để **đơn giản và lâu bền**: vào trang Releases, tải file bản mới nhất, chạy bộ cài (hoặc giải nén bản portable rồi mở file chạy). Windows có thể hiện cảnh báo "ứng dụng lạ" — đây là điều bình thường với phần mềm cộng đồng; nếu bạn tải từ đúng trang GitHub ở trên thì cứ tiếp tục. *(Giao diện và bước cài có thể đổi theo bản phát hành — xem hướng dẫn ngay trên trang GitHub.)*
+
+PoB2 là phần mềm **miễn phí và offline** — không cần đăng nhập tài khoản, không cần mạng để dùng các tính năng tính toán cơ bản.
+
+## Làm thế này — dùng PoB2 lần đầu (mức người mới)
+
+Bạn **không cần biết hết** mọi nút. Chỉ cần làm được 3 việc: nhập build, đọc số, và thử cây.
+
+### Cách 1: Nhập một build mẫu bằng mã code (dễ nhất)
+
+1. Mở một build hướng dẫn trên **[Maxroll POE2](https://maxroll.gg/poe2)**, tìm nút **"PoB" / "Copy PoB code"** để copy mã.
+2. Trong PoB2, vào mục **Import/Export → Import** rồi **dán mã** vào. Build của họ hiện ra: cây passive, chiêu, đồ.
+3. Bấm quanh để xem họ đi cây thế nào, gắn support gem gì — rồi **bắt chước trong game**.
+
+### Cách 2: Nhập chính nhân vật của bạn
+
+Theo kho chính thức, PoB2 cho phép *"import passive tree, items, and skills from existing characters"* — tức **kéo nguyên cây passive, đồ và chiêu của nhân vật bạn** vào để xem máy tính phân tích. Bạn nhập **tên tài khoản + tên nhân vật** vào mục Import là PoB2 tải về (nhân vật của bạn cần ở chế độ hồ sơ công khai). *(Các bước cụ thể có thể đổi theo bản — làm theo nhãn trên màn hình Import.)*
+
+### Cách 3: Tự bày từ đầu
+
+Chọn class, rồi **bấm vào cây passive** để tô thử các ô. Mỗi lần đổi, nhìn **bảng số bên cạnh** đổi theo.
+
+### Đọc 3 nhóm số quan trọng nhất
+
+Khi nhìn bảng tổng quan của PoB2, người mới chỉ cần để ý:
+
+- **DPS** (sát thương mỗi giây) — số càng cao đánh càng nhanh. Dùng để **so sánh**: "đổi ô này DPS lên hay xuống?".
+- **Life / Energy Shield** (máu / lá chắn) — "kho máu" của bạn; phải đủ dày để sống.
+- **Resistances** (kháng Lửa/Băng/Sét, và Chaos) — phải đẩy lên **trần (mặc định 75%)**. Đây là phòng thủ quan trọng nhất; xem bài [Phòng thủ](/lo-trinh/chuong-2-co-che-cot-loi/phong-thu/).
+
+Mẹo dùng: **đổi một thứ rồi xem ba nhóm số trên nhúc nhích ra sao.** Đó là cách bạn "cảm" được ô nào đáng lấy mà không cần học công thức. Vì sao các số này cộng dồn với nhau, xem bài [Cộng dồn sát thương](/lo-trinh/chuong-4-passive-tree/cong-don-sat-thuong/).
+
+<Hop variant="thuatngu">
+
+| Tiếng Anh | Tiếng Việt / Giải thích |
+|-----------|------------------------|
+| Path of Building 2 (PoB2) | Phần mềm miễn phí, offline, dùng lên kế hoạch & tính build POE2 |
+| Build planner | Công cụ dựng/lên kế hoạch build |
+| Offline | Ngoại tuyến — chạy không cần mạng |
+| Import / Export | Nhập / Xuất — đưa build vào hoặc lấy mã build ra |
+| PoB code | Mã code đại diện cho cả một build, dán vào PoB2 là hiện ra |
+| Install wizard | Bộ cài tự động |
+| Portable | Bản nén giải ra chạy luôn, không cần cài |
+| DPS (Damage Per Second) | Sát thương mỗi giây — chỉ số so sánh độ mạnh tấn công |
+| Life / Energy Shield | Máu / Lá chắn năng lượng — "kho máu" của nhân vật |
+| Resistances | Kháng nguyên tố (Lửa/Băng/Sét) và Chaos |
+| Resistance Cap | Trần kháng — mức tối đa kháng có tác dụng (mặc định 75%) |
+
+</Hop>
+
+<Hop variant="nguon">
+
+- [PathOfBuilding-PoE2 — GitHub chính thức (PathOfBuildingCommunity)](https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2)
+- [PathOfBuilding-PoE2 — Releases (trang tải)](https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/releases)
+- [PoB2 Release and PoB Team Partnership — Maxroll](https://maxroll.gg/poe2/news/pob2-release-and-pob-team-partnership)
+- [Build & PoB code mẫu — Maxroll POE2](https://maxroll.gg/poe2)
+
+> ⚠️ **Lưu ý:** PoB2 đang phát triển theo POE2 (Early Access) nên **giao diện, bước cài và phiên bản đổi liên tục**. Luôn tải bản mới nhất ở trang Releases và làm theo hướng dẫn ngay trên GitHub.
+
+</Hop>
+
+<Hop variant="mauchot">
+
+- **PoB2 là phần mềm miễn phí, offline** để dựng và tính build POE2 — gần như ai cũng dùng.
+- **Chỉ tải từ GitHub chính thức** `PathOfBuildingCommunity/PathOfBuilding-PoE2`, tránh web lạ.
+- Cách nhanh nhất: **dán mã PoB code** của build mẫu (Maxroll) để xem & bắt chước.
+- Người mới chỉ cần đọc 3 nhóm số: **DPS, Life/ES, Resistances** — đổi gì thì xem chúng nhúc nhích ra sao.
+- **Thử cây trong PoB2 trước, tô trong game sau** — sai trong PoB2 không tốn gì.
+
+</Hop>

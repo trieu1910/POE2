@@ -1,0 +1,115 @@
+---
+title: Đọc cây passive — các loại ô & cách tiêu điểm
+description: Hướng dẫn người mới đọc cây kỹ năng bị động POE2 — ô nhỏ, notable, keystone, ô chỉ số, ô gắn ngọc, cách lấy điểm passive và tiêu điểm sớm hợp lý.
+lastUpdated: 2026-05-27
+---
+
+import Hop from '@components/Hop.astro';
+
+:::tip[👉 Bài này bạn sẽ hiểu được]
+- Phân biệt **5 loại ô** trên cây: ô nhỏ, notable, keystone, ô chỉ số, ô gắn ngọc.
+- Bạn **kiếm điểm passive ở đâu** (lên cấp + một số nhiệm vụ).
+- Vì sao **keystone là con dao hai lưỡi** — đổi luật chơi nhưng có đánh đổi.
+- Người mới nên **tiêu điểm sớm thế nào** để không rải lung tung.
+:::
+
+Khi bấm mở **Passive Skill Tree (cây kỹ năng bị động)**, bạn thấy một bản đồ sao khổng lồ với hàng ngàn ô nối với nhau bằng đường kẻ. Mỗi điểm passive cho phép bạn "tô sáng" một ô (gọi là **allocate** — kích hoạt ô đó), và ô đã tô sẽ cộng vĩnh viễn tác dụng của nó vào nhân vật. Bạn chỉ đi được tới ô nào **nối liền** với ô đã tô — nên cây giống như một mê cung mà bạn vẽ đường đi của mình.
+
+Nhân vật mỗi class **bắt đầu ở một vị trí khác nhau** trên cây (Warrior gần vùng sức mạnh, Sorceress gần vùng phép thuật...). Đó là lý do cùng một cây nhưng mỗi class lại "đi" ra hướng khác nhau.
+
+## 5 loại ô bạn cần nhận ra
+
+Theo [Maxroll — PoE 2 Passive Tree](https://maxroll.gg/poe2/resources/poe-2-passive-tree-and-dual-specialization), cây có vài loại ô với vai trò rất khác nhau. Nhìn vào **kích thước và hình dạng** ô là đoán được loại:
+
+### 1. Ô nhỏ / ô thường (small / minor passive)
+
+Là các chấm nhỏ chiếm phần lớn cây. Mỗi ô cho **một chỉ số nhỏ**: ví dụ "+5% Increased Fire Damage", "+8 Maximum Life", "+10% Increased Projectile Speed". Một ô lẻ thì không đáng kể, nhưng chúng là **đường đi** để bạn nối tới những ô lớn, và cộng dồn lại cũng đáng giá.
+
+### 2. Notable (điểm đáng kể)
+
+Ô to hơn, thường nằm **ở cuối một cụm** các ô nhỏ. Một notable cho **một gói tác dụng mạnh hơn hẳn**, đôi khi kèm điều kiện. Maxroll mô tả notable là *"phần thưởng đáng kể ở cuối một chuỗi ô nhỏ"*. Đây là **mục tiêu chính** khi bạn vạch đường đi: đi qua vài ô nhỏ để "với tới" một notable hợp build.
+
+### 3. Keystone (ô đổi luật chơi)
+
+Ô lớn nhất, thường **đứng riêng một mình** ở rìa cây. Keystone **thay đổi luật chơi của nhân vật** — tác dụng cực mạnh nhưng **luôn kèm đánh đổi (trade-off)**. Maxroll gọi keystone là *"tác dụng mạnh, thường định hình cả build"*.
+
+Ví dụ kinh điển là **Chaos Inoculation**: cho bạn **miễn nhiễm hoàn toàn sát thương Chaos (hỗn độn)**, nhưng đổi lại **máu (Life) của bạn bị ép xuống còn 1** — nghĩa là bạn phải sống hoàn toàn bằng Energy Shield (lá chắn năng lượng). Một keystone có thể làm build bạn bay lên hoặc tự sát nếu lấy bừa.
+
+> ⚠️ **Người mới đừng lấy keystone khi chưa hiểu rõ đánh đổi của nó.** Hãy đọc kỹ dòng chữ trên ô (cả phần lợi lẫn phần hại), hoặc làm theo build mẫu. Nhiều keystone chỉ hợp với build đã xây dựng quanh nó.
+
+### 4. Ô chỉ số / ô di chuyển (attribute / travel node)
+
+Là các ô cho **chỉ số gốc**: Strength (Str — sức mạnh), Dexterity (Dex — nhanh nhẹn), Intelligence (Int — trí tuệ). Trong POE2 nhiều ô "di chuyển" cho bạn **chọn một trong ba chỉ số** khi tô. Các chỉ số này vừa giúp bạn **đủ điều kiện đeo đồ / gắn gem** (đồ và gem yêu cầu lượng Str/Dex/Int nhất định), vừa cho ích lợi định tính (ví dụ Str liên quan tới máu) *(chi tiết tác dụng từng chỉ số xem bài [Chỉ số gốc](/lo-trinh/chuong-1-class-ascendancy/chi-so-goc/))*. Đừng đi vòng xa chỉ để nhặt chỉ số — thường bạn nhặt chúng "trên đường" tới notable.
+
+### 5. Ô gắn ngọc (jewel socket)
+
+Là **ô tròn rỗng** trên cây. Khi tô nó, bạn mở ra một **socket (lỗ)** để **gắn Jewel (ngọc)** vào. Jewel là một viên đá bạn nhặt/chế được, gắn vào sẽ cho thêm chỉ số (ví dụ "+ máu", "+ sát thương cho một loại chiêu"). Coi như một "ô passive bổ sung" mà nội dung do viên ngọc quyết định. Người mới chưa cần ưu tiên, nhưng nên biết để sau này tận dụng.
+
+## Bạn kiếm điểm passive ở đâu?
+
+Có **hai nguồn chính** *(theo [Maxroll](https://maxroll.gg/poe2/resources/poe-2-passive-tree-and-dual-specialization))*:
+
+1. **Lên cấp (level up):** mỗi cấp cho bạn điểm passive — đây là nguồn lớn nhất và đều đặn.
+2. **Một số nhiệm vụ trong cốt truyện (campaign quest):** vài nhiệm vụ thưởng thêm điểm passive (và một số thưởng **điểm refund** — điểm hoàn lại để xoá ô đã tô).
+
+> Số điểm cụ thể mỗi cấp/nhiệm vụ là loại **dễ đổi theo patch** — đừng học thuộc con số, cứ chơi và tiêu điểm khi có. Nếu lỡ tô sai, bạn **xoá ô (refund) được bằng cách trả Gold (vàng)**, giá tăng dần theo cấp; vài nhiệm vụ cốt truyện cũng tặng điểm refund miễn phí.
+
+POE2 còn có **Weapon Set Passive Points (điểm passive theo bộ vũ khí)** — một số điểm chỉ có tác dụng khi bạn đang cầm bộ vũ khí tương ứng, dùng cho ai hay đổi qua lại hai bộ vũ khí. **Người mới có thể bỏ qua phần này lúc đầu** *(theo [Maxroll](https://maxroll.gg/poe2/resources/poe-2-passive-tree-and-dual-specialization), có thể đổi theo patch)*.
+
+## Làm thế này — người mới nên tiêu điểm sớm
+
+Nguyên tắc vàng: **đi có hướng, đừng rải đều.** Một số điểm dồn đúng chỗ mạnh hơn nhiều so với rải mỗi nơi một ít.
+
+1. **Bám theo một build mẫu nếu có.** Cách dễ nhất và an toàn nhất: mở một build hướng dẫn (trên Maxroll, hoặc nhập vào Path of Building 2) và **tô theo đúng thứ tự họ chỉ**. Xem bài [Path of Building 2](/lo-trinh/chuong-4-passive-tree/path-of-building-2/).
+2. **Ưu tiên máu (Life) sớm.** Nhặt các notable/ô cho **Maximum Life** gần điểm xuất phát — sống được thì mới đánh được. (Phòng thủ tổng thể xem [Phòng thủ](/lo-trinh/chuong-2-co-che-cot-loi/phong-thu/).)
+3. **Hướng tới vài notable hợp loại sát thương của bạn.** Nếu bạn đánh phép lửa, đi tới cụm notable về "Fire / Spell Damage"; nếu bắn cung, đi cụm "Projectile / Attack". **Chọn một hướng và dồn vào**, đừng vừa lấy lửa vừa lấy băng vừa lấy vật lý.
+4. **Nhặt chỉ số (attribute) "trên đường", đừng đi vòng.** Chỉ đi lệch để lấy Str/Dex/Int khi bạn **thiếu điều kiện** đeo đồ/gắn gem.
+5. **Khoan đụng keystone.** Chỉ lấy khi bạn hiểu rõ đánh đổi, hoặc build mẫu bảo lấy.
+6. **Tô sai thì refund.** Đừng sợ thử — POE2 cho xoá ô bằng Gold, và bạn có thể dùng Path of Building 2 để **thử trước khỏi tốn gì**.
+
+Tóm lại tinh thần: **đủ máu → dồn vào một hướng sát thương → vài notable mạnh → để dành keystone tới khi hiểu rõ.**
+
+<Hop variant="thuatngu">
+
+| Tiếng Anh | Tiếng Việt / Giải thích |
+|-----------|------------------------|
+| Passive Skill Tree | Cây kỹ năng bị động — bản đồ ô cộng chỉ số cho nhân vật |
+| Passive Point | Điểm passive — dùng để tô (kích hoạt) một ô trên cây |
+| Allocate | Tô / kích hoạt một ô passive |
+| Small / Minor Passive | Ô nhỏ / ô thường — cộng một chỉ số nhỏ |
+| Notable | Điểm đáng kể — ô cho gói tác dụng mạnh, cuối một cụm |
+| Keystone | Ô đổi luật chơi — tác dụng mạnh kèm đánh đổi |
+| Trade-off | Sự đánh đổi — được cái này, mất cái kia |
+| Chaos Inoculation | Keystone: miễn nhiễm Chaos nhưng Life bị ép còn 1 |
+| Attribute | Chỉ số gốc: Strength / Dexterity / Intelligence |
+| Strength / Dexterity / Intelligence | Sức mạnh / Nhanh nhẹn / Trí tuệ |
+| Travel Node | Ô di chuyển — thường cho chọn một chỉ số gốc |
+| Jewel Socket | Ô gắn ngọc — lỗ trên cây để gắn Jewel |
+| Jewel | Ngọc — viên đá gắn vào socket cho thêm chỉ số |
+| Maximum Life | Máu tối đa — thanh sinh lực chính |
+| Energy Shield | Lá chắn năng lượng — lớp "máu" hồi nhanh, ăn đòn trước Life |
+| Refund | Hoàn điểm — xoá một ô đã tô (tốn Gold) |
+| Weapon Set Passive Points | Điểm passive chỉ có tác dụng theo bộ vũ khí đang cầm |
+| Gold | Vàng — tiền dùng cho NPC, refund passive, v.v. |
+
+</Hop>
+
+<Hop variant="nguon">
+
+- [PoE 2 Passive Tree and Weapon Specialisation — Maxroll](https://maxroll.gg/poe2/resources/poe-2-passive-tree-and-dual-specialization)
+- [Passive Tree Planner — Maxroll](https://maxroll.gg/poe2/passive-tree)
+- [Trang chính thức Path of Exile 2](https://www.pathofexile.com/poe2)
+
+> ⚠️ **Lưu ý:** Danh sách notable/keystone và số điểm passive mỗi cấp/nhiệm vụ **đổi theo patch** trong giai đoạn Early Access. Xem cây thật trong game hoặc Path of Building 2 mới nhất.
+
+</Hop>
+
+<Hop variant="mauchot">
+
+- Cây passive có **5 loại ô**: ô nhỏ (chỉ số nhỏ), notable (gói mạnh), keystone (đổi luật + đánh đổi), ô chỉ số, ô gắn ngọc.
+- **Notable là mục tiêu chính** khi vạch đường; ô nhỏ chủ yếu là đường đi nối tới notable.
+- **Keystone là con dao hai lưỡi** — người mới khoan lấy khi chưa hiểu đánh đổi.
+- Điểm passive đến từ **lên cấp + một số nhiệm vụ**; tô sai thì **refund bằng Gold**.
+- Tiêu điểm: **đủ máu trước → dồn một hướng sát thương → vài notable → đừng rải đều.**
+
+</Hop>

@@ -1,0 +1,112 @@
+---
+title: Cộng dồn sát thương — "more" vs "increased"
+description: Mô hình tư duy về scaling sát thương trong POE2 cho người mới — flat damage, increased (cộng dồn) và more (nhân lên), vì sao support gem mạnh, và vì sao phòng thủ phải lớn theo sát thương.
+lastUpdated: 2026-05-27
+---
+
+import Hop from '@components/Hop.astro';
+
+:::tip[👉 Bài này bạn sẽ hiểu được]
+- Ba "thành phần" cộng dồn sát thương: **flat (cộng thẳng)**, **increased (% cộng dồn)**, **more (% nhân lên)**.
+- Vì sao **"more" mạnh hơn "increased"** dù cùng con số phần trăm.
+- Vì sao **support gem** lại quan trọng cho sát thương.
+- **Vì sao phòng thủ phải lớn theo sát thương** — và checklist tự kiểm "mình có theo kịp không".
+:::
+
+Khi mới chơi, bạn thấy đủ thứ dòng chữ cộng sát thương trên đồ, gem, cây passive và thấy rối. Thật ra mọi thứ gói trong **một mô hình đơn giản**: sát thương của bạn được xây từ **một con số gốc**, rồi **được khuếch đại bằng nhiều lớp**. Hiểu được các lớp này, bạn sẽ biết **đổi gì để mạnh lên** thay vì lấy bừa cho "thấy số cộng là vui".
+
+Phần này mô tả **định tính** (hiểu ý là chính), không bắt bạn học công thức. Cách trình bày dưới đây khớp với [Maxroll — Damage Scaling](https://maxroll.gg/poe2/getting-started/damage-scaling) và [PoE Wiki — Damage](https://www.poewiki.net/wiki/Damage).
+
+## Ba thành phần cộng dồn sát thương
+
+Hình dung sát thương như nấu một nồi nước: **flat** là đổ thêm nước vào nồi, **increased** là cộng dồn lượng nước, còn **more** là **nhân đôi cả nồi**.
+
+### 1. Flat damage — sát thương cộng thẳng
+
+Là các dòng kiểu **"Adds X to Y Physical/Fire/... Damage"** (cộng thêm chừng đó sát thương). Đây là **lượng sát thương gốc cộng thẳng vào**, trước khi các phần trăm nhân lên. Phần lớn đến từ **vũ khí** và một số đồ/gem. Maxroll mô tả flat là *sát thương cộng thêm "trước khi các bội số được áp dụng"*. Càng nhiều flat thì các lớp % phía sau càng "có cái để nhân".
+
+### 2. Increased — % tăng, CỘNG DỒN với nhau
+
+Là các dòng **"X% Increased ... Damage"**. Đây là nguồn phần trăm phổ biến nhất (từ cây passive, đồ, một số gem). Điểm mấu chốt: **tất cả các dòng "increased" cùng loại CỘNG LẠI với nhau** rồi mới áp một lần.
+
+> Ví dụ: bạn có hai dòng "10% increased" thì thành **20% increased** (cộng dồn: 10 + 10). Theo [PoE Wiki](https://www.poewiki.net/wiki/Damage): *"all sources of increased damage stack additively"* — mọi nguồn increased cộng dồn với nhau.
+
+Hệ quả quan trọng: increased **bị giảm dần hiệu quả (diminishing returns)**. Khi bạn đã có 300% increased, cộng thêm 10% nữa chỉ là phần nhỏ trong tổng — không "đã" như lúc đầu.
+
+### 3. More — % NHÂN LÊN, mỗi nguồn nhân riêng
+
+Là các dòng **"X% More ... Damage"**. Khác hẳn increased: **mỗi nguồn "more" nhân riêng một lớp**, không cộng dồn. Theo [PoE Wiki](https://www.poewiki.net/wiki/Damage): *"all unique sources of more damage are multiplicative with each other"* — mọi nguồn more nhân lên với nhau.
+
+> Ví dụ: hai dòng "10% more" thành **110% × 110% = 121%** (nhân, không phải 120%). Maxroll ghi rõ *"'More' damage multipliers are multiplicative and mostly gained from support gems"* — more nhân lên và chủ yếu đến từ support gem.
+
+Vì nhân lên (không bị giảm dần), **"more" thường mạnh hơn "increased" dù cùng con số phần trăm** — đặc biệt khi bạn đã có sẵn nhiều increased.
+
+## Vì sao flat + increased + more phối hợp với nhau?
+
+Vì chúng **nhân chồng lên nhau**, nên **trộn nhiều loại mạnh hơn dồn một loại**. Maxroll minh hoạ rằng một build trộn flat + increased + nhiều "more" + tốc đánh + chí mạng cho ra **gấp khoảng 5 lần** DPS so với chỉ nhồi increased *(theo [Maxroll — Damage Scaling](https://maxroll.gg/poe2/getting-started/damage-scaling), con số minh hoạ, đổi theo build/patch)*.
+
+Đây cũng là lý do **support gem quan trọng**: phần lớn "more" mạnh nhất đến từ support gem. Mỗi ô gắn thêm một support gem hợp lý là **một lớp nhân mới** cho sát thương — thường đáng giá hơn nhiều ô increased nhỏ trên cây. (Cách hoạt động của gem xem [Skill Gem & Support Gem](/lo-trinh/chuong-2-co-che-cot-loi/skill-gem-support/).)
+
+Tinh thần thực hành: **đảm bảo có đủ flat (vũ khí tốt) → gắn các support "more" tốt → rồi mới nhồi increased trên cây để lấp đầy.**
+
+## Sống còn phải lớn theo sát thương
+
+Đây là phần **người mới hay quên**: chỉ lo tăng sát thương, bỏ bê phòng thủ → đánh nhanh nhưng **chết cũng nhanh**. Càng vào sâu, quái và boss đánh càng đau; nếu phòng thủ đứng yên thì bạn sẽ "một phát chết".
+
+Hai trụ phòng thủ phải đi cùng sát thương:
+
+- **Kháng nguyên tố (Resistances)** — đẩy Lửa/Băng/Sét lên **trần (mặc định 75%)** càng sớm càng tốt. Đây là phòng thủ **quan trọng số một**, và game **phạt giảm kháng sau mỗi Act** nên phải kiểm lại liên tục.
+- **Máu / Lá chắn (Life / Energy Shield)** — "kho máu" phải đủ dày so với cấp, để chịu được cú đánh hụt né.
+
+Chi tiết hai trụ này ở bài [Phòng thủ](/lo-trinh/chuong-2-co-che-cot-loi/phong-thu/) và [Máu / Mana / Flask](/lo-trinh/chuong-2-co-che-cot-loi/mau-mana-flask/). Quy tắc đơn giản: **mỗi khi tăng một mảng sát thương, hãy tự hỏi "phòng thủ của mình có theo kịp không?"**
+
+## Làm thế này — checklist "nhân vật mình có theo kịp không?"
+
+Mở bảng nhân vật (hoặc nhập vào [Path of Building 2](/lo-trinh/chuong-4-passive-tree/path-of-building-2/)) và soi 4 câu hỏi:
+
+1. **Sát thương có "kéo" được quái/boss không?** Quái thường chết trong vài đòn? Thanh máu boss tụt thấy rõ? Nếu đánh mãi không chết → thiếu flat (đổi vũ khí) hoặc thiếu support "more".
+2. **Ba kháng nguyên tố đã gần 75% chưa?** Nếu một kháng thấp → ưu tiên đeo đồ bù kháng **trước cả** sát thương.
+3. **Máu / Lá chắn có đủ dày so với cấp không?** Hay bị "một phát chết" → cần thêm Life/ES, đừng dồn hết vào sát thương.
+4. **Đang trộn nhiều loại scaling hay chỉ nhồi increased?** Nếu đã có nhiều increased mà DPS lên chậm → tìm thêm **flat** (vũ khí) và **more** (support gem) thay vì cộng tiếp increased.
+
+Nói gọn: **flat làm nền → more nhân lên (ưu tiên support) → increased lấp đầy → và luôn để phòng thủ (kháng + máu) lớn theo.**
+
+<Hop variant="thuatngu">
+
+| Tiếng Anh | Tiếng Việt / Giải thích |
+|-----------|------------------------|
+| Scaling | Cách khuếch đại / cho lớn lên (sát thương, phòng thủ...) |
+| Flat damage | Sát thương cộng thẳng (dòng "Adds X to Y ... Damage") |
+| Increased | % tăng — các dòng cùng loại **cộng dồn** với nhau |
+| More | % nhân — mỗi nguồn **nhân riêng một lớp** |
+| Additive | Cộng dồn (kiểu của increased) |
+| Multiplicative | Nhân lên (kiểu của more) |
+| Diminishing returns | Hiệu quả giảm dần (càng nhiều increased càng ít "đã") |
+| Support Gem | Viên hỗ trợ — nguồn "more" chính cho sát thương |
+| DPS | Sát thương mỗi giây — chỉ số so sánh độ mạnh tấn công |
+| Resistances | Kháng nguyên tố (Lửa/Băng/Sét) và Chaos |
+| Resistance Cap | Trần kháng — mặc định 75% |
+| Life / Energy Shield | Máu / Lá chắn năng lượng — "kho máu" để sống |
+
+</Hop>
+
+<Hop variant="nguon">
+
+- [Damage Scaling — Maxroll](https://maxroll.gg/poe2/getting-started/damage-scaling)
+- [Damage — PoE Wiki](https://www.poewiki.net/wiki/Damage)
+- [Defence Guide — Maxroll](https://maxroll.gg/poe2/getting-started/defence-guide)
+- [Trang chính thức Path of Exile 2](https://www.pathofexile.com/poe2)
+
+> ⚠️ **Lưu ý:** Cách "increased cộng dồn / more nhân lên" là **cơ chế nền** ổn định, nhưng **con số minh hoạ** (ví dụ "gấp 5 lần", trần kháng 75%) **đổi theo build/patch**. Kiểm tra lại trong Path of Building 2 và bảng nhân vật in-game.
+
+</Hop>
+
+<Hop variant="mauchot">
+
+- Sát thương = **flat (cộng thẳng)** được khuếch đại bởi **increased (cộng dồn)** và **more (nhân lên)**.
+- **"More" thường mạnh hơn "increased"** vì nó nhân lên, không bị giảm dần hiệu quả.
+- **Trộn nhiều loại scaling** mạnh hơn nhồi một loại — và **support gem** là nguồn "more" chính.
+- **Phòng thủ phải lớn theo sát thương**: cap kháng 75% + đủ máu, nếu không thì "một phát chết".
+- Tự kiểm thường xuyên: **đủ sát thương kéo boss? kháng cap chưa? máu đủ chưa? đang trộn scaling chưa?**
+
+</Hop>

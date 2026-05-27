@@ -63,7 +63,15 @@ export default defineConfig({
                 { label: 'Mẹo lên cấp', link: '/lo-trinh/chuong-3-campaign/meo-len-cap/' },
               ],
             },
-            { label: 'Chương 4 — Passive Tree', link: '/lo-trinh/chuong-4-passive-tree/' },
+            {
+              label: 'Chương 4 — Passive Tree',
+              items: [
+                { label: 'Tổng quan chương', link: '/lo-trinh/chuong-4-passive-tree/' },
+                { label: 'Đọc cây passive', link: '/lo-trinh/chuong-4-passive-tree/doc-cay-passive/' },
+                { label: 'Path of Building 2', link: '/lo-trinh/chuong-4-passive-tree/path-of-building-2/' },
+                { label: 'Cộng dồn sát thương', link: '/lo-trinh/chuong-4-passive-tree/cong-don-sat-thuong/' },
+              ],
+            },
             { label: 'Chương 5 — Trang bị & Vật phẩm', link: '/lo-trinh/chuong-5-trang-bi/' },
             { label: 'Chương 6 — Chế đồ (Crafting)', link: '/lo-trinh/chuong-6-crafting/' },
             { label: 'Chương 7 — Endgame: Atlas & Maps', link: '/lo-trinh/chuong-7-endgame-atlas/' },
