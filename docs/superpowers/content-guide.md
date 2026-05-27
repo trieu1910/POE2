@@ -8,6 +8,10 @@ Tài liệu này dành cho người viết bài học trong `src/content/docs/lo
 
 Mỗi bài học là một file `.mdx` nằm trong `src/content/docs/lo-trinh/<chuong>/`. Đặt tên theo slug của chương, ví dụ: `chuong-0-nhap-mon/bai-01-poe2-la-gi.mdx`.
 
+> **Ngoại lệ:** File `index.md` của mỗi chương là **trang tổng quan chương** (giới thiệu + danh sách link tới các bài). Nó KHÔNG cần theo khuôn bài học (không cần import `Hop`, không cần các block glossary/nguồn/mấu chốt). Chỉ các file bài học `.mdx` mới theo khuôn dưới đây.
+
+> **Số liệu cơ chế (per-point, công thức):** các con số như "mỗi điểm Str cho +X máu" là loại **dễ sai và đổi giữa POE1↔POE2 và theo patch**. Nếu không xác nhận được từ nguồn chính thống/poewiki/poe2db, hãy **mô tả tác dụng định tính** (Str→máu & yêu cầu đồ Str…) thay vì khẳng định con số; nếu có nêu số, kèm "*(theo \\<nguồn\\>, có thể đổi theo patch)*" và link.
+
 ### Import bắt buộc
 
 Dòng đầu tiên của phần body (ngay sau frontmatter) phải là:
