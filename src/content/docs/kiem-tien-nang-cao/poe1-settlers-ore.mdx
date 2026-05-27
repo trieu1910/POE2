@@ -1,0 +1,161 @@
+---
+title: "POE1: Farm Settlers/Kingsmarch ore (ổn định, dễ)"
+description: Hướng dẫn farm gold & currency bằng cơ chế Kingsmarch (Settlers of Kalguur) trong POE1 — đào ore, smelt thành bar, ship qua cảng lấy thưởng. Farm lời trung bình nhưng cực ổn, rảnh tay, hợp người mới.
+lastUpdated: 2026-05-27
+---
+
+import Hop from '@components/Hop.astro';
+
+:::tip[👉 Bài này bạn sẽ làm được]
+- Mở khóa **Kingsmarch** và **thuê + phân công workers** (thợ) đúng cách để town tự chạy nền.
+- Hiểu vòng lặp **đào ore → smelt thành bar → ship qua cảng lấy thưởng**, và biến thưởng đó thành currency.
+- Biết cách chạy map để **gom ore/gold nền** (gồm biến thể "Magic Alva" cày gold) trong lúc vẫn làm content khác.
+- Đẩy ROI bằng nâng cấp building + lên rank workers — vì sao đây là farm **lời trung bình nhưng RẤT ổn & dễ**.
+:::
+
+> Đây là chiến lược của **Path of Exile 1 (POE1)** — *không phải POE2*. Bối cảnh viết theo league **Mirage 3.28** (~tháng 5/2026); **Kingsmarch** đã thành cơ chế **core (vĩnh viễn)** từ league **3.25 Settlers of Kalguur** nên còn đó trong mọi league POE1 hiện tại. *(Chi tiết số liệu/thưởng có thể đổi theo patch/league — luôn kiểm tra lại trong game.)*
+
+## Kingsmarch / Settlers là gì?
+
+**Kingsmarch** là một **thị trấn** bạn xây cho người Kalguuran sau khi qua campaign. Nó là một cỗ máy kiếm tiền **chạy nền theo thời gian thực** — workers vẫn làm việc cả khi bạn offline. Bốn thành phần chính:
+
+- **Workers (thợ)** — bạn thuê thợ làm các nghề: **Mining (đào ore)**, **Smelting (luyện ore thành bar)**, **Disenchanting (phân rã đồ lấy bụi)**, **Farming (trồng trọt)**, và **Shipping (đi tàu)**.
+- **Mỏ ore** — nơi thợ mỏ đào ra **quặng (ore)**: Crimson Iron, Orichalcum, Petrified Amber, Bismuth, Verisium.
+- **Cảng (port/harbour)** — bạn **ship hàng** (ore, bar, dust, nông sản) đi các cảng để **lấy phần thưởng**.
+- **Gold (vàng)** — đồng tiền riêng của town: dùng để thuê/trả lương thợ, xây/nâng cấp, và "đánh bạc" ở market.
+
+> Nói gọn: bạn **nuôi một dây chuyền** (đào → luyện → ship), gold là dầu bôi trơn, còn currency thật đến từ **phần thưởng ship** và việc bán lại chúng.
+
+## Setup từng bước
+
+### 1. Mở khóa Kingsmarch
+
+Mở khóa bằng cách nói chuyện với **Johan, the King's Hand** ở **Epilogue** (sau khi xong campaign) lần đầu. Sau đó bạn được dẫn qua quest hướng dẫn **Kingsmarch Shipping** để dựng cảng và chuyến tàu đầu tiên. *(Nếu bạn vào league mới, làm campaign trước rồi quest này sẽ tự mở.)*
+
+### 2. Thuê & phân công workers
+
+- Gặp **Raulf, the Recruiter** để **thuê thợ**. Mỗi thợ có **nghề chuyên (specialist)** và **mức lương (wage)** riêng; bạn tốn gold để **reroll** danh sách thợ và trả lương. Có thể **thuê/đuổi bất cứ lúc nào** để gom đúng đội hình.
+- Phân công theo dây chuyền:
+  - **Thợ mỏ (Miners)** → đào ore trong mỏ. Đây là **đầu nguồn** — không đào thì không có gì để ship.
+  - **Thợ luyện (Smelters)** → biến ore thô thành **bar**. **Bar đáng giá hơn ore thô rất nhiều khi ship** (theo Maxroll, bar cho ~5x giá trị shipment so với ore thô), nên gần như luôn nên smelt trước khi ship.
+  - **Thợ ship (Shippers)** → lái tàu. Thợ ship chuyên nghiệp **giảm rủi ro** chuyến đi (mất thủy thủ, bị cướp biển).
+  - **Thợ phân rã (Disenchanters)** → do **Rog** quản, phân rã đồ Magic/Rare/Unique thành **Thaumaturgic Dust (bụi)** — dùng để **tăng giá trị shipment** hoặc nuôi **Recombinator**.
+  - **Thợ trồng (Farmers)** → trồng nông sản; một số cảng **trả giá cao cho loại nông sản nhất định**.
+- **Mẹo:** tốc độ **đào và luyện** chính là cái **giới hạn** bạn ship nhanh hay chậm. Maxroll khuyên dồn gold để lên **Rank 5 Miners + Smelters + Farmers** và **một đội Shippers**, vì hai khâu đào/luyện là nút thắt cổ chai. *(Số rank tối ưu có thể đổi theo patch — kiểm tra lại.)*
+
+### 3. Nâng cấp building cốt lõi (ưu tiên)
+
+Gold cũng dùng để **xây và nâng cấp** các công trình. Ưu tiên những thứ trực tiếp tăng **lượng ore vào → bar ra → tàu chạy**:
+
+- Nâng **Mine (mỏ)** và **Smithy/khu luyện** trước — vì đào & luyện là nút thắt.
+- Nâng **Port/Harbour (cảng)** để mở thêm điểm đến và tăng năng lực ship.
+- Các công trình phụ (Farm, khu Disenchant) nâng sau khi dây chuyền chính đã chạy mượt.
+
+> ⚠️ Thứ tự ưu tiên building/rank ở đây là **khung chung theo nguồn**, không phải con số cứng. Mỗi patch GGG có thể chỉnh chi phí/hiệu quả — vào game xem tooltip thực tế rồi quyết.
+
+## Atlas/scarab — chạy map sao cho ra ore & gold
+
+Ore **không chỉ** đến từ mỏ thị trấn (passive); bạn còn **gom thêm ore khi chạy map**, và đây mới là phần "juice" để farm này đáng tiền. Có hai hướng chính:
+
+- **Kalguuran map farming (gom ore khi mapping).** Bạn spec Atlas + dùng **Kalguuran scarab** để ore rơi nhiều hơn lúc chạy map; số ore này **đổ thẳng vào Kingsmarch** để ship. Maxroll dùng combo dạng *Kalguuran Scarab x2 + Kalguuran Scarab of Guarded Riches + Cartography scarab*. Patch **3.28 buff mạnh**: shipment toàn **ore giờ trả về Currency items** (thay vì đồ trang bị), và thợ **smelt nhanh gấp đôi** — nên hướng này lời hơn trước nhiều. Maxroll xếp độ lời **"Average" (trung bình)**, đầu tư **thấp**.
+- **Biến thể "Magic Alva" (cày gold).** Mục tiêu là **gold**, không phải ore: chạy **map magic** mật độ cao (Maxroll dùng **Jungle Valley T16, 8 mod, ảnh hưởng Eater of Worlds**) với scarab *Incursion Scarab of Champions x2 + Kalguuran + Horned Scarab of Glittering*; kích **Bismuth Ore** trong map để thêm mod nguyên tố → **tăng gold rơi ra**. Gold scale theo **Pack Size + Item Rarity + Item Quantity**. Maxroll báo **~1 triệu gold/giờ** nhưng độ lời tổng chỉ **"Below Average"** — tức đây là **vòi gold để nuôi gambling/market**, không phải nguồn currency chính.
+
+> Nói rõ: **mỏ thị trấn là nguồn ore nền (passive)**, còn **map farming là nguồn ore/gold chủ động**. Bạn có thể chỉ dựa vào mỏ nền nếu lười, nhưng muốn ROI thật thì gom thêm ore khi mapping. *(Cây Atlas + scarab cụ thể đổi theo patch — copy theo build guide Maxroll mới nhất rồi tự kiểm trong game.)*
+
+## Cách chạy — vòng lặp hàng ngày
+
+Đây là farm **rảnh tay**: phần lớn diễn ra nền, bạn chỉ ghé town vài lần mỗi phiên.
+
+1. **Gom ore.** Để thợ mỏ đào nền; đồng thời **chạy map** (Kalguuran spec) để dồn thêm ore vào kho.
+2. **Smelt / refine.** Để thợ luyện biến ore thô → **bar**. Nhớ: bar đáng giá hơn ore thô khi ship, nên ưu tiên ship **bar**.
+3. **Ship qua cảng.** Gặp **Tujen, the Harbourmaster** → chọn ore/bar/dust/nông sản → chọn **cảng đến**. Mỗi cảng **ưu tiên một loại tài nguyên** (loại đó trả cao hơn). **Cảng càng xa → thưởng càng cao nhưng chuyến càng lâu.** Dùng **dust** để **tăng giá trị shipment** khi muốn đẩy phần thưởng.
+4. **Quản lý workers & nhịp ship.** Canh để **không bao giờ để mỏ/lò trống** (luôn có việc cho thợ) và **không để tàu nằm cảng không tải hàng**. Thuê thêm/đuổi thợ kém để giữ dây chuyền đầy. Cảnh giác **rủi ro** (cướp biển, mất thủy thủ) — đội Shippers tốt giảm xác suất xấu.
+5. **Dùng gold ở market.** Gold dư đem **đánh bạc** ở Kingsmarch (xem mục bán bên dưới) hoặc trả phí giao dịch Currency Exchange.
+
+> Nhịp lý tưởng: mỗi lần ghé town, **dọn kho thành phẩm → nạp tàu mới → giao việc lại cho thợ** rồi quay ra map. Cứ thế lặp.
+
+## Cách bán / biến thành currency
+
+Phần thưởng ship là **nguồn thu chính** của farm này. Tùy cảng, bạn nhận:
+
+- **Currency items** (đặc biệt khi ship **ore/bar** — buff 3.28), **Maps**, **Unique items**, **Heist Contracts**.
+- **Tattoos** (gắn lên cây Passive) khi ship tới **cảng Karui**.
+- **Runegrafts** và các phần thưởng khác khi ship tới **cảng Kalguuran**. *(Sau 3.28, một số Tattoo/Runegraft chỉ rơi ở cảng cụ thể — phân bố chính xác từng đảo có thể chưa chốt; kiểm tra trong game.)*
+
+**Biến thành currency thế nào:**
+
+- **Currency items** → đã là currency, dùng/bán trực tiếp.
+- **Tattoos / Runegrafts / Unique / Maps** → **bán cho người chơi** qua trade thường, hoặc đổi/bán qua **Currency Exchange Market** (gặp **Faustus, the Financier** ở Kingsmarch) — chợ đổi currency/fragment **bất đồng bộ** giữa người chơi, mỗi giao dịch tốn **phí gold**.
+- **Bán ore thô cho người chơi khác?** Có thể, nhưng thường **không đáng** so với việc tự smelt thành bar rồi ship — vì bar cho giá trị shipment cao hơn nhiều. Chỉ bán thô nếu bạn dư ore mà thiếu năng lực luyện/ship.
+
+> **Gold KHÔNG phải là lợi nhuận trực tiếp** — gold không bán ra currency được. Gold chỉ để **vận hành town + gamble**. Tiền thật của bạn = **phần thưởng ship đã bán ra**. Đây là điểm người mới hay nhầm.
+
+## Đẩy ROI
+
+- **Nâng building + lên rank workers đúng nút thắt.** Đào & luyện là cổ chai → ưu tiên Mine/Smithy + Miners/Smelters rank cao trước; cảng và Shippers theo sau.
+- **Phân công đúng người đúng việc.** Thợ chuyên Shipping cho lên tàu (giảm rủi ro), thợ chuyên Mining/Smelting cho mỏ/lò. Đừng để thợ rank cao làm sai nghề.
+- **Chọn cảng xa khi đủ lực.** Cảng xa **thưởng cao hơn**; khi dây chuyền đã chạy đều và bạn có nhiều hàng tồn, ship xa để tối đa thưởng/chuyến. Lúc còn yếu thì ship gần cho **vòng quay nhanh, ổn định**.
+- **Dùng dust để đẩy giá trị shipment**, và **luôn smelt ore thành bar** trước khi ship.
+- **Loop Magic Alva để bơm gold.** Gold nuôi **gambling Black Market** (mua đồ random rarity từ Faustus) và phí Currency Exchange — gold dồi dào giúp bạn quay nhiều hơn, đôi khi trúng đồ đáng tiền.
+- **Vì sao đây là farm "rảnh tay":** town **chạy nền theo thời gian thực kể cả khi offline**, ore còn **tự gom khi bạn mapping content khác**. Bạn không phải ngồi canh — chỉ ghé dọn kho và nạp tàu. Đổi lại, **lời chỉ ở mức trung bình** (Maxroll: "Average" cho Kalguuran farming, "Below Average" lời tổng cho Magic Alva). Đúng kỳ vọng: **không giàu nhanh, nhưng cực ổn định, ít phương sai, dễ cho người mới** — một nguồn thu nền đáng tin trong lúc bạn làm việc khác.
+
+> Muốn đặt farm này vào bức tranh lớn (chọn farm theo giai đoạn league, đo ROI), xem phần tổng quan [Kiếm tiền nâng cao](/POE2/kiem-tien-nang-cao/) và [Dòng thời gian league](/POE2/kiem-tien-nang-cao/dong-thoi-gian-league/).
+
+<Hop variant="thuatngu">
+
+| Tiếng Anh | Tiếng Việt / Giải thích |
+|-----------|------------------------|
+| Kingsmarch | Thị trấn bạn xây trong Settlers — cỗ máy kiếm tiền chạy nền |
+| Settlers of Kalguur | League 3.25, nơi cơ chế Kingsmarch ra đời (giờ là core) |
+| Worker | Thợ — nhân công bạn thuê làm các nghề trong town |
+| Mining / Miner | Đào ore / thợ đào |
+| Smelting / Smelter | Luyện ore thành bar / thợ luyện |
+| Disenchanting / Disenchanter | Phân rã đồ lấy bụi / thợ phân rã |
+| Farming / Farmer | Trồng nông sản / thợ trồng |
+| Shipping / Shipper | Đi tàu chở hàng / thợ tàu |
+| Ore | Quặng thô đào từ mỏ (Crimson Iron, Orichalcum, Bismuth…) |
+| Bar | Thỏi kim loại — ore đã luyện, giá trị ship cao hơn ore thô |
+| Smelt | Luyện ore thành bar |
+| Thaumaturgic Dust | Bụi từ phân rã đồ — tăng giá trị shipment / nuôi Recombinator |
+| Port / Harbour | Cảng — nơi ship hàng đi lấy thưởng |
+| Shipment | Chuyến hàng bạn gửi đi cảng |
+| Gold | Tiền riêng của town: thuê/trả thợ, xây dựng, gamble market |
+| Runegraft | Phần thưởng ship (cảng Kalguuran) — thay đổi đồ/skill |
+| Tattoo | Phần thưởng ship (cảng Karui) — gắn lên cây Passive |
+| Currency Exchange (Market) | Chợ đổi currency giữa người chơi (qua Faustus), tốn phí gold |
+| Black Market | Mua đồ random rarity bằng gold từ Faustus (gambling) |
+| Scarab | Vật phẩm nhét map device để bơm một cơ chế cụ thể |
+| Atlas | Cây bản đồ thế giới endgame, định hướng farm |
+
+</Hop>
+
+<Hop variant="nguon">
+
+- [Kingsmarch Settlement Guide — Maxroll POE](https://maxroll.gg/poe/resources/kingsmarch-settlement-guide)
+- [Kalguuran Map Farming (Mirage 3.28) — Maxroll POE](https://maxroll.gg/poe/currency/kalguuran-map-farming)
+- [Magic Alva Gold Farming Strategy (Mirage 3.28) — Maxroll POE](https://maxroll.gg/poe/currency/magic-alva-gold-farming-strategy)
+- [Settlers Strategy — Maxroll POE](https://maxroll.gg/poe/currency/settlers)
+- [Kingsmarch — PoE Wiki](https://www.poewiki.net/wiki/Kingsmarch)
+- [Kingsmarch Shipping — PoE Wiki](https://www.poewiki.net/wiki/Kingsmarch_Shipping)
+- [Currency Exchange Market — PoE Wiki](https://www.poewiki.net/wiki/Currency_Exchange_Market)
+- [Path of Exile: Settlers of Kalguur (trang chính thức)](https://www.pathofexile.com/settlers)
+
+> ⚠️ **Lưu ý:** Số liệu thưởng/cảng, rank workers tối ưu, và scarab/Atlas đổi theo patch/league. Bài viết theo **Mirage 3.28** — luôn đối chiếu build guide Maxroll mới nhất và tooltip trong game trước khi áp dụng.
+
+</Hop>
+
+:::note[📊 Số liệu sống — kiểm tra trước khi dùng]
+- **Giá currency & phần thưởng ship (POE1):** [poe.ninja](https://poe.ninja/economy) (chọn league POE1 đang chạy, vd Mirage) để xem giá Runegraft/Tattoo/Unique/Currency thực tế.
+- **Giá trade người-chơi:** kiểm tra [poe.ninja/economy](https://poe.ninja/economy) trước khi định giá hàng để bán/đổi.
+- Đừng hardcode "1 chuyến = X currency" — thưởng phụ thuộc cảng, loại hàng, dust, và giá thị trường biến động theo giờ.
+:::
+
+<Hop variant="mauchot">
+
+- **Dây chuyền lõi:** đào **ore** → smelt thành **bar** (đáng giá hơn nhiều khi ship) → **ship qua cảng** lấy thưởng → bán thưởng ra **currency**.
+- **Gold ≠ lợi nhuận:** gold chỉ để thuê/trả thợ, xây dựng, gamble market; tiền thật đến từ **phần thưởng ship đã bán**.
+- **Nút thắt là đào & luyện** — ưu tiên nâng Mine/Smithy + lên rank Miners/Smelters; cảng xa cho thưởng cao hơn khi đã đủ lực.
+- **Gom ore khi mapping** (Kalguuran scarab) và **loop Magic Alva** (~1M gold/h) để bơm gold; mỏ thị trấn vẫn chạy nền cả khi offline.
+- **Đây là farm rảnh tay, lời TRUNG BÌNH nhưng RẤT ổn & dễ** — nguồn thu nền đáng tin cho người mới, không phải cách giàu nhanh.
+
+</Hop>
