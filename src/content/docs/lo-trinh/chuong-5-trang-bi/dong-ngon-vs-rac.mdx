@@ -1,0 +1,128 @@
+---
+title: Dòng ngon vs rác — khung đánh giá affix cho mọi món đồ
+description: Một khung tư duy 3 bậc để biết một dòng mod là ngon, tùy build hay rác — áp dụng được cho bất kỳ món đồ nào, cộng cách ước lượng giá trị một dòng.
+lastUpdated: 2026-05-27
+---
+
+import Hop from '@components/Hop.astro';
+
+:::tip[👉 Bài này bạn sẽ hiểu được]
+- Một **khung 3 bậc** để phân loại bất kỳ dòng mod nào: **luôn quý / tùy build / thường là rác**.
+- Câu hỏi 3-trong-1 để chấm điểm mọi dòng trong 5 giây: nó giúp tôi **sống lâu hơn, đánh đau hơn (đúng cách), hay chỉ để mặc đồ**?
+- Vì sao một dòng "to" vẫn có thể là rác nếu sai build, và một dòng "nhỏ" vẫn quý nếu nó cap kháng.
+- **Làm thế này:** cách dùng poe2db/trade để ước lượng một dòng đáng giá cỡ nào trước khi giữ hay bán.
+:::
+
+Bài [Đọc một món đồ](/POE2/lo-trinh/chuong-5-trang-bi/doc-mot-mon-do/) dạy bạn nhìn cả món; bài này phóng to vào **từng dòng** để bạn biết dòng nào đáng tiền, dòng nào lấp chỗ. Đây là kỹ năng quan trọng nhất khi lên đồ: nhìn một bức tường 6 dòng chữ và **chấm điểm từng dòng trong vài giây**.
+
+Tin tốt: bạn **không cần thuộc lòng** tên hàng trăm mod. Bạn chỉ cần một **khung phân loại** ổn định, áp dụng được cho mọi món đồ, mọi patch.
+
+## Câu hỏi vàng: chấm điểm một dòng trong 5 giây
+
+Mỗi khi đọc một dòng mod, hỏi: **"Dòng này có giúp tôi (a) sống lâu hơn, (b) đánh đau hơn theo đúng cách build tôi scale, hay (c) cho phép tôi mặc/dùng món đồ này không?"**
+
+- Trả lời **có** cho (a), (b), hoặc (c) → dòng có giá trị.
+- Trả lời **không cho cả ba** → **rác / lấp chỗ.**
+
+Đơn giản vậy thôi. Phần còn lại của bài chia nhỏ ba nhóm này thành một thang 3 bậc dễ nhớ.
+
+## Bậc 1 — "Luôn quý cho gần như mọi build"
+
+Đây là những dòng mà **build nào cũng thích**, vì chúng phục vụ việc sống sót hoặc điều kiện mặc đồ — không phụ thuộc cách bạn gây sát thương.
+
+- **Kháng (Resistance) — đặc biệt để cap 75%.** Đây là nhóm quý nhất cho người mới. Thiếu kháng nghĩa là **ăn gấp đôi sát thương** loại đó *(theo [Maxroll — Comprehensive League Start Guide](https://maxroll.gg/poe2/getting-started/comprehensive-league-start-leveling-guide))*. Một dòng "+% kháng" cho loại bạn đang thiếu gần như **luôn là điểm cộng lớn**. Vì sao cap 75% lại là vua, xem [Phòng thủ](/POE2/lo-trinh/chuong-2-co-che-cot-loi/phong-thu/).
+- **Maximum Life (máu tối đa)** — với build dùng máu. Đây là "ngân sách sống" nền tảng; gần như mọi build dùng máu đều muốn dòng này trên mọi ô có thể.
+- **Maximum Energy Shield (lá chắn năng lượng tối đa)** — với build dùng ES. Tùy hệ phòng thủ: build máu thì +Life quý hơn, build ES thì +ES quý hơn. (Bạn chọn hệ nào, xem bài [Ưu tiên theo build](/POE2/lo-trinh/chuong-5-trang-bi/uu-tien-theo-build/).)
+- **Chỉ số gốc (Strength / Dexterity / Intelligence) khi bạn cần để mặc đồ hoặc dùng gem.** Nhiều món đồ và skill gem có **yêu cầu chỉ số**. Nếu bạn thiếu vài điểm Str để mặc một cái áo, thì một dòng +Str trên đồ khác **đáng giá** — nó "mở khóa" cho bạn mặc đồ tốt. (Str còn cho máu, Int còn cho mana — nên chúng ít khi hoàn toàn vô dụng.)
+- **Movement Speed (tốc độ di chuyển)** — gần như mọi build đều muốn. Nó vừa giúp đi nhanh (đỡ chán), vừa giúp **né đòn** (sống sót). Dòng này chỉ xuất hiện trên **giày (boots)** — chi tiết ở bài [Ưu tiên theo ô đồ](/POE2/lo-trinh/chuong-5-trang-bi/uu-tien-theo-slot/).
+
+> Quy tắc nhanh: **Kháng + Life/ES + (chỉ số đủ mặc đồ) + Movement Speed** là "khung xương" mọi nhân vật cần. Một món gom được nhiều dòng nhóm này gần như chắc chắn đáng giữ.
+
+## Bậc 2 — "Tùy build: ngon nếu hợp, rác nếu không"
+
+Đây là nhóm dễ đánh lừa người mới nhất. Các dòng này **rất mạnh** — nhưng **chỉ khi build bạn scale đúng loại đó**. Sai loại thì chúng là rác đẹp mã.
+
+- **Tăng % sát thương theo loại** — ví dụ "% increased Physical Damage", "% increased Fire/Cold/Lightning Damage", "% increased Spell Damage", "% increased Attack Damage". Chỉ quý nếu **đúng loại sát thương build bạn dùng**. Dòng "+% Spell Damage" là **vô dụng** với build đánh đòn (attack) thuần; "+% Physical Attack Damage" là vô dụng với pháp sư băng.
+- **Added flat damage (sát thương phẳng cộng thêm)** — ví dụ "thêm 5–12 sát thương lửa cho đòn đánh". Loại này **rất mạnh khi đúng chỗ**, nhưng phải phân biệt: dòng "...to **Attacks**" chỉ giúp build đánh đòn; dòng "...to **Spells**" chỉ giúp build phép. Cộng sát thương cho đòn đánh trên đồ của pháp sư = rác.
+- **Crit (Critical) — cơ hội chí mạng & sát thương chí mạng.** Chỉ quý nếu build bạn **đầu tư vào crit**. Nhiều build (đặc biệt minion hay một số build đánh đều) **không dùng crit** — với chúng các dòng crit là rác.
+- **Attack Speed / Cast Speed (tốc độ đánh / niệm phép).** Attack speed quý cho build đánh đòn; cast speed quý cho build phép. Lấy nhầm loại = vô dụng.
+- **+Mức skill (+to Level of Skills / +to Level of all [loại] Spell Skills...).** Cực mạnh, nhưng phải **đúng loại skill bạn dùng**: "+to Level of all Fire Spell Skills" chỉ giúp nếu chiêu chính của bạn là phép lửa.
+
+Với nhóm này, **câu hỏi vàng phần (b)** là bộ lọc: *"Dòng này có scale đúng cách build tôi gây sát thương không?"* Đúng loại → có thể quý hơn cả một dòng kháng. Sai loại → coi như dòng trống.
+
+## Bậc 3 — "Thường là rác / lấp chỗ"
+
+- **Dòng không liên quan build.** Dòng phép trên đồ của build đánh đòn; dòng minion trên đồ của build tự đánh; dòng cận chiến trên đồ của build bắn xa. Đây là "rác đẹp mã" phổ biến nhất.
+- **Dòng quá nhỏ / tier thấp.** Cùng một loại mod nhưng giá trị bé tí (ví dụ +5 Life khi bạn đáng ra có +80). Tier thấp nghĩa là món rơi từ khu cấp thấp — xem [Affix & Item Level](/POE2/lo-trinh/chuong-5-trang-bi/affix-va-ilvl/) để hiểu vì sao ilvl giới hạn tier.
+- **Dòng "vui nhưng vô dụng".** Một số mod đọc thì ngầu nhưng thực tế không đẩy được sống-sót hay sát-thương theo cách build cần (ví dụ tăng một chỉ số bạn đã thừa, hoặc một hiệu ứng ngách không khớp lối chơi của bạn).
+
+> Đừng để **độ hiếm** đánh lừa. Một món Rare 6 dòng mà **5 dòng đều thuộc Bậc 3** thì thực chất chỉ "1 dòng có ích" — thua một món Magic 2 dòng đều là Bậc 1 (ví dụ +Life và +kháng đang thiếu).
+
+## Cách đếm: "dòng thật" thay vì "số dòng"
+
+Mẹo thực chiến: khi so hai món, **đừng đếm tổng số dòng** — hãy đếm **số dòng Bậc 1 + dòng Bậc 2 đúng build**. Đó mới là "giá trị thật" của món.
+
+Ví dụ tư duy (không phải số liệu cố định):
+
+- Món A (Rare): +Life, +kháng lửa, +kháng băng, +% spell damage, +cast speed, +mana. Bạn là **build đánh cung (attack, vật lý)** → dòng spell/cast/mana là rác với bạn → **chỉ 3 dòng thật**.
+- Món B (Rare): +Life, +kháng sét, +% physical attack damage, +attack speed → **4 dòng thật đều đúng build** dù trông "ít chữ hơn".
+
+→ Món B đáng mặc hơn, dù nhìn lướt qua A có vẻ "nhiều dòng hơn".
+
+## Làm thế này — ước lượng một dòng đáng giá cỡ nào
+
+Khi muốn biết một dòng "to hay nhỏ", "hiếm hay thường", đừng đoán — tra:
+
+1. **poe2db để xem tier & khoảng giá trị.** Tra mod trên [poe2db](https://poe2db.tw/us/): mỗi mod có nhiều **tier**, mỗi tier một khoảng giá trị và một mức **ilvl** tối thiểu. Nếu dòng của bạn nằm gần tier cao nhất → đó là dòng "xịn"; gần tier thấp → dòng lấp chỗ.
+2. **Trang trade để xem độ hiếm/giá trị tương đối.** Mở [pathofexile.com/trade2](https://www.pathofexile.com/trade2), lọc theo đúng món + đúng dòng + đúng khoảng giá trị. Kết quả tìm được càng **ít** thì dòng/tổ hợp đó càng **hiếm và có giá**; càng **nhiều** thì càng phổ thông (dễ tự kiếm hơn là mua).
+3. **PoB2 để đo tác động thật.** Để biết một dòng sát thương thực sự thêm bao nhiêu DPS hay một dòng phòng thủ thêm bao nhiêu sức chống chịu, nhập build vào **Path of Building 2** (xem [Chương 4 — Path of Building 2](/POE2/lo-trinh/chuong-4-passive-tree/path-of-building-2/)) và bật/tắt dòng đó để xem con số đổi.
+
+> ⚠️ Tier, ilvl mở khóa và độ hiếm của mod **đổi theo patch** trong Early Access. Đừng học thuộc con số — học **cách tra** (poe2db + trade2) là kỹ năng dùng được mãi.
+
+<Hop variant="thuatngu">
+
+| Tiếng Anh | Tiếng Việt / Giải thích |
+|-----------|------------------------|
+| Affix / Mod | Dòng chỉ số ghi trên đồ |
+| Resistance | Kháng (Fire / Cold / Lightning / Chaos) |
+| Maximum Life | Máu tối đa — ngân sách sống chính |
+| Energy Shield (ES) | Lá chắn năng lượng — lớp "máu" hồi nhanh |
+| Movement Speed | Tốc độ di chuyển — chỉ có trên giày |
+| Attribute (Str/Dex/Int) | Chỉ số gốc; dùng để mặc đồ & dùng gem |
+| Increased % Damage | Tăng % sát thương (theo loại) |
+| Added flat damage | Sát thương phẳng cộng thêm (cho Attacks hoặc Spells) |
+| Critical (Crit) | Chí mạng — cơ hội & sát thương chí mạng |
+| Attack Speed / Cast Speed | Tốc độ đánh / tốc độ niệm phép |
+| +to Level of Skills | Cộng cấp kỹ năng (theo loại) |
+| Tier (mod tier) | Bậc của một mod, từ yếu tới mạnh |
+| Item Level (ilvl) | Cấp vật phẩm — giới hạn tier mod được quay |
+
+</Hop>
+
+<Hop variant="nguon">
+
+- [Comprehensive League Start Leveling Guide — Maxroll (POE2)](https://maxroll.gg/poe2/getting-started/comprehensive-league-start-leveling-guide)
+- [Damage Scaling — Maxroll (POE2)](https://maxroll.gg/poe2/getting-started/damage-scaling)
+- [Defence Guide — Maxroll (POE2)](https://maxroll.gg/poe2/getting-started/defence-guide)
+- [poe2db — database mod/tier/base](https://poe2db.tw/us/)
+- [Trang trade chính thức POE2](https://www.pathofexile.com/trade2)
+
+> ⚠️ **Lưu ý:** Giá trị/tier mỗi mod, mức ilvl mở khóa và độ hiếm tương đối **đổi theo patch**. Tra poe2db/trade2 tại thời điểm bạn chơi; đừng hardcode con số.
+
+</Hop>
+
+:::note[📊 Số liệu sống — kiểm tra trước khi dùng]
+- Tier & giá trị mod theo ilvl: [poe2db](https://poe2db.tw/us/)
+- Độ hiếm/giá trị một dòng (đếm kết quả tìm): [pathofexile.com/trade2](https://www.pathofexile.com/trade2)
+- Giá currency tham chiếu: [poe.ninja](https://poe.ninja)
+:::
+
+<Hop variant="mauchot">
+
+- Chấm mỗi dòng bằng **câu hỏi vàng**: nó giúp tôi **sống lâu hơn / đánh đau hơn đúng cách / mặc được đồ**? Không cái nào → **rác**.
+- **Bậc 1 (luôn quý):** kháng (cap 75%), Life/ES, chỉ số đủ mặc đồ, Movement Speed.
+- **Bậc 2 (tùy build):** %sát thương theo loại, flat damage cho Attacks/Spells đúng loại, crit, tốc độ, +skill — chỉ quý nếu hợp build.
+- **Bậc 3 (rác):** dòng sai build, dòng tier quá nhỏ, dòng "vui mà vô dụng". Đừng để màu Rare 6 dòng đánh lừa — đếm **dòng thật**.
+- **Làm thế này:** ước lượng giá trị một dòng bằng **poe2db (tier/ilvl)** + **trade2 (độ hiếm)** + **PoB2 (tác động thật)**.
+
+</Hop>

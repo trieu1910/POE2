@@ -81,6 +81,10 @@ export default defineConfig({
                 { label: 'Độ hiếm của đồ', link: '/lo-trinh/chuong-5-trang-bi/do-hiem/' },
                 { label: 'Affix & Item Level', link: '/lo-trinh/chuong-5-trang-bi/affix-va-ilvl/' },
                 { label: 'Đọc một món đồ', link: '/lo-trinh/chuong-5-trang-bi/doc-mot-mon-do/' },
+                { label: 'Dòng ngon vs rác', link: '/lo-trinh/chuong-5-trang-bi/dong-ngon-vs-rac/' },
+                { label: 'Ưu tiên theo ô đồ', link: '/lo-trinh/chuong-5-trang-bi/uu-tien-theo-slot/' },
+                { label: 'Ưu tiên theo build', link: '/lo-trinh/chuong-5-trang-bi/uu-tien-theo-build/' },
+                { label: 'Bình & Charm — ưu tiên', link: '/lo-trinh/chuong-5-trang-bi/flask-charm-uu-tien/' },
               ],
             },
             {

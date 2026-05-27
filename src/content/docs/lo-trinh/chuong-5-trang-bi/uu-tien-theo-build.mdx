@@ -1,0 +1,127 @@
+---
+title: Ưu tiên theo build — lên đồ theo nhóm archetype
+description: Dạy ưu tiên đồ theo archetype (Life vs ES; Attack vs Spell vs Minion; cận chiến vs tầm xa) thay vì từng class, kèm thứ tự ưu tiên chung khi mới lên đồ.
+lastUpdated: 2026-05-27
+---
+
+import Hop from '@components/Hop.astro';
+
+:::tip[👉 Bài này bạn sẽ hiểu được]
+- Vì sao nên lên đồ theo **archetype (nhóm build)** thay vì theo từng class.
+- Hai trục lớn: **Life vs Energy-Shield** (phòng thủ khác nhau) và **Attack vs Spell vs Minion** (scale sát thương khác nhau).
+- Mỗi nhóm **scale bằng dòng gì** và nên săn dòng đó ở đâu.
+- **Làm thế này:** một **thứ tự ưu tiên chung** áp dụng được cho gần như mọi build khi mới lên đồ.
+:::
+
+POE2 có nhiều class và vô số build, nên **học thuộc "class X mặc đồ gì" là vô ích** — build đổi là sai hết. Cách bền hơn là nhận diện **archetype**: build của bạn (1) sống bằng **Life hay Energy Shield**, và (2) gây sát thương bằng **đòn đánh (attack), phép (spell), hay minion (triệu hồi)**. Biết hai điều đó là biết **săn dòng gì** — bất kể bạn chơi class nào.
+
+> Class chỉ là điểm xuất phát, **không** khóa cứng archetype. Sorceress *thường* đi ES + spell; Warrior *thường* đi Life + attack cận chiến — nhưng đó là xu hướng, không phải luật. **Luôn xác định archetype của build cụ thể bạn đang theo**, rồi mới lên đồ.
+
+## Trục 1 — Phòng thủ: Life-based vs Energy-Shield-based
+
+Hai cách "làm thanh máu", ưu tiên đồ khác nhau:
+
+### Life-based (dùng máu)
+- **Sống bằng:** Maximum Life. Strength cho thêm máu, nên build Life thường thích Str *(theo [Maxroll — Defence Guide](https://maxroll.gg/poe2/getting-started/defence-guide))*.
+- **Ưu tiên đồ:** dòng **+Life** trên mọi ô; nền giáp/né tùy lớp giảm đòn; **luôn cap kháng**.
+- **Lưu ý:** Life **bị Chảy máu (Bleed) và Độc (Poison) ăn thẳng** — nên charm gỡ bleed/poison rất hữu ích (xem [Bình & Charm](/POE2/lo-trinh/chuong-5-trang-bi/flask-charm-uu-tien/)).
+
+### Energy-Shield-based (dùng lá chắn năng lượng)
+- **Sống bằng:** Maximum Energy Shield — lớp "máu phụ" hồi lại sau một lúc không ăn đòn. Liên quan Intelligence.
+- **Ưu tiên đồ:** dòng **+Energy Shield** (và %increased ES); base type thiên ES.
+- **Lưu ý quan trọng:** ES **không chặn Bleed/Poison**, và **sát thương Chaos trừ ES gấp đôi** *(theo [Maxroll — Defence Guide](https://maxroll.gg/poe2/getting-started/defence-guide))* — nên build ES càng cần để ý **kháng Chaos** và charm gỡ bleed/poison.
+
+> Cách chọn cho người mới: theo **hệ phòng thủ build của bạn** (hoặc của build guide bạn đang follow). Đừng nhồi cả +Life lẫn +ES rời rạc lên cùng một bộ rồi loãng cả hai — chọn một trục chính, gom dày. Nền tảng phòng thủ xem [Phòng thủ](/POE2/lo-trinh/chuong-2-co-che-cot-loi/phong-thu/).
+
+## Trục 2 — Sát thương: Attack vs Spell vs Minion
+
+Đây là trục quyết định bạn **săn dòng damage nào**. Lấy nhầm nhóm là phí cả món đồ.
+
+### Attack (đánh thường — theo vũ khí)
+- **Scale bằng:** **sát thương của vũ khí** là gốc *(theo [Maxroll — Damage Scaling](https://maxroll.gg/poe2/getting-started/damage-scaling))*, nhân thêm bởi added flat damage **cho Attacks**, %increased (đúng loại: physical/elemental/attack), **attack speed**, và crit nếu build dùng crit.
+- **Săn gì trên đồ:** **vũ khí mạnh là ưu tiên số 1**; added flat damage *to Attacks* (nhẫn/găng/amulet), attack speed (găng/vũ khí), %tăng đúng loại sát thương.
+- **Bỏ qua:** mọi dòng có chữ **Spell** và mọi dòng **Minion**.
+
+### Spell / Caster (phép — theo skill gem)
+- **Scale bằng:** **cấp của skill gem** là gốc *(theo [Maxroll — Damage Scaling](https://maxroll.gg/poe2/getting-started/damage-scaling))*, cộng **+mức skill** (đúng loại), %increased spell/elemental damage (đúng loại nguyên tố), **cast speed**, crit (nếu dùng), và added flat damage **cho Spells**.
+- **Săn gì trên đồ:** **+mức skill** (amulet, vũ khí phép) là cực mạnh; %spell/elemental đúng loại; cast speed; gậy/wand/sceptre/đồ tay phụ hợp phép.
+- **Bỏ qua:** "sát thương đòn đánh"/attack speed của vũ khí phép, dòng *to Attacks*, dòng Minion.
+
+### Minion (triệu hồi)
+- **Scale bằng:** **chỉ số RIÊNG của minion** — minion **không** ăn theo sát thương của bạn *(theo [Maxroll — Damage Scaling](https://maxroll.gg/poe2/getting-started/damage-scaling))*. Bạn buff minion bằng các dòng nói rõ "Minions deal..." / "Minions have...".
+- **Săn gì trên đồ:** dòng **+mức minion skill**, "Minion Damage", "Minion Life", "Minions deal extra...", và **tốc độ đánh/niệm cho minion** nếu có. Bản thân bạn vẫn cần **phòng thủ đầy đủ** (kháng, Life/ES) để sống mà ra lệnh.
+- **Bỏ qua (cho phần sát thương):** %spell/attack damage *của riêng bạn*, crit *của bạn*, attack/cast speed *của bạn* — chúng **không** chuyển sang minion. Đây là cái bẫy lớn nhất của người mới chơi minion: nhặt đồ "tăng sát thương" của bản thân mà minion chẳng mạnh thêm.
+
+> Mẹo phân biệt 3 nhóm trong 1 câu: **đọc kỹ chữ trên dòng mod.** "to Attacks" = nhóm attack; "to Spells"/"Spell"/"Cast" = nhóm spell; "Minions" = nhóm minion. Dòng không có chữ khớp nhóm của bạn → không phải dòng sát thương của bạn.
+
+## Trục phụ — Cận chiến vs Tầm xa
+
+Đây là tinh chỉnh bên trong nhóm Attack (và đôi khi Spell):
+
+- **Cận chiến (melee):** đứng gần, ăn đòn nhiều hơn → **đề cao phòng thủ** (giáp, block/khiên, Life dày). Dòng sát thương ưu tiên loại "melee"/đúng vũ khí cận chiến.
+- **Tầm xa (ranged — cung/đạn/phép bắn xa):** đứng xa, né đòn bằng khoảng cách → **Movement Speed và kê vị trí** gánh nhiều phần sống sót; vẫn cần kháng cap. Dòng sát thương ưu tiên loại đúng (projectile/đúng vũ khí tầm xa).
+
+Hệ quả thực tế: **cận chiến cần "trâu" hơn một bậc** vì luôn đứng trong tầm đánh; tầm xa có thể đánh đổi chút phòng thủ lấy sát thương vì khoảng cách đã là một lớp "né".
+
+## Làm thế này — thứ tự ưu tiên chung khi mới lên đồ
+
+Áp dụng được cho **gần như mọi archetype**. Khi nhặt/mua một món, chạy theo thứ tự:
+
+1. **Cap kháng (75%) trước.** Đây là việc số 1, rẻ và cứu mạng nhất. Thiếu kháng = ăn gấp đôi sát thương *(theo [Maxroll — Comprehensive League Start Guide](https://maxroll.gg/poe2/getting-started/comprehensive-league-start-leveling-guide))*. Vá kháng chủ yếu ở **nhẫn/dây chuyền/khiên/giáp**.
+2. **Đủ Life hoặc ES để sống sót.** Theo đúng **trục phòng thủ** của build (Life hay ES, không pha loãng). Gom +Life/+ES trên mọi ô quay được.
+3. **Dòng scale sát thương đúng loại của build.** Đúng nhóm Attack / Spell / Minion (xem Trục 2). Đặt dòng đắt nhất ở **vũ khí** (attack) hoặc **vũ khí phép + amulet +skill** (spell), hoặc dòng **Minion** (minion).
+4. **Tiện ích.** Movement Speed (giày — gần như luôn nên có), tốc độ đánh/niệm, crit (nếu build dùng), mana, charm slot trên belt.
+
+> Quy tắc một câu, dùng được cho mọi build: **Sống đã (kháng → Life/ES) → rồi mới đánh (dòng sát thương đúng nhóm) → rồi mới mượt (tiện ích).** Nếu một "nâng cấp" làm rớt kháng dưới 75%, nó **chưa phải nâng cấp** cho tới khi bạn vá lại kháng ở ô khác.
+
+Liên hệ class (chỉ là xu hướng, **hedge theo build cụ thể**):
+
+| Class (ví dụ) | Archetype hay gặp | Trục phòng thủ | Nhóm sát thương |
+|---------------|-------------------|----------------|-----------------|
+| Sorceress | pháp sư nguyên tố | thường ES | Spell |
+| Warrior | đập cận chiến nặng | thường Life | Attack (melee) |
+| Ranger | cung/đạn tầm xa | Life/né | Attack (ranged) |
+| Witch (triệu hồi) | nuôi quân | Life hoặc ES | Minion |
+
+> ⚠️ Bảng trên là **xu hướng phổ biến**, không phải luật. Mỗi class có nhiều build trái dấu (Witch cũng có build phép, Sorceress cũng có build Life…). Xác định **archetype của chính build bạn đang theo** rồi mới áp thứ tự ưu tiên ở trên.
+
+<Hop variant="thuatngu">
+
+| Tiếng Anh | Tiếng Việt / Giải thích |
+|-----------|------------------------|
+| Archetype | Nhóm build chung (theo cách sống & cách đánh) |
+| Life-based / ES-based | Build sống bằng máu / bằng lá chắn năng lượng |
+| Attack | Build đánh đòn — scale theo sát thương vũ khí |
+| Spell / Caster | Build phép — scale theo cấp skill gem |
+| Minion | Build triệu hồi — minion có chỉ số riêng |
+| Added flat damage (to Attacks/Spells) | Sát thương phẳng cộng cho đòn đánh / cho phép |
+| Increased % Damage | Tăng % sát thương (theo loại) |
+| Attack/Cast Speed | Tốc độ đánh / niệm phép |
+| +to Level of Skills | Cộng cấp kỹ năng (theo loại) |
+| Melee / Ranged | Cận chiến / Tầm xa |
+| Bleed / Poison | Chảy máu / Độc — sát thương theo thời gian, ES không chặn |
+| Chaos Damage | Sát thương hỗn độn — trừ ES gấp đôi |
+
+</Hop>
+
+<Hop variant="nguon">
+
+- [Damage Scaling — Maxroll (POE2)](https://maxroll.gg/poe2/getting-started/damage-scaling)
+- [Defence Guide — Maxroll (POE2)](https://maxroll.gg/poe2/getting-started/defence-guide)
+- [Comprehensive League Start Leveling Guide — Maxroll (POE2)](https://maxroll.gg/poe2/getting-started/comprehensive-league-start-leveling-guide)
+- [Path of Exile 2 Survival Guide — Maxroll](https://maxroll.gg/poe2/resources/path-of-exile-2-survival-guide)
+- [Trang chính thức Path of Exile 2](https://www.pathofexile.com/poe2)
+
+> ⚠️ **Lưu ý:** Class roster, xu hướng meta và cách scale chi tiết **đổi theo patch** trong Early Access. Bảng class chỉ là xu hướng — xác định archetype theo build cụ thể bạn chơi.
+
+</Hop>
+
+<Hop variant="mauchot">
+
+- Lên đồ theo **archetype** (cách sống + cách đánh), không theo class — class chỉ là xu hướng, không khóa cứng.
+- **Phòng thủ:** chọn **một** trục Life **hoặc** ES rồi gom dày; đừng pha loãng cả hai.
+- **Sát thương:** Attack scale theo **vũ khí**; Spell scale theo **cấp gem (+skill)**; Minion scale theo **chỉ số riêng của minion** — đọc kỹ chữ "to Attacks / Spell / Minions" để khỏi nhặt nhầm.
+- Cận chiến cần "trâu" hơn; tầm xa đổi chút phòng thủ lấy sát thương nhờ khoảng cách + Movement Speed.
+- **Thứ tự chung khi lên đồ:** 1) cap kháng → 2) đủ Life/ES → 3) sát thương đúng nhóm → 4) tiện ích. **Sống đã rồi mới đánh.**
+
+</Hop>

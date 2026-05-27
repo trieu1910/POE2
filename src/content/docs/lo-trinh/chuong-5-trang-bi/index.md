@@ -23,6 +23,10 @@ Trang bị (gear) là một trong **ba trụ cột** quyết định nhân vật
 - **[Độ hiếm của đồ](/POE2/lo-trinh/chuong-5-trang-bi/do-hiem/)** — 4 bậc độ hiếm: Normal (trắng), Magic (xanh dương), Rare (vàng), Unique (cam/nâu). Mỗi bậc nghĩa là gì, đồ nào nên nhặt sớm, đồ nào kệ nó.
 - **[Affix & Item Level](/POE2/lo-trinh/chuong-5-trang-bi/affix-va-ilvl/)** — Affix (mod) là gì: prefix (tiền tố) vs suffix (hậu tố), implicit vs explicit; mỗi bậc độ hiếm có bao nhiêu mod; item level (ilvl) và base type (loại nền), và vì sao ilvl quyết định mod "xịn" cỡ nào được xuất hiện.
 - **[Đọc một món đồ](/POE2/lo-trinh/chuong-5-trang-bi/doc-mot-mon-do/)** — Cách đánh giá một món đồ có "ngon" cho **build của bạn** hay không: khớp chỉ số với build, đọc DPS vũ khí cơ bản, và thói quen luôn giữ kháng đầy. Kèm một checklist "giữ hay bỏ".
+- **[Dòng ngon vs rác](/POE2/lo-trinh/chuong-5-trang-bi/dong-ngon-vs-rac/)** — Khung tư duy 3 bậc để chấm điểm **bất kỳ dòng mod nào**: luôn quý (kháng/Life/ES/chỉ số/Movement Speed), tùy build (sát thương theo loại, crit, tốc độ, +skill), hay rác. Kèm cách dùng poe2db/trade để ước lượng giá trị một dòng.
+- **[Ưu tiên theo ô đồ](/POE2/lo-trinh/chuong-5-trang-bi/uu-tien-theo-slot/)** — Mỗi ô (mũ, áo, găng, giày, vũ khí, khiên, nhẫn, dây chuyền, thắt lưng) nên săn dòng gì: "đặc sản" riêng và dòng phải-có vs nên-có vs bonus. Nhớ: giày phải có Movement Speed!
+- **[Ưu tiên theo build](/POE2/lo-trinh/chuong-5-trang-bi/uu-tien-theo-build/)** — Lên đồ theo **archetype**: Life vs Energy-Shield, Attack vs Spell vs Minion, cận chiến vs tầm xa. Kèm thứ tự ưu tiên chung: cap kháng → đủ Life/ES → sát thương đúng loại → tiện ích.
+- **[Bình & Charm — ưu tiên](/POE2/lo-trinh/chuong-5-trang-bi/flask-charm-uu-tien/)** — Chọn bình máu/mana (lượng hồi, Instant, giảm charge) và charm nào nên cắm (gỡ đóng băng/bleed/poison), cùng vai trò belt nhiều ô charm.
 
 ## Học xong chương này bạn sẽ
 

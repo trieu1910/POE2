@@ -1,0 +1,147 @@
+---
+title: Ưu tiên theo ô đồ — mỗi slot nên săn dòng gì
+description: Đi qua từng ô trang bị trong POE2 (mũ, áo, găng, giày, vũ khí, khiên, nhẫn, dây chuyền, thắt lưng) với dòng "phải có / nên có / bonus" theo heuristic bền vững.
+lastUpdated: 2026-05-27
+---
+
+import Hop from '@components/Hop.astro';
+
+:::tip[👉 Bài này bạn sẽ hiểu được]
+- Mỗi ô đồ trong POE2 có "vai trò" riêng — biết ô nào nên săn dòng gì.
+- Phân biệt cho từng ô: dòng **phải có** vs **nên có** vs **bonus**.
+- Vì sao **giày phải có Movement Speed**, **vũ khí là nguồn sát thương chính**, và **dây chuyền/nhẫn là nơi gom kháng + chỉ số mạnh nhất**.
+- **Làm thế này:** một bảng tra nhanh để lúc nhặt đồ biết ngay ô đó cần gì.
+:::
+
+Bài [Dòng ngon vs rác](/POE2/lo-trinh/chuong-5-trang-bi/dong-ngon-vs-rac/) dạy cách chấm điểm một dòng nói chung. Bài này áp dụng vào **từng ô cụ thể**, vì mỗi ô có "đặc sản" riêng: có ô chỉ nó mới cho Movement Speed, có ô là nguồn sát thương chính, có ô là nơi tốt nhất để nhồi kháng. Biết "đặc sản" của từng ô giúp bạn **không phí một dòng quý ở sai chỗ** và **không đòi hỏi sai thứ ở một ô**.
+
+> Nhắc lại nền chung cho mọi ô: **kháng để cap 75%** và **Life (hoặc ES tùy build)** gần như luôn được hoan nghênh ở bất kỳ ô nào quay ra được — đó là "thuế sống sót" chung. Bên dưới chỉ nêu thêm **đặc sản riêng** của mỗi ô.
+
+## Nhóm giáp: Mũ, Áo, Găng, Giày
+
+Bốn ô này chủ yếu đóng góp **phòng thủ + máu/ES + kháng**. Loại phòng thủ gốc (giáp / né / ES) tùy base type — chọn loại hợp hệ phòng thủ build bạn (xem [Phòng thủ](/POE2/lo-trinh/chuong-2-co-che-cot-loi/phong-thu/)).
+
+### Mũ (Helmet)
+- **Phải có:** Life/ES + kháng.
+- **Nên có:** chỉ số gốc bạn đang thiếu để mặc đồ; thêm một lớp phòng thủ gốc cao (giáp/né/ES).
+- **Bonus:** một số mũ quay được dòng hợp build (ví dụ tăng hiệu quả một loại sát thương, hoặc tiện ích). Coi như điểm cộng, không bắt buộc.
+
+### Giáp thân (Body Armour)
+- **Phải có:** đây là ô cho **nhiều giáp/né/ES gốc nhất** trên người — ưu tiên chỉ số phòng thủ gốc cao + Life/ES.
+- **Nên có:** kháng để góp phần cap.
+- **Bonus:** dòng phòng thủ hiếm (ví dụ thêm % một loại phòng thủ). Body là "tấm khiên thịt" lớn nhất, nên đừng tiếc đầu tư.
+
+### Găng (Gloves)
+- **Phải có:** Life/ES + kháng.
+- **Nên có:** đây là một trong ít ô tốt cho **sát thương hợp build** — ví dụ added flat damage cho đòn đánh (build attack) hoặc dòng tăng sát thương đúng loại; với build attack, găng còn quay được **attack speed**.
+- **Bonus:** chỉ số gốc; tiện ích nhỏ.
+
+### Giày (Boots) — nhớ Movement Speed!
+- **Phải có:** **Movement Speed (tốc độ di chuyển).** Đây là **ô DUY NHẤT** cho Movement Speed, và nó quý cho **gần như mọi build** — đi nhanh hơn, và quan trọng là **né đòn dễ hơn (sống sót)**. Maxroll xếp Movement Speed là **ưu tiên hàng đầu** khi lên đồ lúc leo cấp *(theo [Comprehensive League Start Guide](https://maxroll.gg/poe2/getting-started/comprehensive-league-start-leveling-guide))*.
+- **Nên có:** Life/ES + kháng.
+- **Bonus:** chỉ số gốc.
+
+> Quy tắc giày cho người mới: **một đôi giày tốt gần như luôn có Movement Speed.** Đôi không có Movement Speed thường nên bỏ qua, trừ khi nó vá đúng chỗ kháng đang thủng nặng. Mức Movement Speed thường tăng theo cấp đồ — đôi cấp cao cho % cao hơn *(con số cụ thể đổi theo patch, tra in-game/poe2db)*.
+
+## Vũ khí (Weapon) — nguồn sát thương chính
+
+Vũ khí là ô **quan trọng nhất cho sát thương**, nhưng cách đọc nó **khác hẳn** tùy build attack hay spell:
+
+- **Build đánh đòn (attack):** phần lớn sát thương tính từ **sát thương của vũ khí** *(theo [Maxroll — Damage Scaling](https://maxroll.gg/poe2/getting-started/damage-scaling))*. → Săn **sát thương vật lý/nguyên tố cao + attack speed + (crit nếu build dùng crit)**. So hai vũ khí bằng cách đổi thử và xem **chiêu của bạn mạnh lên không**, hoặc dùng PoB2 (cách đọc DPS xem [Đọc một món đồ](/POE2/lo-trinh/chuong-5-trang-bi/doc-mot-mon-do/)).
+- **Build phép (spell):** sát thương phép scale từ **cấp skill gem**, không phải từ "sát thương vật lý" của gậy phép *(theo [Maxroll — Damage Scaling](https://maxroll.gg/poe2/getting-started/damage-scaling))*. → Trên gậy/wand/sceptre, săn **+mức skill (đúng loại), +% spell/elemental damage, cast speed, crit** — **đừng** nhìn "sát thương đòn đánh" của nó.
+
+- **Phải có:** dòng sát thương đúng loại build (xem trên).
+- **Nên có:** tốc độ (attack/cast tùy loại); chỉ số gốc để mặc; với spell có thể là dòng +skill.
+- **Bonus:** dòng tiện ích đặc thù vũ khí.
+
+> ⚠️ Đây là ô **dễ phí tiền nhất** vì người mới hay nhìn "số DPS to" mà quên hỏi *đúng loại build chưa*. Một cây "DPS thô" cao nhưng sai hệ (vd vũ khí vật lý cho build phép) là **rác** với bạn.
+
+## Khiên / đồ tay phụ (Shield / Off-hand)
+
+Tay phụ tùy build:
+
+- **Khiên (Shield):** cho thêm phòng thủ gốc + cơ hội **đỡ (block)** — rất mạnh chống cú đánh lớn (xem [Phòng thủ](/POE2/lo-trinh/chuong-2-co-che-cot-loi/phong-thu/)). **Phải có:** Life/ES + kháng + (chỉ số đỡ nếu build dựa vào block). Khiên cũng là một ô tốt để **nhồi kháng**.
+- **Đồ tay phụ của caster (Focus/đồ phụ phép):** thường cho **ES, mana, và dòng hợp phép** (+skill, %spell/elemental, crit). Săn theo đúng loại phép build dùng.
+- **Vũ khí hai tay / cầm hai vũ khí:** không có ô tay phụ riêng — dồn kỳ vọng sát thương vào vũ khí chính (hoặc cả hai tay).
+
+## Nhẫn (Rings) x2 — kho kháng & chỉ số
+
+Hai ô nhẫn là **nơi gom kháng và chỉ số tốt nhất** vì nhẫn quay được **nhiều loại kháng + attribute**, và một số nhẫn base có **implicit kháng sẵn** (ví dụ nhẫn Topaz có kháng sét).
+
+- **Phải có:** kháng (đây là nơi vá kháng thủng dễ nhất) — bạn có **tới 2 nhẫn** nên gom được nhiều.
+- **Nên có:** Life/ES; chỉ số gốc đang thiếu để mặc đồ.
+- **Bonus:** added flat damage đúng loại (attack hoặc spell), mana, tiện ích. Nhẫn là ô linh hoạt — dùng nó để "lấp nốt" chỗ thiếu của cả bộ.
+
+## Dây chuyền (Amulet) — thường mang dòng mạnh & +skill
+
+Dây chuyền là ô **giá trị cao** vì nó quay được nhiều dòng mạnh và đặc biệt là **+mức skill**. Maxroll lưu ý amulet (và jewel) ở cấp cao **rất đáng giá** *(theo [Comprehensive League Start Guide](https://maxroll.gg/poe2/getting-started/comprehensive-league-start-leveling-guide))*.
+
+- **Phải có:** Life/ES + một dòng mạnh hợp build.
+- **Nên có:** **+mức skill** đúng loại của bạn (cực mạnh để scale sát thương phép/skill); kháng; chỉ số gốc (amulet có implicit chọn được một chỉ số).
+- **Bonus:** crit, tốc độ, tiện ích hợp build. Vì amulet hiếm khi bị "đụng" với ô khác, hãy ưu tiên đặt **dòng đắt giá nhất của build** ở đây nếu được.
+
+## Thắt lưng (Belt) — Life & ô Charm
+
+Belt **không cho sát thương** (không quay dòng damage) — vai trò của nó là **sống sót + chứa Charm**.
+
+- **Phải có:** Life (belt là ô tốt để nhồi máu) + kháng.
+- **Nên có:** **nhiều ô Charm** — belt tốt hơn cho nhiều ô charm để tự chống hiệu ứng xấu (chi tiết ở [Bình & Charm — ưu tiên](/POE2/lo-trinh/chuong-5-trang-bi/flask-charm-uu-tien/)).
+- **Bonus:** dòng tăng hiệu quả bình/charm, hoặc phòng thủ phụ. **Đừng** tìm dòng sát thương trên belt — nó không có.
+
+## Làm thế này — bảng tra nhanh khi nhặt đồ
+
+| Ô đồ | Phải có | Đặc sản riêng cần nhớ |
+|------|---------|----------------------|
+| Mũ | Life/ES + kháng | thêm phòng thủ gốc; chỉ số đủ mặc |
+| Giáp thân | Life/ES + phòng thủ gốc cao | "tấm thịt" lớn nhất — đầu tư mạnh |
+| Găng | Life/ES + kháng | sát thương hợp build; attack speed (build attack) |
+| Giày | **Movement Speed** | ô DUY NHẤT cho tốc độ di chuyển |
+| Vũ khí | sát thương đúng loại build | nguồn DPS chính; attack≠spell cách đọc khác |
+| Khiên/tay phụ | Life/ES + kháng | block (khiên) hoặc ES+phép (đồ caster) |
+| Nhẫn x2 | kháng | kho vá kháng & chỉ số (có 2 cái) |
+| Dây chuyền | dòng mạnh + Life/ES | **+mức skill** đúng loại; ô giá trị nhất |
+| Thắt lưng | Life + kháng | **ô Charm** — không có dòng sát thương |
+
+Quy trình lúc nhặt: nhìn **ô** → nhớ "đặc sản" của ô → đếm xem món có **dòng phải-có** không → rồi mới xét nên-có/bonus. Luôn tự hỏi cuối cùng: **thay vào có tụt kháng dưới 75% không?** (nếu có, chỉ thay khi bù được kháng ở ô khác).
+
+> Đừng cầu toàn từng ô. Mục tiêu người mới là **cả bộ** đạt: kháng cap 75%, đủ Life/ES, vũ khí ra sát thương đúng loại, giày có Movement Speed. Tối ưu từng dòng để dành cho lúc đã quen.
+
+<Hop variant="thuatngu">
+
+| Tiếng Anh | Tiếng Việt / Giải thích |
+|-----------|------------------------|
+| Helmet / Body Armour | Mũ / Giáp thân |
+| Gloves / Boots | Găng / Giày |
+| Weapon | Vũ khí — nguồn sát thương chính |
+| Shield / Off-hand | Khiên / đồ tay phụ |
+| Ring / Amulet / Belt | Nhẫn / Dây chuyền / Thắt lưng |
+| Movement Speed | Tốc độ di chuyển — chỉ trên giày |
+| Block | Đỡ — cơ hội chặn toàn bộ đòn (thường nhờ khiên) |
+| +to Level of Skills | Cộng cấp kỹ năng (theo loại) — thường trên amulet/vũ khí |
+| Implicit | Mod gắn liền theo loại đồ (vd nhẫn Topaz có kháng sét) |
+| Charm slot | Ô cắm charm trên belt |
+| Attack / Spell | Đòn đánh (scale theo vũ khí) / Phép (scale theo gem) |
+
+</Hop>
+
+<Hop variant="nguon">
+
+- [Comprehensive League Start Leveling Guide — Maxroll (POE2)](https://maxroll.gg/poe2/getting-started/comprehensive-league-start-leveling-guide)
+- [Damage Scaling — Maxroll (POE2)](https://maxroll.gg/poe2/getting-started/damage-scaling)
+- [Defence Guide — Maxroll (POE2)](https://maxroll.gg/poe2/getting-started/defence-guide)
+- [poe2db — database item/mod/base](https://poe2db.tw/us/)
+- [Trang chính thức Path of Exile 2](https://www.pathofexile.com/poe2)
+
+> ⚠️ **Lưu ý:** Mức Movement Speed theo cấp, dòng nào quay được ở ô nào, và số ô charm của belt **đổi theo patch**. Tra poe2db/in-game tại thời điểm chơi.
+
+</Hop>
+
+<Hop variant="mauchot">
+
+- Mỗi ô có "đặc sản": nền chung là **kháng + Life/ES**, rồi mới tới riêng từng ô.
+- **Giày = ô duy nhất cho Movement Speed** (đi nhanh + né đòn) — gần như luôn muốn.
+- **Vũ khí = nguồn sát thương chính**; build attack đọc sát thương vũ khí, build spell đọc +skill/%spell — **đừng nhìn sai loại**.
+- **Nhẫn x2 = kho vá kháng & chỉ số**; **dây chuyền = ô giá trị nhất (thường +skill)**; **belt = Life + ô Charm, không có sát thương**.
+- **Làm thế này:** nhìn ô → nhớ đặc sản → kiểm dòng phải-có → đảm bảo thay vào **không tụt kháng dưới 75%**.
+
+</Hop>
