@@ -1,0 +1,84 @@
+---
+title: Bảng quyết định farm (cheat-sheet)
+description: Trang tra nhanh — tình huống / tín hiệu giá đang thế này thì nên farm hoặc làm gì. Flowchart bằng chữ + bảng scannable để liếc trong lúc chơi, không phải bài đọc dài.
+lastUpdated: 2026-05-27
+---
+
+import Hop from '@components/Hop.astro';
+
+:::tip[👉]
+- Đây là **trang tra nhanh** — liếc trong lúc chơi: "tình huống của tôi → nên làm gì".
+- Muốn hiểu **"vì sao"** thì click vào bài chi tiết được link trong từng dòng.
+- Không có giá cụ thể ở đây — giá đổi theo giờ, luôn mở [poe.ninja](https://poe.ninja) để check.
+:::
+
+## Flowchart bằng chữ (ngắn)
+
+**Hỏi đầu tiên: bạn đang cần gì?**
+
+- **Cần XP / lên cấp** → farm **density vừa sức** (đủ quái nhưng không chết), **đi party** nếu được, **ít chết** (chết mất XP). Đừng all-in cơ chế đắt khi mục tiêu chỉ là cấp.
+
+- **Cần currency** → hỏi tiếp: **"Lực / gear đủ chưa?"**
+  - **Chưa đủ** → farm **an toàn + density**, **dựng lực trước** đã ([Ưu tiên theo build](/POE2/lo-trinh/chuong-5-trang-bi/uu-tien-theo-build/)). Build yếu mà cố cày đồ đắt = chết + lỗ.
+  - **Đủ rồi** → hỏi tiếp: **"Giá đang ưu cơ chế / đồ nào?"** → mở [poe.ninja](https://poe.ninja) xem cái gì đắt → **truy ngược ra content sinh nó** ([Từ giá trị → content farm](/POE2/lo-trinh/chuong-8-kinh-te-kiem-tien/tim-content-farm/)) → **spec Atlas vào cơ chế đó + đẩy mật độ** → farm → **đo ROI** ([Tư duy ROI](/POE2/lo-trinh/chuong-8-kinh-te-kiem-tien/tu-duy-roi/)).
+
+## Tình huống → Nên làm
+
+| Tình huống của bạn | Nên làm |
+|---|---|
+| Mới vào endgame, gear còn yếu | Density cơ bản, tier **vừa sức**, nhặt currency/đồ. **KHÔNG** all-in cơ chế đắt. |
+| Đầu league | Bán **commodity** & đồ leveling sớm (lúc này được giá nhất); chạy density để tích vốn. |
+| Hay chết / build yếu | Giảm tier, farm an toàn, **ưu tiên dựng lực** ([Ưu tiên theo build](/POE2/lo-trinh/chuong-5-trang-bi/uu-tien-theo-build/)). |
+| Muốn currency mà không biết farm gì | Mở [poe.ninja](https://poe.ninja) xem cái gì đắt → **truy ngược content** ([Từ giá trị → content farm](/POE2/lo-trinh/chuong-8-kinh-te-kiem-tien/tim-content-farm/)). |
+| Currency X đang tăng + bạn farm được nó | Spec Atlas vào content sinh X, **blast density**, cày khi còn hot. |
+| Dư currency + thấy món sắp tăng (patch buff) | Cân nhắc **đầu cơ** — mua trước rồi bán sau ([Flip & đầu cơ](/POE2/lo-trinh/chuong-8-kinh-te-kiem-tien/flip-dau-co-currency/)). |
+| Đi party 6 acc | Chung 1 map, đẩy density, chia loot qua **Permanent Allocation** ([Cày Party 6 Acc](/POE2/party-6-acc/)). |
+| Cuối league / sắp reset | **Bán hàng tồn**, không ôm đồ qua wipe (wipe = mất sạch). |
+
+## Tín hiệu giá → Ý nghĩa → Hành động
+
+| Tín hiệu giá | Ý nghĩa | Hành động |
+|---|---|---|
+| Giá tăng + **bạn farm được** | Bạn đang ngồi trên mỏ vàng | **Ưu tiên farm / giữ** rồi bán dần |
+| Giá tăng **do patch buff** | Cầu sắp lên (meta đổi theo nó) | Cân nhắc **mua trước khi tăng**, hoặc bán nếu đang có |
+| Giá **rớt mạnh** | Đang mất giá (cung tràn / nerf) | **Tránh farm** cái đó; hoặc đợi **đáy** để đầu cơ |
+| Commodity **rẻ** cuối league | Sắp wipe, không ai cần nữa | **Không tích trữ** — bán hết |
+
+<Hop variant="thuatngu">
+
+| Tiếng Anh | Tiếng Việt / Giải thích |
+|-----------|------------------------|
+| Density (mật độ quái) | Số lượng quái trong map — nhiều quái = nhiều loot/cơ chế nhả ra |
+| Commodity | Hàng hóa phổ thông, ai cũng cần (currency thường, mảnh…) — dễ bán, giá ổn |
+| Spec Atlas | Điểm cây Atlas tập trung vào một cơ chế để nó ra nhiều hơn |
+| ROI | Lợi tức trên cái bỏ ra — đo bằng currency/giờ |
+| Blast | Chạy map nhanh, dồn dập, lặp lại liên tục |
+| Permanent Allocation | Chế độ chia loot cố định theo người trong party (không tranh nhặt) |
+| Wipe / Reset | Hết league, server xóa nhân vật/đồ về tài khoản chuẩn |
+
+</Hop>
+
+<Hop variant="nguon">
+
+- [poe.ninja — xu hướng giá & economy (link tham chiếu, không copy số)](https://poe.ninja)
+- [Maxroll POE2 — chiến lược & farming](https://maxroll.gg/poe2)
+- [Trang chính thức Path of Exile 2 & patch notes](https://www.pathofexile.com/poe2)
+
+> ⚠️ Cơ chế nào đáng farm và giá món gì đang hot **đổi theo từng patch/league** (bản hiện hành ~0.5.x EA). Đây là khung quyết định; "cái gì đang ăn" luôn đọc lại poe.ninja/Maxroll theo bản mới nhất.
+
+</Hop>
+
+:::note[📊 Số liệu sống — kiểm tra trước khi dùng]
+- Giá currency & cái gì đang đắt: [poe.ninja](https://poe.ninja) (chọn Path of Exile 2 → đúng league)
+- Giá thực tế món bạn nhắm: [pathofexile.com/trade2](https://www.pathofexile.com/trade2)
+:::
+
+<Hop variant="mauchot">
+
+- **Trước mỗi phiên farm, hỏi 3 câu:** Cần **XP hay currency**? **Lực đủ chưa**? **Giá đang ưu cơ chế/đồ gì**?
+- **Lực chưa đủ → dựng lực + farm an toàn trước.** Đừng all-in cơ chế đắt khi build còn yếu.
+- **Đủ lực → truy ngược từ giá:** mở poe.ninja xem cái gì đắt → spec Atlas + density vào content sinh nó → **đo ROI**.
+- **Đọc tín hiệu giá:** tăng + farm được → giữ/cày; rớt mạnh → tránh (hoặc đợi đáy đầu cơ).
+- **Cuối league bán sạch** — đừng ôm đồ qua wipe.
+
+</Hop>

@@ -115,9 +115,11 @@ export default defineConfig({
                 { label: 'Trade & định giá', link: '/lo-trinh/chuong-8-kinh-te-kiem-tien/trade-va-dinh-gia/' },
                 { label: 'Đọc thị trường & meta', link: '/lo-trinh/chuong-8-kinh-te-kiem-tien/doc-thi-truong-meta/' },
                 { label: 'Phân tích & đoán thị trường', link: '/lo-trinh/chuong-8-kinh-te-kiem-tien/phan-tich-thi-truong/' },
+                { label: 'Flip & đầu cơ currency', link: '/lo-trinh/chuong-8-kinh-te-kiem-tien/flip-dau-co-currency/' },
                 { label: 'Từ giá trị → content farm', link: '/lo-trinh/chuong-8-kinh-te-kiem-tien/tim-content-farm/' },
                 { label: 'Các cách farm', link: '/lo-trinh/chuong-8-kinh-te-kiem-tien/cac-cach-farm/' },
                 { label: 'Tư duy ROI', link: '/lo-trinh/chuong-8-kinh-te-kiem-tien/tu-duy-roi/' },
+                { label: 'Bảng quyết định farm (cheat-sheet)', link: '/lo-trinh/chuong-8-kinh-te-kiem-tien/bang-quyet-dinh-farm/' },
               ],
             },
             {
