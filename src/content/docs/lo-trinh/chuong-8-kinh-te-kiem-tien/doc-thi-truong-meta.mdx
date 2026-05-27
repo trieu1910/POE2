@@ -1,0 +1,138 @@
+---
+title: Đọc thị trường & nhận diện meta
+description: Vì sao giá currency/đồ trong POE2 lên hay xuống? Bài này dạy cách đọc poe.ninja, nhận diện "meta", và dùng lăng kính gốc cung–cầu để tự giải thích mọi biến động giá — không học thuộc con số.
+lastUpdated: 2026-05-27
+---
+
+import Hop from '@components/Hop.astro';
+
+:::tip[👉 Bài này bạn sẽ hiểu được]
+- "Meta" trong kinh tế là gì, và vì sao **commodity** (hàng phổ thông) khác hẳn **chase item** (đồ đỉnh hiếm).
+- **Làm thế này:** đọc poe.ninja POE2 (cả mục economy lẫn builds) để tự thấy cái gì đang đắt và cái gì đang được nhiều người cần.
+- **Vì sao giá lên, vì sao giá xuống** — gọi đúng tên từng nguyên nhân thay vì đoán mò.
+- Lăng kính gốc **cung vs cầu**: hỏi đúng 2 câu là tự giải thích được mọi biến động giá.
+:::
+
+## "Meta" trong kinh tế là gì
+
+Ở các bài trước bạn nghe "meta" theo nghĩa build (kiểu nhân vật) đang mạnh. Trong **kinh tế**, "meta" có nghĩa rộng hơn: đó là **những currency, đồ, hoặc cơ chế đang được nhiều người cần và vì thế giữ giá cao** tại thời điểm này. Một món "đang meta" không nhất thiết mạnh nhất — nó chỉ cần **nhiều người muốn + tương đối khó kiếm** là giá sẽ cao.
+
+Để đọc thị trường, hãy chia mọi món ra hai nhóm:
+
+- **Commodity (hàng phổ thông):** những thứ **ai cũng cần, giao dịch liên tục, thanh khoản (liquidity) cao** — bán lúc nào cũng có người mua, giá ổn định và dễ tra. Ví dụ điển hình là **Exalted Orb** và **Divine Orb** (xem [Currency giá trị](/POE2/lo-trinh/chuong-8-kinh-te-kiem-tien/currency-gia-tri/)), cùng các vật liệu chế đồ stack được. Commodity giống gạo, muối, xăng: giá nhúc nhích chậm, luôn bán được.
+- **Chase item / đồ đỉnh:** những món **hiếm, đắt, kén người mua** — thường là unique mạnh, đồ rare số má cao, hoặc base hoàn hảo cho build top. Chase item giống bất động sản: một món đáng cả gia tài, nhưng **khó bán nhanh** vì ít người đủ tiền và đúng nhu cầu, giá lại **biến động dữ dội** theo meta build.
+
+> Quy tắc ngầm: commodity dễ định giá và đổi ra tiền; chase item có thể lãi to nhưng cũng dễ "ôm hàng" không bán được. Người mới nên sống bằng commodity trước.
+
+## Cách đọc poe.ninja POE2 (từng bước)
+
+**poe.ninja** là trang thống kê cộng đồng, có **mục riêng cho Path of Exile 2** (tách khỏi POE1). Hai phần bạn cần dùng song song: **economy** (giá) và **builds** (cầu). Lưu ý: poe.ninja gắn dữ liệu **theo từng league/patch** — mỗi mùa kinh tế **reset (làm lại từ đầu)**, nên luôn chọn đúng league hiện tại, đừng đọc nhầm dữ liệu mùa cũ.
+
+**Bước 1 — Xem giá (economy):**
+
+1. Mở [poe.ninja/poe2/economy](https://poe.ninja/poe2/economy).
+2. **Chọn đúng league hiện tại** ở phần chọn league (nếu bạn chơi league mới chứ không phải Standard).
+3. Vào mục **Currency**: bảng này cho biết **tỉ giá** từng viên — cái gì đang **đắt so với Exalted/Divine**, viên nào đang lên/xuống. Đây là nơi đọc "nhiệt độ" của nền kinh tế.
+4. Mở các mục **đồ/unique** (uniques và các nhóm item khác): xem món nào đang có giá cao. Để ý **biểu đồ xu hướng** của từng món để biết nó đang tăng hay giảm.
+
+**Bước 2 — Xem cầu đến từ đâu (builds):**
+
+1. Mở [poe.ninja/poe2/builds](https://poe.ninja/poe2/builds).
+2. Nhìn **build nào đang phổ biến** (nhiều người chơi) — trang này tổng hợp skill, đồ, unique mà người chơi đang dùng nhiều.
+3. **Suy luận:** những đồ mà các build hot đó cần chính là **nguồn cầu**. Nếu một unique xuất hiện trong rất nhiều build top, gần như chắc chắn nó đang (hoặc sắp) đắt.
+
+**Ghép lại:** "Meta kinh tế" = **giá trị cao (đọc ở economy)** + **nhiều người cần (đọc ở builds)**. Khi hai dấu hiệu này trùng nhau ở một món, đó là món đang dẫn dắt thị trường.
+
+> Đừng học thuộc con số trên poe.ninja — giá đổi theo giờ. Hãy luyện **thói quen mở cả hai trang** và đọc *xu hướng* + *vì sao*.
+
+## Vì sao giá LÊN
+
+Một món tăng giá khi **cầu vượt cung**. Cụ thể, để ý các nguyên nhân sau:
+
+1. **Cầu tăng vì build hot cần nó.** Nhiều người đổ vào một build, build đó cần một unique/base/gem cụ thể → người người đi mua cùng lúc → giá vọt lên.
+2. **Cung khan vì drop hiếm hoặc content khó.** Món chỉ rơi từ boss khó, hoặc tỉ lệ rớt thấp → ít hàng ra thị trường → đắt.
+3. **Patch buff một build hoặc một món.** Bản vá (patch ~0.5.x EA) buff một skill/đồ → build dùng nó bỗng mạnh → **cầu tăng đột biến** chỉ sau một đêm. Đây là cú sốc giá nhanh nhất.
+4. **Content/cơ chế mới đẻ ra "chase item" mới.** Khi patch thêm cơ chế endgame mới, nó thường kèm những unique/đồ mới chưa ai có → khan hàng + tò mò → giá cao trong giai đoạn đầu.
+5. **Đầu league khan hàng.** Mùa vừa mở, chưa ai farm được nhiều, mọi thứ hiếm tương đối → giá cao hơn bình thường, nhất là với đồ endgame.
+
+> ⚠️ Patch buff/nerf là biến số mạnh nhất và **đổi theo từng bản** — luôn đọc patch notes mới khi thấy giá nhảy bất thường.
+
+## Vì sao giá XUỐNG
+
+Một món giảm giá khi **cung vượt cầu**. Các nguyên nhân thường gặp:
+
+1. **Cung tăng vì ai cũng farm được.** Khi cộng đồng tìm ra cách farm dễ một món (hoặc nó rơi nhiều hơn sau patch), hàng tràn ra thị trường → rớt giá.
+2. **Cầu giảm vì build bị nerf hoặc rớt meta.** Patch nerf một build, hoặc người chơi chán chuyển sang build khác → đồ của build cũ **không ai mua nữa** → giá lao dốc.
+3. **Lạm phát cuối league.** Càng về cuối mùa, càng nhiều người tới endgame, currency và đồ **tràn ra** → mặt bằng giá (tính bằng currency phổ thông) thay đổi, nhiều món rẻ đi rõ rệt. Đây là quy luật vòng đời của *mọi* league.
+4. **Meta farm dịch sang chỗ khác.** Khi điểm farm "hot" đổi sang một cơ chế/khu vực khác, những món gắn với điểm farm cũ giảm cầu → giảm giá.
+
+Muốn thấy cụ thể món nào đang giảm, mở biểu đồ xu hướng trên poe.ninja và đọc thêm [Phân tích thị trường](/POE2/lo-trinh/chuong-8-kinh-te-kiem-tien/phan-tich-thi-truong/).
+
+## Lăng kính gốc — Cung vs Cầu
+
+Tất cả những nguyên nhân ở trên thật ra chỉ là **hai lực**: cung và cầu. Mọi mức giá đều là **điểm cân bằng** giữa:
+
+> **"Món này khó kiếm cỡ nào?"** (cung) × **"Bao nhiêu người muốn nó cỡ nào?"** (cầu)
+
+Mỗi khi thấy một món lên hay xuống, hãy tự hỏi đúng **2 câu**:
+
+1. **Cung đổi không?** Có dễ kiếm hơn / khó kiếm hơn không (drop, content, cách farm mới)?
+2. **Cầu đổi không?** Có nhiều/ít người cần nó hơn không (build hot lên, build bị nerf, cơ chế mới)?
+
+Trả lời được 2 câu này là bạn **tự giải thích được mọi biến động** mà không cần ai mách. Đó là khác biệt giữa người "nghe đồn giá" và người **đọc được thị trường**.
+
+## Nên theo cái nào
+
+Nguyên tắc cho người muốn kiếm tiền ổn định, không phải đánh bạc:
+
+- **Ưu tiên món: cầu cao + BẠN cung được ổn định.** Tức là món nhiều người cần *và* build/party của bạn **farm ra nó đều đặn**. Khi đó bạn vừa có nguồn hàng, vừa có người mua — đây là dòng tiền bền nhất. (Tìm điểm farm hợp build tại [Tìm content farm](/POE2/lo-trinh/chuong-8-kinh-te-kiem-tien/tim-content-farm/).)
+- **Người mới tránh ôm chase item siêu biến động.** Một unique đỉnh có thể đáng cả gia tài hôm nay nhưng rớt nửa giá sau một patch nerf. Bạn dễ kẹt vốn vì không bán kịp. Hãy để chase item cho khi đã có đệm tài chính và biết đọc xu hướng.
+- **Luôn so với công sức bỏ ra.** Một món đắt nhưng tốn quá nhiều thời gian/đầu tư để farm thì chưa chắc đáng — cân nhắc bằng [Tư duy ROI](/POE2/lo-trinh/chuong-8-kinh-te-kiem-tien/tu-duy-roi/).
+
+Tóm lại: **đừng chạy theo món đang đắt nhất, hãy chạy theo món bạn cung được ổn định mà vẫn có nhiều người cần.**
+
+<Hop variant="thuatngu">
+
+| Tiếng Anh | Tiếng Việt / Giải thích |
+|-----------|------------------------|
+| Meta | Cái đang "thịnh": build mạnh, hoặc món đang được nhiều người cần & giữ giá |
+| Commodity | Hàng phổ thông, ai cũng cần, dễ bán — giá ổn định (vd Exalted/Divine) |
+| Chase item | Đồ đỉnh hiếm, đắt, kén người mua, giá biến động mạnh |
+| Supply (cung) | Lượng hàng có trên thị trường — món càng khó kiếm, cung càng ít |
+| Demand (cầu) | Nhu cầu của người chơi — càng nhiều người muốn, cầu càng cao |
+| Liquidity (thanh khoản) | Mức độ dễ đổi món ra tiền nhanh; commodity thanh khoản cao, chase item thấp |
+| Exchange rate (tỉ giá) | Tỉ lệ quy đổi giữa hai currency, đổi theo cung–cầu |
+| League | Mùa chơi có thời hạn; kinh tế reset & biến động theo vòng đời mỗi league |
+| Standard | Server vĩnh viễn, gộp đồ của các league cũ |
+| Patch / patch notes | Bản vá game & ghi chú thay đổi — nguồn gốc của buff/nerf làm giá nhảy |
+| Buff / Nerf | Làm mạnh lên / làm yếu đi một build hoặc món đồ qua patch |
+| poe.ninja | Trang thống kê cộng đồng: có mục economy (giá) và builds (cầu) cho POE2 |
+
+</Hop>
+
+<Hop variant="nguon">
+
+- [Path of Exile 2 — Trang chính thức & patch notes](https://www.pathofexile.com/poe2)
+- [Currency Guide — Maxroll POE2](https://maxroll.gg/poe2/resources/currency-guide)
+- [Currency — POE2 Wiki](https://www.poewiki.net/wiki/poe2wiki:Currency)
+- [Currency database — poe2db](https://poe2db.tw/us/Currency)
+
+> ⚠️ **Lưu ý:** "meta" build, điểm farm hot, và mức giá **đổi theo từng patch/league** trong Early Access (mốc hiện tại ~0.5.x). Bài này dạy *cách đọc*, KHÔNG ghi con số — luôn tra poe.ninja để biết tình hình hiện tại.
+
+</Hop>
+
+:::note[📊 Số liệu sống — kiểm tra trước khi dùng]
+- **Giá & tỉ giá hiện tại (cái gì đang đắt):** [poe.ninja/poe2/economy](https://poe.ninja/poe2/economy) — nhớ chọn đúng league hiện tại.
+- **Build nào đang phổ biến (cầu đến từ đâu):** [poe.ninja/poe2/builds](https://poe.ninja/poe2/builds)
+- **Giá đồ thực tế đang rao:** [pathofexile.com/trade2](https://www.pathofexile.com/trade2)
+:::
+
+<Hop variant="mauchot">
+
+- **Meta kinh tế = giá trị cao + nhiều người cần.** Đọc giá ở poe.ninja economy, đọc cầu ở poe.ninja builds.
+- Phân biệt **commodity** (dễ bán, giá ổn) với **chase item** (đắt, biến động, kén mua) — người mới sống bằng commodity.
+- **Giá lên** khi cầu vượt cung (build hot, patch buff, content mới, đầu league khan hàng); **giá xuống** khi cung vượt cầu (farm dễ, build bị nerf, lạm phát cuối league).
+- Lăng kính gốc: mọi giá = **cung × cầu**. Mỗi biến động, tự hỏi "cung đổi không?" và "cầu đổi không?".
+- **Làm thế này:** theo món **cầu cao + bạn cung được ổn định**, tránh ôm chase item siêu biến động khi chưa có đệm vốn.
+
+</Hop>

@@ -20,6 +20,9 @@ lastUpdated: 2026-05-27
 
 - **[Currency giá trị](/POE2/lo-trinh/chuong-8-kinh-te-kiem-tien/currency-gia-tri/)** — Currency nào thực sự giữ giá và vì sao: Exalted Orb là đơn vị "tiền lẻ" hằng ngày, Divine Orb là đơn vị giá trị cao, cùng các món giá trị khác. Khái niệm "tỉ giá" giữa các currency, vì sao giá đổi suốt league, và cách đọc poe.ninja để tự nắm giá.
 - **[Trade & định giá](/POE2/lo-trinh/chuong-8-kinh-te-kiem-tien/trade-va-dinh-gia/)** — Cách dùng trang trade chính thức (trade2) để tìm đồ, cách whisper (nhắn) người bán (POE2 **không có nhà đấu giá tự động**), và cách tự định giá đồ của bạn bằng cách tra các tin rao tương tự. Có hướng dẫn từng bước cho giao dịch đầu tiên.
+- **[Đọc thị trường & meta](/POE2/lo-trinh/chuong-8-kinh-te-kiem-tien/doc-thi-truong-meta/)** — Nhìn poe.ninja là biết cái gì đang meta/đáng giá, và **vì sao giá lên hay xuống** (chu kỳ league, patch buff/nerf, content mới, độ phổ biến của build, nguồn cung từ farm).
+- **[Phân tích & đoán thị trường](/POE2/lo-trinh/chuong-8-kinh-te-kiem-tien/phan-tich-thi-truong/)** — Đọc biểu đồ giá/xu hướng, dòng thời gian một league, đoán trước cầu tăng/giảm, và đầu cơ/flip có kiểm soát rủi ro.
+- **[Từ giá trị → content farm](/POE2/lo-trinh/chuong-8-kinh-te-kiem-tien/tim-content-farm/)** — Quy trình truy ngược: thấy món đáng giá → tìm **content nào rơi/sinh ra nó** → dựng chiến lược Atlas/cơ chế để đi farm đúng thứ đó.
 - **[Các cách farm](/POE2/lo-trinh/chuong-8-kinh-te-kiem-tien/cac-cach-farm/)** — Bốn cách kiếm tiền chính: chạy map hiệu quả, đánh boss lấy đồ rớt giá trị, chế đồ để bán (flip), và đầu cơ currency/thị trường. Mỗi cách kèm cảnh báo cho người mới và gợi ý "người mới nên bắt đầu kiếm tiền từ đâu".
 - **[Tư duy ROI](/POE2/lo-trinh/chuong-8-kinh-te-kiem-tien/tu-duy-roi/)** — Tư duy như một nhà đầu tư: thời gian đổi lấy phần thưởng, chi phí cơ hội, không đổ currency mình không dám mất, theo dõi xem cái gì sinh lời với CHÍNH BẠN, và tránh lừa đảo / canh bạc rủi ro.
 

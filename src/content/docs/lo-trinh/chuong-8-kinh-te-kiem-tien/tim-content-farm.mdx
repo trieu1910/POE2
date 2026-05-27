@@ -1,0 +1,159 @@
+---
+title: Từ giá trị → tìm content để farm
+description: Khi đã biết một món đáng giá, làm sao TÌM ra nó rơi từ đâu / do cơ chế nào, rồi dựng cây Atlas + cơ chế để cày đúng thứ đó. Quy trình truy ngược 7 bước, công cụ tra nguồn (poe2db, wiki, Maxroll), và 3 dạng nguồn ra của một món kèm cách farm tương ứng.
+lastUpdated: 2026-05-27
+---
+
+import Hop from '@components/Hop.astro';
+
+:::tip[👉 Bài này bạn sẽ hiểu được]
+- **Quy trình truy ngược**: từ "món này đáng tiền" → tìm ra **nó rơi từ đâu** → cày đúng content sinh ra nó.
+- **Công cụ tra nguồn** một món: poe2db.tw, POE Wiki, guide farm của Maxroll — gõ gì, đọc mục nào.
+- **3 dạng nguồn ra** (rơi từ cơ chế / rơi từ boss / do craft) và **cách farm tương ứng** cho từng dạng.
+- **Làm thế này:** dựng một kế hoạch farm hoàn chỉnh — chọn cơ chế lời → cây Atlas đẩy nó → đo ROI → tinh chỉnh.
+:::
+
+Đọc thị trường rồi, bạn biết "món X đang đáng tiền". Nhưng biết một món đáng giá **chưa đủ** — câu hỏi tiếp theo (và là phần khó nhất) là: **làm sao kiếm ra nó một cách có hệ thống?** Nó rơi ở đâu? Cơ chế nào nhả nó? Cày map kiểu gì để nó ra nhiều?
+
+Bài này dạy bạn **truy ngược từ giá trị về nguồn**, rồi biến cái nguồn đó thành một **kế hoạch cày cụ thể**. Đây là kỹ năng cốt lõi phân biệt người "cày bừa rồi hy vọng" với người **cày có mục tiêu**.
+
+## Quy trình truy ngược — 7 bước
+
+Đây là khung xương. Cả bài còn lại chỉ là giải thích chi tiết từng bước.
+
+1. **Xác định món đáng giá.** Từ việc [đọc thị trường & meta](/POE2/lo-trinh/chuong-8-kinh-te-kiem-tien/doc-thi-truong-meta/), bạn chốt được một (hoặc vài) món/loại currency đang có giá tốt và **có cầu ổn định**.
+2. **Tìm nguồn ra của nó.** Trả lời câu hỏi: nó **rơi từ đâu**, **do cơ chế nào**, hay phải **craft (chế) ra**? (Phần "công cụ" bên dưới.)
+3. **Map nguồn đó sang content/cơ chế cụ thể.** Ví dụ "rơi từ Breach" → cơ chế Breach trong map; "rơi từ một pinnacle boss" → boss đó cần vé gì để vào.
+4. **Dựng cây Atlas + cơ chế đẩy đúng thứ đó** (kèm **mật độ quái** — càng nhiều quái thì cơ chế nhả càng nhiều). Đây là bước biến lý thuyết thành map chạy được.
+5. **Farm.** Chạy lặp đi lặp lại theo chiến lược vừa dựng, tối ưu tốc độ.
+6. **Đo ROI.** Tính **currency/giờ** thực tế (xem [Tư duy ROI](/POE2/lo-trinh/chuong-8-kinh-te-kiem-tien/tu-duy-roi/)) — nó có thật sự lời như bạn nghĩ không?
+7. **Tinh chỉnh.** Sửa cây Atlas, đổi tier map, đổi cơ chế phụ. Khi **meta đổi** (giá món X tụt), quay lại **bước 1** với món khác.
+
+> Điểm mấu chốt: đừng dừng ở "món này đáng tiền". Một món đáng tiền mà bạn **không có cách cày ra hiệu quả** thì với bạn nó… không đáng tiền. Bước 2 và 4 mới là chỗ kiếm tiền thật.
+
+## Cách TÌM nguồn ra của một món (công cụ)
+
+Đây là bước 2 — quan trọng nhất và cũng dễ bỏ qua nhất. May mắn là POE2 có sẵn công cụ tra cứu. Ba nguồn chính:
+
+### 1. poe2db.tw — tra nguồn/drop của item
+
+[poe2db.tw](https://poe2db.tw) là database item/skill chi tiết. **Cách dùng:**
+
+- Gõ **tên item** (tiếng Anh) vào ô tìm kiếm trên poe2db → mở **trang của item đó**.
+- Đọc mục **nguồn/drop (acquisition / drop source)** trên trang — nó thường ghi món này **gắn với cơ chế nào** hoặc **thả ra từ đâu**.
+
+> Đã xác minh: trang cơ chế/item trên poe2db **có liệt kê thông tin nguồn**. Ví dụ trang Breach liệt kê rõ các món gắn với Breach (splinter, catalyst, ring, unique đặc trưng…) và mô tả chúng đến từ đâu (quái Breach, clasped hands…). Bạn dùng đúng kiểu đọc đó cho món mình quan tâm. *(Danh sách cụ thể đổi theo patch — luôn đọc lại trang theo bản hiện hành.)*
+
+### 2. POE Wiki (namespace POE2)
+
+[POE Wiki](https://www.poewiki.net) có trang cho từng item/cơ chế. Tra trang của món bạn quan tâm để đọc phần mô tả **nguồn/cách lấy** và cơ chế liên quan. Khi tra, ưu tiên **trang POE2** (namespace `poe2wiki`) thay vì trang POE1, vì cơ chế hai game khác nhau. *(Một số trang wiki có thể chưa đầy đủ cho EA — chéo kiểm với poe2db.)*
+
+### 3. Guide farm của Maxroll
+
+[Maxroll POE2](https://maxroll.gg/poe2) có các bài chiến lược/farming viết sẵn. **Cách dùng:**
+
+- Tra kiểu **"how to farm \<tên item\> poe2"** hoặc tìm trong mục resources/strategy của Maxroll.
+- Maxroll thường nói luôn: món/loại loot này **cày bằng cơ chế nào**, **cây Atlas điểm ra sao**, chiến lược nào đang ăn. Đây là đường tắt khi bạn lười tự suy ra từ database.
+
+> Thứ tự khuyên dùng: **poe2db** để xác định nguồn (dữ liệu thô, chính xác) → **Maxroll** để xem người ta đã có chiến lược cày sẵn chưa → **Wiki** để tra thêm chi tiết cơ chế khi cần.
+
+## 3 dạng nguồn ra & cách farm tương ứng
+
+Khi đã tra được nguồn, nó sẽ rơi vào **một trong ba dạng**. Mỗi dạng có cách cày khác hẳn nhau.
+
+### Dạng 1 — Rơi từ một cơ chế (mechanic)
+
+Nếu món X **gắn với một cơ chế endgame** — ví dụ Breach, Ritual, Expedition, Delirium… — thì cách cày là:
+
+- **Spec cây Atlas vào đúng cơ chế đó.** Cây Atlas (xem [Cây Atlas — Ch.7](/POE2/lo-trinh/chuong-7-endgame-atlas/cay-atlas/)) cho phép bạn **tập trung điểm** để cơ chế xuất hiện nhiều hơn và nhả nhiều hơn. Đây là lý do người chuyên cày một cơ chế kiếm tốt hơn người rải đều.
+- **Tăng mật độ quái.** Phần lớn cơ chế nhả loot theo **số quái bạn giết trong cơ chế đó** — càng nhiều quái, càng nhiều splinter/loot. Ưu tiên map và mod làm tăng số lượng quái.
+- **Blast map** (chạy nhanh, dồn dập): chọn map dễ đi, build dọn nhanh, lặp lại liên tục đúng cơ chế đó.
+
+> Chi tiết về các cơ chế xuất hiện trong map (Breach/Ritual/Expedition/Delirium…) xem [Cơ chế trong map — Ch.7](/POE2/lo-trinh/chuong-7-endgame-atlas/co-che-trong-map/). Cơ chế nào nhả món gì **đổi theo patch/meta** — luôn chéo kiểm poe2db/Maxroll.
+
+### Dạng 2 — Rơi từ boss (pinnacle / map boss)
+
+Nếu món X là **đồ rơi từ một boss cụ thể** (boss trong map, hoặc pinnacle boss endgame — xem [Pinnacle boss — Ch.7](/POE2/lo-trinh/chuong-7-endgame-atlas/pinnacle-boss/)), thì cách cày là **boss rush** (cày boss liên tục):
+
+- **Gom "vé vào cửa"**: pinnacle boss cần fragment/key (mảnh/chìa khóa) nhặt khi chạy map hoặc từ cơ chế. Bước đầu của boss rush thường là **cày ra đủ vé**.
+- **Lặp lại nhanh**: vào boss → giết → lấy loot → reset. Tối ưu thời gian giữa các lần (di chuyển, mở cổng).
+- **Đảm bảo build đủ cứng**: boss khó hơn quái thường nhiều; chết có thể **mất vé**. Đừng boss rush khi build còn yếu.
+
+### Dạng 3 — Do craft (chế ra)
+
+Nếu món X **không rơi sẵn** mà phải **chế ra**, thì "nguồn" của nó là **bàn craft của bạn**, không phải map. Cách làm:
+
+- **Mua base phù hợp** (món đồ gốc) + **currency/essence/rune** cần thiết.
+- **Chế theo một công thức cụ thể** bạn đã hiểu rõ (xem [Chương 6 — Crafting](/POE2/lo-trinh/chuong-6-crafting/)) → ra mod người ta cần → **bán cao hơn tổng chi phí**.
+- Lúc này việc "farm" của bạn là **farm nguyên liệu đầu vào** (currency/essence/base) — vòng về dạng 1 hoặc 2 để kiếm nguyên liệu, rồi craft.
+
+> Cảnh báo: craft là **xác suất** — có thể đổ currency mà ra đồ rác. Chỉ làm khi đã tính được chi phí trung bình so với giá bán (xem [Tư duy ROI](/POE2/lo-trinh/chuong-8-kinh-te-kiem-tien/tu-duy-roi/)).
+
+## Làm thế này — dựng chiến lược farm hoàn chỉnh
+
+Gói cả quy trình lại thành các bước thực hành:
+
+1. **Chọn cơ chế đang lời.** Đọc [Đọc thị trường & meta](/POE2/lo-trinh/chuong-8-kinh-te-kiem-tien/doc-thi-truong-meta/) để biết loot/cơ chế nào đang được giá. Chọn **1–2 cơ chế** bạn vừa thấy lời vừa thấy hợp build.
+2. **Tra nguồn để chắc chắn.** Dùng poe2db/Maxroll xác nhận món bạn nhắm **đúng là** đến từ cơ chế/boss/craft nào (đừng đoán).
+3. **Dựng cây Atlas đẩy cơ chế đó.** Vào [Cây Atlas — Ch.7](/POE2/lo-trinh/chuong-7-endgame-atlas/cay-atlas/), điểm tập trung vào cơ chế đã chọn; tham khảo [Cơ chế trong map — Ch.7](/POE2/lo-trinh/chuong-7-endgame-atlas/co-che-trong-map/) để biết nhánh nào ảnh hưởng cơ chế nào.
+4. **Tối ưu tốc độ + mật độ.** Chọn tier map **vừa sức không chết**, ưu tiên map dễ đi và mod tăng số lượng quái. Mục tiêu: nhiều lượt cơ chế mỗi giờ.
+5. **Cày party 6 nếu muốn đẩy hiệu suất.** Cày nhóm 6 người có thể tăng tốc độ và mật độ đáng kể — xem [Cày Party 6 Acc](/POE2/party-6-acc/).
+
+## Đo & xoay vòng
+
+Một kế hoạch farm **không phải làm một lần là xong** — meta đổi liên tục trong EA:
+
+- **Đo currency/giờ thật.** Sau khi cày một lúc, tính xem chiến lược này thực tế cho bao nhiêu mỗi giờ (cách đo cụ thể ở [Tư duy ROI](/POE2/lo-trinh/chuong-8-kinh-te-kiem-tien/tu-duy-roi/)). Đừng tin "nghe nói cái này ăn" — **tự đo với build của bạn**.
+- **So sánh & tinh chỉnh.** Nếu thấp hơn kỳ vọng, sửa cây Atlas / đổi tier / đổi cơ chế phụ, rồi đo lại.
+- **Meta đổi → quay lại bước 1.** Khi giá món bạn cày tụt (cung tăng, patch nerf, hết hot), **quay lại đầu quy trình**: đọc thị trường, tìm món mới đáng giá, truy ngược nguồn, dựng farm mới.
+
+> ⚠️ Cơ chế nào nhả món gì và chiến lược Atlas tối ưu **đổi theo từng patch/league** (bản hiện hành ~0.5.x EA). Bài này dạy **phương pháp**; "công thức cụ thể đang ăn" thì luôn đọc lại Maxroll/poe.ninja theo bản mới nhất.
+
+<Hop variant="thuatngu">
+
+| Tiếng Anh | Tiếng Việt / Giải thích |
+|-----------|------------------------|
+| Drop source / Acquisition | Nguồn rơi ra của một món — nó đến từ đâu |
+| Mechanic (cơ chế) | Hoạt động endgame xuất hiện trong map (Breach, Ritual, Expedition, Delirium…) |
+| Breach | Cơ chế: vết nứt thực tại, quái tràn ra, nhả splinter/loot riêng |
+| Ritual | Cơ chế: vòng nghi lễ, giết quái để đổi điểm lấy phần thưởng |
+| Expedition | Cơ chế: đào di chỉ, đặt thuốc nổ, đổi loot với NPC |
+| Delirium | Cơ chế: sương mù tăng quái + loot, càng sâu càng nhiều |
+| Atlas tree (cây Atlas) | Cây điểm endgame để buff cơ chế/loot trong map |
+| Monster density (mật độ quái) | Số lượng quái trong map — quyết định loot cơ chế nhả ra |
+| Blast map | Chạy map nhanh, dồn dập, lặp lại liên tục |
+| Pinnacle boss | Boss đỉnh endgame, cần vé (fragment/key) để vào |
+| Boss rush | Cày boss liên tục để gom loot/đồ rơi từ boss |
+| Fragment / Key (vé) | Vật phẩm cần để mở cửa vào boss |
+| Base (base type) | Món đồ gốc dùng làm nền để chế |
+| Craft (chế đồ) | Dùng currency/essence/rune tạo mod trên đồ |
+| ROI | Lợi tức trên cái bỏ ra — đo bằng currency/giờ |
+
+</Hop>
+
+<Hop variant="nguon">
+
+- [poe2db.tw — database item/skill, có thông tin nguồn/drop](https://poe2db.tw)
+- [POE Wiki — tra item & cơ chế (ưu tiên trang POE2)](https://www.poewiki.net)
+- [Maxroll POE2 — guide chiến lược & farming](https://maxroll.gg/poe2)
+- [poe.ninja — xu hướng giá & economy (link tham chiếu)](https://poe.ninja)
+- [Trang chính thức Path of Exile 2](https://www.pathofexile.com/poe2)
+
+> ⚠️ **Lưu ý:** cơ chế nào nhả món gì, cây Atlas tối ưu, và chiến lược "đang ăn" **đổi theo từng patch/league**. Bài này dạy phương pháp truy ngược; danh sách nguồn cụ thể của từng món luôn đọc lại poe2db/Maxroll theo bản hiện hành.
+
+</Hop>
+
+:::note[📊 Số liệu sống — kiểm tra trước khi dùng]
+- **Món/cơ chế nào đang đáng farm thay đổi theo league** — xem xu hướng giá tại: [poe.ninja](https://poe.ninja) (chọn Path of Exile 2 → đúng league)
+- Kiểm tra giá thực tế của món bạn nhắm cày: [pathofexile.com/trade2](https://www.pathofexile.com/trade2)
+:::
+
+<Hop variant="mauchot">
+
+- **Biết món đáng tiền chưa đủ** — phải truy ngược ra **nó rơi từ đâu** rồi dựng cách cày. Đó là 7 bước: giá trị → nguồn → content → cây Atlas → farm → đo ROI → tinh chỉnh.
+- **Tra nguồn bằng công cụ:** gõ tên item vào **poe2db** đọc mục nguồn; tra **"how to farm \<item\> poe2"** trên **Maxroll**; chéo kiểm **POE Wiki** (trang POE2).
+- **3 dạng nguồn:** rơi từ **cơ chế** → spec cây Atlas + mật độ quái, blast map; rơi từ **boss** → boss rush, gom vé; **craft** → mua base + nguyên liệu, chế rồi bán.
+- **Dựng farm:** chọn cơ chế đang lời → cây Atlas đẩy nó → tối ưu tốc độ + mật độ → party 6 để đẩy hiệu suất.
+- **Đo currency/giờ và xoay vòng:** meta đổi thì quay lại bước 1 với món mới. Đừng cày mãi một thứ đã hết lời.
+
+</Hop>
