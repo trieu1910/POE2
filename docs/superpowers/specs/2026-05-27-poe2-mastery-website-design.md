@@ -94,7 +94,7 @@ Khuôn này nên được hiện thực hóa thành một component/snippet tái
 - **Build check**: `astro build` chạy sạch, không lỗi.
 - **Link check**: kiểm tra link nội bộ và link ngoài (báo link hỏng).
 - **Responsive**: kiểm tra hiển thị trên khổ điện thoại.
-- **Deploy**: GitHub Pages hoặc Netlify, miễn phí; có pipeline deploy lại khi cập nhật nội dung.
+- **Deploy**: mặc định **GitHub Pages** (miễn phí, tự động qua GitHub Actions vì đã có git); **Netlify** là phương án dự phòng nếu người dùng chưa có tài khoản GitHub. Xác nhận tài khoản GitHub trong bước dựng khung (Đợt 0).
 
 ---
 
