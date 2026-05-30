@@ -1,5 +1,5 @@
 import type { SlotResult } from './types';
-import { resolveToken } from './affix-map';
+import { resolveToken, GENERIC_KEYS } from './affix-map';
 import { wrapSearch } from './wrap';
 
 const META = /[.^$*+?()[\]{}|\\]/g;
@@ -32,6 +32,7 @@ export function buildCombined(results: SlotResult[], charLimit = 50): CombinedRe
   for (const r of results) {
     if (r.slot.uniqueName) continue; // unique mua theo tên, không quét vendor
     for (const a of r.slot.affixes) {
+      if (GENERIC_KEYS.has(a.key)) continue; // bỏ stat phổ thông (Life/Res…) cho bớt nhiễu
       const resolved = resolveToken(a.key, a.label);
       const piece = escapeToken(resolved.token);
       const cur = map.get(piece);

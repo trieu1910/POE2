@@ -7,75 +7,62 @@ function affix(key: string, label: string): NormalizedAffix {
 }
 
 function slot(over: Partial<ParsedSlot>): ParsedSlot {
-  return {
-    inventoryId: 'X',
-    base: 'Base',
-    levelInterval: [1, 100],
-    affixes: [],
-    ...over,
-  };
+  return { inventoryId: 'X', base: 'Base', levelInterval: [1, 100], affixes: [], ...over };
 }
 
-describe('buildIngameRegex', () => {
-  it('nối token bằng | theo thứ tự ưu tiên', () => {
+describe('buildIngameRegex — lọc gắt (VÀ 2 stat, đặc trưng trước)', () => {
+  it('VÀ 2 stat chính: mỗi cụm bọc ngoặc, ngăn nhau bằng dấu cách', () => {
     const r = buildIngameRegex(
       slot({
         affixes: [
-          affix('to maximum life', 'to maximum Life'),
-          affix('increased evasion rating', 'increased Evasion Rating'),
+          affix('added physical damage', 'Adds Physical Damage'),
+          affix('increased critical hit chance', 'increased Critical Hit Chance'),
         ],
       }),
-      50,
     );
-    expect(r).not.toBeNull();
-    expect(r!.regex).toBe('"imum L|Eva"'); // có dấu cách → bọc ngoặc kép
-    expect(r!.length).toBe('"imum L|Eva"'.length);
-    expect(r!.included).toHaveLength(2);
-    expect(r!.dropped).toHaveLength(0);
+    expect(r!.regex).toBe('"Physic" "Hit Cha"');
+    expect(r!.included).toEqual(['Adds Physical Damage', 'increased Critical Hit Chance']);
   });
 
-  it('bỏ affix vượt giới hạn ký tự', () => {
+  it('ưu tiên stat đặc trưng, đẩy stat phổ thông (Life) ra khỏi top-2', () => {
     const r = buildIngameRegex(
       slot({
         affixes: [
-          affix('to maximum life', 'to maximum Life'),
-          affix('increased evasion rating', 'increased Evasion Rating'),
-          affix('to spirit', 'to Spirit'),
+          affix('to maximum life', 'to maximum Life'), // phổ thông
+          affix('added physical damage', 'Adds Physical Damage'),
+          affix('increased critical hit chance', 'increased Critical Hit Chance'),
         ],
       }),
-      8,
     );
-    expect(r!.included).toEqual(['to maximum Life']);
-    expect(r!.dropped.length).toBe(2);
+    expect(r!.regex).toBe('"Physic" "Hit Cha"');
+    expect(r!.dropped).toContain('to maximum Life');
   });
 
-  it('đánh cờ warning cho token fallback', () => {
-    const r = buildIngameRegex(
-      slot({ affixes: [affix('some unmapped thing', 'some unmapped thing')] }),
-      50,
-    );
-    expect(r!.warnings).toContain('some unmapped thing');
+  it('chỉ có 1 stat → ra đúng 1 cụm', () => {
+    const r = buildIngameRegex(slot({ affixes: [affix('increased movement speed', 'increased Movement Speed')] }));
+    expect(r!.regex).toBe('"vement"');
   });
 
-  it('trả null cho đồ unique', () => {
-    expect(buildIngameRegex(slot({ uniqueName: 'Foo' }), 50)).toBeNull();
-  });
-
-  it('trả null khi không có affix', () => {
-    expect(buildIngameRegex(slot({ affixes: [] }), 50)).toBeNull();
-  });
-
-  it('gộp token trùng, vẫn tính cả hai affix là included', () => {
+  it('gộp 2 dòng cùng stat thành 1, lấy stat kế tiếp cho đủ 2', () => {
     const r = buildIngameRegex(
       slot({
         affixes: [
-          affix('to evasion rating', 'to Evasion Rating'),
-          affix('increased evasion rating', 'increased Evasion Rating'),
+          affix('added physical damage', 'Adds Physical Damage'),
+          affix('added physical damage', 'Adds Physical Damage'),
+          affix('increased critical hit chance', 'increased Critical Hit Chance'),
         ],
       }),
-      50,
     );
-    expect(r!.regex).toBe('Eva');
-    expect(r!.included).toEqual(['to Evasion Rating', 'increased Evasion Rating']);
+    expect(r!.regex).toBe('"Physic" "Hit Cha"');
+  });
+
+  it('token fallback bị đánh cờ ⚠', () => {
+    const r = buildIngameRegex(slot({ affixes: [affix('some weird stat', 'some weird stat')] }));
+    expect(r!.warnings).toContain('some weird stat');
+  });
+
+  it('null cho đồ unique và khi không có affix', () => {
+    expect(buildIngameRegex(slot({ uniqueName: 'Foo' }))).toBeNull();
+    expect(buildIngameRegex(slot({ affixes: [] }))).toBeNull();
   });
 });

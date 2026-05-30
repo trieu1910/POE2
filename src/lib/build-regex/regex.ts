@@ -1,6 +1,5 @@
 import type { ParsedSlot, IngameRegex } from './types';
-import { resolveToken } from './affix-map';
-import { wrapSearch } from './wrap';
+import { resolveToken, GENERIC_KEYS } from './affix-map';
 
 const META = /[.^$*+?()[\]{}|\\]/g;
 
@@ -9,40 +8,62 @@ function escapeToken(t: string): string {
   return t.replace(META, '\\$&');
 }
 
+/** Một "cụm" trong logic VÀ luôn bọc ngoặc kép, ngăn cách nhau bằng dấu cách. */
+function group(piece: string): string {
+  return `"${piece}"`;
+}
+
+/** Số stat buộc khớp cùng lúc (logic VÀ) — "gắt vừa". */
+const REQUIRE = 2;
+
+/**
+ * Tạo regex lọc GẮT cho 1 ô: buộc món phải có ĐỦ {REQUIRE} stat chính cùng lúc
+ * (mỗi stat là một cụm "..." ngăn nhau bằng dấu cách = logic VÀ trong game).
+ * Ưu tiên stat đặc trưng trước, đẩy stat phổ thông (Life/Res…) xuống cuối.
+ */
 export function buildIngameRegex(slot: ParsedSlot, charLimit = 50): IngameRegex | null {
   if (slot.uniqueName) return null;
   if (slot.affixes.length === 0) return null;
 
-  // Chừa 2 ký tự cho cặp ngoặc kép (luôn an toàn dù cuối cùng có bọc hay không).
-  const inner = Math.max(1, charLimit - 2);
+  // Đặc trưng trước, phổ thông sau (sort ổn định giữ thứ tự ưu tiên gốc).
+  const ordered = [
+    ...slot.affixes.filter((a) => !GENERIC_KEYS.has(a.key)),
+    ...slot.affixes.filter((a) => GENERIC_KEYS.has(a.key)),
+  ];
 
-  const tokens: string[] = [];
+  const chosen: string[] = [];
+  const seen = new Set<string>();
   const included: string[] = [];
   const dropped: string[] = [];
   const warnings: string[] = [];
 
-  for (const a of slot.affixes) {
+  for (const a of ordered) {
     const resolved = resolveToken(a.key, a.label);
     const piece = escapeToken(resolved.token);
-    if (tokens.includes(piece)) {
-      // Token trùng — đã được token trước phủ; tính là "gồm" nhưng không nhồi thêm.
-      included.push(a.label);
-      if (resolved.confidence === 'low') warnings.push(a.label);
+
+    if (seen.has(piece)) {
+      // Cùng stat đã gặp — nếu nó đã được chọn thì coi như cũng "gồm".
+      if (chosen.includes(piece)) included.push(a.label);
       continue;
     }
-    const candidate = [...tokens, piece].join('|');
+    seen.add(piece);
 
-    if (candidate.length > inner && tokens.length > 0) {
-      // Không nhét được — bỏ qua, vẫn thử các token ngắn hơn phía sau.
+    if (chosen.length >= REQUIRE) {
       dropped.push(a.label);
       continue;
     }
 
-    tokens.push(piece);
+    const candidate = [...chosen, piece].map(group).join(' ');
+    if (candidate.length > charLimit && chosen.length > 0) {
+      dropped.push(a.label);
+      continue;
+    }
+
+    chosen.push(piece);
     included.push(a.label);
     if (resolved.confidence === 'low') warnings.push(a.label);
   }
 
-  const regex = wrapSearch(tokens.join('|'));
+  const regex = chosen.map(group).join(' ');
   return { regex, length: regex.length, included, dropped, warnings };
 }

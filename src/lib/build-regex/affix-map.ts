@@ -68,6 +68,22 @@ const STOP = new Set([
   'chance', 'gain', 'your', 'base', 'local',
 ]);
 
+/**
+ * Stat "phổ thông" — gần như món rare nào cũng có, nên KHÔNG phân biệt được
+ * món tốt/xấu. Khi chọn stat để lọc (logic VÀ), ưu tiên stat đặc trưng trước,
+ * đẩy mấy cái này xuống cuối.
+ */
+export const GENERIC_KEYS = new Set<string>([
+  'to maximum life',
+  'to maximum mana',
+  'to fire resistance',
+  'to cold resistance',
+  'to lightning resistance',
+  'to chaos resistance',
+  'to all elemental resistances',
+  'to accuracy rating',
+]);
+
 export function lookup(key: string): AffixToken | null {
   return MAP[key] ?? null;
 }

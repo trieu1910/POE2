@@ -8,8 +8,8 @@ import BuildRegexTool from '@components/BuildRegexTool.astro';
 
 :::tip[👉 Công cụ này làm gì]
 - Bạn nạp file `.build` (export từ Build Planner trong game POE2).
-- Công cụ đọc danh sách đồ theo build và **xuất regex cho từng ô** để dán vào **ô search trong game** (túi đồ / stash / cửa hàng) — món khớp sẽ sáng lên.
-- Kèm **checklist stat** để bạn lọc trên trang trade.
+- Mỗi ô đồ ra **"Regex lọc gắt"**: buộc món phải có **2 stat chính cùng lúc** mới sáng → lọc ra món đáng mua, không sáng tràn lan.
+- Kèm **checklist stat** để lọc trên trang trade.
 :::
 
 <BuildRegexTool />
@@ -17,13 +17,19 @@ import BuildRegexTool from '@components/BuildRegexTool.astro';
 ## Cách dùng regex trong game
 
 1. Mở túi đồ / stash / cửa hàng NPC, tìm **ô search** (kính lúp).
-2. Dán chuỗi regex của ô đồ tương ứng vào ô đó.
-3. Món nào khớp sẽ được tô sáng — đó là ứng viên đáng xem.
+2. Dán **"Regex lọc gắt"** của đúng ô bạn đang muốn mua.
+3. Chỉ món có **đủ** các stat đó mới sáng — đó là ứng viên đáng xem.
+
+## Vì sao "lọc gắt" (logic VÀ) thay vì gộp tất cả
+
+- Nếu gộp mọi stat bằng dấu `|` ("HOẶC"), thì vì Life/kháng/né… **món nào cũng có ít nhất một cái**, nên gần như **mọi món đều sáng** → vô dụng, khác gì tự lựa.
+- Cách đúng: **dấu cách giữa các cụm `"…"` = "VÀ"** trong game. `"Phys" "rit"` = chỉ món có **cả** Physical **lẫn** Crit mới sáng. Đó mới là lọc thật.
+- Công cụ ưu tiên **stat đặc trưng của build** trước (đẩy Life/kháng xuống), rồi buộc 2 stat đó cùng lúc.
 
 ## Vài điều cần biết
 
-- **Regex là bản rút gọn, không phải bản dịch 1-1.** Ô search trong game có **giới hạn ký tự** (mặc định ~50, game sẽ nâng lên 250 trong patch tương lai), nên công cụ chỉ nhồi được vài affix ưu tiên đầu mỗi ô. Phần bị cắt sẽ ghi rõ ở mục "Đã bỏ".
-- **Copy NGUYÊN cả dấu ngoặc kép `"…"` nếu có.** Token nhiều khi chứa dấu cách (vd `imum L` = "maximum Life"); trong game dấu cách bị hiểu là tách nhiều điều kiện, nên phải bọc ngoặc kép để dấu cách thành ký tự thật — `|` vẫn là "hoặc" bên trong ngoặc. Công cụ tự bọc giúp bạn rồi, chỉ cần copy nguyên.
-- **Token ⚠ "chưa chắc"** là affix chưa có trong bảng quy đổi — công cụ đoán token tự động, bạn nên tự kiểm lại.
-- **Giai đoạn**: file build thường có 2 bộ đồ (leveling và endgame). Chọn đúng giai đoạn để ra đồ phù hợp.
-- **Trang trade** (pathofexile.com) dùng bộ lọc có cấu trúc, không phải regex — nên ở đó hãy dùng **checklist stat** mà công cụ liệt kê.
+- **Copy NGUYÊN cả dấu ngoặc kép `"…"`.** Mỗi cụm là một điều kiện; dấu cách giữa các cụm = "VÀ". Trong một cụm, `|` vẫn là "hoặc".
+- **Hộp "🧹 Quét thô tất cả"** (cuối trang) dùng "HOẶC" nên **sáng nhiều** — chỉ để liếc nhanh "tab này có gì dính build không", KHÔNG phải để lọc món tốt.
+- **Token ⚠ "chưa chắc"** là affix chưa có trong bảng quy đổi — công cụ đoán tự động, nên tự kiểm lại.
+- **Giai đoạn**: file build thường có 2 bộ đồ (leveling/endgame) — chọn đúng.
+- **Mua từ người chơi khác?** Dùng **trang trade** (pathofexile.com) với bộ lọc + giá trị tối thiểu (theo **checklist stat** công cụ liệt kê) — đó mới là cách nhanh nhất để có đồ chuẩn build. Regex trong game hợp để lọc đồ tự rớt / vendor.

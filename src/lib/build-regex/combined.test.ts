@@ -11,44 +11,51 @@ function res(over: Partial<ParsedSlot>): SlotResult {
   return { slot, ingameRegex: null, trade: { mustHave: [], niceToHave: [] } };
 }
 
-describe('buildCombined', () => {
-  it('gom + dedupe token toàn build, stat nhiều ô cần xếp trước', () => {
+describe('buildCombined — quét thô', () => {
+  it('gom + dedupe, bỏ stat phổ thông (Life), stat nhiều ô xếp trước', () => {
     const r = buildCombined(
       [
-        res({ affixes: [aff('to maximum life', 'to maximum Life'), aff('increased evasion rating', 'increased Evasion Rating')] }),
-        res({ affixes: [aff('to maximum life', 'to maximum Life'), aff('to spirit', 'to Spirit')] }),
+        res({
+          affixes: [
+            aff('to maximum life', 'to maximum Life'), // phổ thông → loại
+            aff('increased evasion rating', 'increased Evasion Rating'),
+            aff('to spirit', 'to Spirit'),
+          ],
+        }),
+        res({ affixes: [aff('increased evasion rating', 'increased Evasion Rating')] }),
       ],
       50,
     );
-    expect(r.full).toBe('"imum L|Eva|Spiri"'); // Life 2 ô → đứng đầu; dedupe còn 1; có space → bọc ngoặc
+    expect(r.full).toBe('Eva|Spiri'); // Eva (2 ô) trước; Life bị loại; không space → không bọc ngoặc
   });
 
-  it('bỏ qua ô đồ unique', () => {
+  it('bỏ qua ô unique và stat phổ thông', () => {
     const r = buildCombined(
       [
-        res({ uniqueName: 'Foo', affixes: [aff('to maximum life', 'to maximum Life')] }),
-        res({ affixes: [aff('to spirit', 'to Spirit')] }),
+        res({ uniqueName: 'Foo', affixes: [aff('to spirit', 'to Spirit')] }),
+        res({ affixes: [aff('to maximum life', 'to maximum Life'), aff('to spirit', 'to Spirit')] }),
       ],
       50,
     );
     expect(r.full).toBe('Spiri');
   });
 
-  it('compact tôn trọng giới hạn ký tự; full thì không', () => {
+  it('compact tôn trọng giới hạn ký tự; full thì không; có space → bọc ngoặc', () => {
     const r = buildCombined(
       [
         res({
           affixes: [
-            aff('to maximum life', 'to maximum Life'),
-            aff('increased evasion rating', 'increased Evasion Rating'),
+            aff('added physical damage', 'Adds Physical Damage'),
+            aff('increased critical hit chance', 'increased Critical Hit Chance'),
             aff('to spirit', 'to Spirit'),
           ],
         }),
       ],
-      8,
+      12,
     );
-    expect(r.compact).toBe('"imum L"');
+    expect(r.compact).toBe('Physic');
     expect(r.dropped.length).toBe(2);
+    expect(r.full).toBe('"Physic|Hit Cha|Spiri"');
     expect(r.fullLength).toBeGreaterThan(r.compactLength);
   });
 });

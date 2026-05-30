@@ -62,7 +62,7 @@
     msg.textContent = `Đã tạo cho ${results.length} ô đồ.`;
     const limit = Number(limitInput.value) || 50;
     const combined = buildCombined(results, limit);
-    output.innerHTML = combinedHtml(combined, limit) + results.map(cardHtml).join('');
+    output.innerHTML = results.map(cardHtml).join('') + combinedHtml(combined, limit);
     output.querySelectorAll<HTMLButtonElement>('[data-copy]').forEach((btn) => {
       btn.addEventListener('click', () => {
         navigator.clipboard.writeText(btn.dataset.copy ?? '');
@@ -79,14 +79,14 @@
       : `<details class="brt-full"><summary>Bản đầy đủ — mọi stat (${c.fullLength} ký tự, vượt giới hạn ô search)</summary>
           <div class="brt-regex"><code>${esc(c.full)}</code><button data-copy="${esc(c.full)}">Copy</button></div></details>`;
     return `<article class="brt-card brt-combined">
-      <h3>🎯 Regex tổng hợp — “cân all” một dòng</h3>
-      <p><b>Bản gọn</b> (vừa ô search, ${c.compactLength}/${limit} ký tự):</p>
+      <h3>🧹 Quét thô tất cả (1 dòng — sẽ sáng NHIỀU)</h3>
+      <p><b>Bản gọn</b> (${c.compactLength}/${limit} ký tự):</p>
       <div class="brt-regex"><code>${esc(c.compact) || '—'}</code>
         <button data-copy="${esc(c.compact)}">Copy</button></div>
       ${c.dropped.length ? `<p class="brt-meta brt-warn">Không đủ chỗ nên đã bỏ: ${c.dropped.map(esc).join(', ')}</p>` : ''}
       ${c.warnings.length ? `<p class="brt-meta brt-warn">⚠ Chưa chắc: ${c.warnings.map(esc).join(', ')}</p>` : ''}
       ${fullBlock}
-      <p class="brt-meta">Dán 1 dòng này để quét nhanh “có món nào liên quan build không”. Muốn lọc chính xác từng ô thì dùng regex riêng bên dưới.</p>
+      <p class="brt-meta">Dùng "HOẶC" (|) nên sáng nhiều — chỉ để liếc nhanh "tab này có gì dính build không". <b>Muốn lọc ra món đáng mua thì dùng "Regex lọc gắt" của từng ô bên dưới.</b></p>
     </article>`;
   }
 
@@ -102,11 +102,11 @@
     } else if (r.ingameRegex) {
       const g = r.ingameRegex;
       body = `
-        <p><b>Regex trong game</b> (${g.length} ký tự):</p>
+        <p><b>🎯 Regex lọc gắt</b> (buộc có cùng lúc, ${g.length} ký tự):</p>
         <div class="brt-regex"><code>${esc(g.regex)}</code>
           <button data-copy="${esc(g.regex)}">Copy</button></div>
-        <p class="brt-meta">Gồm: ${g.included.map(esc).join(', ') || '—'}</p>
-        ${g.dropped.length ? `<p class="brt-meta brt-warn">Đã bỏ (quá giới hạn): ${g.dropped.map(esc).join(', ')}</p>` : ''}
+        <p class="brt-meta">Chỉ sáng món có ĐỦ: ${g.included.map(esc).join(' + ') || '—'}</p>
+        ${g.dropped.length ? `<p class="brt-meta">Stat khác (không bắt buộc): ${g.dropped.map(esc).join(', ')}</p>` : ''}
         ${g.warnings.length ? `<p class="brt-meta brt-warn">⚠ Chưa chắc: ${g.warnings.map(esc).join(', ')}</p>` : ''}`;
     } else {
       body = `<p>Không có affix để lọc — search theo base: <code>${esc(r.slot.base)}</code></p>`;
