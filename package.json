@@ -7,12 +7,17 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "dependencies": {
     "@astrojs/starlight": "^0.39.2",
     "astro": "^6.3.1",
     "sharp": "^0.34.5",
     "starlight-links-validator": "^0.24.0"
+  },
+  "devDependencies": {
+    "vitest": "^4.1.7"
   }
 }
