@@ -163,7 +163,13 @@ export default defineConfig({
             { label: 'POE1: Farm Settlers/Kingsmarch ore', link: '/kiem-tien-nang-cao/poe1-settlers-ore/' },
           ],
         },
-        { label: '🛠️ Công cụ Build', link: '/cong-cu-build/' },
+        {
+          label: '🛠️ Công cụ Build',
+          items: [
+            { label: 'Tổng quan', link: '/cong-cu-build/' },
+            { label: 'Regex mua đồ từ build', link: '/cong-cu-build/regex-mua-do/' },
+          ],
+        },
         { label: '💰 Dashboard Kiếm tiền', link: '/kiem-tien/' },
         { label: '🧠 Ghi chú cá nhân', link: '/ghi-chu/' },
       ],
