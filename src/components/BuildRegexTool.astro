@@ -62,7 +62,7 @@
     msg.textContent = `Đã tạo cho ${results.length} ô đồ.`;
     const limit = Number(limitInput.value) || 50;
     const combined = buildCombined(results, limit);
-    output.innerHTML = results.map(cardHtml).join('') + combinedHtml(combined, limit);
+    output.innerHTML = combinedHtml(combined, limit) + results.map(cardHtml).join('');
     output.querySelectorAll<HTMLButtonElement>('[data-copy]').forEach((btn) => {
       btn.addEventListener('click', () => {
         navigator.clipboard.writeText(btn.dataset.copy ?? '');
@@ -79,14 +79,14 @@
       : `<details class="brt-full"><summary>Bản đầy đủ — mọi stat (${c.fullLength} ký tự, vượt giới hạn ô search)</summary>
           <div class="brt-regex"><code>${esc(c.full)}</code><button data-copy="${esc(c.full)}">Copy</button></div></details>`;
     return `<article class="brt-card brt-combined">
-      <h3>🧹 Quét thô tất cả (1 dòng — sẽ sáng NHIỀU)</h3>
+      <h3>🎯 Dòng tổng — quét nhanh cả build (1 dòng)</h3>
       <p><b>Bản gọn</b> (${c.compactLength}/${limit} ký tự):</p>
       <div class="brt-regex"><code>${esc(c.compact) || '—'}</code>
         <button data-copy="${esc(c.compact)}">Copy</button></div>
       ${c.dropped.length ? `<p class="brt-meta brt-warn">Không đủ chỗ nên đã bỏ: ${c.dropped.map(esc).join(', ')}</p>` : ''}
       ${c.warnings.length ? `<p class="brt-meta brt-warn">⚠ Chưa chắc: ${c.warnings.map(esc).join(', ')}</p>` : ''}
       ${fullBlock}
-      <p class="brt-meta">Dùng "HOẶC" (|) nên sáng nhiều — chỉ để liếc nhanh "tab này có gì dính build không". <b>Muốn lọc ra món đáng mua thì dùng "Regex lọc gắt" của từng ô bên dưới.</b></p>
+      <p class="brt-meta">Kiểu dòng mà các pro share để <b>quét nhanh khi farm/leveling</b> (loại vũ khí + stat chính, nối HOẶC). Cố tình sáng hơi nhiều = lưới vớt, không bỏ sót. <b>Muốn lọc CHÍNH XÁC từng món đáng mua → dùng "Regex lọc gắt" của từng ô bên dưới.</b></p>
     </article>`;
   }
 

@@ -40,6 +40,17 @@ describe('buildCombined — quét thô', () => {
     expect(r.full).toBe('Spiri');
   });
 
+  it('mỏ neo loại vũ khí (từ ô Weapon) đứng đầu dòng tổng', () => {
+    const r = buildCombined(
+      [
+        res({ inventoryId: 'Weapon1', base: 'Twin Bow', affixes: [aff('added physical damage', 'Adds Physical Damage')] }),
+        res({ inventoryId: 'Boots1', base: 'Dragonscale Boots', affixes: [aff('increased movement speed', 'increased Movement Speed')] }),
+      ],
+      50,
+    );
+    expect(r.full).toBe('Bow|Physic|vement'); // Bow (loại vũ khí) đứng đầu
+  });
+
   it('compact tôn trọng giới hạn ký tự; full thì không; có space → bọc ngoặc', () => {
     const r = buildCombined(
       [

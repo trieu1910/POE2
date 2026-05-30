@@ -18,7 +18,7 @@ function group(piece: string): string {
  * "Dragonscale Boots" → Boots, "Prismatic Ring" → Ring) → dùng làm mỏ neo
  * khóa regex vào đúng LOẠI trang bị, để không sáng nhầm món khác.
  */
-function baseAnchor(base: string): string {
+export function baseAnchor(base: string): string {
   const words = base.trim().split(/\s+/).filter(Boolean);
   if (words.length === 0) return '';
   return words[words.length - 1].replace(/[^A-Za-z]/g, '');
