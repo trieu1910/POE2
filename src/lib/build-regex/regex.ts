@@ -13,17 +13,31 @@ function group(piece: string): string {
   return `"${piece}"`;
 }
 
-/** Số stat buộc khớp cùng lúc (logic VÀ) — "gắt vừa". */
+/**
+ * Từ cuối của tên base thường là "họ" món đồ (vd "Twin Bow" → Bow,
+ * "Dragonscale Boots" → Boots, "Prismatic Ring" → Ring) → dùng làm mỏ neo
+ * khóa regex vào đúng LOẠI trang bị, để không sáng nhầm món khác.
+ */
+function baseAnchor(base: string): string {
+  const words = base.trim().split(/\s+/).filter(Boolean);
+  if (words.length === 0) return '';
+  return words[words.length - 1].replace(/[^A-Za-z]/g, '');
+}
+
+/** Số stat (ngoài mỏ neo loại đồ) buộc khớp cùng lúc — "gắt vừa". */
 const REQUIRE = 2;
 
 /**
- * Tạo regex lọc GẮT cho 1 ô: buộc món phải có ĐỦ {REQUIRE} stat chính cùng lúc
- * (mỗi stat là một cụm "..." ngăn nhau bằng dấu cách = logic VÀ trong game).
+ * Regex lọc GẮT cho 1 ô: khóa theo LOẠI trang bị + buộc có {REQUIRE} stat chính
+ * cùng lúc. Mỗi phần là một cụm "..." ngăn nhau bằng dấu cách (logic VÀ trong game).
  * Ưu tiên stat đặc trưng trước, đẩy stat phổ thông (Life/Res…) xuống cuối.
  */
 export function buildIngameRegex(slot: ParsedSlot, charLimit = 50): IngameRegex | null {
   if (slot.uniqueName) return null;
   if (slot.affixes.length === 0) return null;
+
+  const anchor = baseAnchor(slot.base);
+  const baseGroups = anchor ? [group(escapeToken(anchor))] : [];
 
   // Đặc trưng trước, phổ thông sau (sort ổn định giữ thứ tự ưu tiên gốc).
   const ordered = [
@@ -42,7 +56,6 @@ export function buildIngameRegex(slot: ParsedSlot, charLimit = 50): IngameRegex 
     const piece = escapeToken(resolved.token);
 
     if (seen.has(piece)) {
-      // Cùng stat đã gặp — nếu nó đã được chọn thì coi như cũng "gồm".
       if (chosen.includes(piece)) included.push(a.label);
       continue;
     }
@@ -53,7 +66,7 @@ export function buildIngameRegex(slot: ParsedSlot, charLimit = 50): IngameRegex 
       continue;
     }
 
-    const candidate = [...chosen, piece].map(group).join(' ');
+    const candidate = [...baseGroups, ...chosen.map(group), group(piece)].join(' ');
     if (candidate.length > charLimit && chosen.length > 0) {
       dropped.push(a.label);
       continue;
@@ -64,6 +77,6 @@ export function buildIngameRegex(slot: ParsedSlot, charLimit = 50): IngameRegex 
     if (resolved.confidence === 'low') warnings.push(a.label);
   }
 
-  const regex = chosen.map(group).join(' ');
+  const regex = [...baseGroups, ...chosen.map(group)].join(' ');
   return { regex, length: regex.length, included, dropped, warnings };
 }

@@ -102,10 +102,10 @@
     } else if (r.ingameRegex) {
       const g = r.ingameRegex;
       body = `
-        <p><b>🎯 Regex lọc gắt</b> (buộc có cùng lúc, ${g.length} ký tự):</p>
+        <p><b>🎯 Regex lọc gắt</b> (khóa loại đồ + buộc có cùng lúc, ${g.length} ký tự):</p>
         <div class="brt-regex"><code>${esc(g.regex)}</code>
           <button data-copy="${esc(g.regex)}">Copy</button></div>
-        <p class="brt-meta">Chỉ sáng món có ĐỦ: ${g.included.map(esc).join(' + ') || '—'}</p>
+        <p class="brt-meta">Chỉ sáng <b>${esc(r.slot.base)}</b> có ĐỦ: ${g.included.map(esc).join(' + ') || '—'}</p>
         ${g.dropped.length ? `<p class="brt-meta">Stat khác (không bắt buộc): ${g.dropped.map(esc).join(', ')}</p>` : ''}
         ${g.warnings.length ? `<p class="brt-meta brt-warn">⚠ Chưa chắc: ${g.warnings.map(esc).join(', ')}</p>` : ''}`;
     } else {
