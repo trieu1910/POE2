@@ -212,15 +212,16 @@ const SNAKE = /^[a-z0-9]+(_[a-z0-9+%]+)+$/i;
 /** Làm sạch markup/placeholder, trả về chuỗi người-đọc. */
 function clean(input: string): string {
   let t = input.trim();
+  t = t.replace(/\((?:local)\)/gi, '');                 // (local) — bỏ trước khi test snake_case
+  t = t.replace(/\(\d+(?:\.\d+)?-\d+(?:\.\d+)?\)/g, ''); // (70-100)
+  t = t.trim();
   if (SNAKE.test(t)) {
     t = t
       .replace(/_/g, ' ')
       .replace(/\s*\+\s*%/g, ' %')
       .replace(/\s*\+/g, '');
   }
-  t = t.replace(/\((?:local)\)/gi, '');           // (local)
-  t = t.replace(/\(\d+(?:\.\d+)?-\d+(?:\.\d+)?\)/g, ''); // (70-100)
-  t = t.replace(/#/g, '');
+  t = t.replace(/[#%]/g, '');                      // bỏ cả placeholder # và % thừa
   t = t.replace(/\s+/g, ' ').trim();
   return t;
 }
@@ -698,6 +699,12 @@ export function buildIngameRegex(slot: ParsedSlot, charLimit = 50): IngameRegex 
   for (const a of slot.affixes) {
     const resolved = resolveToken(a.key, a.label);
     const piece = escapeToken(resolved.token);
+    if (tokens.includes(piece)) {
+      // Token trùng — đã được token trước phủ; tính là "gồm" nhưng không nhồi thêm.
+      included.push(a.label);
+      if (resolved.confidence === 'low') warnings.push(a.label);
+      continue;
+    }
     const candidate = [...tokens, piece].join('|');
 
     if (candidate.length > charLimit && tokens.length > 0) {
