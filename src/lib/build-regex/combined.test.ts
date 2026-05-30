@@ -20,7 +20,7 @@ describe('buildCombined', () => {
       ],
       50,
     );
-    expect(r.full).toBe('imum L|Eva|Spiri'); // Life xuất hiện 2 ô → đứng đầu; dedupe còn 1
+    expect(r.full).toBe('"imum L|Eva|Spiri"'); // Life 2 ô → đứng đầu; dedupe còn 1; có space → bọc ngoặc
   });
 
   it('bỏ qua ô đồ unique', () => {
@@ -47,7 +47,7 @@ describe('buildCombined', () => {
       ],
       8,
     );
-    expect(r.compact).toBe('imum L');
+    expect(r.compact).toBe('"imum L"');
     expect(r.dropped.length).toBe(2);
     expect(r.fullLength).toBeGreaterThan(r.compactLength);
   });

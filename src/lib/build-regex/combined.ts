@@ -1,5 +1,6 @@
 import type { SlotResult } from './types';
 import { resolveToken } from './affix-map';
+import { wrapSearch } from './wrap';
 
 const META = /[.^$*+?()[\]{}|\\]/g;
 function escapeToken(t: string): string {
@@ -42,15 +43,17 @@ export function buildCombined(results: SlotResult[], charLimit = 50): CombinedRe
   // Sắp xếp: token được nhiều ô cần xếp trước (sort ổn định giữ thứ tự gặp).
   const entries = [...map.entries()].sort((a, b) => b[1].count - a[1].count);
 
-  const full = entries.map((e) => e[0]).join('|');
+  const full = wrapSearch(entries.map((e) => e[0]).join('|'));
 
+  // Chừa 2 ký tự cho cặp ngoặc kép.
+  const inner = Math.max(1, charLimit - 2);
   const compactTokens: string[] = [];
   const included: string[] = [];
   const dropped: string[] = [];
   const warnings: string[] = [];
   for (const [piece, info] of entries) {
     const candidate = [...compactTokens, piece].join('|');
-    if (candidate.length > charLimit && compactTokens.length > 0) {
+    if (candidate.length > inner && compactTokens.length > 0) {
       dropped.push(info.label);
       continue;
     }
@@ -58,7 +61,7 @@ export function buildCombined(results: SlotResult[], charLimit = 50): CombinedRe
     included.push(info.label);
     if (info.low) warnings.push(info.label);
   }
-  const compact = compactTokens.join('|');
+  const compact = wrapSearch(compactTokens.join('|'));
 
   return {
     compact,

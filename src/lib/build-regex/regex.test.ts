@@ -28,8 +28,8 @@ describe('buildIngameRegex', () => {
       50,
     );
     expect(r).not.toBeNull();
-    expect(r!.regex).toBe('imum L|Eva');
-    expect(r!.length).toBe('imum L|Eva'.length);
+    expect(r!.regex).toBe('"imum L|Eva"'); // có dấu cách → bọc ngoặc kép
+    expect(r!.length).toBe('"imum L|Eva"'.length);
     expect(r!.included).toHaveLength(2);
     expect(r!.dropped).toHaveLength(0);
   });

@@ -22,7 +22,8 @@ import BuildRegexTool from '@components/BuildRegexTool.astro';
 
 ## Vài điều cần biết
 
-- **Regex là bản rút gọn, không phải bản dịch 1-1.** Ô search trong game có **giới hạn ký tự** (mặc định ~50), nên công cụ chỉ nhồi được vài affix ưu tiên đầu mỗi ô. Phần bị cắt sẽ ghi rõ ở mục "Đã bỏ".
+- **Regex là bản rút gọn, không phải bản dịch 1-1.** Ô search trong game có **giới hạn ký tự** (mặc định ~50, game sẽ nâng lên 250 trong patch tương lai), nên công cụ chỉ nhồi được vài affix ưu tiên đầu mỗi ô. Phần bị cắt sẽ ghi rõ ở mục "Đã bỏ".
+- **Copy NGUYÊN cả dấu ngoặc kép `"…"` nếu có.** Token nhiều khi chứa dấu cách (vd `imum L` = "maximum Life"); trong game dấu cách bị hiểu là tách nhiều điều kiện, nên phải bọc ngoặc kép để dấu cách thành ký tự thật — `|` vẫn là "hoặc" bên trong ngoặc. Công cụ tự bọc giúp bạn rồi, chỉ cần copy nguyên.
 - **Token ⚠ "chưa chắc"** là affix chưa có trong bảng quy đổi — công cụ đoán token tự động, bạn nên tự kiểm lại.
 - **Giai đoạn**: file build thường có 2 bộ đồ (leveling và endgame). Chọn đúng giai đoạn để ra đồ phù hợp.
 - **Trang trade** (pathofexile.com) dùng bộ lọc có cấu trúc, không phải regex — nên ở đó hãy dùng **checklist stat** mà công cụ liệt kê.

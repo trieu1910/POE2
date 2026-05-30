@@ -1,5 +1,6 @@
 import type { ParsedSlot, IngameRegex } from './types';
 import { resolveToken } from './affix-map';
+import { wrapSearch } from './wrap';
 
 const META = /[.^$*+?()[\]{}|\\]/g;
 
@@ -11,6 +12,9 @@ function escapeToken(t: string): string {
 export function buildIngameRegex(slot: ParsedSlot, charLimit = 50): IngameRegex | null {
   if (slot.uniqueName) return null;
   if (slot.affixes.length === 0) return null;
+
+  // Chừa 2 ký tự cho cặp ngoặc kép (luôn an toàn dù cuối cùng có bọc hay không).
+  const inner = Math.max(1, charLimit - 2);
 
   const tokens: string[] = [];
   const included: string[] = [];
@@ -28,7 +32,7 @@ export function buildIngameRegex(slot: ParsedSlot, charLimit = 50): IngameRegex 
     }
     const candidate = [...tokens, piece].join('|');
 
-    if (candidate.length > charLimit && tokens.length > 0) {
+    if (candidate.length > inner && tokens.length > 0) {
       // Không nhét được — bỏ qua, vẫn thử các token ngắn hơn phía sau.
       dropped.push(a.label);
       continue;
@@ -39,6 +43,6 @@ export function buildIngameRegex(slot: ParsedSlot, charLimit = 50): IngameRegex 
     if (resolved.confidence === 'low') warnings.push(a.label);
   }
 
-  const regex = tokens.join('|');
+  const regex = wrapSearch(tokens.join('|'));
   return { regex, length: regex.length, included, dropped, warnings };
 }
