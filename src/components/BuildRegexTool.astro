@@ -1,0 +1,156 @@
+---
+// Công cụ client-side: không có props, mọi xử lý chạy trong trình duyệt.
+---
+<div class="brt">
+  <div class="brt-controls">
+    <label class="brt-drop" id="brt-drop">
+      📂 Kéo-thả file <code>.build</code> vào đây, hoặc bấm để chọn file
+      <input type="file" id="brt-file" accept=".build,.json,application/json" hidden />
+    </label>
+    <details class="brt-paste">
+      <summary>…hoặc dán nội dung file</summary>
+      <textarea id="brt-text" rows="6" placeholder="Dán toàn bộ nội dung file .build vào đây"></textarea>
+      <button id="brt-parse" type="button">Phân tích</button>
+    </details>
+    <div class="brt-opts">
+      <span>Giai đoạn:</span>
+      <button type="button" data-level="60" class="brt-stage">Leveling (1-64)</button>
+      <button type="button" data-level="90" class="brt-stage is-active">Endgame (65+)</button>
+      <button type="button" data-level="" class="brt-stage">Tất cả</button>
+      <label>Giới hạn ký tự: <input type="number" id="brt-limit" value="50" min="10" max="250" /></label>
+    </div>
+  </div>
+  <p class="brt-msg" id="brt-msg">Chưa có file. Hãy nạp một file <code>.build</code> để bắt đầu.</p>
+  <div class="brt-output" id="brt-output"></div>
+</div>
+
+<script>
+  import { generate, BuildParseError } from '../lib/build-regex/index';
+  import { slotLabel } from '../lib/build-regex/labels';
+
+  const fileInput = document.getElementById('brt-file') as HTMLInputElement;
+  const drop = document.getElementById('brt-drop') as HTMLLabelElement;
+  const textArea = document.getElementById('brt-text') as HTMLTextAreaElement;
+  const parseBtn = document.getElementById('brt-parse') as HTMLButtonElement;
+  const limitInput = document.getElementById('brt-limit') as HTMLInputElement;
+  const msg = document.getElementById('brt-msg') as HTMLParagraphElement;
+  const output = document.getElementById('brt-output') as HTMLDivElement;
+  const stageBtns = Array.from(document.querySelectorAll<HTMLButtonElement>('.brt-stage'));
+
+  let rawText = '';
+  let level: number | undefined = 90;
+
+  function esc(s: string): string {
+    return s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]!));
+  }
+
+  function render() {
+    if (!rawText) return;
+    let results;
+    try {
+      results = generate(rawText, { level, charLimit: Number(limitInput.value) || 50 });
+    } catch (e) {
+      output.innerHTML = '';
+      msg.textContent = e instanceof BuildParseError ? e.message : 'Có lỗi khi xử lý file.';
+      return;
+    }
+    if (results.length === 0) {
+      msg.textContent = 'Không có ô đồ nào khớp giai đoạn đã chọn.';
+      output.innerHTML = '';
+      return;
+    }
+    msg.textContent = `Đã tạo cho ${results.length} ô đồ.`;
+    output.innerHTML = results.map(cardHtml).join('');
+    output.querySelectorAll<HTMLButtonElement>('[data-copy]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        navigator.clipboard.writeText(btn.dataset.copy ?? '');
+        btn.textContent = '✓ Đã copy';
+        setTimeout(() => (btn.textContent = 'Copy'), 1200);
+      });
+    });
+  }
+
+  function cardHtml(r: ReturnType<typeof generate>[number]): string {
+    const head = `${esc(slotLabel(r.slot.inventoryId))} — ${esc(r.slot.base)}${
+      r.slot.baseClass ? ` <small>(${esc(r.slot.baseClass)})</small>` : ''
+    }`;
+
+    let body: string;
+    if (r.slot.uniqueName) {
+      body = `<p>🔶 Đồ unique → search theo tên: <code>${esc(r.slot.uniqueName)}</code>
+        <button data-copy="${esc(r.slot.uniqueName)}">Copy</button></p>`;
+    } else if (r.ingameRegex) {
+      const g = r.ingameRegex;
+      body = `
+        <p><b>Regex trong game</b> (${g.length} ký tự):</p>
+        <div class="brt-regex"><code>${esc(g.regex)}</code>
+          <button data-copy="${esc(g.regex)}">Copy</button></div>
+        <p class="brt-meta">Gồm: ${g.included.map(esc).join(', ') || '—'}</p>
+        ${g.dropped.length ? `<p class="brt-meta brt-warn">Đã bỏ (quá giới hạn): ${g.dropped.map(esc).join(', ')}</p>` : ''}
+        ${g.warnings.length ? `<p class="brt-meta brt-warn">⚠ Chưa chắc: ${g.warnings.map(esc).join(', ')}</p>` : ''}`;
+    } else {
+      body = `<p>Không có affix để lọc — search theo base: <code>${esc(r.slot.base)}</code></p>`;
+    }
+
+    const trade = `
+      <p class="brt-meta"><b>Trade — Bắt buộc:</b> ${r.trade.mustHave.map(esc).join('; ') || '—'}</p>
+      ${r.trade.niceToHave.length ? `<p class="brt-meta"><b>Nên có:</b> ${r.trade.niceToHave.map(esc).join('; ')}</p>` : ''}`;
+
+    return `<article class="brt-card"><h3>${head}</h3>${body}${trade}</article>`;
+  }
+
+  function loadText(t: string) {
+    rawText = t;
+    render();
+  }
+
+  fileInput.addEventListener('change', () => {
+    const f = fileInput.files?.[0];
+    if (f) f.text().then(loadText);
+  });
+  ['dragover', 'dragenter'].forEach((ev) =>
+    drop.addEventListener(ev, (e) => { e.preventDefault(); drop.classList.add('is-over'); }),
+  );
+  ['dragleave', 'drop'].forEach((ev) =>
+    drop.addEventListener(ev, () => drop.classList.remove('is-over')),
+  );
+  drop.addEventListener('drop', (e) => {
+    e.preventDefault();
+    const f = (e as DragEvent).dataTransfer?.files?.[0];
+    if (f) f.text().then(loadText);
+  });
+  parseBtn.addEventListener('click', () => loadText(textArea.value));
+  limitInput.addEventListener('change', render);
+  stageBtns.forEach((b) =>
+    b.addEventListener('click', () => {
+      stageBtns.forEach((x) => x.classList.remove('is-active'));
+      b.classList.add('is-active');
+      level = b.dataset.level ? Number(b.dataset.level) : undefined;
+      render();
+    }),
+  );
+</script>
+
+<style>
+  .brt { margin: 1.5rem 0; }
+  .brt-drop { display: block; border: 2px dashed var(--sl-color-gray-4); border-radius: 0.5rem;
+    padding: 1.25rem; text-align: center; cursor: pointer; background: var(--sl-color-gray-6); }
+  .brt-drop.is-over { border-color: var(--sl-color-accent); }
+  .brt-paste { margin: 0.75rem 0; }
+  .brt-paste textarea { width: 100%; font-family: var(--sl-font-mono); }
+  .brt-opts { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; margin: 0.75rem 0; }
+  .brt-stage { padding: 0.25rem 0.6rem; border: 1px solid var(--sl-color-gray-4); border-radius: 0.4rem;
+    background: transparent; cursor: pointer; }
+  .brt-stage.is-active { background: var(--sl-color-accent); color: var(--sl-color-white); }
+  .brt-limit, .brt-opts input[type='number'] { width: 4rem; }
+  .brt-msg { color: var(--sl-color-gray-3); }
+  .brt-card { border: 1px solid var(--sl-color-gray-5); border-left: 4px solid var(--sl-color-accent);
+    border-radius: 0.5rem; padding: 0.75rem 1rem; margin: 0.75rem 0; background: var(--sl-color-gray-6); }
+  .brt-card h3 { margin: 0 0 0.5rem; font-size: 1rem; }
+  .brt-regex { display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; }
+  .brt-regex code { font-size: 1.05rem; }
+  .brt-meta { font-size: 0.85rem; margin: 0.35rem 0; }
+  .brt-warn { color: var(--sl-color-orange-high, #c47f00); }
+  .brt-card button, .brt-paste button { cursor: pointer; padding: 0.2rem 0.6rem;
+    border: 1px solid var(--sl-color-gray-4); border-radius: 0.4rem; background: var(--sl-color-gray-5); }
+</style>
