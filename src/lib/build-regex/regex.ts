@@ -20,6 +20,12 @@ export function buildIngameRegex(slot: ParsedSlot, charLimit = 50): IngameRegex 
   for (const a of slot.affixes) {
     const resolved = resolveToken(a.key, a.label);
     const piece = escapeToken(resolved.token);
+    if (tokens.includes(piece)) {
+      // Token trùng — đã được token trước phủ; tính là "gồm" nhưng không nhồi thêm.
+      included.push(a.label);
+      if (resolved.confidence === 'low') warnings.push(a.label);
+      continue;
+    }
     const candidate = [...tokens, piece].join('|');
 
     if (candidate.length > charLimit && tokens.length > 0) {

@@ -32,4 +32,8 @@ describe('normalizeAffix', () => {
   it('giữ to maximum life', () => {
     expect(normalizeAffix('# to maximum Life').key).toBe('to maximum life');
   });
+
+  it('snake_case kèm đuôi (local) vẫn đổi sang chữ', () => {
+    expect(normalizeAffix('local_charm_slots (local)').key).toBe('local charm slots');
+  });
 });

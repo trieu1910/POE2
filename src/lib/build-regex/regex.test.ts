@@ -64,4 +64,18 @@ describe('buildIngameRegex', () => {
   it('trả null khi không có affix', () => {
     expect(buildIngameRegex(slot({ affixes: [] }), 50)).toBeNull();
   });
+
+  it('gộp token trùng, vẫn tính cả hai affix là included', () => {
+    const r = buildIngameRegex(
+      slot({
+        affixes: [
+          affix('to evasion rating', 'to Evasion Rating'),
+          affix('increased evasion rating', 'increased Evasion Rating'),
+        ],
+      }),
+      50,
+    );
+    expect(r!.regex).toBe('Eva');
+    expect(r!.included).toEqual(['to Evasion Rating', 'increased Evasion Rating']);
+  });
 });
