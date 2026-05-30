@@ -25,7 +25,7 @@
 </div>
 
 <script>
-  import { generate, BuildParseError } from '../lib/build-regex/index';
+  import { generate, buildCombined, BuildParseError } from '../lib/build-regex/index';
   import { slotLabel } from '../lib/build-regex/labels';
 
   const fileInput = document.getElementById('brt-file') as HTMLInputElement;
@@ -60,7 +60,9 @@
       return;
     }
     msg.textContent = `Đã tạo cho ${results.length} ô đồ.`;
-    output.innerHTML = results.map(cardHtml).join('');
+    const limit = Number(limitInput.value) || 50;
+    const combined = buildCombined(results, limit);
+    output.innerHTML = combinedHtml(combined, limit) + results.map(cardHtml).join('');
     output.querySelectorAll<HTMLButtonElement>('[data-copy]').forEach((btn) => {
       btn.addEventListener('click', () => {
         navigator.clipboard.writeText(btn.dataset.copy ?? '');
@@ -68,6 +70,24 @@
         setTimeout(() => (btn.textContent = 'Copy'), 1200);
       });
     });
+  }
+
+  function combinedHtml(c: ReturnType<typeof buildCombined>, limit: number): string {
+    const fitsBox = c.fullLength <= limit;
+    const fullBlock = fitsBox
+      ? ''
+      : `<details class="brt-full"><summary>Bản đầy đủ — mọi stat (${c.fullLength} ký tự, vượt giới hạn ô search)</summary>
+          <div class="brt-regex"><code>${esc(c.full)}</code><button data-copy="${esc(c.full)}">Copy</button></div></details>`;
+    return `<article class="brt-card brt-combined">
+      <h3>🎯 Regex tổng hợp — “cân all” một dòng</h3>
+      <p><b>Bản gọn</b> (vừa ô search, ${c.compactLength}/${limit} ký tự):</p>
+      <div class="brt-regex"><code>${esc(c.compact) || '—'}</code>
+        <button data-copy="${esc(c.compact)}">Copy</button></div>
+      ${c.dropped.length ? `<p class="brt-meta brt-warn">Không đủ chỗ nên đã bỏ: ${c.dropped.map(esc).join(', ')}</p>` : ''}
+      ${c.warnings.length ? `<p class="brt-meta brt-warn">⚠ Chưa chắc: ${c.warnings.map(esc).join(', ')}</p>` : ''}
+      ${fullBlock}
+      <p class="brt-meta">Dán 1 dòng này để quét nhanh “có món nào liên quan build không”. Muốn lọc chính xác từng ô thì dùng regex riêng bên dưới.</p>
+    </article>`;
   }
 
   function cardHtml(r: ReturnType<typeof generate>[number]): string {
@@ -147,6 +167,10 @@
   .brt-card { border: 1px solid var(--sl-color-gray-5); border-left: 4px solid var(--sl-color-accent);
     border-radius: 0.5rem; padding: 0.75rem 1rem; margin: 0.75rem 0; background: var(--sl-color-gray-6); }
   .brt-card h3 { margin: 0 0 0.5rem; font-size: 1rem; }
+  .brt-combined { border-left-width: 5px; border-left-color: var(--sl-color-accent-high, var(--sl-color-accent));
+    background: var(--sl-color-accent-low, var(--sl-color-gray-6)); }
+  .brt-combined h3 { font-size: 1.1rem; }
+  .brt-full { margin: 0.4rem 0; }
   .brt-regex { display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; }
   .brt-regex code { font-size: 1.05rem; }
   .brt-meta { font-size: 0.85rem; margin: 0.35rem 0; }

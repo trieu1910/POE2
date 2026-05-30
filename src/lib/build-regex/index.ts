@@ -27,4 +27,6 @@ export function generate(jsonText: string, opts: GenerateOptions = {}): SlotResu
 }
 
 export { parseBuild, BuildParseError } from './parse';
+export { buildCombined } from './combined';
+export type { CombinedRegex } from './combined';
 export type { SlotResult, ParsedSlot } from './types';
